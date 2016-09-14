@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#content{
+				display: -webkit-box;
+	            display: -webkit-flex;
+	            display: flex;
+	            -webkit-box-orient: horizontal;
+	            -webkit-flex-flow: row;
+                flex-flow: row;
+			}
+			#content>div{
+				border: 1px solid #ccc;
+			}
+			#content .shit{
+	            -webkit-box-flex: 1; 
+	            -webkit-flex: 1;
+	            flex: 1;
+	            text-align: center;
+	        }
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<div class="shit">左边</div>
+			<div class="shit">中间</div>
+			<div >右边</div>
+		</div>
+	</body>
+</html>

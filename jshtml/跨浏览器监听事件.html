@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1,user-scalable=0, width=device-width" />
+		<title></title>
+		<style type="text/css">
+			.div {
+				border: 1px solid rgba(0, 0, 0, 0.3);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id='btn' class="div">
+			d
+		</div>
+	</body>
+	<script type="text/javascript">
+		//跨浏览器
+		var eventUtil = {
+			//添加句柄
+			addHandler: function(element, type, handler) {
+				//DOM 2级处理
+				if (element.addEventListener) {
+					element.addEventListener(type, handler, false);
+					//IE8以下 兼容性
+				} else if (element.attachEvent) {
+					element.attachEvent('on' + type, handler);
+					//DOM 0 级处理 ----老版本不支持2级，也不支持IE模式
+				} else {
+					element['on' + type] = handler;
+					//在js中，所有连接属性的，用点的都可以用中括号[]
+				}
+			},
+			//删除句柄
+			removeHandler: function(element, type, handler) {
+				//DOM 2级处理
+				if (element.removeEventListener) {
+					element.removeEventListener(type, handler, false);
+					//IE8以下 兼容性
+				} else if (element.detachEvent) {
+					element.detachEvent('on' + type, handler);
+					//DOM 0 级处理 ----老版本不支持2级，也不支持IE模式
+				} else {
+					element['on' + type] = null;
+					//在js中，所有连接属性的，用点的都可以用中括号[]
+				}
+			}
+		}
+		var btn = document.getElementById('btn');
+		//使用
+		eventUtil.addHandler(btn, 'click', function() {
+			alert(123)
+		});
+	</script>
+
+</html>

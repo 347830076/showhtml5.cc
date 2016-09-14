@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script type="text/javascript">
+			function whichElement(e) {
+				var targ
+				if(!e) var e = window.event
+				if(e.target) targ = e.target
+				else if(e.srcElement) targ = e.srcElement
+//				if(targ.nodeType == 3) // defeat Safari bug
+//					targ = targ.parentNode
+				var tname
+				tname = targ.tagName
+				alert("You clicked on a " + tname + " element.")
+			}
+		</script>
+	</head>
+
+	<body ontouchstart="whichElement(event)">
+		<p>在文档中点击某个位置。消息框会提示出您所点击的标签的名称。</p>
+
+		<h3>这是标题</h3>
+		<p>这是段落。</p>
+		<img src="/i/eg_mouse2.jpg" />
+	</body>
+	<script type="text/javascript">
+	</script>
+
+</html>

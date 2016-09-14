@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		 <table>
+            <tr>
+                <td>用户名：</td>
+                <td><input type="text" name="txtName" id="txtName" required/></td>
+            </tr>
+               <tr>
+                <td>标题：</td>
+                <td><input type="text" name="txtTitle" id="txtTitle" required/></td>
+            </tr>
+            <tr>
+                <td>留言：</td>
+                <td><input type="text" name="txtWords" id="txtWords" required/></td>
+            </tr>
+        </table>
+        <input type="button" value="保存" id="btnSave"/>
+        <hr/>
+        <input type="button" value="展示所哟数据" onclick="showAllTheData();"/>
+        <table id="tblData">
+        </table>
+    <script type="text/javascript">
+  		//一、会话级别的本地存储：sessionStorage
+        //添加key-value 数据到 sessionStorage
+        sessionStorage.setItem("demokey", "会话级别的本地存储");
+        //通过key来获取value
+        var dt = sessionStorage.getItem("demokey");
+        console.log(dt);
+        //清空所有的key-value数据。
+//      sessionStorage.clear();
+        console.log(sessionStorage.getItem("demokey"));
+        console.log(sessionStorage.length);
+        
+        //二、永久本地存储：localStorage
+        //添加key-value 数据到 sessionStorage
+        localStorage.setItem("demokey", "永久本地存储");
+        //通过key来获取value
+        var dt = localStorage.getItem("demokey");
+        console.log(dt);
+        //清空所有的key-value数据。
+        //localStorage.clear();
+        console.log(localStorage.length);
+        //三、逆天了本地数据库                    
+        /*操作本地数据库的最基本的步骤是：
+		    第一步：openDatabase方法：创建一个访问数据库的对象。
+		    第二步：使用第一步创建的数据库访问对象来执行transaction方法，通过此方法可以设置一个开启事务成功的事件响应方法，在事件响应方法中可以执行SQL.
+		    第三步：通过executeSql方法执行查询，当然查询可以是：CRUD。*/
+
+		//Demo：获取或者创建一个数据库，如果数据库不存在那么创建之
+		var dataBase = openDatabase("student", "1.0", "学生表", 1024 * 1024, function () { });
+		/*	1，数据库名称。
+		    2，数据库的版本号，目前来说传个1.0就可以了，当然可以不填；
+		    3，对数据库的描述。
+		    4，设置分配的数据库的大小（单位是kb）。
+		    5，回调函数(可省略)。
+		    初次调用时创建数据库，以后就是建立连接了。		
+		（2）db.transaction方法可以设置一个回调函数，此函数可以接受一个参数就是我们开启的事务的对象。然后通过此对象可以进行执行Sql脚本，跟下面的步骤可以结合起来。		
+		（3）通过executeSql方法执行查询。
+		ts.executeSql(sqlQuery,[value1,value2..],dataHandler,errorHandler)
+		参数说明：
+	    qlQuery：需要具体执行的sql语句，可以是create、select、update、delete；
+	    value1,value2..]：sql语句中所有使用到的参数的数组，在executeSql方法中，将s>语句中所要使用的参数先用“?”代替，然后依次将这些参数组成数组放在第二个参数中
+	    ataHandler：执行成功是调用的回调函数，通过该函数可以获得查询结果集；
+	    4,errorHandler：执行失败时调用的回调函数；
+
+		*/		
+		window.onload = function(){//页面加载完成后绑定页面按钮的点击事件
+			 initDatabase();
+			 document.getElementById("btnSave").onclick = function(){
+			 	var txtName = document.getElementById("txtName").value;
+			 	var txtTitle = document.getElementById("txtTitle").value;
+			 	var txtWords = document.getElementById("txtWords").value;
+                var db = getCurrentDb();
+                //执行sql脚本，插入数据
+                db.transaction(function (trans) {
+                    trans.executeSql("insert into Demo(uName,title,words) values(?,?,?) ", [txtName, txtTitle, txtWords], function (ts, data) {
+                    }, function (ts, message) {
+                        alert(message);
+                    });
+                });
+                showAllTheData();
+			 }
+		}
+        function initDatabase() {
+            var db = getCurrentDb();//初始化数据库
+            if(!db) {alert("您的浏览器不支持HTML5本地数据库");return;}
+            db.transaction(function (trans) {//启动一个事务，并设置回调函数
+                //执行创建表的Sql脚本
+                trans.executeSql("create table if not exists Demo(uName text null,title text null,words text null)", [], function (trans, result) {
+	                }, function (trans, message) {//消息的回调函数alert(message);});
+	            }, function (trans, result) {
+	            }, function (trans, message) {
+	            });
+        	});
+        }
+        function getCurrentDb() {
+            //打开数据库，或者直接连接数据库参数：数据库名称，版本，概述，大小
+            //如果数据库不存在那么创建之
+            var db = openDatabase("myDb", "1.0", "it's to save demo data!", 1024 * 1024); ;
+            return db;
+        }
+        //显示所有数据库中的数据到页面上去
+        function showAllTheData() {
+            document.getElementById("tblData").innerHTML = '';
+            var db = getCurrentDb();
+            db.transaction(function (trans) {
+                trans.executeSql("select * from Demo ", [], function (ts, data) {
+                    if (data) {
+                        for (var i = 0; i < data.rows.length; i++) {
+                            appendDataToTable(data.rows.item(i));//获取某行数据的json对象
+                        }
+                    }
+                }, function (ts, message) {alert(message);var tst = message;});
+            });
+        }
+        function appendDataToTable(data) {//将数据展示到表格里面
+            //uName,title,words
+            var txtName = data.uName;
+            var txtTitle = data.title;
+            var words = data.words;
+            var strHtml = "";
+            strHtml += "<tr>";
+            strHtml += "<td>"+txtName+"</td>";
+            strHtml += "<td>" + txtTitle + "</td>";
+            strHtml += "<td>" + words + "</td>";
+            strHtml += "</tr>";
+            document.getElementById("tblData").insertAdjacentHTML('beforeEnd',strHtml);
+        }
+    </script>
+	</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title></title>
+		<meta charset="UTF-8" />
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				width: 100%;
+			}
+			.example1 {
+				width: 100%;
+				overflow: hidden;
+			}
+			.example1>div{
+				float: left;
+				margin-left: 5px;
+				margin-bottom: 5px;
+			}
+			.example1_content {
+				width: 20%;
+				padding: 10% 0;
+				background: #ccc;
+			}
+			.example1_content1 {
+				width: 10%;
+				padding: 10% 0;
+				background: #ccc;
+			}
+			.example1_content2 {
+				width: 20%;
+				padding: 10%;
+				background: #ccc;
+			}
+			.example1_content3 {
+				width: 20%;
+				padding: 5%;
+				background: #ccc;
+			}
+			.example2 {
+				padding: 12px 6px 0px;
+				border-left: 1px solid;
+				font-size: 0;
+				margin-left: 12px;
+			}
+			
+			.example3>img {
+				width: 50px;
+				height: 50px;
+				float: left;
+			}
+			
+			.example3>div {
+				padding-left: 60px;
+			}
+			
+			.line_tri {
+				width: 150px;
+				height: 30px;
+				padding: 15px 0;
+				border-top: 30px solid;
+				border-bottom: 30px solid;
+				background-color: #ccc;
+				background-clip: content-box;
+			}
+			
+			.eye {
+				width: 150px;
+				height: 150px;
+				padding: 10px;
+				border: 10px solid;
+				border-radius: 50%;
+				background-color: currentcolor;
+				background-clip: content-box;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h3>
+			1、padding百分比是根据宽度来计算的，可以用来做固定比例布局
+		</h3>
+		<div class="example1">
+			<div class="example1_content"></div>
+			<div class="example1_content1"></div>
+			<div class="example1_content2"></div>
+			<div class="example1_content3"></div>
+		</div>
+		<h3>
+			2、利用padding做分隔符
+		</h3>
+		<div>
+			注册<span class="example2"></span>登录
+		</div>
+		<br />
+		<h3>3、左边图片固定</h3>
+		<div class="example3">
+			<img src="img/p227.jpg.jpg" />
+			<div>
+				左边图片固定，右边文字自适应。左边图片固定，右边文字自适应。左边图片固定，右边文字自适应。左边图片固定，右边文字自适应。左边图片固定，右边文字自适应。
+			</div>
+		</div>
+		<h3 style="margin: 10px 0;">
+			4、利用padding画图
+		</h3>
+		<div class="line_tri"></div><br />
+		<div class="eye"></div>
+		<h3>5、行内元素的padding只影响左右，不影响上下</h3>
+		<div>
+			左<span style="padding: 20px;">中间内容</span>右
+		</div>
+	</body>
+
+</html>

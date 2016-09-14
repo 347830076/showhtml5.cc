@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			//原因:js按照2进制来处理小数的加减乘除,在arg1的基础上 将arg2的精度进行扩展或逆扩展匹配,所以会出现如下情况.
+
+			//javascript(js)的小数点加减乘除问题，是一个js的bug如0.3*1 = 0.2999999999等，下面列出可以完美求出相应精度的四种js算法
+			var a = accDiv(1,3);
+			console.log(a);
+			//除法
+			function accDiv(arg1, arg2) {
+				var t1 = 0,
+					t2 = 0,
+					r1, r2;
+				try {
+					t1 = arg1.toString().split(".")[1].length
+				} catch (e) {}
+				try {
+					t2 = arg2.toString().split(".")[1].length
+				} catch (e) {}
+				with(Math) {
+					r1 = Number(arg1.toString().replace(".", ""))
+					r2 = Number(arg2.toString().replace(".", ""))
+					return accMul((r1 / r2), pow(10, t2 - t1));
+				}
+			}
+			var b = accMul(0.1,3);
+			console.log(b);
+			//乘法  
+			function accMul(arg1, arg2) {
+				var m = 0,
+					s1 = arg1.toString(),
+					s2 = arg2.toString();
+				try {
+					m += s1.split(".")[1].length
+				} catch (e) {}
+				try {
+					m += s2.split(".")[1].length
+				} catch (e) {}
+				return Number(s1.replace(".", "")) * Number(s2.replace(".", "")) / Math.pow(10, m)
+			}
+			var c = accAdd(0.1,3);
+			console.log(c);
+			//加法   
+			function accAdd(arg1, arg2) {
+				var r1, r2, m;
+				try {
+					r1 = arg1.toString().split(".")[1].length
+				} catch (e) {
+					r1 = 0
+				}
+				try {
+					r2 = arg2.toString().split(".")[1].length
+				} catch (e) {
+					r2 = 0
+				}
+				m = Math.pow(10, Math.max(r1, r2))
+				return (arg1 * m + arg2 * m) / m
+			}
+			//减法   
+			function Subtr(arg1, arg2) {
+				var r1, r2, m, n;
+				try {
+					r1 = arg1.toString().split(".")[1].length
+				} catch (e) {
+					r1 = 0
+				}
+				try {
+					r2 = arg2.toString().split(".")[1].length
+				} catch (e) {
+					r2 = 0
+				}
+				m = Math.pow(10, Math.max(r1, r2));
+				n = (r1 >= r2) ? r1 : r2;
+				return ((arg1 * m - arg2 * m) / m).toFixed(n);
+			}
+		</script>
+	</body>
+
+</html>

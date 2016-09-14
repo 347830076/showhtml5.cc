@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">	
+		<style type="text/css">
+			*{
+				margin: 0;
+			}
+			html,
+			body {
+				height: 100%;
+				background-color: #fff;
+				font-size: 14px;
+			}
+			#wrap {
+				height: 100%;
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-orient: vertical;
+				-webkit-flex-flow: column;
+				flex-flow: column;
+			}
+			.header{
+				text-align: center;
+				line-height: 40px;
+				background-color: #0000FF;
+				color: #fff;
+			}
+			#main {
+				-webkit-box-flex: 1;
+				-webkit-flex: 1;
+				flex: 1;
+				overflow: auto;
+			}
+			#nav {
+				background-color: #008000;
+				text-align: center;
+				line-height: 40px;
+			}						
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="header">
+				顶部
+			</div>	
+			<div id="main">
+				中间
+				<div>中间</div>
+			</div>
+			<!--底部-->
+			<div id="nav">
+				底部
+			</div>
+			<!--end底部-->
+		</div>
+	</body>
+</html>

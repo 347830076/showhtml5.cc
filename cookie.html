@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			localStorage.setItem('d',12)
+			
+			document.cookie="name=ghd=d";
+			console.log(document.cookie)
+//			console.log(getCookie('name='))
+			 
+			function getCookie(name){
+				var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+				if(arr=document.cookie.match(reg))
+				return unescape(arr[2]);
+				else
+				return null;
+			}
+			function clearCookie(){ 
+				var keys=document.cookie.match(/[^ =;]+(?=\=)/g); 
+				if (keys) { 
+					for (var i = keys.length; i--;) 
+					document.cookie=keys[i]+'=0;expires=' + new Date( 0).toUTCString() 
+				} 
+			} 
+		</script>
+	</body>
+</html>

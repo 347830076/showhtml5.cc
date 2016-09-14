@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>html5 example: IMG Preview</title>
+		<style type="text/css">
+			img{
+				width: 100px;height: 100px;
+			}
+		</style>
+	</head>
+
+	<body id='body'>
+		<div>
+			<input id="viewFiles" type="file" multiple="multiple" />
+		</div>
+		
+		<script type="text/javascript">
+			(function() {
+				var viewFiles = document.getElementById("viewFiles");
+				var viewImg = document.getElementById("viewImg");
+				var body = document.getElementById("body");
+
+				function viewFile(file) {
+					for (var i = 0; i < file.length; i++) {
+						//通过file.size可以取得图片大小
+						var reader = new FileReader();
+						reader.onload = function(evt) {
+							var img = document.createElement("img");
+							img.src = evt.target.result;
+							body.appendChild(img);
+							
+						}
+						reader.readAsDataURL(file[i]);
+					}
+				}
+				viewFiles.addEventListener("change", function() {
+					//通过 this.files 取到 FileList ，这里只有一个
+					viewFile(this.files);
+				}, false);
+			})();
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		 <style type="text/css">
+		 	.container{
+		 		display: -webkit-box;
+		 		display: -webkit-flex;
+		 		display: flex;
+		 		/*在felxbox布局中，默认有两颗轴，水平轴和垂直轴 　　此属性决定主轴的方向（即子元素排列方向，默认是水平方向），有四个值可取，分别为，flex-direction: row row-reverse column column-reverse*/
+		 		flex-direction: row;
+		 		/*此属性表示当子元素.son太多时，需不需要换行（默认是不换行），有三个值取，flex-wrap: nowrap wrap wrap-reverse
+*/
+		 		flex-wrap: wrap;
+		 		justify-content: space-around;
+		 	}
+		 	.container div{
+		 		-webkit-box-flex: 1;
+		 		-webkit-flex: 1;
+		 		flex: 1;
+		 		background-color: #ccc;
+		 		border: 1px solid #C0392B;
+		 		/*text-align: center;*/
+		 	}
+		 </style>
+	</head>
+	<body>
+		<div class="container">
+			<div>1111111111111111111</div>
+			<div>2</div>
+			<div>3</div>				
+		</div>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>仅基于浏览器的HTML5获取经纬度</title>
+		<script>
+			function getLocation() {
+				var options = {
+					enableHighAccuracy: true,
+					maximumAge: 1000
+				}
+				if (navigator.geolocation) {
+					//浏览器支持geolocation
+					navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
+				} else {
+					//浏览器不支持geolocation
+					alert('您的浏览器不支持地理位置定位');
+				}
+			}
+			//成功时
+			function onSuccess(position) {
+				//返回用户位置
+				//经度
+				var longitude = position.coords.longitude;
+				//纬度
+				var latitude = position.coords.latitude;
+				alert('经度' + longitude + '，纬度' + latitude);
+				document.write('经度' + longitude + '，纬度' + latitude);
+				//根据经纬度获取地理位置，不太准确，获取城市区域还是可以的
+			}
+			//失败时
+			function onError(error) {
+				switch (error.code) {
+					case 1:
+						alert("位置服务被拒绝");
+						break;
+					case 2:
+						alert("暂时获取不到位置信息");
+						break;
+					case 3:
+						alert("获取信息超时");
+						break;
+					case 4:
+						alert("未知错误");
+						break;
+				}
+			}
+			window.onload = getLocation;
+		</script>
+	</head>
+	<body>
+		<h3>仅用浏览器HTML5的getCurrentPosition()方法来获得用户的经纬度。没调用第三方API来获取地理位置（百度地图API 或 谷歌地图API），调用API可以将经纬度转换成地理位置。</h3>
+	</body>
+</html>

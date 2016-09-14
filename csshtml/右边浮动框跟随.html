@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#xf{
+				position:absolute; 
+				right:8px; 
+				top:100px;
+				border: 1px solid #ccc;
+				width: 100px;
+				height: 100px;
+				background-color: #ccc;
+			}
+			#bg{
+				width: 100px;
+				height: 10220px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="xf"></div>
+		<div id='bg'></div>
+		<script type="text/javascript">
+			var tips;      
+			var theTop = 100;
+			var old = theTop;
+		   function initFloatTips() {
+		      tips = document.getElementById('xf');
+		      moveTips();
+		   };
+		   
+		   function moveTips() {
+		        var tt=10;
+		        pos = window.pageYOffset;
+			    pos = pos - tips.offsetTop + theTop;         
+			    pos = tips.offsetTop + pos / 10;
+				tips.style.top = pos + "px";
+			    setTimeout(moveTips,tt);
+		    }
+		    initFloatTips();
+
+		</script>
+	</body>
+</html>

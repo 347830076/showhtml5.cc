@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>刮刮乐</title>
+        <style type="text/css">
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            img{
+                width: 600px;
+                height: 373px;
+            }
+            #canvas{
+                position: absolute;
+                left: 0;
+                top: 0;
+                border: 1px solid cornflowerblue;
+                box-shadow: 10px 10px 10px gray;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="image/3.jpg"/>
+        <canvas id="canvas" width="600" height="373"></canvas>
+    </body>
+    <script type="text/javascript">
+        var canvas=document.getElementById('canvas');
+        var a=canvas.getContext('2d');
+        //绘制蒙层
+        a.fillStyle='gray';
+        a.fillRect(0,0,canvas.width,canvas.height);
+        //开刮
+        canvas.onmousedown=function  () {
+            //鼠标点下并且移动才会有刮得效果
+            canvas.onmousemove=function  (e) {
+                var event=window.event;
+                //获取鼠标位置
+                var x=event.clientX-canvas.offsetLeft;
+                var y=event.clientY-canvas.offsetTop;
+                //设置图形组合方案
+                a.globalCompositeOperation='destination-out';
+//              a.clearRect(x-25,y-25,50,50);
+                //设置橡皮擦的形状
+                a.beginPath();
+                a.arc(x,y,35,0,Math.PI*2,false);
+                a.fillStyle='rgba(0,0,0,1)';
+                a.fill();
+            }
+        }
+        //当鼠标松开的时候停止清除
+        window.onmouseup=function  () {
+            canvas.onmousemove=null;
+//          canvas.onmousemove='none';
+        }
+
+    </script>
+</html>

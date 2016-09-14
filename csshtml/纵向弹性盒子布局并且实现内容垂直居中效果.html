@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+		<title>文档</title>
+		<style>
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+			}
+			
+			* {
+				margin: 0px;
+				padding: 0px
+			}
+			
+			.table-view {
+				display: table;
+				width: 100%;
+				border-collapse: collapse;
+				border-spacing: 0;
+			}
+			
+			.table-view.full {
+				/*需要让其占满父容器时在table-view上加上full*/
+				height: 100%;
+			}
+			
+			.table-row {
+				display: table-row;
+			}
+			
+			.table-cell {
+				border: 1px red solid;
+				display: table-cell;
+				vertical-align: middle;
+				/*默认垂直居中*/
+			}
+			
+			.table-cell.vt {
+				/*需要垂直居上是在table-cell上加上vt*/
+				vertical-align: top;
+			}
+			
+			.table-cell.vb {
+				/*需要垂直居上是在table-cell上加上vb*/
+				vertical-align: bottom;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="table-view full">
+			<div class="table-row">
+				<div class="table-cell">
+					1
+				</div>
+			</div>
+			<div class="table-row">
+				<div class="table-cell">
+					2
+				</div>
+			</div>
+			<div class="table-row">
+				<div class="table-cell">
+					3
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

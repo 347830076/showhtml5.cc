@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*@-webkit-keyframes toastFrames{
+				from{
+				    opacity: 1;
+				}
+				to{
+				   opacity: 0;
+				}
+			}
+			@-moz-keyframes toastFrames{
+				from{
+				    opacity: 1;
+				}
+				to{
+				   opacity: 0;
+				}
+			}
+			@-o-keyframes toastFrames{
+				from{
+				    opacity: 1;
+				}
+				to{
+				   opacity: 0;
+				}
+			}
+			@-ms-keyframes toastFrames{
+				from{
+				    opacity: 1;
+				}
+				to{
+				   opacity: 0;
+				}
+			}*/
+			/*.toastContainer{
+				position: fixed;
+				top: 50%;
+				left: 50%;	
+				width: 100%;			
+				z-index: 9999;
+				text-align: center;	
+				-webkit-transform: translateX(-50%);
+				-moz-transform: translateX(-50%);
+				-ms-transform: translateX(-50%);
+				-o-transform: translateX(-50%);
+				transform: translateX(-50%);	
+				-webkit-animation: toastFrames 3s;
+				-moz-animation: toastFrames 3s;
+				-ms-animation: toastFrames 3s;
+				-o-animation: toastFrames 3s;
+				animation: toastFrames 3s;
+				opacity: 0;
+			}*/
+			/*.toast{		
+				display: inline-block;	
+				max-width: 80%;								
+				padding: 10px 20px;
+				border-radius: 7px;
+				word-break:break-all;
+				word-wrap:break-word;
+				text-align: left;
+				background-color: rgba(0,0,0,0.5);
+				color: #fff;						
+			}*/
+		</style>
+	</head>
+	
+	<body>
+		<div onclick="add()" style="text-align: center;line-height: 50px;">
+				点击
+		</div>
+		<script type="text/javascript">
+			function add(){
+				toast({msg:'的所发生的',duration:1000,location:'bottom'});
+				toast({msg:'dsdsd',duration:1000,location:'top'});
+				toast({msg:'的所发生dsd的'});
+			}
+//			
+			function toast(obj){
+				if(document.getElementById("toastContainer")){
+					document.body.removeChild(document.getElementById("toastContainer"));
+				}
+												
+				if(obj.location == 'top'){
+					var duration = 'top:20px;';
+					var translate = '-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);';
+				}else if(obj.location == 'middle'){
+					var duration = 'top:50%;';
+					var translate = '-webkit-transform: translateX(-50%) translateY(-50%);-moz-transform: translateX(-50%) translateY(-50%);-ms-transform: translateX(-50%) translateY(-50%);-o-transform: translateX(-50%) translateY(-50%);transform: translateX(-50%) translateY(-50%);';
+				}else{
+					var duration = 'bottom:20px;';
+					var translate = '-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);';
+				}
+				var seed = obj.duration || 3;
+				var location = '-webkit-animation: toastFrames 1s '+ seed +'s forwards;-moz-animation: toastFrames 1s'+ seed +'s forwards;-ms-animation: toastFrames 1s '+ seed +'s forwards;-o-animation: toastFrames 1s forwards'+ seed +'s;animation: toastFrames 1s ' + seed + 's forwards;';
+				
+				var style = '<style>@-webkit-keyframes toastFrames{from{opacity: 1;}to{opacity: 0;}}@-moz-keyframes toastFrames{from{opacity: 1;}to{opacity: 0;}}@-o-keyframes toastFrames{from{opacity: 1;}to{opacity: 0;}}@-ms-keyframes toastFrames{from{opacity: 1;}to{opacity: 0;}}</style>';
+				
+				var html = style + '<div id="toastContainer" style="position: fixed;'+ duration +'left: 50%;	width: 100%;z-index: 9999;text-align: center; '+ translate + location +'"><span style="display: inline-block;	max-width: 80%;padding: 10px 20px;border-radius: 7px;word-break:break-all;word-wrap:break-word;text-align: left;background-color: rgba(0,0,0,0.5);color: #fff;" id="toastText"></span></div>';
+
+				document.body.insertAdjacentHTML('beforeEnd', html);
+				document.getElementById("toastText").innerText = obj.msg;
+				
+			}
+		</script>
+	</body>
+</html>

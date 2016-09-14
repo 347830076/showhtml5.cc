@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div id="d"></div>
+		<script type="text/javascript">
+			var foo = (12.4 / 4.13) | 0; //结果为3
+			var bar = ~~(12.4 / 4.13); //结果为3
+			console.log(foo);
+			console.log(1.55 | 0);
+			(function() {
+				var oldAlert = window.alert,
+					count = 0;
+				window.alert = function(a) {
+					count++;
+					oldAlert(a + "\n You've called alert " + count + " times now. Stop, it's evil!");
+				};
+			})();  
+			var _log = console.log;
+			console.log = function() {
+			  _log.call(console, '%c' + [].slice.call(arguments).join(' '), 'color:transparent;text-shadow:0 0 2px rgba(0,0,0,.5);');
+			};
+			console.log(1.55 | 0);
+			var a=1,b=2;a=[b,b=a][0];
+		</script>  
+	</body>
+
+</html> 

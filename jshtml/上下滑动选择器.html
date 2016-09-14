@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+			.UICustomPickerBroungound{
+				position: fixed;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,0.5);
+			}
+			.UICustomPickerContainer{
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: 180px;
+				text-align: center;
+				z-index: 999999;
+			}
+			.UICustomPickerSelect{				
+				width: 100%;
+				height: 150px;
+				background-color: #fff;
+			}
+			.UICustomPickerSelect>div{
+				height: 30px;
+				line-height: 30px;
+			}
+			.UICustomPickerUnit{
+				position: absolute;
+				top: 50%;
+				right: 12px;
+				-webkit-transform: translateY(-50%);
+				-moz-transform: translateY(-50%);
+				-ms-transform: translateY(-50%);
+				-o-transform: translateY(-50%);
+				transform: translateY(-50%);
+				font-size: 20px;
+			}
+			.UICustomPickerButtons{
+				width: 100%;
+				height: 30px;
+				line-height: 30px;
+				position: relative;
+				background-color: #000;
+				color: #fff;
+			}
+			.UICustomPickerButtons>div{
+				width: 50%;
+			}
+			.UICustomPickerButtons>div:first-child{
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="UICustomPickerBroungound"></div>
+		<div class="UICustomPickerContainer">
+			<div class="UICustomPickerButtons">
+				<div>确定</div>
+				<div>取消</div>
+			</div>
+			<div class="UICustomPickerSelect">
+				<div id="UICustomPickerfirst">1</div>
+				<div id="UICustomPickersecond">2</div>
+				<div id="UICustomPickerthird">3</div>
+				<div id="UICustomPickerfourth">4</div>
+				<div id="UICustomPickerfifth">5</div>
+			</div>
+			<div class="UICustomPickerUnit">kg</div>
+		</div>		
+		<script type="text/javascript">
+
+			document.querySelector('.UICustomPickerContainer').addEventListener('touchstart',function(){
+
+			},false);
+			//记录上一次的坐标，和相差距离
+			var juliy  = oldmovey = 0;
+			//第一次移动的时候
+			var move_flag = true;
+			document.querySelector('.UICustomPickerContainer').addEventListener('touchmove',function(){
+				event.stopPropagation();//阻止冒泡
+			    event.preventDefault();//阻止浏览器默认事件
+			    movey = event.touches[0].pageY; //移动触摸的X轴坐标
+				if (move_flag) { //第一次移动的时候，上一次坐标和当前坐标应该一样
+					oldmovey = movey;
+					move_flag = false;
+				}
+				
+				//坐标相差
+				juliy = movey - oldmovey;
+				oldmovey = movey;		
+				console.log(juliy)
+				var picker = document.querySelector('.UICustomPickerSelect');
+				picker.style.marginTop = picker.offsetTop + juliy + 'px';
+			    
+			},false);
+			document.querySelector('.UICustomPickerContainer').addEventListener('touchend',function(){
+				event.preventDefault(); //阻止元素的默认事件
+				event.stopPropagation(); // 阻止元素冒泡事件
+				move_flag = true;
+				var picker = document.querySelector('.UICustomPickerSelect');
+				//上边距
+				if (picker.offsetTop > 0) {
+					picker.style.marginTop = 0 + 'px';
+				} else if (picker.offsetTop < 0 && Math.abs(picker.offsetTop)  > (5*30 - 150)) {
+					picker.style.marginTop = (5*30 - 150) + 'px';
+				} else {
+					
+				}
+			},false);	
+		</script>
+	</body>
+</html>

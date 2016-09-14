@@ -1,0 +1,107 @@
+.borderWidth{
+	border-bottom:1px solid #ccc;
+
+}
+.tong{
+	height: 0px;
+	border-bottom: 1px solid #ccc;
+	margin-left: 10px;
+}
+.bg{
+	background: #fff;
+	height: 44px;
+	position: relative;
+}
+.txt{
+
+	padding: 5px 0px 5px 20px;
+	color: #777;
+	height: 24px;
+	font-size: 15px;
+	margin: 10px 0;
+	background: #fff;
+	width: 100%;	
+}
+.yanzhengma{
+	display: inline-block;
+	position: absolute;
+	right: 0px;
+	top:0px;
+	font-size: 12px;
+	border-radius: 10px;
+	background: #63ce60;
+	cursor: pointer;
+	padding:5px 10px;
+	margin: 3px 10px;
+	
+}
+.content{
+	text-align: center;
+	color:white;
+	
+}
+.tishi{
+	height: 40px;
+	line-height:40px ;
+	background: #f8f8f8;
+	padding-left: 20px;
+	font-size: 12px;
+}
+.nichengTxt{
+	position: absolute;
+	font-size: 15px;
+	display: inline-block;
+	width:45px;
+	height: 18px;
+
+	top:13px;
+	right: 10px;
+	color:#c7c7cd;
+}
+.sex{
+	position: relative;
+	margin: 20px 0 0px 0px;
+	text-align: center;
+	
+}
+.sex span{
+	
+	display: inline-block;
+	width: 125px;
+	
+	height: 45px;
+	line-height: 45px;
+	padding-left:30px ;
+	cursor: pointer;
+	
+}
+.nan{
+	border-radius: 7px 0 0 7px;
+	border: 1px #ccc solid;
+	border-right: 0px;
+	background: url(../images/nan.png) 35px center no-repeat white;
+}
+.nv{
+	border-radius: 0px 7px 7px 0px;
+	background: url(../images/nv.png) 35px center no-repeat #e8e9ed;
+	border: 1px #ccc solid;
+}
+.sex_tishi{
+	text-align: center;font-size: 12px;
+	margin: 10px 0;
+}
+#button{
+	border-radius:7px;
+	display:block;
+	width: 295px;
+	height: 42px;
+	color:white;
+	background: #c737d6;
+	margin: 30px auto 30px;
+	cursor: pointer;
+}
+
+
+
+
+

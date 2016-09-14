@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<link rel="stylesheet" type="text/css" href="../css/api.css" />-->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+			.size {
+				width: 200px;
+				height: 200px;
+				background: #8BC34A;
+			}
+			
+			.example1 {
+				border-radius: 100px;
+			}
+			
+			.example3 {
+				width: 200px;
+				height: 150px;
+				border-radius: 50%;
+				background: #8BC34A;
+			}
+			
+			.example4 {
+				width: 200px;
+				height: 150px;
+				border-radius: 50% / 100% 100% 0 0;
+				background: #8BC34A;
+			}
+			
+			.example5 {
+				width: 200px;
+				height: 150px;
+				border-radius: 100% 0 0 100% / 50%;
+				background: #8BC34A;
+			}
+			
+			.example6 {
+				width: 160px;
+				height: 100px;
+				border-radius: 100% 0 0 0;
+				background: #8BC34A;
+			}
+			
+			.opera {
+				width: 258px;
+				height: 275px;
+				background: #F22629;
+				border-radius: 258px 258px 258px 258px /275px 275px 275px 275px;
+				position: relative;
+			}
+			
+			.opera-top {
+				width: 112px;
+				height: 231px;
+				background: #FFFFFF;
+				border-radius: 112px 112px 112px 112px/231px 231px 231px 231px;
+				position: absolute;
+				left: 50%;
+				right: 50%;
+				top: 50%;
+				bottom: 50%;
+				margin-left: -56px;
+				margin-top: -115px;
+			}
+			
+			.button {
+				width: 200px;
+				height: 100px;
+				position: relative;
+				left: 100px;
+				line-height: 100px;
+				text-align: center;
+				font-weight: bold;
+				z-index: 1;
+			}
+			
+			.button::before {
+				content: '';
+				/* 用伪元素来生成一个矩形 */
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: -1;
+				-webkit-transform: skew(45deg);
+				-moz-transform: skew(45deg);
+				-ms-transform: skew(45deg);
+				-o-transform: skew(45deg);
+				transform: skew(45deg);
+				background: #8BC34A;
+			}
+			
+			.example7 {
+				width: 140px;
+				height: 140px;
+				position: relative;
+				left: 100px;
+				line-height: 100px;
+				text-align: center;
+				font-weight: bolder;
+				z-index: 1;
+			}
+			
+			.example7::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: -1;
+				-webkit-transform: rotate(45deg);
+				-moz-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				-o-transform: rotate(45deg);
+				transform: rotate(45deg);
+				background: #8BC34A;
+			}
+			
+			.example8 {
+				background: #8BC34A;
+				background: linear-gradient(135deg, transparent 15px, #8BC34A 0%) top left, linear-gradient(-135deg, transparent 15px, #8BC34A 0) top right, linear-gradient(-45deg, transparent 15px, #8BC34A 0) bottom right, linear-gradient(45deg, transparent 15px, #8BC34A 0) bottom left;
+				background-size: 50% 50%;
+				background-repeat: no-repeat;
+				padding: 1em 1.2em;
+				max-width: 12em;
+				line-height: 1.5em;
+			}
+			
+			.example9 {
+				background: #8BC34A;
+				background: radial-gradient(circle at top left, transparent 15px, #8BC34A 0) top left, radial-gradient(circle at top right, transparent 15px, #8BC34A 0) top right, radial-gradient(circle at bottom right, transparent 15px, #8BC34A 0) bottom right, radial-gradient(circle at bottom left, transparent 15px, #8BC34A 0) bottom left;
+				background-size: 50% 50%;
+				background-repeat: no-repeat;
+				padding: 20px;
+				max-width: 170px;
+			}
+			
+			.pie {
+				width: 140px;
+				height: 140px;
+				background: #8BC34A;
+				border-radius: 50%;
+				background-image: linear-gradient(to right, transparent 50%, #655 0);
+			}
+			
+			.pie::before {
+				content: '';
+				display: block;
+				margin-left: 50%;
+				height: 100%;
+				border-radius: 0 100% 100% 0 / 50%;
+				background-color: inherit;
+				-webkit-transform-origin: left;
+				-moz-transform-origin: left;
+				-ms-transform-origin: left;
+				-o-transform-origin: left;
+				transform-origin: left;
+				-webkit-transform: rotate(.1turn);
+				-moz-transform: rotate(.1turn);
+				-ms-transform: rotate(.1turn);
+				-o-transform: rotate(.1turn);
+				transform: rotate(.1turn);
+				/*10%*/
+				-webkit-transform: rotate(.2turn);
+				-moz-transform: rotate(.2turn);
+				-ms-transform: rotate(.2turn);
+				-o-transform: rotate(.2turn);
+				transform: rotate(.2turn);
+				/*20%*/
+				-webkit-transform: rotate(.3turn);
+				oz-transform: rotate(.3turn);
+				-ms-transform: rotate(.3turn);
+				-o-transform: rotate(.3turn);
+				transform: rotate(.3turn);
+				/*30%*/
+				/*在参数中规定角度。turn是圈，1turn = 360deg；另外还有弧度rad，2nrad = 1turn = 360deg。如，transform:rotate(2turn); //旋转两圈*/
+			}
+			
+			.pie2 {
+				width: 140px;
+				height: 140px;
+				background: #8BC34A;
+				border-radius: 50%;
+				background-image: linear-gradient(to right, transparent 50%, #655 0);
+			}
+			
+			.pie2::before {
+				content: '';
+				display: block;
+				margin-left: 50%;
+				height: 100%;
+				border-radius: 0 100% 100% 0 / 50%;
+				background: #655;
+				/*当范围大于50%时,需要改变伪元素的背景颜色为#655;*/
+				-webkit-transform-origin: left;
+				-moz-transform-origin: left;
+				-ms-transform-origin: left;
+				-o-transform-origin: left;
+				transform-origin: left;
+				-webkit-transform: rotate(.1turn);
+				-moz-transform: rotate(.1turn);
+				-ms-transform: rotate(.1turn);
+				-o-transform: rotate(.1turn);
+				transform: rotate(.1turn);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="size example1"></div>
+		<br />
+		<div class="example3"></div>
+		<br />
+		<div class="example4"></div>
+		<br />
+		<div class="example5"></div>
+		<br />
+		<div class="example6"></div>
+		<br />
+		<div class="opera">
+			<div class="opera-top"></div>
+		</div>
+		<br />
+		<div class="button">transform:skew()</div>
+		<br /><br />
+		<div class="example7">transform:rotate()</div>
+		<br /><br />
+
+		<div class="example8">Hey, focus! You’re supposed to be looking at my corners, not reading my text. The text is just placeholder!</div>
+		<br />
+		<div class="example9">Hey, focus! You’re supposed to be looking at my corners, not reading my text. The text is just placeholder!</div>
+		<br />
+		<div class="pie"></div>
+		<div class="pie2"></div>
+		<div class="pie3"></div>
+	</body>
+
+</html>

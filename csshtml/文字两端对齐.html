@@ -1,0 +1,37 @@
+	<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>系统维护</title>
+		<link rel="stylesheet" type="text/css" href="css/api.css"/>
+		<style type="text/css">
+			.tipText{
+				position: fixed;
+				left: 50%;
+				top: 50%;
+				min-width: 300px;
+				-webkit-transform: translateX(-50%) translateY(-50%);
+				-moz-transform: translateX(-50%) translateY(-50%);
+				-ms-transform: translateX(-50%) translateY(-50%);
+				-o-transform: translateX(-50%) translateY(-50%);
+				transform: translateX(-50%) translateY(-50%);
+				padding: 10px 10px;
+				text-align: center;
+				border-radius: 3px;
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="tipText">
+			系统维护和重构中，用户的余额一分都不会少，6月25日恢复。感谢大家的体谅和关注，我们一直在用心做好产品和服务！
+		</div>
+		<script type="text/javascript">
+			var box = document.querySelector('.tipText');
+			box.style.textAlign = "justify";
+			box.style.letterSpacing = '-.15em';
+			box.innerHTML = box.innerHTML.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '').split("").join(" ").replace(/\s{3}/g, " &nbsp; ");
+		</script>
+	</body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+
+	<head>
+		<meta charset="UTF-8"/>
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function() {
+				var tagName = getClass("div", "a1");
+				//因为返回的是包含多个元素的数组，所以要遍历一下
+				for (var i = 0; i < tagName.length; i++) {
+					tagName[i].innerHTML = "你好";
+				}
+				var tagName = getClass("div", "a2");
+				for (var i = 0; i < tagName.length; i++) {
+					tagName[i].innerHTML = "ALL好";
+				}
+			}
+
+			function getClass(tagname, className) { //tagname指元素，className指class的值
+				//判断浏览器是否支持getElementsByClassName，如果支持就直接的用
+				if (document.getElementsByClassName) {
+					return document.getElementsByClassName(className);
+				} else { //当浏览器不支持getElementsByClassName的时候用下面的方法
+					var tagname = document.getElementsByTagName(tagname); //获取指定元素
+					var tagnameAll = []; //这个数组用于存储所有符合条件的元素
+					for (var i = 0; i < tagname.length; i++) { //遍历获得的元素
+						if (tagname[i].className == className) { //如果获得的元素中的class的值等于指定的类名，就赋值给tagnameAll
+							tagnameAll[tagnameAll.length] = tagname[i];
+						}
+					}
+					return tagnameAll;
+				} 
+			}
+				
+		</script> 
+	</head>
+
+	<body>
+		<div class="a1"></div>
+		<div class="a1"></div>
+		<div class="a1"></div>
+		<div class="a1"></div>
+		<div class="a2"></div>
+		<div class="a2"></div>
+		<div class="a2"></div>
+		<div class="a2"></div>
+		<div id="myList">
+			
+		</div>
+		<script type="text/javascript">
+			var node=document.createElement("LI");
+			node.innerHTML = 'dddddd';
+			document.getElementById("myList").appendChild(node);
+		</script>
+	</body>
+
+</html>

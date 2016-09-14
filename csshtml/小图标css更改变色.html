@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.icon {
+				display: block;
+				width: 20px;
+				height: 20px;
+				overflow: hidden;
+				border: 1px solid #ccc;
+				margin: auto;
+			}
+			
+			.icon-del {
+				background: url(../img/star-l-h.png) no-repeat center;
+				background-size: 100% 100%;
+			}
+			
+			.icon > .icon {
+				position: relative;
+				top: -1px;
+				left: -21px;
+				border-right: 20px solid transparent;
+				-webkit-filter:drop-shadow(20px 0px rgb(102, 102, 102));
+				filter: drop-shadow(20px 0px rgb(102, 102, 102));
+				-ms-filter: drop-shadow(20px 0px rgb(102, 102, 102));				
+			}
+		</style>
+	</head>
+
+	<body>
+		<p><strong>原始图标</strong></p>
+		<i class="icon icon-del"></i>
+		<p><strong>可以变色的图标</strong></p>
+		<i class="icon">
+			<i class="icon icon-del"></i>
+		</i>
+	</body>
+
+</html>

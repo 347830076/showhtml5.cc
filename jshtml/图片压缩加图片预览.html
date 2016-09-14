@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>File API Test</title>
+		<script src="../js/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var jic = {
+				compress: function(source_img_obj, quality, output_format) {
+					var mime_type = "image/jpeg";
+					if (output_format != undefined && output_format == "png") {
+						mime_type = "image/png";
+					}
+					var cvs = document.createElement('canvas');
+					//naturalWidth真实图片的宽度
+					cvs.width = source_img_obj.naturalWidth;
+					cvs.height = source_img_obj.naturalHeight;
+					var ctx = cvs.getContext("2d").drawImage(source_img_obj, 0, 0);
+					var newImageData = cvs.toDataURL(mime_type, quality / 100);
+					var result_image_obj = new Image();
+					result_image_obj.src = newImageData;
+					return result_image_obj;
+				},
+				update: function update(file) {
+				}
+			}
+		</script>
+		<style>
+			#test {
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<input type="file" id="fileImg" onchange="handleFileSelect(this)">
+		<form>
+			<img src="" id="test" alt="">
+		</form>
+		<script>
+			function handleFileSelect(file) {
+//				var files = evt.target.files;
+//				for (var i = 0, f; f = files[i]; i++) {
+//					// Only process image files.
+//					if (!f.type.match('image.*')) {
+//						continue;
+//					}
+					var reader = new FileReader();
+					reader.onload = (function(theFile) {
+						return function(e) {
+							console.log(e.target.result);
+							var i = document.getElementById("test");
+							i.src = event.target.result;
+							var quality = 50;
+							i.src = jic.compress(i, quality).src;
+							i.style.display = "block";
+						};
+					})(file.files[0]);
+					// Read in the image file as a data URL.
+					reader.readAsDataURL(file.files[0]);
+				}
+			//兼容各种浏览器
+			function handleFileSelect1(file) {
+				var img = next(file);
+				if(file.files && file.files[0]) {
+					var reader = new FileReader();
+					reader.onload = function(evt) {
+						img.src = evt.target.result;						
+					}
+					reader.readAsDataURL(file.files[0]);
+				} else {
+					file.parentNode.innerHTML = '<div class="img" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src=\'' + file.value + '\'"></div>';
+				}
+			}
+
+//			}
+//			document.getElementById('fileImg').addEventListener('change', handleFileSelect, false);
+		</script>
+	</body>
+
+</html>

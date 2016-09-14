@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.shadow {
+			    color: transparent;
+			    text-shadow: #000 0 0 2px;
+			}
+			.div {
+			    box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.2), 0 0 0 12px rgba(0, 0, 0, 0.2), 0 0 0 18px rgba(0, 0, 0, 0.2), 0 0 0 24px rgba(0, 0, 0, 0.2);
+			    height: 100px;
+			    margin: 50px auto;
+			    width: 100px;
+			    border:1px solid #FFFF00;
+			}
+			.container{
+				background-position: calc(100% - 50px) calc(100% - 20px);
+			}
+		</style>
+		
+	</head>
+	<body>
+		 <style style="display:block" contentEditable>
+        	body { color: blue }
+        </style>
+		<div class="shadow">
+			文字模糊效果
+		</div>
+		<div class="div">
+		</div>
+		<div style="width: 100%; position: relative; padding-bottom: 20%;">
+		    <div style="position: absolute; left: 0; top: 0; right: 0; bottom: 0;background-color:yellow;">
+		        this content will have a constant aspect ratio that varies based on the width.
+		    </div>
+		</div>
+	</body>
+</html>

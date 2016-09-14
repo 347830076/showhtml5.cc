@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#canvas{
+				display: block;margin: 0 auto;border: 1px solid #ccc;
+			}
+			#scaleRange{
+				display: block;margin: 20px auto;width: 800px;
+			}
+		</style>
+	</head>
+	<body style="background-color: black;">
+		<canvas id="canvas">
+			您的浏览器不支持canvas
+		</canvas>
+		<canvas id="offCanvas" style="display: none"></canvas>
+		<script type="text/javascript">
+			var swidth = 1152;
+			var sheight = 768;
+			
+			var canvas = document.getElementById("canvas");
+			var context = canvas.getContext('2d');
+			
+			var offCanvas = document.getElementById("offCanvas");
+			var offContext = offCanvas.getContext('2d');
+			
+			var scale;
+			var image = new Image();			
+			var isMouseDown = false;
+			
+			window.onload = function(){				
+				canvas.width = swidth;
+				canvas.height = sheight;	
+				
+				image.src = '../image/img-lg.jpg';
+				image.onload = function(){
+					offCanvas.width = image.width;
+					offCanvas.height = image.height;
+					
+					scale = offCanvas.width / canvas.width;
+					
+					context.drawImage(image,0,0,canvas.width,canvas.height);
+					offContext.drawImage(image,0,0);
+				}												
+			}
+			function windowToCanvas(x,y){
+				var bbox = canvas.getBoundingClientRect();
+				return {
+					x : x - bbox.left,
+					y : y - bbox.top
+				}
+			}
+			//点下
+			canvas.onmousedown = function(e){
+				e.preventDefault();
+				
+				var point = windowToCanvas(e.clientX,e.clientY);
+				console.log(point.x,point.y);
+				isMouseDown = true;
+				
+				drawCanvasWithMagnifier(true,point);
+				
+			}
+			//移动
+			canvas.onmousemove = function(e){
+				e.preventDefault();
+				if(isMouseDown){
+					var point = windowToCanvas(e.clientX,e.clientY);
+					console.log(point.x,point.y);
+					drawCanvasWithMagnifier(true,point);
+				}
+			}
+			//弹起
+			canvas.onmouseup = function(e){
+				e.preventDefault();
+				isMouseDown = false;
+				drawCanvasWithMagnifier(false);
+			}
+			//离开
+			canvas.onmouseout = function(e){
+				e.preventDefault();
+				isMouseDown = false;
+				drawCanvasWithMagnifier(false);
+			}
+			function drawCanvasWithMagnifier(isShowMagnifier,point){
+				context.clearRect( 0 , 0 , canvas.width , canvas.height );
+	            context.drawImage( image , 0 , 0 , canvas.width , canvas.height );
+	            if( isShowMagnifier == true ){
+	                drawMagnifier( point );
+	            }
+
+			}
+			function drawMagnifier(point){
+				var mr = 200;
+
+	            var imageLG_cx = point.x * scale;
+	            var imageLG_cy = point.y * scale;
+	
+	            var sx = imageLG_cx - mr;
+	            var sy = imageLG_cy - mr;
+	
+	            var dx = point.x - mr;
+	            var dy = point.y - mr;
+	
+	            context.save();//保存之前绘制的操作，以下执行新的操作
+	
+	            context.lineWidth = 10.0;
+	            context.strokeStyle = "#069";
+	
+//	            context.beginPath();//beginPath() 方法开始一条路径，或重置当前的路径。
+//	            context.arc( point.x , point.y , mr , 0 , Math.PI*2 , false );
+//	            context.stroke();//使用 stroke() 方法在画布上绘制确切的路径。
+//	            context.clip();
+	            context.drawImage( offCanvas , sx , sy , 2*mr , 2*mr , dx , dy , 2*mr , 2*mr );
+	            context.restore();//恢复之前绘制的操作到画布上，使的所有重叠在一起
+
+			}
+		</script>
+	</body>
+</html>

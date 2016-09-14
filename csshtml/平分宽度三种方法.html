@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.red {
+				background: red;
+				height: 30px;
+				line-height: 30px;
+				color: #fff;
+				margin-top: 30px;
+				text-align: center;
+			}
+			
+			.blue {
+				background: blue;
+				height: 30px;
+				line-height: 30px;
+				color: #fff;
+				margin-top: 10px;
+				text-align: center;
+			}
+			/*以上代码为了区分两个导航*/
+			/*第一种*/
+			.nav,
+			.nav_ {
+				width: 100%;
+				list-style: none;
+				padding: 0px;
+				margin: 0px 0;
+			}
+			
+			.nav li {
+				float: left;
+				width: 20%;
+			}
+			
+			.nav_ li {
+				float: left;
+				width: 33.333%;
+			}
+			/*第二种*/
+
+			/*以上代码为了区分两个导航*/
+			.nav2,.nav_2{list-style: none;padding:0px;margin:0px;
+			    display: -webkit-box;
+			    display: -ms-flexbox;
+			    display: -webkit-flex;
+			    display: flex;
+			}
+			.nav2 li,.nav_2 li{list-style: none;padding:0px;margin:0px;
+			    -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+			    -moz-box-flex: 1;        /* OLD - Firefox 19- */
+			    -webkit-flex: 1;          /* Chrome */
+			    -ms-flex: 1;              /* IE 10 */
+			    flex: 1;
+			}
+			/*第三种*/
+			.nav3,.nav_3 {
+			    display: table;
+			    table-layout: fixed;
+			    width: 100%; 
+			    list-style: none;
+			    margin:0px;
+			    padding:0px;
+			}
+			.nav3 li,.nav_3 li {
+			    display: table-cell; 
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--第一种-->
+		<header class="footer red">
+			<ul class="nav_">
+				<li>简介</li>
+				<li>订单</li>
+				<li>账户</li>
+			</ul>
+		</header>
+		<footer class="footer blue">
+			<ul class="nav">
+				<li>首页</li>
+				<li>微淘</li>
+				<li>社区</li>
+				<li>购物车</li>
+				<li>我的淘宝</li>
+			</ul>
+		</footer>
+		<!--第二种-->
+		<header class="footer red">
+			<ul class="nav_2">
+				<li>简介</li>
+				<li>订单</li>
+				<li>账户</li>
+			</ul>
+		</header>
+		<footer class="footer blue">
+			<ul class="nav2">
+				<li>首页</li>
+				<li>微淘</li>
+				<li>社区</li>
+				<li>购物车</li>
+				<li>我的淘宝</li>
+			</ul>
+		</footer>
+		<!--第三种-->
+		<header class="footer red">
+			<ul class="nav_3">
+				<li>简介</li>
+				<li>订单</li>
+				<li>账户</li>
+			</ul>
+		</header>
+		<footer class="footer blue">
+			<ul class="nav3">
+				<li>首页</li>
+				<li>微淘</li>
+				<li>社区</li>
+				<li>购物车</li>
+				<li>我的淘宝</li>
+			</ul>
+		</footer>
+	</body>
+
+</html>

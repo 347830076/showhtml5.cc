@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+			.code{
+				width: 200px;
+				height: 200px;
+				position: relative;	
+				margin: 20px auto;		
+			}
+			.icon{
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				left: 50%;
+				top: 50%;
+				background-image: url(../image/taomei_200x200.png);
+				background-size: 100% 100%;
+				-webkit-transform: translateX(-50%) translateY(-50%);
+				-moz-transform: translateX(-50%) translateY(-50%);
+				-ms-transform: translateX(-50%) translateY(-50%);
+				-o-transform: translateX(-50%) translateY(-50%);
+				transform: translateX(-50%) translateY(-50%);
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="qrcode" class="code">
+			<div class="icon"></div>
+		</div>
+		<div id="qrcode1" class="code">
+			<div class="icon"></div>
+		</div>
+		<script src="../js/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery.qrcode.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/qrcode.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		
+//			$('#qrcode').qrcode("http://www.baidu.com");	
+			
+			$('#qrcode').qrcode({width: 200,height: 200,text: "http://www.baidu.com"});	
+
+			$('#qrcode1').qrcode({width: 200,height: 200,text: "http://www.baidu.com",background : '#f00',foreground:'#0f0'});	
+			
+		</script>
+	</body>
+</html>

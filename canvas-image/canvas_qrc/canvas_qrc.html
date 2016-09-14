@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style>
+	
+			#canvas,#canva_smark{
+				display: block;
+				/*margin: 0 auto;*/
+				/*border: 1px solid #ccc;*/
+			}
+
+		</style>
+	</head>
+	
+
+	<body>
+		<div>原图</div>
+		<img src='027.jpg' style='width:200px;' id="yuantu" />
+		<div>贴上二维码</div>
+		<canvas id="canvas">
+			您的浏览器不支持canvas
+		</canvas>
+		<canvas id="canva_smark" style="display: none;">
+			您的浏览器不支持canvas
+		</canvas>
+		<canvas id="canva_copy" width="200" height="200">
+			
+		</canvas>
+		<script src="stackblur.js"></script>
+		<script type="text/javascript">
+			document.getElementById("yuantu").onload = function(){
+				var imgWidth = this.width;
+				var imgHeight = this.height;
+				
+				canvas = document.getElementById("canvas");
+				context = canvas.getContext('2d');
+				
+				canvas.width = 200;
+				canvas.height = imgHeight + 50;
+				
+				
+				
+				
+				var image = new Image();
+				image.src = '027.jpg';
+				
+				image.onload = function(){					
+					context.drawImage(image,0,50,imgWidth,imgHeight);	
+					
+					canvasb = document.getElementById("canva_copy");
+					contextb = canvasb.getContext('2d');
+					var imageData = context.getImageData( 0 , 0 , canvas.width , canvas.height );
+					var pixelData = imageData.data;
+					contextb.putImageData( imageData , 0 , 0 , 0 , 0 , canvas.width , 100 ); 
+					
+					StackBlur.canvasRGB(canvas, 0, 0, canvas.width, canvas.height, 20);
+					
+				}
+
+				var canva_smark = document.getElementById("canva_smark");
+				var context_smark = canva_smark.getContext('2d');
+				canva_smark.width = 200;
+				canva_smark.height = 50;
+				
+				context_smark.fillStyle  = 'rgba(0,0,0,1)';
+				context_smark.fillRect(0,0,canva_smark.width,canva_smark.height);
+				
+				context_smark.font = 'bold 16px Arial';
+				context_smark.fillStyle = 'rgba(255,255,255,1)';
+				context_smark.textBaseline = 'top';
+				context_smark.fillText('长按识别二维码',60,15);
+				
+				var imageErweima = new Image();
+				imageErweima.src = '1.png';
+				imageErweima.onload = function(){
+					context_smark.drawImage(imageErweima,0,0,50,50);
+					context.drawImage(canva_smark,0,0);
+				}
+				
+				
+				
+			}
+
+
+	
+		</script>
+	</body>
+</html>

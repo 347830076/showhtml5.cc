@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+			.border {
+				position: relative;
+				width: 300px;
+				height: 200px;
+			}
+			
+			.border:after {
+				border: 1px solid #ff3300;
+				display: block;
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				/*-webkit-transform-origin: 0 0;
+				-webkit-transform: scale(1);
+				-moz-transform: scale(1);
+				-ms-transform: scale(1);
+				-o-transform: scale(1);
+				transform: scale(1);
+				pointer-events: none;*/
+			}
+			
+			@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+				.border:after {										
+					-webkit-transform: scale(0.5);
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="border"></div>
+	</body>
+
+</html>

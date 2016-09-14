@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>焦点轮播图</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				text-decoration: none;
+			}
+			
+			#carousel_container {
+				width: 100%;
+				height: 400px;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			#carousel_list {
+				/*width: 4200px;*/
+				height: 400px;
+				position: absolute;
+				z-index: 1;
+			}
+			#carousel_loding{
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-image: url(../image/loading2.gif);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 320px 320px;
+				background-color: #fff;
+				z-index: 99;
+			}
+			#carousel_list a {
+				float: left;
+				overflow: hidden;
+				position: relative;
+				height: 400px;
+			}
+			/*#carousel_list a img {width: 100%;}*/
+			
+			#carousel_buttons {
+				position: absolute;
+				height: 10px;
+				/*width: 100px;*/
+				z-index: 2;
+				bottom: 20px;
+				left: 50%;
+				-webkit-transform: translateX(-50%);
+				-moz-transform: translateX(-50%);
+				-ms-transform: translateX(-50%);
+				-o-transform: translateX(-50%);
+				transform: translateX(-50%);
+			}
+			
+			#carousel_buttons span {
+				cursor: pointer;
+				float: left;
+				border: 1px solid #fff;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background: #333;
+				margin-right: 5px;
+			}
+			
+			#carousel_buttons .on {
+				background: orangered;
+			}
+			
+			.arrow {
+				cursor: pointer;
+				display: none;
+				line-height: 39px;
+				text-align: center;
+				font-size: 36px;
+				font-weight: bold;
+				width: 40px;
+				height: 40px;
+				position: absolute;
+				z-index: 2;
+				top: 180px;
+				background-color: RGBA(0, 0, 0, .3);
+				color: #fff;
+			}
+			
+			.arrow:hover {
+				background-color: RGBA(0, 0, 0, .7);
+			}
+			
+			#carousel_container:hover .arrow {
+				display: block;
+			}
+			
+			#carousel_prev {
+				left: 20px;
+			}
+			
+			#carousel_next {
+				right: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<script src="js/jquery.1.10.2.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="js/fit_image.js" type="text/javascript" charset="utf-8"></script>-->
+		<div id="carousel_container">
+			<div id="carousel_loding"></div>
+			<div id="carousel_list">
+				<!--<a href=""> <img src="img/5.jpg" /></a>-->
+				<a href=""> <img src="img/1.jpg" /></a>
+				<a href=""> <img src="img/2.jpg" /></a>
+				<a href=""> <img src="img/3.jpg" /></a>
+				<a href=""> <img src="img/4.jpg" /></a>
+				<!--<a href=""> <img src="img/5.jpg" /></a>-->
+				<!--<a href=""> <img src="img/1.jpg" /></a>-->
+			</div>
+			<div id="carousel_buttons">
+				
+			</div>
+			<a href="javascript:;" id="carousel_prev" class="arrow">&lt;</a>
+			<a href="javascript:;" id="carousel_next" class="arrow">&gt;</a>
+		</div>
+
+		<script type="text/javascript">
+			function myccarousel() {
+
+				var containerWidth = len = '';
+				//获取容器宽度
+				containerWidth = document.getElementById("carousel_container").offsetWidth;
+
+				//获取图片个数
+				len = document.getElementById("carousel_list").getElementsByTagName('a').length;
+				//容器内第一和最后个添加一个第一和最后图片，用来做无缝切换
+				document.getElementById("carousel_list").insertAdjacentHTML('beforeEnd', document.getElementById("carousel_list").getElementsByTagName('a')[0].outerHTML);
+
+				document.getElementById("carousel_list").insertAdjacentHTML('afterBegin', document.getElementById("carousel_list").getElementsByTagName('a')[document.getElementById("carousel_list").getElementsByTagName('a').length - 2].outerHTML);
+				//显示容器排第一的图片
+				document.getElementById("carousel_list").style.left = -containerWidth + 'px';
+
+				//总图片容器宽度
+				document.getElementById("carousel_list").style.width = containerWidth * ($('#carousel_list a').length) + 'px';
+
+				//图片的容器
+				var as = document.getElementById("carousel_list").getElementsByTagName('a');
+				for(var i = 0; i < as.length; i++) {
+					as[i].style.width = containerWidth + 'px';
+				}
+
+				//图片在容器内居住显示            
+				var imgs = document.getElementById("carousel_list").getElementsByTagName('img');
+				for(var i = 0; i < imgs.length; i++) {
+					fitImage(imgs[i].parentNode, imgs[i])
+				}
+
+				//添加选择按钮
+				for(var i = 0; i < len; i++) {
+					if(i == 0) {
+						document.getElementById("carousel_buttons").insertAdjacentHTML('beforeEnd', '<span index=' + (i + 1) + ' class="on"></span>');
+					} else {
+						document.getElementById("carousel_buttons").insertAdjacentHTML('beforeEnd', '<span index=' + (i + 1) + '></span>');
+					}
+				}
+
+				var carousel_container = document.getElementById('carousel_container');
+				var carousel_list = document.getElementById('carousel_list');
+				var carousel_buttons = document.getElementById('carousel_buttons').getElementsByTagName('span');
+				var carousel_prev = document.getElementById('carousel_prev');
+				var carousel_next = document.getElementById('carousel_next');
+				var index = 1;
+				//          var len = 5;
+				var animated = false;
+				var interval = 3000;
+				var timer;
+
+				function animate(offset) {
+					if(offset == 0) {
+						return;
+					}
+					animated = true;
+					var time = 300;
+					var inteval = 10;
+					var speed = offset / (time / inteval);
+					var left = parseInt(carousel_list.style.left) + offset;
+					//				console.log(left)
+					var go = function() {
+						if((speed > 0 && parseInt(carousel_list.style.left) + speed < left) || (speed < 0 && parseInt(carousel_list.style.left) + speed > left)) {
+							carousel_list.style.left = parseInt(carousel_list.style.left) + speed + 'px';
+							setTimeout(go, inteval);
+						} else {
+							carousel_list.style.left = left + 'px';
+
+							if(left > -200) {
+								carousel_list.style.left = -containerWidth * len + 'px';
+							}
+							if(left < (-containerWidth * len)) {
+								carousel_list.style.left = '-' + containerWidth + 'px';
+							}
+							//                      console.log(carousel_list.style.left);
+							animated = false;
+						}
+					}
+					go();
+				}
+
+				function showButton() {
+					for(var i = 0; i < carousel_buttons.length; i++) {
+						if(carousel_buttons[i].className == 'on') {
+							carousel_buttons[i].className = '';
+							break;
+						}
+					}
+					carousel_buttons[index - 1].className = 'on';
+				}
+
+				function play() {
+					timer = setTimeout(function() {
+						carousel_next.onclick();
+						play();
+					}, interval);
+				}
+
+				function stop() {
+					clearTimeout(timer);
+				}
+
+				carousel_next.onclick = function() {
+					if(animated) {
+						return;
+					}
+					if(index == len) {
+						index = 1;
+					} else {
+						index += 1;
+					}
+					animate(-containerWidth);
+					showButton();
+				}
+				carousel_prev.onclick = function() {
+					if(animated) {
+						return;
+					}
+					if(index == 1) {
+						index = len;
+					} else {
+						index -= 1;
+					}
+					animate(containerWidth);
+					showButton();
+				}
+
+				for(var i = 0; i < carousel_buttons.length; i++) {
+					carousel_buttons[i].onclick = function() {
+						if(animated) {
+							return;
+						}
+						if(this.className == 'on') {
+							return;
+						}
+						var myIndex = parseInt(this.getAttribute('index'));
+						var offset = -containerWidth * (myIndex - index);
+
+						animate(offset);
+						index = myIndex;
+						showButton();
+					}
+				}
+
+				carousel_container.onmouseover = stop;
+				carousel_container.onmouseout = play;
+
+				play();
+
+				window.onresize = function() {
+					if(animated) {
+						return;
+					}
+					containerWidth = document.getElementById('carousel_container').offsetWidth;
+					//图片的容器
+					var as = document.getElementById("carousel_list").getElementsByTagName('a');
+					for(var i = 0; i < as.length; i++) {
+						as[i].style.width = containerWidth + 'px';
+					}
+					//总图片容器宽度
+					document.getElementById("carousel_list").style.width = containerWidth * ($('#carousel_list a').length) + 'px';
+					//显示容器排第一的图片
+					document.getElementById("carousel_list").style.left = -containerWidth + 'px';
+					//图片在容器内居住显示            
+					var imgs = document.getElementById("carousel_list").getElementsByTagName('img');
+					for(var i = 0; i < imgs.length; i++) {
+						fitImage(imgs[i].parentNode, imgs[i])
+					}
+
+				}
+				//图片在容器内居中显示
+				function fitImage(objDiv, objImg, wholeImage) {			
+					var divWidth = objDiv.offsetWidth;      //容器的宽
+					var divHeight = objDiv.offsetHeight;    //容器的高			
+					var imgWidth = objImg.width;    //图片的宽
+					var imgHeight = objImg.height; //图片的高
+					var imgScale = '';   //图片缩放倍数
+
+					var divRatio = (divWidth / divHeight);  //容器宽高比
+					var imgRatio = (imgWidth / imgHeight);  //图片宽高比
+					
+					if (!wholeImage) {
+						if(divRatio >= imgRatio){
+							imgScale = divWidth / imgWidth;
+						}else{
+							imgScale = divHeight / imgHeight;
+						}
+					}
+					else {
+						if(divRatio >= imgRatio){
+							imgScale = divHeight / imgHeight;
+						}else{
+							imgScale = divWidth / imgWidth;
+						}
+					}
+					
+					objImg.style.width = (imgWidth * imgScale) + 'px';
+					objImg.style.height = (imgHeight * imgScale) + 'px';
+
+					objImg.style.marginLeft = (divWidth - objImg.width) / 2 + 'px';
+					objImg.style.marginTop = (divHeight - objImg.height) / 2 + 'px';	
+					document.getElementById("carousel_loding").style.display = 'none';
+				}
+			}
+			window.onload = function() {
+				myccarousel();
+			}
+
+			//      $(function () {
+			//      	//获取容器宽度
+			//  		var containerWidth = $('#carousel_container').width();
+			//  		//获取图片个数
+			//          var len = $('#carousel_list a').length;
+			//          //容器内第一和最后个添加一个第一和最后图片，用来做无缝切换
+			//          $('#carousel_list').append($('#carousel_list a').eq(0).clone(true));
+			//          $('#carousel_list').prepend($('#carousel_list a').eq($('#carousel_list a').length -2).clone(true));
+			//          //显示容器排第一的图片
+			//          $('#carousel_list').css('left',-containerWidth+'px');
+			//          //总图片容器宽度
+			//          $('#carousel_list').css('width',containerWidth * ($('#carousel_list a').length) + 'px');	
+			//          
+			//			//图片的容器
+			//          $('#carousel_list a').css('width',containerWidth + 'px');
+			//          //图片在容器内居住显示            
+			//          $('#carousel_list').find('a img').each(function(){
+			//          	fitImage(this.parentNode,this)
+			//          });	          
+			//          
+			//          //添加选择按钮
+			//          for(var i = 0; i < len; i++){
+			//	           	if(i == 0){
+			//	           		$('#carousel_buttons').append('<span index='+ (i+1) +' class="on"></span>');
+			//	           	}else{
+			//	           		$('#carousel_buttons').append('<span index='+ (i+1) +'></span>')
+			//	           	}
+			//          }
+			//          
+			//          
+			//          var carousel_container = $('#carousel_container');
+			//          var carousel_list = $('#carousel_list');
+			//          var carousel_buttons = $('#carousel_buttons span');
+			//          var carousel_prev = $('#carousel_prev');
+			//          var carousel_next = $('#carousel_next');
+			//          if(len <= 1){           	
+			//	            carousel_prev.css('display','none');
+			//	            carousel_next.css('display','none');
+			//          }
+			//          
+			//          var index = 1;
+			////          var len = 5;
+			//          var interval = 3000;
+			//          var timer;
+			//
+			//
+			//          function animate (offset) {
+			//              var left = parseInt(carousel_list.css('left')) + offset;
+			//              if (offset>0) {
+			//                  offset = '+=' + offset;
+			//              }
+			//              else {
+			//                  offset = '-=' + Math.abs(offset);
+			//              }
+			////              console.log(carousel_list.css('left') + '::' + offset)
+			//              carousel_list.animate({'left': offset}, 300, function () {
+			//                  if(left > -200){
+			//                      carousel_list.css('left', -containerWidth * len);
+			//                  }
+			//                  if(left < (-containerWidth * len)) {
+			//                      carousel_list.css('left', -containerWidth);
+			//                  }
+			//              });
+			//          }
+			//
+			//          function showButton() {
+			//              carousel_buttons.eq(index-1).addClass('on').siblings().removeClass('on');
+			//          }
+			//
+			//          function play() {
+			//              timer = setTimeout(function () {
+			//                  carousel_next.trigger('click');
+			//                  play();
+			//              }, interval);
+			//          }
+			//          function stop() {
+			//              clearTimeout(timer);
+			//          }
+			//
+			//          carousel_next.bind('click', function () {
+			//              if (carousel_list.is(':animated')) {
+			//                  return;
+			//              }
+			//              if (index == len) {
+			//                  index = 1;
+			//              }
+			//              else {
+			//                  index += 1;
+			//              }
+			//              animate(-containerWidth);
+			//              showButton();
+			//          });
+			//
+			//          carousel_prev.bind('click', function () {
+			//              if (carousel_list.is(':animated')) {
+			//                  return;
+			//              }
+			//              if (index == 1) {
+			//                  index = len;
+			//              }
+			//              else {
+			//                  index -= 1;
+			//              }
+			//              animate(containerWidth);
+			//              showButton();
+			//          });
+			//
+			//          carousel_buttons.each(function () {
+			//               $(this).bind('click', function () {
+			//                   if (carousel_list.is(':animated') || $(this).attr('class')=='on') {
+			//                       return;
+			//                   }
+			//                   var myIndex = parseInt($(this).attr('index'));
+			//                   var offset = -containerWidth * (myIndex - index);
+			//
+			//                   animate(offset);
+			//                   index = myIndex;
+			//                   showButton();
+			//               })
+			//          });
+			//
+			//          carousel_container.hover(stop, play);
+			//
+			//          play();
+			//          $(window).resize(function() {
+			//          	if (carousel_list.is(':animated')) {
+			//                  return;
+			//             }
+			//				var containerWidth = $('#container').width();
+			//	            $('#carousel_list a').css('width',containerWidth + 'px');
+			//	            
+			//	            //总图片容器宽度
+			//              $('#carousel_list').css('width',containerWidth * ($('#carousel_list a').length) + 'px');	
+			//				//显示容器排第一的图片
+			//           	$('#carousel_list').css('left',-containerWidth+'px');
+			//	            //图片在容器内居住显示            
+			//	            $('#carousel_list').find('a img').each(function(){
+			//	            	fitImage(this.parentNode,this)
+			//	            });	
+			//			});
+//						//图片在容器内居中显示
+//						function fitImage(objDiv, objImg, wholeImage) {			
+//							var divWidth = objDiv.offsetWidth;      //容器的宽
+//							var divHeight = objDiv.offsetHeight;    //容器的高			
+//							var imgWidth = objImg.width;    //图片的宽
+//							var imgHeight = objImg.height; //图片的高
+//							var imgScale = '';   //图片缩放倍数
+//		
+//							var divRatio = (divWidth / divHeight);  //容器宽高比
+//							var imgRatio = (imgWidth / imgHeight);  //图片宽高比
+//							
+//							if (!wholeImage) {
+//								if(divRatio >= imgRatio){
+//									imgScale = divWidth / imgWidth;
+//								}else{
+//									imgScale = divHeight / imgHeight;
+//								}
+//							}
+//							else {
+//								if(divRatio >= imgRatio){
+//									imgScale = divHeight / imgHeight;
+//								}else{
+//									imgScale = divWidth / imgWidth;
+//								}
+//							}
+//							
+//							objImg.style.width = (imgWidth * imgScale) + 'px';
+//							objImg.style.height = (imgHeight * imgScale) + 'px';
+//		
+//							objImg.style.marginLeft = (divWidth - objImg.width) / 2 + 'px';
+//							objImg.style.marginTop = (divHeight - objImg.height) / 2 + 'px';	
+//						}
+			//      });
+			//
+		</script>
+
+	</body>
+
+</html>

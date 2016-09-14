@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+				<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0, width=device-width" />
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}			
+			html,
+			body {
+				height: 100%;
+			}
+			
+			.wrap {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+			
+			.box1 {
+				width: 125%;
+				height: 100%;
+				margin: 0;
+				overflow-y: scroll;
+				overflow-x: hidden;
+				background-color: #eee;
+			}
+			
+			.box2 {
+				width: 80%;
+				padding-right: 5%;
+			}
+		</style>
+	</head>
+	<div class="wrap">
+		<div class="box1">
+			<div class="box2">
+				<p>box1和box2实现在一定高度的节点(box1)里展示大于该高度的节点(box2)</p>
+				<p>box2里面滚动了多少可以通过box1.scrollTop来获取</p>
+				<p style="margin-bottom:850px;">wrap作为最外层的节点，作用是用来隐藏滚动条的</p>
+				<p id="end">The-end</p>
+			</div>
+		</div>
+	</div>
+
+	</body>
+
+</html>

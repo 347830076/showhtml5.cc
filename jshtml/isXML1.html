@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			var isXML = function(document){
+//				return (!!document.xmlVersion) || (!!document.xml) || (toString.call(document) == '[object XMLDocument]') || (document.nodeType == 9 && document.documentElement.nodeName != 'HTML');
+//			}
+//			精简版 
+//			var isXML = window.HTMLDocument ? function(doc){
+//				return !(doc instanceof HTMLDocument);
+//			} : function(doc){
+//				return 'selectNodes' in doc;
+//			}
+
+//			最严谨的函数法
+			var isXML = function(doc){
+				return doc.createElement('p').nodeName !== doc.createElement("P").nodeName;
+			}
+			console.log(isXML(document));
+		</script>
+	</body>
+</html>

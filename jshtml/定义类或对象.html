@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			console.log('--------------原始的方式------------------------')
+			var oCar = new Object;
+			oCar.color = "blue";
+			oCar.doors = 4;
+			oCar.mpg = 25;
+			oCar.showColor = function() {
+			  console.log(this.color);
+			};
+			oCar.showColor();
+			console.log('-----------------end原始的方式------------------------')
+			console.log('-----------------工厂函数------------------------')			
+			function createCar() {
+			  var oTempCar = new Object;
+			  oTempCar.color = "blue";
+			  oTempCar.doors = 4;
+			  oTempCar.mpg = 25;
+			  oTempCar.showColor = function() {
+			     console.log(this.color);
+			  };
+			  return oTempCar;
+			}			
+			var oCar1 = createCar();
+			oCar1.showColor();
+			var oCar2 = createCar();
+			oCar2.color = 'red';
+			oCar2.showColor();
+			console.log('-----------------end工厂函数------------------------')
+			
+			
+			console.log('-----------------工厂函数------------------------')
+			
+			function showColor() {
+			  console.log(this.color);
+			}
+			
+			function createCar(sColor,iDoors,iMpg) {
+			  var oTempCar = new Object;
+			  oTempCar.color = sColor;
+			  oTempCar.doors = iDoors;
+			  oTempCar.mpg = iMpg;
+			  oTempCar.showColor = showColor;
+			  return oTempCar;
+			}
+			
+			var oCar1 = createCar("red",4,23);
+			var oCar2 = createCar("blue",3,25);
+			
+			oCar1.showColor();		//输出 "red"
+			oCar2.showColor();		//输出 "blue"
+		</script>
+	</body>
+</html>

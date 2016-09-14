@@ -1,0 +1,24 @@
+html,body{height: 100%;}
+/**base**/
+body{ background:#f8f8f8; margin:0;}
+textarea,input{ font-size:24px;-webkit-appearance: none; outline:none; }
+
+#header{
+	background:#d626dc;
+	background: -webkit-linear-gradient(left,#d626dc,#bb1fd1) ;
+ 	background: -moz-linear-gradient(left,#d626dc,#bb1fd1);
+    text-align: center; color: #fff;
+    width: 100%; position: relative;
+}
+#header .back-icon{
+    display: inline-block; width: 44px; height: 44px;
+    background: url(../images/arr-l.png) no-repeat center center; 
+    -webkit-background-size: 20px 20px;
+    background-size: 20px 20px;
+    position: absolute; left: 0; top: 0;
+}
+#header h1{
+    font-size: 20px;
+    font-weight: 300;
+    height: 44px; line-height: 44px; margin: 0em; color: #fff;
+}

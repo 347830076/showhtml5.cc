@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function urlArgs() {
+			    var args = {};                             
+			    var query = location.search.substring(1);  // 过滤掉'?'
+			    var pairs = query.split("&");              
+			    for(var i = 0; i < pairs.length; i++) {    
+			        var pos = pairs[i].indexOf('=');       
+			        if (pos == -1) continue;               
+			        var name = pairs[i].substring(0,pos);  
+			        var value = pairs[i].substring(pos+1);
+			        value = decodeURIComponent(value);     
+			        args[name] = value;                    
+			    }
+			    return args;                              
+			}
+			console.log(JSON.stringify(urlArgs()))
+			//"webkit": Safari或Chrome版本号
+			//"opera": 版本号就是软件的版本号
+			//"mozilla"： 版本号是Gecko
+			//"msie" 版本号就是软件版本
+			var browser = (function() {
+			     var s = navigator.userAgent.toLowerCase();
+			     var match = /(webkit)[ \/]([\w.]+)/.exec(s) ||
+			     /(opera)(?:.*version)?[ \/]([\w.]+)/.exec(s) ||
+			     /(msie) ([\w.]+)/.exec(s) ||
+			     !/compatible/.test(s) && /(mozilla)(?:.*? rv:([\w.]+))?/.exec(s) ||
+			     [];
+			     return { name: match[1] || "", version: match[2] || "0" };
+			}());
+			console.log(JSON.stringify(browser))
+		</script>
+	</body>
+</html>

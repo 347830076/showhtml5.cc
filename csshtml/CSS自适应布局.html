@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			.wrap{
+				background-color: #d66464;
+			}
+			.clearfix:after{
+				content: '';
+				clear: both;
+				display: block;
+			}
+			.left{
+				float: left;
+				width: 100px;
+				background-color: #00f;
+			}
+			.right{
+				float: right;
+				width: 150px;
+				background-color: #0f0;
+			}
+			.center{
+				background-color: #fff;
+				margin-left: 110px;
+				margin-right: 160px;
+				/*height: 150px;*/
+			}
+			.wrap1{
+				background-color: #fbd570;
+				margin-left: 100px;
+				margin-right: 150px;
+				margin-top: 10px;
+			}
+			.left1{
+				float: left;
+				width: 100px;
+				background-color: #00f;
+				height: 180px;
+				/*margin-left: -moz-calc(-100%-100px);
+				margin-left: -webkit-calc(-100%-100px);
+				margin-left: calc(-100%-100px);*/
+				margin-left: -100px;
+			}
+			.right1{
+				float: right;
+				width: 150px;
+				background: #0f0;
+				height: 200px;
+				margin-right: -150px;
+			}
+			.center1{
+				background-color: #b373da;
+				height: 150px;
+				float: left;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap clearfix">
+			<div class="left">left 宽度固定，高度可固定也可以由内容撑开</div>
+			<div class="right">right 宽度固定，高度可固定也可以由内容撑开</div>
+			<div class="center">center 可以自适应浏览器宽度，高度可固定也可以由内容撑开</div>
+		</div>
+		
+		<div class="wrap1 clearfix">
+			<div class="left1">left1 宽度固定，高度可固定也可以由内容撑开</div>
+			<div class="center1">center1 可以自适应浏览器宽度，高度可固定也可以由内容撑开</div>			
+			<div class="right1">right1 宽度固定，高度可固定也可以由内容撑开</div>			
+		</div>
+		
+	</body>
+</html>

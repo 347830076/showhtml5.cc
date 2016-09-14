@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			html,body{
+				/*background: yellow;*/
+				width: 100%;
+				height: 100%;
+			}
+			.parent {
+				position: relative;
+				width: 200px;
+				height: 200px;
+				top: 50%;
+				left: 50%;
+				background-color: black;
+				-webkit-transform: translateX(-50%) translateY(-50%);
+				-moz-transform: translateX(-50%) translateY(-50%);
+				-o-transform: translateX(-50%) translateY(-50%);
+				-ms-transform: translateX(-50%) translateY(-50%);
+				transform: translateX(-50%) translateY(-50%);
+			}
+			.child {
+				position: relative;
+				height: 100px;
+				width: 100px;
+				top: 50%;
+				left: 50%;
+				background-color: red;
+				-webkit-transform: translateX(-50%) translateY(-50%);
+				-moz-transform: translateX(-50%) translateY(-50%);
+				-o-transform: translateX(-50%) translateY(-50%);
+				-ms-transform: translateX(-50%) translateY(-50%);
+				transform: translateX(-50%) translateY(-50%);
+			}
+			.child1 {
+				position: absolute;
+				height: 50px;
+				width: 50px;
+				top: 50%;
+				left: 50%;
+				background-color: yellow;
+				-webkit-transform: translateX(-50%) translateY(-50%);
+				-moz-transform: translateX(-50%) translateY(-50%);
+				-o-transform: translateX(-50%) translateY(-50%);
+				-ms-transform: translateX(-50%) translateY(-50%);
+				transform: translateX(-50%) translateY(-50%);
+			}
+			 .five{
+	             display:table-cell;
+	             vertical-align:middle;
+	             text-align:center;
+	             width:120px;
+	             height:120px;
+	             background:purple;
+			 }
+			.six{
+	             width:100px;
+	             height:100px;
+	             line-height:100px;
+	             text-align:center;
+	             background:gray;
+ 			}
+		</style>
+	</head>
+
+	<body>
+		<div class="parent">
+			<div class="child">
+				<span class="child1"></span>
+			</div>
+		</div>
+		<div class="five">内容</div>
+		<div class="six">内容</div>
+	</body>
+
+</html>
