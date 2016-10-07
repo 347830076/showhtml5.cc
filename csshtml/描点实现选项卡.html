@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset='utf-8' />
+	<style>
+	*{
+	margin:0;
+	padding:0;}
+	   .con,.con a{
+	     width:200px;height:200px;
+		 background:blue;
+		 line-height:200px;
+		 text-align:center;
+		 color:red;
+		 font-size:30px;
+	   }
+	   ul{
+	   width:  120px;
+	   margin: 10px auto;
+	   list-style:none;
+	   }
+	   ul li{
+	     float:left;
+	     width:20px;
+		 height:20px;
+		 margin-right:10px;
+		 background:#999;
+		 text-align:center;
+	   }
+	</style>
+  </head>
+  <body>
+     <div style="width:200px;height:200px;margin:auto;overflow:hidden">
+	    <div class="con" id="id1">1</div>
+		<div class="con" id="id2">2</div>
+		<div class="con" id="id3">3</div>
+		<div class="con" id="id4">4</div>
+	 </div>
+	  <ul>
+	     <li ><a href="#id1">1</a></li>		 
+	     <li ><a href="#id2">2</a></li>		 
+	     <li ><a href="#id3">3</a></li>		 
+	     <li><a href="#id4">4</a></li>
+	  </ul>
+	  <script type="text/javascript">
+//	  	for(var i=1;i<=3;i++){
+//				setTimeout(function(){
+//						console.log(i); 
+//				},0); 
+//			};
+//			for(var i=1;i<=3;i++){
+//			  setTimeout((function(a){ 
+//			    console.log(a);  
+//			  })(i),0); 
+//			}
+			var a = [1,2];
+			var b = [3,4];
+			var c = {};
+			c.a = a;
+			c.b = b;
+			console.log(JSON.stringify(c))
+	  </script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function ClassA(sColor) {
+			    this.color = sColor;
+			    this.sayColor = function () {
+			        console.log(this.color);
+			    };
+			}
+			
+//			function ClassB(sColor, sName) {
+//			    this.newMethod = ClassA;
+//			    this.newMethod(sColor);
+//			    delete this.newMethod;
+//			
+//			    this.name = sName;
+//			    this.sayName = function () {
+//			        console.log(this.name);
+//			    };
+//			}
+			
+			function ClassB(sColor, sName) {
+			    //this.newMethod = ClassA;
+			    //this.newMethod(color);
+			    //delete this.newMethod;
+//			    ClassA.call(this, sColor);
+//				ClassA.apply(this, new Array(sColor));
+				ClassA.apply(this, arguments);
+			
+			    this.name = sName;
+			    this.sayName = function () {
+			        console.log(this.name);
+			    };
+			}
+
+			var objA = new ClassA("blue");
+			var objB = new ClassB("red", "John");
+			objA.sayColor();	//输出 "blue"
+			objB.sayColor();	//输出 "red"
+			objB.sayName();		//输出 "John" 
+
+
+			function sayColor(sPrefix,sSuffix) {
+			    console.log(sPrefix + this.color + sSuffix);
+			};
+			
+			var obj = new Object();
+			obj.color = "blue";
+			
+			sayColor.call(obj, "The color is ", "a very nice color indeed.");
+			
+			var tiemer = null;
+			var time = 100 , num = 0;
+			document.write('FlipFlop');
+			tiemer = setInterval(function(){
+				if(time > 0){
+					time--;
+					num++;
+					if(num % 3 == 0 && num % 5 == 0){
+						document.write('35 : ' + num);
+						document.write('<br>');
+					}else if(num % 5 == 0){
+						document.write('5 : ' + num);
+						document.write('<br>');
+					}else if(num % 3 == 0){
+						document.write('3 : ' + num);
+						document.write('<br>');
+					}
+					console.log(num);
+				}else{
+					clearInterval(tiemer);
+				}
+			},1000);
+			
+		</script>
+	</body>
+</html>

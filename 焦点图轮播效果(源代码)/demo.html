@@ -221,6 +221,9 @@
 				}
 
 				function play() {
+					if(timer){
+						clearTimeout(timer);
+					}
 					timer = setTimeout(function() {
 						carousel_next.onclick();
 						play();

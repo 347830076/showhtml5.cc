@@ -22,8 +22,80 @@
 		<div id='left'>left</div>
 		<div id='toggle'>隐藏或显示</div>
 		<div id='toggle_left'>left为50的地方并且完全清晰显示出来（透明度为1）</div>
+		<div id="time"></div>
 		<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>		
 		<script type="text/javascript">
+		
+			showTime();
+			function showTime(){
+			    isLeapYear(year);
+			    if(isLeapYear(year)){
+			   	    var show_month = ['31','29','31','30','31','30','31','31','30','31','30','31'];
+			    }else{
+			   	   var show_month = ['31','28','31','30','31','30','31','31','30','31','30','31'];
+			    }
+			   
+			    var show_day=new Array('星期一','星期二','星期三','星期四','星期五','星期六','星期日');
+			    var time=new Date();
+			    var year=time.getFullYear();
+			   
+			    var month=time.getMonth();
+			    var date=time.getDate();
+			    var day=time.getDay();
+			    var hour=time.getHours();
+			    var minutes=time.getMinutes();
+			    var second=time.getSeconds();
+			    month<10?month='0'+month:month;
+			    month=parseInt(month)+1;
+			   
+			    var monthFlag = true;
+				var monthNumber = month;
+				var dataNumber = '';
+				
+			    for(var i=0;i<7;i++){ 
+			   	  //星期
+			      var number = day-1+ i;
+			      if(number>=7){
+			         number= number-7;
+			      }
+			      //日期
+			      dataNumber = date + i;
+
+			      if(dataNumber > show_month[month-1]){
+			      	dataNumber = dataNumber - show_month[month-1];
+			      	if(monthFlag){
+			      		monthNumber = month + 1;
+			      		if(month > 12){
+			      			monthNumber = month - 12;
+			      		}
+			      		monthFlag = false;
+			      	}
+			      }
+			      if(i==0){
+			         $("#time").append('<span class="date_container_border_right" data-time="">今天<br />'+month+'"月"'+dataNumber+'"日"</span>');
+			      } else {
+			         $("#time").append('<span class="date_container_border_right" data-time="">'+show_day[number]+'<br />'+monthNumber+'"月"'+dataNumber+'"日"</span>');
+			      }
+			   }
+			}
+		
+			function isLeapYear(year) {
+			    var cond1 = year % 4 == 0;  //条件1：年份必须要能被4整除
+			    var cond2 = year % 100 != 0;  //条件2：年份不能是整百数
+			    var cond3 = year % 400 ==0;  //条件3：年份是400的倍数
+			    //当条件1和条件2同时成立时，就肯定是闰年，所以条件1和条件2之间为“与”的关系。
+			    //如果条件1和条件2不能同时成立，但如果条件3能成立，则仍然是闰年。所以条件3与前2项为“或”的关系。
+			    //所以得出判断闰年的表达式：
+			    var cond = cond1 && cond2 || cond3;
+			    if(cond) {
+//			        alert(year + "是闰年");
+			        return true;
+			    } else {
+//			        alert(year + "不是闰年");
+			        return false;
+			    }
+			}
+				
 			$("#go").click(function () {
 			    $("#block").animate({
 			        width: "90%",

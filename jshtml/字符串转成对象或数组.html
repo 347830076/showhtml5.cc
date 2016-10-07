@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			//把文本转化为对象
+			var test = '{ colkey: "col", colsinfo: "NameList" }'
+			var obj2 = eval("(" + test + ")");
+			console.log(obj2.colsinfo);
+			//把文本转化为数组 
+			var test = '["colkey", "col", "colsinfo","NameList" ]'
+			var obj2 = eval("(" + test + ")");
+			console.log(obj2.length);
+		</script>
+	</body>
+
+</html>
