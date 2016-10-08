@@ -1,0 +1,502 @@
+/*维修故障选择*/
+
+.maintian_title_con {
+	min-width: 1100px;
+	background-color: #fbce00;
+}
+
+.maintian_title {
+	background-color: #fbce00;
+	padding: 60px 0;
+}
+
+.maintian_title>span {
+	float: left;
+	width: 20%;
+	*width: 19.5%;
+	text-align: center;
+	font-size: 20px;
+	border-right: 1px solid #e0b500;
+	color: #fff;
+	background-size: 42px 42px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	padding-top: 50px;
+}
+
+.jgtm {
+	background-image: url(../img/jgtm_w.png);
+}
+
+.mfsm {
+	background-image: url(../img/mfsm_w.png);
+}
+
+.zlbz {
+	background-image: url(../img/zlbz_w.png);
+}
+
+.gxwx {
+	background-image: url(../img/gxwx_w.png);
+}
+
+.shbz {
+	background-image: url(../img/shbz_w.png);
+}
+
+.shbz_last_child {
+	border-right: none !important;
+}
+
+.select_container {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.select_left {
+	width: 850;
+	margin-right: 250px;
+}
+
+.select_right {
+	position: absolute;
+	right: 0;
+	width: 220px;
+	height: 350px;
+	float: right;
+	border: 1px solid #f0f0f0;
+	margin-top: 96px;
+}
+
+.select_title {
+	padding: 50px 20px 10px;
+}
+
+.select_title>label,
+.select_title>span {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 20px;
+	color: #595757;
+}
+
+.select_title>label {
+	width: 36px;
+	height: 36px;
+	line-height: 36px;
+	border-radius: 100%;
+	text-align: center;
+	color: #fff;
+	background-color: #fbce00;
+}
+
+.select_block_con {
+	border-top: 1px solid #f0f0f0;
+	border-left: 1px solid #f0f0f0;
+	border-right: 1px solid #f0f0f0;
+	margin-left: 20px;
+}
+
+.select_block {
+	position: relative;
+	width: 100%;
+	height: auto;
+	/*line-height: 50px;*/
+	/*overflow: hidden;*/
+}
+
+.select_block>label {
+	float: left;
+	display: inline-block;
+	vertical-align: middle;
+	width: 120px;
+	height: 50px;
+	line-height: 50px;
+	*height: 52px;
+	*line-height: 54px;
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	background-color: #fbce00;
+}
+
+.select_block_bottom_border {
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.select_block_r {
+	position: relative;
+	margin-left: 120px;
+	/*width: 730px;*/
+	*width: 708px;
+	height: 50px;
+	*height: 52px;
+	overflow: hidden;
+	/*background-color: #1F6377;*/
+}
+
+.select_block_r>li {
+	float: left;
+	height: 50px;
+}
+
+.select_block_r>li>a {
+	float: left;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 16px;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 28px;
+	color: #929292;
+	/*-webkit-transition-duration: 0.2s;
+				-moz-transition-duration: 0.2s;
+				-ms-transition-duration: 0.2s;
+				-o-transition-duration: 0.2s;
+				transition-duration: 0.2s;
+   				-webkit-transition-property: border-color,color;
+   				-moz-transition-property: border-color,color;
+   				-ms-transition-property: border-color,color;
+   				-o-transition-property: border-color,color;
+   				transition-property: border-color,color;*/
+}
+
+.select_block_r>li>a:hover {
+	color: #fbce00;
+	border-bottom: 2px solid #fbce00 !important;
+}
+
+.select_block_r_active {
+	color: #fbce00 !important;
+	border-bottom: 2px solid #fbce00 !important;
+}
+
+.select_block_r_active>.a_more {
+	border-color: transparent transparent transparent #fbce00;
+}
+
+.select_block_r_disable {
+	background-color: #ccc;
+}
+
+.select_block_r>li>a.select_block_r_disable:hover {
+	cursor: no-drop;
+	color: #929292 !important;
+	border: none !important;
+}
+
+.a_more {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 3px;
+	font-size: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 4px 8px;
+	border-color: transparent transparent transparent #929292;
+}
+
+.select_block_r>li>a:hover>i.a_more {
+	border-color: transparent transparent transparent #fbce00;
+}
+
+.select_block_r_more {
+	position: absolute;
+	left: 0;
+	top: 51px;
+	width: 100%;
+	height: auto;
+	background-color: #fff;
+	z-index: 999;
+	display: none;
+}
+
+.select_right_title {
+	font-size: 20px;
+	font-weight: 700;
+	padding: 20px;
+	color: #2e3c45;
+	text-align: center;
+}
+
+.select_right_border_bottom {
+	border-bottom: 1px solid #f3f3f3;
+}
+
+.select_right_row {
+	position: relative;
+	padding: 15px;
+}
+
+.select_right_row>span {
+	color: #888;
+}
+
+.select_right_row_price {
+	position: absolute;
+	right: 15px;
+	color: #fbce00 !important;
+}
+
+.antipate_price {
+	position: absolute;
+	left: 0;
+	bottom: 65px;
+	width: 100%;
+	font-size: 15px;
+	text-align: center;
+}
+
+.antipate_price>span {
+	color: #dab000;
+}
+
+.select_right_btn {
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+	width: 180px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 7px;
+	font-size: 18px;
+	color: #fff;
+	background-color: #fbce00;
+}
+
+
+/*确认维修信息*/
+
+.maintain_container {
+	background-color: #fff;
+	margin: 80px auto;
+	text-align: center;
+}
+
+.maintain_title {
+	font-size: 30px;
+	/*margin-bottom: 20px;*/
+	/*padding: 20px;*/
+	color: #2e3c45;
+	text-align: center;
+}
+
+.maintain_title>label,
+.maintain_title>span {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.maintain_title>span {
+	padding: 0 20px;
+}
+
+.maintain_title>label {
+	display: inline-block;
+	width: 100px;
+	height: 1px;
+	background-color: #f1f1f1;
+}
+
+.maintain_block {
+	margin: 20px 0;
+	padding-left: 20px;
+}
+
+.maintain_block_left {
+	margin: 40px 0 10px;
+}
+
+.maintain_block_left>span {
+	font-size: 16px;
+	padding: 15px 0;
+	color: #595757;
+}
+
+.maintain_block_right {
+	/*margin-left: 100px;*/
+}
+
+.right_span {
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid #ececec;
+	background-color: #f7f7f7;
+	width: 154px;
+	height: 60px;
+	line-height: 60px;
+	font-size: 16px;
+	text-align: center;
+}
+
+.right_span_active,
+.right_span:active {
+	border: none;
+	color: #fff;
+	background-color: #fbce00;
+}
+
+.block_input_container {
+	margin-bottom: 10px;
+}
+
+.block_input_container>span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 70px;
+	height: 40px;
+	line-height: 40px;
+	text-align: right;
+	margin-right: 15px;
+	color: #888888;
+}
+
+.block_input_container>input {
+	display: inline-block;
+	vertical-align: middle;
+	width: 380px;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	border: 1px solid #ccc;
+	color: #d5d5d5;
+}
+
+.block_right_time_c {
+	border: 1px solid #dfe0e0;
+	width: 702px;
+	*width: 706px;
+	margin: auto;
+	background-color: #f7f7f7;
+}
+
+.date_container {
+	height: 50px;
+	*height: 43px;
+	border-bottom: 1px solid #dfe0e0;
+}
+
+.date_container>span {
+	float: left;
+	width: 100px;
+	text-align: center;
+	padding: 5px 0;
+}
+
+.date_container>span:hover,
+.time_container>span:hover {
+	color: #fff;
+	background-color: #fbce00;
+}
+
+.date_container_border_right {
+	border-right: 1px solid #dfe0e0;
+}
+
+.date_container_active {
+	color: #fff;
+	background-color: #fbce00;
+}
+
+.time_container {
+	width: 100%;
+}
+
+.time_container>span {
+	float: left;
+	width: 25%;
+	*width: 24.85%;
+	padding: 15px 0;
+	text-align: center;
+}
+
+.block_right_info_con {
+	margin-bottom: 10px;
+}
+
+.block_right_info {
+	display: inline-block;
+	border: 1px solid #dfe0e0;
+}
+
+.block_right_info>span {
+	padding: 10px 25px;
+}
+
+.block_right_info_project {
+	color: #fbce00;
+}
+
+.wx,
+.zfb {
+	display: inline-block;
+	vertical-align: middle;
+	width: 27px;
+	height: 27px;
+	background-image: url(../img/wx.png);
+	margin-right: 3px;
+}
+
+.zfb {
+	background-image: url(../img/zfb.png);
+}
+
+.block_right_price {
+	font-size: 20px;
+	color: #dab000;
+	margin-top: 40px;
+}
+
+.block_right_price_tip {
+	font-size: 14px;
+	color: #b6b6b6;
+}
+
+.submit_indent {
+	width: 180px;
+	line-height: 50px;
+	text-align: center;
+	border-radius: 7px;
+	font-size: 18px;
+	background-color: #fbce00;
+	margin: 20px auto 30px;
+}
+
+
+/*维修单提交成功*/
+
+.maintain_success_c {
+	background-color: #fff;
+	margin: 100px auto;
+	text-align: center;
+}
+
+.maintain_success_icon {
+	width: 126px;
+	height: 126px;
+	background-image: url(../img/success.png);
+	margin: auto;
+}
+
+.maintain_success_text {
+	font-size: 30px;
+	font-weight: 700;
+	margin: 20px 0;
+	color: #2e3c45;
+}
+
+.maintain_success_tip {
+	font-size: 14px;
+	color: #888888;
+}
+
+.maintain_success_btn>a {
+	margin: 30px auto 20px;
+	width: 180px;
+	line-height: 45px;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 7px;
+	background-color: #fbce00;
+}

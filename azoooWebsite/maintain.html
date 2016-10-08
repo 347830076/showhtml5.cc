@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>故障维修</title>
+		<link rel="stylesheet" type="text/css" href="css/api.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/city.css" />
+		<link rel="stylesheet" type="text/css" href="css/maintain.css"/>
+	</head>
+
+	<body>
+		<!--头部 开始-->
+		<div class="header">
+			<ul class="nav pageSize">
+				<li class="logo"><a href="index.html"></a></li>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="maintain.html" class="active">故障维修</a></li>
+				<li><a href="internal_storage_up.html">内存升级</a></li>
+				<li><a href="">手机换屏</a></li>
+				<li><a href="">企业服务</a></li>
+				<li class="about_nav_container">
+					<a href="about.html#0">关于加速度</a>
+					<ul class="about_nav">
+						<li><a href="about.html#0">关于我们</a></li>
+						<li><a href="about.html#1">联系我们</a></li>
+						<li><a href="about.html#2">商务合作</a></li>
+						<li><a href="about.html#3">加入我们</a></li>
+						<li><a href="information.html">媒体报道</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!--头部 结束-->
+		<div class="maintian_title_con">
+			<div class="maintian_title pageSize clearfix">
+				<span class="jgtm">价格透明</span>
+				<span class="mfsm">免费上门</span>
+				<span class="zlbz">质量保障</span>
+				<span class="gxwx">高效维修</span>
+				<span class="shbz shbz_last_child">售后保障</span>
+			</div>	
+		</div>
+		
+		<!--维修故障选择-->
+		<div class="pageSize select_container">
+			<div class="select_right">
+				<div class="select_right_title select_right_border_bottom">推荐维修方案</div>
+				<div class="select_right_row select_right_border_bottom">
+					<span>更换屏幕</span>
+					<span class="select_right_row_price">150元</span>
+				</div>
+				<div class="select_right_row select_right_border_bottom">
+					<span>工时费</span>
+					<span class="select_right_row_price">150元</span>
+				</div>
+				<div class="antipate_price">
+					<span>预计维修总费用：</span>
+					<span class="price">150</span>
+					<span>元</span>
+				</div>
+				<div class="select_right_btn">立即维修</div>
+			</div>
+			<div class="select_left">
+				<div class="select_title">
+					<label>1</label>
+					<span>选择要维修的设备</span>
+				</div>
+				
+				<div class="select_block_con">
+					<div class="select_block clearfix">
+						<label class="select_block_bottom_border">品牌</label>
+						<ul class="select_block_r select_block_bottom_border clearfix" id="brand">
+							<li><a href="javascript:void(0)">苹果</a></li>
+							<li><a class="select_block_r_disable" href="javascript:void(0)">华为</a></li>
+							<li><a href="javascript:void(0)">小米</a></li>
+							<li><a href="javascript:void(0)">oppo</a></li>
+							<li><a href="javascript:void(0)">魅族</a></li>
+							<li><a href="javascript:void(0)">三星</a></li>
+							<li onclick="more(this)"><a href="javascript:void(0)">更多<i class="a_more"></i></a></li>
+							<li><a href="javascript:void(0)">苹果</a></li>
+							<li><a href="javascript:void(0)">华为</a></li>
+							<li><a href="javascript:void(0)">小米</a></li>
+							<li><a href="javascript:void(0)">oppo</a></li>
+							<li><a href="javascript:void(0)">魅族</a></li>
+							<li><a href="javascript:void(0)">魅族</a></li>
+							<li><a href="javascript:void(0)">魅族</a></li>
+							<li><a href="javascript:void(0)">魅族</a></li>
+							<li><a href="javascript:void(0)">魅族</a></li>
+							<li><a href="javascript:void(0)">魅族</a></li>
+							<li><a href="javascript:void(0)">魅族</a></li>
+							<li><a href="javascript:void(0)">魅族</a></li>
+							<li><a href="javascript:void(0)">三星</a></li>
+						</ul>						
+					</div>
+					<div class="select_block" >
+						<label class="select_block_bottom_border">型号</label>
+						<ul class="select_block_r select_block_bottom_border clearfix" id="model">
+							<li><a class="select_block_r_active" href="javascript:void(0)">iPhone 6s</a></li>
+							<li><a href="javascript:void(0)">iPhone 6s Plus</a></li>
+							<li><a href="javascript:void(0)">iPhone 6</a></li>
+							<li><a href="javascript:void(0)">iPhone 5s</a></li>
+							<li onclick="more(this)"><a href="javascript:void(0)">更多<i class="a_more"></i></a></li>
+							<li><a class="select_block_r_active" href="javascript:void(0)">iPhone 6s</a></li>
+							<li><a href="javascript:void(0)">iPhone 6s Plus</a></li>
+							<li><a href="javascript:void(0)">iPhone 6</a></li>
+							<li><a href="javascript:void(0)">iPhone 5s</a></li>
+						</ul>
+					</div>
+					<div class="select_block">
+						<label class="select_block_bottom_border">颜色</label>
+						<ul class="select_block_r select_block_bottom_border clearfix" id="color">
+							<li><a href="javascript:void(0)">银色</a></li>
+							<li><a href="javascript:void(0)">深空灰</a></li>
+							<li><a href="javascript:void(0)">金色</a></li>
+							<li><a href="javascript:void(0)">玫瑰金</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="select_title">
+					<label>2</label>
+					<span>选择故障类型</span>
+				</div>
+				<div class="select_block_con">
+					<div class="select_block" style="z-index: 2;">
+						<label class="select_block_bottom_border">故障类型</label>
+						<ul class="select_block_r select_block_bottom_border clearfix" id="fault_type">
+							<li><a href="javascript:void(0)">屏幕</a></li>
+							<li><a href="javascript:void(0)">电池</a></li>
+							<li><a href="javascript:void(0)">摄像头</a></li>
+							<li><a href="javascript:void(0)">外壳</a></li>
+							<li><a href="javascript:void(0)">传感器</a></li>
+							<li><a href="javascript:void(0)">Wi-Fi</a></li>
+							<!--<li><a href="javascript:void(0)">按键</a></li>-->
+							<li onclick="more(this)"><a href="javascript:void(0)">其它</a></li>
+							<li><a href="javascript:void(0)">屏幕</a></li>
+							<li><a href="javascript:void(0)">电池</a></li>
+							<li><a href="javascript:void(0)">摄像头</a></li>
+							<li><a href="javascript:void(0)">外壳</a></li>
+							<li><a href="javascript:void(0)">传感器</a></li>
+							<li><a href="javascript:void(0)">Wi-Fi</a></li>
+						</ul>
+					</div>
+					<div class="select_block">
+						<label class="select_block_bottom_border">故障细节</label>
+						<ul class="select_block_r select_block_bottom_border clearfix" id="fault_detail">
+							<li><a href="javascript:void(0)">屏幕碎裂</a></li>
+							<li><a href="javascript:void(0)">触摸失灵</a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<!--维修故障选择 结束-->
+
+		<!--确认维修信息-->
+		<div class="pageSize maintain_container">
+			<div class="maintain_title">
+				<label></label>
+				<span>确认维修信息</span>
+				<label></label>
+			</div>
+			<div class="maintain_block clearfix">
+				<div class="maintain_block_left">
+					<span>维修方式：</span>
+				</div>
+				<div class="maintain_block_right">
+					<span class="right_span right_span_active">上门维修</span>
+					<!--<span class="right_span">到店维修</span>-->
+					<span class="right_span">快递寄修</span>
+				</div>
+			</div>
+			<div class="maintain_block clearfix">
+				<div class="maintain_block_left">
+					<span>维修地址：</span>
+				</div>
+				<div class="maintain_block_right">
+					<div class="block_input_container">
+						<span>所在地区</span>
+						<input type="text" id="city" value="省份/城市/县区" onfocus="onfousInput(this)" data-type='省份/城市/县区' onblur="blurInput(this)" />
+					</div>
+					<div class="block_input_container">
+						<span>详细地址</span>
+						<input type="text" value="街道门牌号，地区信息不用再填" onfocus="onfousInput(this)" data-type='街道门牌号，地区信息不用再填' onblur="blurInput(this)" />
+					</div>
+					<div class="block_input_container">
+						<span>姓名</span>
+						<input type="text" value="您的姓名" onfocus="onfousInput(this)" data-type='您的姓名' onblur="blurInput(this)" />
+					</div>
+					<div class="block_input_container">
+						<span>手机号</span>
+						<input type="text" value="您的手机号" onfocus="onfousInput(this)" data-type='您的手机号' onblur="blurInput(this)" />
+					</div>
+				</div>
+			</div>
+			<div class="maintain_block clearfix">
+				<div class="maintain_block_left">维修时间：</div>
+				<div class="maintain_block_right block_right_time_c">
+					<div class="date_container clearfix">
+						<span class="date_container_border_right date_container_active">
+							今天<br />8月19日
+						</span>
+						<span class="date_container_border_right">
+							星期六<br />8月20日
+						</span>
+						<span class="date_container_border_right">
+							星期天<br />8月21日
+						</span>
+						<span class="date_container_border_right">
+							星期一<br />8月22日
+						</span>
+						<span class="date_container_border_right">
+							星期二<br />8月23日
+						</span>
+						<span class="date_container_border_right">
+							星期三<br />8月24日
+						</span>
+						<span>
+							星期四<br />8月25日
+						</span>
+					</div>
+					<div class="time_container clearfix">
+						<span class="date_container_border_right date_container_active">早上<br />09:00~12:00</span>
+						<span class="date_container_border_right">中午<br />12:00~14:00</span>
+						<span class="date_container_border_right">下午<br />14:00~18:00</span>
+						<span>晚上<br />18:00~22:00</span>
+					</div>
+				</div>
+			</div>
+			<div class="maintain_block clearfix">
+				<div class="maintain_block_left">
+					<span>维修信息：</span>
+				</div>
+				<div class="maintain_block_right">
+					<div class="block_right_info_con">
+						<div class="block_right_info">
+							<span class="date_container_border_right">iPhone 6s 金色 屏幕损坏</span>
+							<span class="block_right_info_project">维修方案：更换屏幕</span>
+						</div>						
+					</div>
+					<div class="block_right_info_con">
+						<div class="block_right_info">
+							<span class="date_container_border_right">iPhone 6s 金色 屏幕损坏</span>
+							<span class="block_right_info_project">维修方案：更换屏幕</span>
+						</div>						
+					</div>
+				</div>
+			</div>
+			<!--<div class="maintain_block clearfix">
+				<div class="maintain_block_left">
+					<span>支付方式：</span>
+				</div>
+				<div class="maintain_block_right">
+					<span class="right_span right_span_active">
+						<i class="wx"></i>微信支付
+					</span>
+					<span class="right_span  ">
+						<i class="zfb"></i>支付宝
+					</span>
+					<span class="right_span">现金</span>
+				</div>
+			</div>-->
+			<div class="maintain_block clearfix">
+				<!--<div class="maintain_block_left">
+					<span>费用总计：</span>
+				</div>-->
+				<div class="maintain_block_right">
+					<div class="block_right_price">费用总计：180元</div>
+					<div class="block_right_price_tip">以维修后的报价为准</div>
+				</div>
+			</div>
+			<div class="maintain_block clearfix">
+				<div class="maintain_block_left"></div>
+				<div class="maintain_block_right submit_indent">
+					提交订单
+				</div>
+			</div>
+			<div style="height: 1px;font-size: 0;"></div>
+		</div>
+		<!--确认维修信息 结束-->
+		<!--维修单提交成功-->
+		<div class="pageSize maintain_success_c">
+			<div class="maintain_success_icon"></div>
+			<div class="maintain_success_text">维修单提交成功</div>
+			<div class="maintain_success_tip">稍后客服将会电话和您确认故障类型和维修时间。</div>
+			<div class="maintain_success_btn"><a href="javascript:void(0);">维修单详情</a></div>
+			<div style="height: 1px;"></div>
+		</div>
+		<!--维修单提交成功 结束-->
+		<!--底部 开始-->
+		<div class="footer">
+			<div class="footer_content clearfix">
+				<div class="footer_block footer_block_right_border">
+					<div>关于</div>
+					<ul>
+						<li><a href="about.html#0">关于我们</a></li>
+						<li><a href="about.html#1">联系我们</a></li>
+						<li><a href="about.html#3">加入我们</a></li>
+						<li><a href="about.html#4">媒体报道</a></li>
+					</ul>
+				</div>
+				<div class="footer_block footer_block_right_border">
+					<div>帮助</div>
+					<ul>
+						<li><a href="">服务保障</a></li>
+						<li><a href="">服务流程</a></li>
+						<li><a href="">常见问题</a></li>
+						<li><a href="">线下门店</a></li>
+					</ul>
+				</div>
+				<div class="footer_block blogroll clearfix">
+					<div>友情链接</div>
+					<ul>
+						<li><a href="">友情辅导费地方发的链接1</a></li>
+						<li><a href="">友情链接2</a></li>
+						<li><a href="">友情链接3</a></li>
+						<li><a href="">友情链接4</a></li>
+						<li><a href="">友情链接5</a></li>
+						<li><a href="">友情链接6</a></li>
+						<li><a href="">友情链接7</a></li>
+						<li><a href="">更多<i class="blogroll_more"></i></a></li>
+					</ul>
+				</div>
+				<div class="footer_block wxcode">
+					<img src="img/yj_code.png" />
+					<br />
+					<span>微信扫码关注</span>
+				</div>
+			</div>
+			<div class="banquan pageSize">
+				服务电话:400-991-5591
+			</div>
+			<div class="banquan pageSize">©广州修客信息科技有限公司 ｜ 粤ICP备09075143号</div>
+		</div>
+		<!--底部 结束-->
+		<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Popt.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/cityJson.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/citySet.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/maintain.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+					
+		</script>
+	</body>
+
+</html>
