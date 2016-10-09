@@ -1,0 +1,378 @@
+html,
+body {
+	background-color: #f7f7f7;
+}
+
+.container {
+	position: relative;
+	min-height: 500px;
+	height: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.left {
+	position: absolute;
+	left: 0;
+	top: 0;
+	border: 1px solid #eeeeee;
+	width: 200px;
+	text-align: center;
+	z-index: 99;
+	background-color: #fff;
+}
+
+.right {
+	margin-left: 210px;
+	padding: 25px;
+	min-height: 600px;
+	background-color: #fff;
+}
+
+.left_menu>li {
+	line-height: 50px;
+	border-bottom: 1px solid #eeeeee;
+}
+
+.left_menu>li>a {
+	width: 100%;
+	line-height: 50px;
+}
+
+.left_menu>li>a:hover {
+	color: #fff;
+	background-color: #fbce00;
+	cursor: hand;
+}
+
+.left_menu_active {
+	background-color: #fbce00;
+}
+
+.left_menu_active>a {
+	color: #fff;
+}
+
+
+/*右边*/
+
+.right>div {
+	/*display: none;*/
+}
+
+
+/*加入我们*/
+
+.join_position {
+	padding-top: 20px;
+}
+
+.join_position>label,
+.join_position>a {
+	display: inline-block;
+	vertical-align: middle;
+	height: 40px;
+	line-height: 40px;
+}
+
+.join_position>label {
+	position: relative;
+	width: 100px;
+}
+
+.join_position>label>i,
+.join_position>label>span {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	z-index: 2;
+	font-size: 18px;
+	background-color: #fff;
+	padding-right: 10px;
+}
+
+.join_position>label>i {
+	top: 20px;
+	width: 100%;
+	height: 2px;
+	background-color: #f2f2f2;
+	z-index: 1;
+}
+
+.join_position>a {
+	border: 1px solid #eeefef;
+	height: 40px;
+	line-height: 40px;
+	padding: 0px 15px;
+	margin-left: 20px;
+	border-radius: 7px;
+	color: #888;
+	background-color: #f7f7f7;
+}
+
+.join_position>a:hover,
+.join_position_active {
+	/*border: none !important;*/
+	color: #fff !important;
+	background-color: #FBCE00 !important;
+}
+
+.json_details {
+	border-top: 1px solid #e6e6e6;
+	margin-top: 30px;
+	padding-left: 30px;
+	display: none;
+}
+
+.join_name {
+	font-size: 16px;
+	color: #fbce00;
+	margin: 30px auto 20px;
+}
+
+.join_datail {
+	font-size: 16px;
+	margin: 20px 0;
+	color: #595757;
+}
+
+.join_text {
+	margin-bottom: 5px;
+	color: #888888;
+}
+/*加入我们 end*/
+/*媒体报道*/
+.media_reort_row{
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	width: 100%;
+}
+.media_bottom{
+	border-bottom: 1px solid #eeeeee;
+}
+.media_reort_row_left{
+	float: left;
+	width: 100px;
+	height: 100px;
+	border: 1px solid #eeeeee;
+	margin-right: 20px;
+	overflow: hidden;
+}
+.media_reort_row_left>img{
+	width: 100%;
+	height: 100%;
+}
+.media_reort_row_right{
+	width: 100%;
+}
+.media_reort_row_right_title{
+	font-size: 18px;
+	color: #FBCE00;
+}
+.media_reort_row_right_text{
+	color: #888;
+}
+/*媒体报道 end*/
+/*关于我们*/
+.us_title{
+	font-size: 18px;
+	color: #FBCE00;
+}
+.us_history{
+	margin: 20px 0 40px;	
+}
+.us_history>div{
+	float: left;
+	width: 25%;
+	text-align: center;
+	
+}
+.us_history>div>label{
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+.us_history>div>a{
+	display: inline-block;
+	color: #888;
+	width: 100%;
+	font-size: 16px;
+	border-top: 1px solid #e2e2e2;
+	border-bottom: 1px solid #e2e2e2;
+	border-left: 1px solid #e2e2e2;
+	background-color: #eeeeee;
+	padding: 10px 0;
+}
+.us_history>div:hover>a{
+	color: #fff;
+	background-color: #fbce00;
+}
+.us_history>div:hover>label{
+	color: #fbce00;
+}
+.us_active{
+	position: relative;
+}
+.us_active>a{
+	color: #fff !important;
+	background-color: #fbce00 !important;
+}
+.us_active>label{
+	color: #fbce00 !important;
+}
+.us_active>i{
+	position: absolute;
+	left: 50%;
+	top: 99%;
+	display: inline-block;
+	border-width: 20px 10px;
+	border-style: solid;
+	border-color: #fbce00 transparent transparent  transparent;
+	z-index: 9;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+.us_history_nav{
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+}
+.us_history_nav>li{
+	position: relative;
+	height: 200px;
+}
+.us_history_text_l{
+	float: left;
+	width: 150px;
+	height: 200px;
+	border: 1px solid #E2E2E2;
+	margin-right: 10px;
+}
+.us_history_text_l>img{
+	
+}
+.us_history_text_r>p{
+	color: #888;
+	padding: 10px 0;
+	font-size: 16px;
+}
+.us_server_con {
+	margin: 40px 0;
+}
+
+.us_server_con>span {
+	float: left;
+	width: 24%;
+	/**width: 19.5%;*/
+	text-align: center;
+	font-size: 20px;
+	border-right: 1px solid #eeeeee;
+	color: #888;
+	background-size: 42px 42px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	padding-top: 50px;
+}
+
+.zyaq{
+	background-image: url(../img/about_zyaq.png);
+}
+
+.lfx {
+	background-image: url(../img/about_lfx.png);
+}
+
+.gktm {
+	background-image: url(../img/about_gktm.png);
+}
+
+.fbgx {
+	background-image: url(../img/about_fbgx.png);
+}
+
+
+.shbz_last_child {
+	border-right: none !important;
+}
+.us_map{
+	display: block;
+	width: 74%;
+	margin: 10px auto 20px;
+}
+.us_map_text{
+	width: 74%;
+	margin: auto;
+	font-size: 16px;
+	line-height: 30px;
+	margin-top: 10px;
+}
+.fb{
+	color: #FBCE00;
+}
+.us_map_text>span{
+	display: inline-block !important;
+}
+/*关于我们 end*/
+/*联系我们*/
+.link_title {
+	width: 100%;
+	height: 1px;
+	border-top: 1px solid #F7F7F7;
+	text-align: center;
+}
+.link_title span {
+	position: relative;
+	top: -14px;
+	font-size: 18px;
+	color: #FBCE00;
+	background: #fff;
+	padding: 0 20px;
+}
+.link_contact{
+	margin: 40px 0 70px;
+}
+.link_contact>span {
+	float: left;
+	width: 33%;
+	text-align: center;
+	font-size: 16px;
+	color: #888;
+	background-size: 66px 66px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	padding-top: 70px;
+}
+.link_phone{
+	background-image: url(../img/link_phone.png);
+}
+
+.link_wx {
+	background-image: url(../img/link_wx.png);
+}
+
+.link_email {
+	background-image: url(../img/link_email.png);
+}
+.addressCon{
+	position: relative;
+	width: 90%;
+	margin: auto;
+	border: 1px solid #f7f7f7;
+}
+.addressCon>i{
+	position: absolute;
+	left: -33px;
+	top: -33px;
+	width: 66px;
+	height: 66px;
+	background-image: url(../img/link_point.png);
+	background-repeat: no-repeat;
+}
+.addressCon>p{
+	padding: 10px 35px;
+	font-size: 16px;
+	color: #888;
+	border-bottom: 1px solid #F7F7F7;
+}

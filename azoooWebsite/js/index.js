@@ -3,9 +3,13 @@ $("#city").click(function(e) {
 });
 
 function onfousInput(dom) {
-	if($(dom).val() == '你的姓名' || $(dom).val() == '你的手机号' || $(dom).val() == '手机验证码' || $(dom).val() == '详细地址' || $(dom).val() == '省份/城市/县区') {
+	if($(dom).val() == '您的姓名' || $(dom).val() == '您的手机号' || $(dom).val() == '手机验证码' || $(dom).val() == '详细地址' || $(dom).val() == '省份/城市/县区') {
 		$(dom).val('');
 		$(dom).css('color', '#5e5e5e');
+	}else if($(dom).val() == '输入订单号查询'){
+		$(dom).val('');
+		$(dom).css('color', '#8b8b8b');
+		$(dom).css('background-color', '#fff');
 	}
 }
 
@@ -14,24 +18,13 @@ function blurInput(dom) {
 		$(dom).val($(dom).attr('data-type'));
 		$(dom).css('color', '#d8d8d8');
 	}
-}
-
-//验证码
-function yanzhengma(dom) {
-	if($(dom).html() == '获取验证码') {
-		var time = 60;
-		$(dom).html(time + 's');
-		$(dom).css('backgroundColor', '#d5d5d5');
-		repeat(time, function(time) {
-			if(time != 0) {
-				$('#yanzhengmaCode').html(time + 's');
-			} else {
-				$('#yanzhengmaCode').html('获取验证码');
-				$('#yanzhengmaCode').css('backgroundColor', '#fccf00');
-			}
-		});
+	if($(dom).val() == '输入订单号查询'){
+		$(dom).css('background-color', '#f5f6f6');
+		$(dom).css('color', '#8b8b8b');
 	}
 }
+
+
 
 function repeat(time, callbcak) {
 	if(time > 0) {
@@ -43,47 +36,6 @@ function repeat(time, callbcak) {
 	} else {
 		callbcak(0);
 	}
-}
-
-//立即预约
-function yuyue() {
-	var msg = '';
-
-	if($('#name').val() == '你的姓名') {
-		msg += '请输入你的姓名。<br/>';
-	}
-	if($('#phone').val() == '你的手机号') {
-		msg += '请输入你的手机号。<br/>';
-	} else {
-		if(!regularPhoneNumber($('#phone').val())) {
-			msg += '手机号格式不对。<br/>';
-		}
-	}
-
-	if($('#yanzhengma').val() == '手机验证码') {
-		msg += '请输入手机验证码。<br/>';
-	}
-
-	if($('#city').val() == '省份/城市/县区') {
-		msg += '请选择地区。<br/>';
-	}
-
-	if($('#address_datail').val() == '详细地址') {
-		msg += '请输入详细地址。<br/>';
-	}
-
-	if(msg) {
-		$('#alertbackground').css('display', 'block');
-		$('#alertContainer').css('display', 'block');
-		$('#alertMsg').html(msg);
-		return false;
-	}
-
-	//切换
-	$('#firstContainer').css('display', 'none');
-	$('#sendContainer').css('display', 'block');
-	$('#header_right_text').css('display', 'none');
-	$('#header_right_back').css('display', 'block');
 }
 
 function alertHide() {

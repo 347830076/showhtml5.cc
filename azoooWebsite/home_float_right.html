@@ -1,0 +1,42 @@
+<!--右边悬浮菜单-->  <!--css样式在common.css   js在float_right.js-->
+<ul class="float_right_con">
+	<li class="">
+		<i class="float_r_kf"></i>
+		<span>在线客服</span>
+		<img class="float_right_con_gf_bg" src="img/float_r.gif" />
+	</li>
+	<li class="">
+		<i class="float_r_wx"></i>
+		<span>微信下单</span>
+		<div class="float_r_wx_content float_r_wx_content_wx">
+			<img src="img/right_qrcode.jpg" /> 
+			<em class="float_r_wx_em"></em>
+			<span>扫一扫关注公众号下单</span>
+		</div>			
+	</li>
+	<li class="" style="border: none;">
+		<i class="float_r_fk"></i>
+		<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;反馈</span>
+		<div class="float_r_wx_content float_r_wx_content_fk">
+			<div class="float_r_wx_content_con">
+				<div class="float_r_wx_content_title">服务投诉</div>
+				<div class="float_r_wx_content_toggle clearfix">
+					<div><i class="float_r_wx_content_toggle_iactive" data-type='1'></i><span>服务投诉</span></div>
+					<div><i class="" data-type='2'></i><span>意见反馈</span></div>
+				</div>
+				<input class="float_r_wx_content_tousu" type="text" value="所要投诉工程师的姓名或电话（选填）" data-type="所要投诉工程师的姓名或电话（选填）" onfocus="onfousInput_float(this)" onblur="blurInput_float(this)" />
+				<div class="float_r_wx_content_phone clearfix">
+					<span>手机</span>
+					<input type="text" value="请留下您的手机号码" data-type="请留下您的手机号码" onfocus="onfousInput_float(this)" onblur="blurInput_float(this)" />
+				</div>
+				<textarea class="float_r_wx_content_yj"  data-type="请填写您遇到的问题或意见建议，您的意见对加速度非常重要，是我们前进的动力" onfocus="onfousInput_float(this)" onblur="blurInput_float(this)">请填写您遇到的问题或意见建议，您的意见对加速度非常重要，是我们前进的动力</textarea>
+				<div class="float_r_wx_content_btns">
+					<span class="float_r_wx_content_btns_l">取消</span>
+					<span class="float_r_wx_content_btns_r">提交</span>
+				</div>
+			</div>
+			<!--<em class="float_r_wx_em" style="top: 15px;"></em>-->
+		</div>	
+	</li>
+</ul>
+<!--右边悬浮菜单 end-->

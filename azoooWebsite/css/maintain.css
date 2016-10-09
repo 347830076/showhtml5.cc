@@ -50,19 +50,22 @@
 
 .select_container {
 	position: relative;
-	margin-bottom: 20px;
+	margin-bottom: 250px;
 }
 
 .select_left {
 	width: 850;
 	margin-right: 250px;
+	min-height: 445px;
 }
 
 .select_right {
 	position: absolute;
 	right: 0;
+	bottom: 0;
 	width: 220px;
-	height: 350px;
+	height: auto;
+	min-height: 350px;
 	float: right;
 	border: 1px solid #f0f0f0;
 	margin-top: 96px;
@@ -102,7 +105,7 @@
 	width: 100%;
 	height: auto;
 	/*line-height: 50px;*/
-	/*overflow: hidden;*/
+	overflow: hidden;
 }
 
 .select_block>label {
@@ -116,8 +119,10 @@
 	*line-height: 54px;
 	font-size: 16px;
 	text-align: center;
-	color: #fff;
-	background-color: #fbce00;
+	color: #b7b7b7;
+	/*background-color: #fbf6e1;*/
+	margin-bottom: -600px;
+	padding-bottom: 600px;
 }
 
 .select_block_bottom_border {
@@ -129,15 +134,17 @@
 	margin-left: 120px;
 	/*width: 730px;*/
 	*width: 708px;
-	height: 50px;
+	/*height: 50px;
 	*height: 52px;
-	overflow: hidden;
+	overflow: hidden;*/
 	/*background-color: #1F6377;*/
+	margin-bottom: -600px;
+	padding-bottom: 600px;
 }
 
 .select_block_r>li {
 	float: left;
-	height: 50px;
+	/*line-height: 50px;*/
 }
 
 .select_block_r>li>a {
@@ -145,30 +152,35 @@
 	display: inline-block;
 	vertical-align: middle;
 	font-size: 16px;
-	height: 50px;
-	line-height: 50px;
-	padding: 0 28px;
-	color: #929292;
-	/*-webkit-transition-duration: 0.2s;
-				-moz-transition-duration: 0.2s;
-				-ms-transition-duration: 0.2s;
-				-o-transition-duration: 0.2s;
-				transition-duration: 0.2s;
-   				-webkit-transition-property: border-color,color;
-   				-moz-transition-property: border-color,color;
-   				-ms-transition-property: border-color,color;
-   				-o-transition-property: border-color,color;
-   				transition-property: border-color,color;*/
+	height: 34px;
+	line-height: 34px;
+	padding: 0px 16px;
+	margin: 6px;
+	*margin-top: 8px;
+	color: #595757;
+	border-radius: 2px;
+	-webkit-transition-duration: 0.2s;
+	-moz-transition-duration: 0.2s;
+	-ms-transition-duration: 0.2s;
+	-o-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+	-webkit-transition-property: background-color,color;
+	-moz-transition-property: background-color,color;
+	-ms-transition-property: background-color,color;
+	-o-transition-property: background-color,color;
+	transition-property: background-color,color;
 }
 
 .select_block_r>li>a:hover {
-	color: #fbce00;
-	border-bottom: 2px solid #fbce00 !important;
+	color: #fff;
+	/*border: 1px solid #fbce00 !important;*/
+	background-color: #fbce00;
 }
 
 .select_block_r_active {
-	color: #fbce00 !important;
-	border-bottom: 2px solid #fbce00 !important;
+	color: #fff !important;
+	/*border: 1px solid #fbce00 !important;*/
+	background-color: #fbce00;
 }
 
 .select_block_r_active>.a_more {
@@ -263,7 +275,9 @@
 	color: #fff;
 	background-color: #fbce00;
 }
-
+.select_right_btn:active{
+	background-color: #D3AF03;
+}
 
 /*确认维修信息*/
 
@@ -293,7 +307,7 @@
 
 .maintain_title>label {
 	display: inline-block;
-	width: 100px;
+	width: 250px;
 	height: 1px;
 	background-color: #f1f1f1;
 }
@@ -397,7 +411,16 @@
 	color: #fff;
 	background-color: #fbce00;
 }
-
+.time_container>span:hover.date_container_disable{
+	cursor: no-drop;
+	color: #fff;
+	background-color: #8C8C8C;
+}
+.date_container_disable{
+	cursor: no-drop;
+	color: #fff;
+	background-color: #8C8C8C;
+}
 .time_container {
 	width: 100%;
 }
@@ -461,7 +484,9 @@
 	background-color: #fbce00;
 	margin: 20px auto 30px;
 }
-
+.submit_indent:active{
+	background-color: #d5af01;
+}
 
 /*维修单提交成功*/
 

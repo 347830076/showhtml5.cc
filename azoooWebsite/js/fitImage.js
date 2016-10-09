@@ -4,7 +4,7 @@ function fitImage(objDiv, objImg, wholeImage) {
 	var imgWidth = objImg.width; //图片的宽
 	var imgHeight = objImg.height; //图片的高
 	var imgScale = ''; //图片缩放倍数
-
+//	console.log(divWidth + ":" + divHeight + ":" + imgWidth + ":" + imgHeight);
 	var divRatio = (divWidth / divHeight); //容器宽高比
 	var imgRatio = (imgWidth / imgHeight); //图片宽高比
 
