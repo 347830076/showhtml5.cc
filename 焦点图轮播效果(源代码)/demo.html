@@ -109,7 +109,7 @@
 	</head>
 
 	<body>
-		<script src="js/jquery.1.10.2.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="js/jquery.1.10.2.js" type="text/javascript" charset="utf-8"></script>-->
 		<!--<script src="js/fit_image.js" type="text/javascript" charset="utf-8"></script>-->
 		<div id="carousel_container">
 			<div id="carousel_loding"></div>
@@ -146,7 +146,7 @@
 				document.getElementById("carousel_list").style.left = -containerWidth + 'px';
 
 				//总图片容器宽度
-				document.getElementById("carousel_list").style.width = containerWidth * ($('#carousel_list a').length) + 'px';
+				document.getElementById("carousel_list").style.width = containerWidth * document.getElementById("carousel_list").getElementsByTagName('a').length + 'px';
 
 				//图片的容器
 				var as = document.getElementById("carousel_list").getElementsByTagName('a');

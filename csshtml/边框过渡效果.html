@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/api.css"/>
+		<style type="text/css">
+			.div::before {
+				content: "";
+				border-left: 1px solid #fa2300;
+				border-right: 1px solid #fa2300;
+				position: absolute;
+				bottom: -1px;
+				left: -1px;
+				right: -1px;
+				top: -1px;
+				transform: scale(1, 0);
+				transition: opacity 0.35s ease 0s, transform 0.35s ease 0s;
+				z-index: 1;
+			}
+			
+			.div::after {
+				content: "";
+				border-bottom: 1px solid #fa2300;
+				border-top: 1px solid #fa2300;
+				position: absolute;
+				bottom: -1px;
+				left: -1px;
+				right: -1px;
+				top: -1px;
+				transform: scale(0, 1);
+				transition: opacity 0.35s ease 0s, transform 0.35s ease 0s;
+				z-index: 1;
+			}
+			.div:hover::before,
+			.div:hover::after {
+				opacity: 1;
+				transform: scale(1);
+				transition: opacity 0.35s ease 0s, transform 0.35s ease 0s;
+			}
+			.div{
+				position: relative;
+				display: inline-block;
+			    margin: 10px 10px 0 0;
+			    background: #fff;
+			    border: 1px solid #ccc;
+			    width: 100px;
+			    height: 100px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="div">sdf1</div>
+		<div class="div">1</div>
+		<div class="div">1</div>
+	</body>
+
+</html>

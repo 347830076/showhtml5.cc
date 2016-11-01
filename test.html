@@ -2,16 +2,52 @@
 <html>
 	<head>
 		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/api.css"/>
+		
+		<style type="text/css">
+			input{
+				background-color: #fff;
+			}
+			input[disabled]{
+				color: #000;
+				opacity: 1;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="top"></div>
 		<div class="footer"></div>
+		<input type="text" value="123" disabled="" />
+		<ul class="nav">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
 		<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$(".top").load("top.html");
 				$(".footer").load("footer.html");
 			}); 
+			$('.nav').on('click',function(e){
+				console.log(e.target.innerHTML);
+			});
+			var str = '&lt;span&gt;ddd&lt/span&gt;'
+			str = str.replace(/(&lt;)(.*?)(&gt;)/gi,'').replace(/(&lt;)(.*?)(&gt;)/gi,''); //去除HTML tag 
+			console.log(str)
+//			$.ajax({
+//				async:true,
+//				type:'GET',
+//				dataType:'jsonp',
+//				url:'http://api.map.baidu.com/geocoder/v2/?ak=SalVkqMoNKh8lZugiLBICl0B&callback=renderReverse&location=39.983424,116.322987&output=json&pois=0',			
+//				success:function(data){
+//					console.log(JSON.stringify(data))
+//				},error:function(){
+//					
+//				}
+//			});
 		</script>
 	</body>
 </html>

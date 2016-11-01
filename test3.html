@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var obj = {contetn:"&lt;p&gt;asdfasdf&lt;strong&gt;dsfasdf&lt;span style=&quot;background-color: rgb(255, 0, 0);&quot;&gt;asdf&lt;/span&gt;a&lt;em&gt;fasdfasdfa&lt;span style=&quot;background-color: rgb(255, 255, 0);&quot;&gt;fasdfasdfasdf&lt;/span&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;"}
+			$('body').html('').append(html_unencode(obj.contetn))
+			console.log(html_unencode(obj.contetn))
+			function html_encode(str){     
+				var s = "";     
+				if (str.length == 0) 
+				return "";     
+				s = str.replace(/&/g, "&gt;");     
+				s = s.replace(/</g, "&lt;");     
+				s = s.replace(/>/g, "&gt;");     
+				s = s.replace(/ /g, "&nbsp;");     
+				s = s.replace(/\'/g, "&#39;");     
+				s = s.replace(/\"/g, "&quot;");     
+				s = s.replace(/\n/g, "");     
+				return s;   
+			}
+			function html_unencode(str){     
+				var s = "";     
+				if (str.length == 0) 
+				return "";     
+				s = str.replace(/&lt;/g, "<");     
+				s = s.replace(/&gt;/g, ">");     
+				s = s.replace(/&nbsp;/g, " ");     
+				s = s.replace(/\'/g, "&#39;");     
+				s = s.replace(/\"/g, "&quot;");     
+				s = s.replace(/\n/g, "");     
+				return s;   
+			}
+		</script>
+	</body>
+</html>
