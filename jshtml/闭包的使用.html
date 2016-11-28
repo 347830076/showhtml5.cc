@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.left{
+				float: left;
+				width: 100px;
+				background-color: #D0E9C6;
+				_margin-left:-3px;
+			}
+			.right{
+				float: right;
+				width: 100px;
+				background-color: #008000;
+				_margin-right:-3px;
+			}
+			.content{
+				margin:0 100px;
+				_margin:0 97px;
+				background-color: #ccc;
+			}
+			.em{
+				display: inline-block;
+				border-style: solid;
+				border-width: 20px 10px;
+				border-color: transparent  transparent #f00 transparent ;
+			}
+			.i{
+				display: inline-block;
+				width: 10px;
+				height: 10px;
+				border-width: 1px;
+				border-style: solid;
+				border-color: #f00 #f00 transparent transparent;	
+				-webkit-transform: rotate(45deg);
+				-moz-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				-o-transform: rotate(45deg);
+				transform: rotate(45deg);			
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+		<div>
+			<div class="left">left</div>
+			<div class="right">right</div>
+			<div class="content">content</div>			
+		</div>
+		<em class="em"></em>
+		<i class="i"></i>
+		<script src="../js/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+//			function test(){
+//				a = 0;
+//			}
+//			var a = 1;
+//			test();
+//			console.log(a);
+//			
+//			function test1(){
+//				var b = 0;
+//				function intest(){
+//					b++
+//					console.log(b);
+//				}
+//				return intest;
+//			}
+//			
+//			var obj = test1();
+//			obj();
+//			obj(); 
+
+
+//			var li = document.getElementsByTagName("li");
+//			for(var i = 0; i < 5; i++){				
+//				li[i].onclick = function(){
+//					console.log(i);
+//				}						  
+//			}
+			
+//			var li = document.getElementsByTagName("li");
+//			for(var i = 0; i < 5; i++){
+//				(function(i){
+//					li[i].onclick = function(){
+//						console.log(i)
+//					}
+//				})(i)				
+//			} 
+			for(var i = 0; i < 10000; i++){
+				var body = $('body');
+				body.append(i);
+			}
+			var body = $('body');
+			for(var i = 0; i < 10000; i++){				
+				body.append(i);
+			}
+			
+//			Array.prototype.unique3 = function(){
+//			 var res = [];
+//			 var json = {};
+//			 for(var i = 0; i < this.length; i++){
+//			  if(!json[this[i]]){
+//			   res.push(this[i]);
+//			   json[this[i]] = 1;
+//			  }
+//			 }
+//			 return res;
+//			}
+//			
+//			var arr = [112,112,34,'你好',112,112,34,'你好','str','str1'];
+//			alert(arr.unique3());
+						
+		</script>
+	</body>
+</html>

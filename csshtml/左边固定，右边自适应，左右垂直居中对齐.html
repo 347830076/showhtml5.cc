@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+			}
+			.clearfix:after{
+				content: '';
+				clear: both;
+				display: block;
+				height: 0;
+				overflow: hidden;
+			}
+			.box{
+				position: relative;
+				border: 1px solid #ccc;
+			}
+			.left{
+				display: table-cell;
+				vertical-align: middle;				
+				background-color: #00BCD4;
+			}
+			.right{
+				display: table-cell;
+				word-break:break-all; 
+　　				word-wrap:break-word;
+			}
+			.box1{
+				position: relative;
+				border: 1px solid #ccc;
+				padding: 10px 0;
+				margin: 20px 0;
+			}
+			
+			.left1{
+				float: left;
+				width: 70px;
+				height: 70px;
+				border: 1px solid #ccc;
+			}
+			.right1{
+				position: absolute;
+				left: 85px;
+				top: 50%;
+				-webkit-transform: translateY(-50%);
+				-moz-transform: translateY(-50%);
+				-ms-transform: translateY(-50%);
+				-o-transform: translateY(-50%);
+				transform: translateY(-50%);
+				padding-right: 15px;
+				/*margin-left: 85px;*/
+				background-color: #0000FF;
+				word-break:break-all; 
+　　				word-wrap:break-word;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="left">
+				<div>lefsdfsdft</div>
+				<div>left</div>
+			</div>
+			<div class="right">
+				<div>right1</div>
+				<div>多dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</div>
+				<div>多dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</div>
+				<div>多dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</div>
+			</div>
+		</div>
+		<div class="box1 clearfix">
+			<div class="left1">left1</div>
+			<div class="right1">
+				<div>right1</div>
+				<div>多dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</div>
+			</div>
+		</div>
+	</body>
+</html>
