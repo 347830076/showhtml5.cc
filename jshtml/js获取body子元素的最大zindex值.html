@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title></title>
+		<style type="text/css">
+			.div {
+				position: absolute;
+				z-index: 999;
+			}
+		</style>
+	</head>
+
+	<body style="position: relative;z-index: 99;color: #f00;">
+		<a href="image/11.png" download="">点击下载</a>
+		<div style="position: relative;z-index: 2;"></div>
+		<div class="div"></div>
+	</body>
+	<script type="text/javascript">
+		var divs = document.getElementsByTagName("*");
+		for(var i = 0, max = 0; i < divs.length; i++) {
+			max = Math.max(max,parseInt(getClass(divs[i],'z-index')) || 0);
+		}
+		alert(max);
+		
+console.log(getClass(document.body,'z-index'))
+		//兼容获取非行间样式
+		function getClass(obj, name)
+		{
+			if(obj.currentStyle)
+			{
+				return obj.currentStyle[name]; //IE下获取非行间样式
+			} else{
+				return getComputedStyle(obj, false)[name]; //FF、Chorme下获取费行间样式
+			}
+		}
+	</script>
+
+</html>
