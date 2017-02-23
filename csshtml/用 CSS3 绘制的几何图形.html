@@ -209,10 +209,63 @@
 				-o-transform: rotate(.1turn);
 				transform: rotate(.1turn);
 			}
+			
+			#star-five {
+				margin: 100px 0;
+				position: relative;
+				display: inline-block;
+				color: red;
+				width: 0px;
+				height: 0px;
+				border-right: 24px solid transparent;
+				border-bottom: 17px solid #f00;
+				border-left: 24px solid transparent;
+				-moz-transform: rotate(35deg);
+				-webkit-transform: rotate(35deg);
+				-ms-transform: rotate(35deg);
+				-o-transform: rotate(35deg);
+			}
+			
+			#star-five:before {
+				border-right: 24px solid transparent;
+				border-bottom: 17px solid #f00;
+				border-left: 24px solid transparent;
+				position: absolute;
+				height: 0;
+				width: 0;
+				top: -0px;
+				left: -24px;
+				display: inline-block;
+				content: '';
+				-webkit-transform: rotate(-72deg);
+				-moz-transform: rotate(-70deg);
+				-ms-transform: rotate(-70deg);
+				-o-transform: rotate(-70deg);
+			}
+			
+			#star-five:after {
+				position: absolute;
+				display: inline-block;
+				top: 0px;
+				left: -24px;
+				width: 0px;
+				height: 0px;
+				border-right: 24px solid transparent;
+				border-bottom: 17px solid #f00;
+				border-left: 24px solid transparent;
+				-webkit-transform: rotate(70deg);
+				-moz-transform: rotate(71deg);
+				-ms-transform: rotate(71deg);
+				-o-transform: rotate(71deg);
+				content: '';
+			}
 		</style>
 	</head>
 
 	<body>
+		<div id="star-five"></div>
+		<div id="star-five"></div>
+		<div id="star-five"></div>
 		<div class="size example1"></div>
 		<br />
 		<div class="example3"></div>

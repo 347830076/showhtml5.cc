@@ -385,6 +385,19 @@ var myc = (function(){
 	function bl(s) {
 	    return s < 10 ? '0' + s: s;
 	}
+	//判断手机号码是否正确
+function regularPhoneNumber(str) {
+	var s = str.replace(/\s|\-/g, '');
+	if(s.indexOf("+86") == 0) {
+		s = s.substr(3);
+	}
+	var d = /^1\d{10}$/g;
+	if(d.test(s)) {
+		return s;
+	} else {
+		return null;
+	}
+}
 	return {
 		qq:qq,
 		alert: alert,
@@ -392,6 +405,7 @@ var myc = (function(){
 		toast : toast,
 		showProgress : showProgress,
 		hideProgress : hideProgress,
+		regularPhoneNumber : regularPhoneNumber,
 		repeat : repeat,
 		getTime : getTime
 	};
