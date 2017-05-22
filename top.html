@@ -1,142 +1,93 @@
-<!DOCTYPE html>
 <html>
 
 	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<link rel="stylesheet" type="text/css" href="css/api.css"/>
-		<style type="text/css">
-			html,body{
-				background: #ccc;
-			}
-			@-webkit-keyframes line-spin-fade-loader {
-				50% {
-					opacity: 0.3;
-				}
-				100% {
-					opacity: 1;
-				}
-			}
-			
-			@keyframes line-spin-fade-loader {
-				50% {
-					opacity: 0.3;
-				}
-				100% {
-					opacity: 1;
-				}
-			}
-			
-			.line-spin-fade-loader {
-				position: relative;
-				width: 60px;
-				height: 60px;
-				margin: auto;
-			}
-			
-			.line-spin-fade-loader> div:nth-child(1) {
-				top: 20px;
-				left: 0;
-				-webkit-animation: line-spin-fade-loader 1.2s 0.12s infinite ease-in-out;
-				animation: line-spin-fade-loader 1.2s 0.12s infinite ease-in-out;
-			}
-			
-			.line-spin-fade-loader> div:nth-child(2) {
-				top: 13.63636px;
-				left: 13.63636px;
-				-webkit-transform: rotate(-45deg);
-				-ms-transform: rotate(-45deg);
-				transform: rotate(-45deg);
-				-webkit-animation: line-spin-fade-loader 1.2s 0.24s infinite ease-in-out;
-				animation: line-spin-fade-loader 1.2s 0.24s infinite ease-in-out;
-			}
-			
-			.line-spin-fade-loader> div:nth-child(3) {
-				top: 0;
-				left: 20px;
-				-webkit-transform: rotate(90deg);
-				-ms-transform: rotate(90deg);
-				transform: rotate(90deg);
-				-webkit-animation: line-spin-fade-loader 1.2s 0.36s infinite ease-in-out;
-				animation: line-spin-fade-loader 1.2s 0.36s infinite ease-in-out;
-			}
-			
-			.line-spin-fade-loader> div:nth-child(4) {
-				top: -13.63636px;
-				left: 13.63636px;
-				-webkit-transform: rotate(45deg);
-				-ms-transform: rotate(45deg);
-				transform: rotate(45deg);
-				-webkit-animation: line-spin-fade-loader 1.2s 0.48s infinite ease-in-out;
-				animation: line-spin-fade-loader 1.2s 0.48s infinite ease-in-out;
-			}
-			
-			.line-spin-fade-loader> div:nth-child(5) {
-				top: -20px;
-				left: 0;
-				-webkit-animation: line-spin-fade-loader 1.2s 0.6s infinite ease-in-out;
-				animation: line-spin-fade-loader 1.2s 0.6s infinite ease-in-out;
-			}
-			
-			.line-spin-fade-loader> div:nth-child(6) {
-				top: -13.63636px;
-				left: -13.63636px;
-				-webkit-transform: rotate(-45deg);
-				-ms-transform: rotate(-45deg);
-				transform: rotate(-45deg);
-				-webkit-animation: line-spin-fade-loader 1.2s 0.72s infinite ease-in-out;
-				animation: line-spin-fade-loader 1.2s 0.72s infinite ease-in-out;
-			}
-			
-			.line-spin-fade-loader> div:nth-child(7) {
-				top: 0;
-				left: -20px;
-				-webkit-transform: rotate(90deg);
-				-ms-transform: rotate(90deg);
-				transform: rotate(90deg);
-				-webkit-animation: line-spin-fade-loader 1.2s 0.84s infinite ease-in-out;
-				animation: line-spin-fade-loader 1.2s 0.84s infinite ease-in-out;
-			}
-			
-			.line-spin-fade-loader> div:nth-child(8) {
-				top: 13.63636px;
-				left: -13.63636px;
-				-webkit-transform: rotate(45deg);
-				-ms-transform: rotate(45deg);
-				transform: rotate(45deg);
-				-webkit-animation: line-spin-fade-loader 1.2s 0.96s infinite ease-in-out;
-				animation: line-spin-fade-loader 1.2s 0.96s infinite ease-in-out;
-			}
-			
-			.line-spin-fade-loader> div {
-				background-color: #fff;
-				border-radius: 2px;
-				/*margin: 1px;*/
-				margin-left: 27px;
-				margin-top: 21px;
-				-webkit-animation-fill-mode: both;
-				animation-fill-mode: both;
-				position: absolute;
-				width: 4px;
-				height: 14px;
-			}
-		</style>
+		<meta charset="utf-8">
+		<title>Hello APP</title>
 	</head>
 
 	<body>
-		<div class="line-spin-fade-loader">
-	      <div></div>
-	      <div></div>
-	      <div></div>
-	      <div></div>
-	      <div></div>
-	      <div></div>
-	      <div></div>
-	      <div></div>
-	    </div>
-		<script src="js/myc_up.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
-			myc.showProgress();
+		<button id="btn">请求</button>
+		<script src="../script/jquery1.11.1.min.js"></script>
+		<script type="text/javascript" src="../script/api.js"></script>
+		<script>
+			var url = 'http://api.azooo.com/WechatWeb/Test/testLocation';
+			//    var url = 'http://azooo.localhost.com/WechatWeb/Test/testLocation';
+			var btn = document.getElementById("btn");
+			var flag = false;
+			var timer = null;
+			var method = 'post';
+			btn.onclick = function() {
+				alert('123123');
+				if(!flag) {
+					play(url, method);
+					flag = true;
+				} else {
+					clearInterval(timer); 
+					falg = false;
+				}
+			};
+
+			// 每隔3秒请求一次
+			function play(url, method) {
+				api.startLocation({
+					accuracy: '10m',
+					filter: 1,
+					autoStop: true
+				}, function(ret, err) {
+					if(ret.status) {
+						var lat = ret.latitude;
+						var lng = ret.longitude;
+						var ajaxData = {};
+						ajaxData.lat = lat;
+						ajaxData.lng = lng;
+
+						function runin() {
+							api.ajax({
+								url: url,
+								type: method,
+								dataType: "json",
+								cache: false,
+								data: ajaxData
+							}, function(ret, err) {
+
+							})
+
+						}
+						setInterval(runin, 2000);
+
+					} else {
+						api.alert({
+							msg: err.msg
+						});
+					}
+				});
+			}
+		</script>
+
+		<script>
+			api.startLocation({
+				accuracy: '100m',
+				filter: 1,
+				autoStop: false //这个参数!
+			}, function(ret, err) {
+				alert('哈哈哈');
+				if(ret.status) {
+					var lat = ret.latitude;
+					var lon = ret.longitude;
+					var time = ret.timestamp;
+					var str = '经度：' + lon + '\n';
+					str += '纬度：' + lat + '\n';
+					str += '更新时间：' + time;
+					api.alert({
+						msg: str
+					});
+				} else {
+					api.alert({
+						msg: err.msg
+					});
+				}
+				alert('哇啊啊啊啊');
+			});
 		</script>
 	</body>
 

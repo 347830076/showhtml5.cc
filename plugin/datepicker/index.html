@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UI-datepicker</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		.datepicker{
+			height: 24px;
+			line-height: 24px;
+			width: 230px;
+			padding: 5px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+		}
+        .datepicker:focus{
+        	outline:none;
+        	border: 1px solid #1abc9c;
+        }
+        .hidden{
+        	display: none;
+        }
+        .show{
+        	display: block;
+        }
+
+	</style>
+</head>
+<body>
+  <input type="text" class="datepicker">
+  <!-- <div class="ui-datepicker-wrapper"> -->
+	  <!--  <div class="header">
+	    <a href="#" class="ui-datepicker-btn ui-datepicker-btn-previous"><</a>
+	    <a href="#" class="ui-datepicker-btn ui-datepicker-btn-back">></a>
+	    <span class="ui-datepicker-month">2017-4</span>
+	   </div>
+	   <div class="ui-datepicker-body">
+	   	<table>
+	   		<thead>
+	   			<tr>
+	   				<th>一</th>
+	   				<th>二</th>
+	   				<th>三</th>
+	   				<th>四</th>
+	   				<th>五</th>
+	   				<th>六</th>
+	   				<th>七</th>
+	   			</tr>
+	   		</thead>
+	   		<tbody>
+	   			<tr>
+	   				<td>29</td>
+	   				<td>30</td>
+	   				<td>1</td>
+	   				<td>2</td>
+	   				<td>3</td>
+	   				<td>4</td>
+	   				<td>5</td>
+	   			</tr>
+	   			<tr>
+	   				<td>6</td>
+	   				<td>7</td>
+	   				<td>8</td>
+	   				<td>9</td>
+	   				<td>10</td>
+	   				<td>11</td>
+	   				<td>12</td>
+	   			</tr>
+	   			<tr>
+	   				<td>13</td>
+	   				<td>14</td>
+	   				<td>15</td>
+	   				<td>16</td>
+	   				<td>17</td>
+	   				<td>18</td>
+	   				<td>19</td>
+	   			</tr>
+	   			<tr>
+	   				<td>20</td>
+	   				<td>21</td>
+	   				<td>22</td>
+	   				<td>23</td>
+	   				<td>24</td>
+	   				<td>25</td>
+	   				<td>26</td>
+	   			</tr>
+	   			<tr>
+	   				<td>27</td>
+	   				<td>28</td>
+	   				<td>29</td>
+	   				<td>30</td>
+	   				<td>1</td>
+	   				<td>2</td>
+	   				<td>3</td>
+	   			</tr>
+	   		</tbody>
+	   	</table>
+	   </div> -->
+
+
+  	
+<!--   </div> -->
+<script type="text/javascript" src="date.js"></script>
+<script type="text/javascript" src='mian.js'></script>
+<script type="text/javascript">
+  	console.log(datepicker.getMonthData())
+	datepicker.init('.datepicker')
+</script>
+</body>
+</html>
