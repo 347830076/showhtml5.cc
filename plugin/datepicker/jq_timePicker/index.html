@@ -7,10 +7,54 @@
 		<title></title>
 		<script src="jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="jQuery_UI_v1.11.0.js" type="text/javascript" charset="utf-8"></script>
-		<link rel="stylesheet" type="text/css" href="jquery-ui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="jquery-ui.min.css" />
 		<script src="jquery-ui-timepicker-addon.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" src="jquery-ui-timepicker-zh-CN.js"></script>
-		<link rel="stylesheet" type="text/css" href="jquery-ui-timepicker-addon.min.css"/>
+		<link rel="stylesheet" type="text/css" href="jquery-ui-timepicker-addon.min.css" />
+		<style type="text/css">
+			.ui-datepicker .ui-datepicker-prev span {
+				position: relative;
+			}
+			
+			.ui-datepicker .ui-datepicker-prev span:after {
+				position: absolute;
+				content: '';
+				left: 3px;
+				top: 3px;
+				width: 8px;
+				height: 8px;
+				border-color: transparent transparent #333 #333;
+				border-style: solid;
+				border-width: 1px;
+				-webkit-transform: rotate(45deg);
+				-moz-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				-o-transform: rotate(45deg);
+				transform: rotate(45deg);
+			}
+			
+			.ui-datepicker .ui-datepicker-next span {
+				position: relative;
+				border: none !important;
+			}
+			
+			.ui-datepicker .ui-datepicker-next span:after {
+				position: absolute;
+				content: '';
+				left: 3px;
+				top: 3px;
+				width: 8px;
+				height: 8px;
+				border-color: #333 #333 transparent transparent;
+				border-style: solid;
+				border-width: 1px;
+				-webkit-transform: rotate(45deg);
+				-moz-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				-o-transform: rotate(45deg);
+				transform: rotate(45deg);
+			}
+		</style>
 		<script type="text/javascript">
 			(function($) {
 
@@ -54,10 +98,10 @@
 				$(function() {
 
 					$.datepicker.setDefaults($.datepicker.regional['zh-CN']);
-					
+
 					$("#defult").datetimepicker();
 					$("#defult").datepicker("option", "minDate", '2017-5-22');
-					
+
 					$('#date').prop("readonly", true).datetimepicker({
 						timeText: '时间',
 						hourText: '小时',
@@ -116,22 +160,20 @@
 							end: {} // end picker options});
 						}
 					);
-					
-					
+
 				});
-				
-				
+
 			}(jQuery));
 		</script>
 	</head>
 
 	<body>
-		
+
 		默认：
 		<input id="defult" />
 		<br/>
-		<br />
-		控制到时分秒：<input id="date" />
+		<br /> 控制到时分秒：
+		<input id="date" />
 		<br />
 		<br /> 控制到年月日：
 		<input id="date_yy-mm-dd" />
