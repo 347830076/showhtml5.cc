@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+			<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		
 		<style type="text/css">
 			#block{
 				position: relative;
@@ -25,7 +27,9 @@
 		<div id="time"></div>
 		<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>		
 		<script type="text/javascript">
-		
+			$('#toggle').click(function(){
+				window.open('test3.html');
+			})
 			showTime();
 			function showTime(){
 			    isLeapYear(year);

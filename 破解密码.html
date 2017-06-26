@@ -8,6 +8,11 @@
 
 	<body>
 		<script type="text/javascript">
+			var str = '../';
+			var index = str.indexOf('statics');
+			console.log(index)
+			console.log(str.substr(index > 0 ? index : 0,str.length))
+			
 			arr = [
 				["1A", "B", "C"],
 				["J", "G", "H", "I"]
@@ -46,7 +51,7 @@
 				}
 			}
 			all_arrs(arr, 0, new Array(0));
-			console.log(arr2)
+//			console.log(arr2)
 		</script>
 	</body>
 

@@ -80,10 +80,17 @@
 				len = imgs.length,
 				$progress = $('.progress');
 			$('.btn').on('click', function() {
-				if($(this).data('control') === 'prev') { //上一页
+				if($(this).data('control') === 'prev') { //上一页		
+					if(index - 1 < 0){
+						console.log('没有上一页了')
+					}
 					index = Math.max(0, --index);
-				} else { //下一页
-					index = Math.min(len - 1, ++index);
+										
+				} else { //下一页		
+					if(index + 1 > len-1){
+						console.log('没有下一页了')
+					}
+					index = Math.min(len - 1, ++index);					
 				}
 				document.title = (index + 1) + '/' + len;
 				$('#img').attr('src', imgs[index]);
