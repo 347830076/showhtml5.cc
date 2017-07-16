@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div id="testDiv" style="width: 100px;height: 100px;overflow-y: scroll;padding: 20px;border: 1px solid #ccc;">
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		</div>
+		<script type="text/javascript">
+			var div = document.getElementById("testDiv");
+			function divScroll(){
+				var wholeHeight = div.scrollHeight;
+				var scrollTop = div.scrollTop;
+				var divHeight = div.clientHeight;
+				console.log(divHeight);
+				if(scrollTop + divHeight >= wholeHeight){
+					alert('滚动到底部了');
+				}
+				if(scrollTop == 0){
+					alert('滚动到头部了');
+				}
+			}
+			div.onscroll = divScroll;
+		</script>
+	</body>
+
+</html>
