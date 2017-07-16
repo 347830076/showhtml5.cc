@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			var str = '../';
+			var index = str.indexOf('statics');
+			console.log(index)
+			console.log(str.substr(index > 0 ? index : 0,str.length))
+			
+			arr = [
+				["1A", "B", "C"],
+				["J", "G", "H", "I"]
+			];
+			arr2 = [];
+
+			function all_arrs(arr, level, former) {
+				if(arr.length == level + 1) {
+					if(arr[level] instanceof Array) {
+						for(var i = 0; i < arr[level].length; i++) {
+							temp = former.slice(0);
+//							console.log(temp)
+							temp.push(arr[level][i]);
+//							console.log(temp)
+							arr2.push(temp);
+							
+						}
+					} else {
+						temp = former.slice(0);
+						temp.push(arr[level]);
+						arr2.push(temp);
+						console.log('21213')
+					}
+				} else {
+					if(arr[level] instanceof Array) {
+						for(var i = 0; i < arr[level].length; i++) {
+							temp = former.slice(0);
+							temp.push(arr[level][i]);
+							all_arrs(arr, level + 1, temp);
+						}
+					} else {
+						temp = former.slice(0);
+						temp.push(arr[level]);
+						all_arrs(arr, level + 1, temp);
+					}
+				}
+			}
+			all_arrs(arr, 0, new Array(0));
+//			console.log(arr2)
+		</script>
+	</body>
+
+</html>

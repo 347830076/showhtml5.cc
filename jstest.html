@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+
+	<body>
+
+		<ul id="li1">
+			<li>dd</li>
+			<li>dd</li>
+			<li>dd</li>
+		</ul>
+		<script type="text/javascript">
+			//			document.getElementById("li1").onclick = function(e) {
+			//				console.log([].indexOf())
+			//			}
+			document.getElementById("li1").onclick = function(e) {
+//				console.log([])
+				console.log([].indexOf())
+				console.log(e.target)
+//				console.log(this)
+				console.log(this.children)
+				console.log([].indexOf.call(this.children, e.target))
+			};
+			console.log(sum(2, 3))
+			console.log(sum(2)(3))
+
+			function sum() {
+				if(arguments.length == 1) {
+					var sumNum = arguments[0];
+					return function(num) {
+						return sumNum + num
+					}
+				} else if(arguments.length == 2) {
+					return arguments[0] + arguments[1]
+				}
+			}
+
+			function curry(fn, argLen, currArgs) {
+				return function() {
+					var args = [].slice.call(arguments);
+					// 首次调用时未提供最后一个参数 
+					if(currArgs !== undefined) { args = args.concat(currArgs); }
+					// 递归出口
+					if(args.length == argLen) {
+						return fn.apply(this, args);
+					} else {
+						return curry(fn, argLen, args);
+					}
+				}
+			}
+
+			function sumOf4(a, b, c, d) { return a + b + c + d; }
+			// 改造普通函数，返回柯里函数 
+			var sum4 = curry(sumOf4, 4);
+			console.log(sum4(1, 2, 3, 4));
+			// 10 
+			console.log(sum4(1, 2)(3, 4)); // 10 
+			console.log(sum4(1)(2, 3, 4)); // 10 
+			console.log(sum4(3)(3)(3, 4)); // 10 
+			console.log(sum4(1)(2)(3)(4)); // 10
+		</script>
+	</body>
+
+</html>

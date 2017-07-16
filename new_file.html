@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script src="ioeOsK.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			countWidth(3.8, 20, 10)
+			/*
+			 * num  ： 评分
+			 * starWidth : 星星的宽度
+			 * space  :  星星的间距
+			 */
+			function countWidth(num, starWidth, space) {
+				var intNum = parseInt(num / 2);
+				var floatNum = (num - intNum * 2).toFixed(1);
+				if(intNum >= 1) {
+					return intNum * starWidth + (intNum - 1) * space + starWidth * floatNum / 2;
+				} else {
+					return starWidth * floatNum / 2;
+				}
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/api.css" />
+		<link rel="stylesheet" type="text/css" href="tab.css" />
+	</head>
+
+	<body>
+		<div class="tab js_tab" data-config='{"triggerType": "mouseover","effect": "fade","invoke": "2","auto": 1000}'>
+			<ul class="tab_nav">
+				<li class="actived">
+					<a href="javascript:void(0);">新闻</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);">娱乐</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);">电影</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);">科技</a>
+				</li>
+			</ul>
+			<div class="content_wrap">
+				<div class="content_item current">
+					<img src="../image/lufei.ico" />
+				</div>
+				<div class="content_item">
+					2
+				</div>
+				<div class="content_item">
+					3
+				</div>
+				<div class="content_item">
+					4
+				</div>
+			</div>
+		</div>
+		<div class="tab js_tab" data-config='{"triggerType": "click","effect": "fade","invoke": "1"}'>
+			<ul class="tab_nav">
+				<li class="actived">
+					<a href="javascript:void(0);">新闻</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);">娱乐</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);">电影</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);">科技</a>
+				</li>
+			</ul>
+			<div class="content_wrap">
+				<div class="content_item current">
+					<img src="../image/lufei.ico" />
+				</div>
+				<div class="content_item">
+					2
+				</div>
+				<div class="content_item">
+					3
+				</div>
+				<div class="content_item">
+					4
+				</div>
+			</div>
+		</div>
+		<script src="../js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+//				var tab1 = new Tab($('.js_tab').eq(0));
+//				Tab.init($('.js_tab'));
+				$('.js_tab').tab().css('background','red');
+			});;
+			(function($) {
+
+				var Tab = function(tab) {
+					var _this_ = this;
+
+					//保存单个tab组建
+					this.tab = tab;
+
+					//默认配置参数
+					this.config = {
+						'triggerType': 'mouseover', //用来定义鼠标的触发类型，是click还是mouseover
+						'effect': 'default', //用来定义内容切换效果，是直接切换还是淡入淡出
+						'invoke': '1', //默认展示第几个tab
+						'auto': 3000 //用来定义tab是否自动切换,当指定了时间间隔,就表示自动
+					}
+
+					//如果配置参数存在，就扩展掉默认的配置参数
+					if(this.getConfig()) {
+						$.extend(this.config, this.getConfig());
+					}
+
+					//保存标签列表、对应的内容列表
+					this.tabItems = this.tab.find('ul.tab_nav li');
+					this.contentItems = this.tab.find('div.content_wrap div.content_item');
+
+					//保存配置参数
+					var config = this.config;
+					if(config.triggerType === 'click') {
+						this.tabItems.bind(config.triggerType, function() {
+							_this_.invoke($(this));
+						});
+					} else if(config.triggerType === 'mouseover' || config.tiggerType != 'click') {
+						this.tabItems.mouseover(function() {
+//							_this_.invoke($(this));
+							var self  = $(this);
+							this.timer = window.setTimeout(function(){
+								_this_.invoke(self);
+							},300);
+						}).mouseout(function(){
+							window.clearTimeout(this.timer);
+						})
+					}
+					
+					//自动切换功能,当配置了时间，我们就根据时间间隔自动切换
+					if(config.auto){
+						//定义一个全局的定时器
+						this.timer = null;
+						//计数器
+						this.loop = 0;
+						
+						this.autoPlay();
+						
+						this.tab.hover(function(){ //鼠标滑上去停止轮播
+							window.clearInterval(_this_.timer);
+						},function(){ //鼠标滑出继续轮播
+							_this_.autoPlay();
+						})
+					}
+					
+					//设置默认显示第几个tab
+					if(config.invoke > 1){
+						this.invoke(this.tabItems.eq(config.invoke - 1))
+					}
+					
+				};
+
+				Tab.prototype = {
+					//获取配置参数
+					getConfig: function() {
+						//拿一下tab elem节点上的data-config
+						var config = this.tab.attr('data-config');
+
+						//确保有配置参数
+						if(config && config != '') {
+							return $.parseJSON(config)
+						} else {
+							return null;
+						}
+					},
+					//事件驱动函数,tab切换
+					invoke: function(currentTab) {
+						var _this_ = this;
+						/*
+						 * 要执行tab的选中状态，当前选中的加上actived(标记为白底)
+						 * 切换对应tab的内容，要根据配置参数的effect是default还是fade
+						 */
+						var index = currentTab.index();
+						//tab选中状态
+						currentTab.addClass('actived').siblings().removeClass('actived');
+						//切换对应的内容区域
+						var effect = this.config.effect;
+						var conItems = this.contentItems;
+						if(effect === 'default' || effect != 'fade') { //默认
+							conItems.eq(index).addClass('current').siblings().removeClass('current');
+						} else if(effect === 'fade') { //淡入淡出
+							conItems.eq(index).fadeIn().siblings().fadeOut();
+						}
+						
+						//注意：如果配置了自动切换，记得把当前的loop的值设置成当前tab的index
+						if(this.config.auto){
+							this.loop = index;
+						}
+						
+					},
+					//自动间隔时间切换
+					autoPlay:function(){
+						var _this_ = this,
+						    tabItems = this.tabItems, //临时保存tab列表
+						    tabLength = tabItems.size(), //tab的个数
+						    config = this.config;
+						    
+						this.timer = window.setInterval(function(){
+							_this_.loop++;
+							if(_this_.loop >= tabLength){
+								_this_.loop = 0;
+							}
+							tabItems.eq(_this_.loop).trigger(config.triggerType);
+							
+						},config.auto);
+					}
+				};
+				
+				Tab.init = function(tabs){
+					var _this_ = this;
+					tabs.each(function(){
+						new _this_($(this));
+					})
+				}
+				
+				//注册成jq方法
+				$.fn.extend({
+					tab:function(){
+						this.each(function(){
+							new Tab($(this))
+						});
+						return this;
+					}
+				})
+				
+				window.Tab = Tab;
+			})(jQuery);
+
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,57 @@
+.ui-datepicker-wrapper{
+	display: none;
+	width: 240px;
+    font-size: 16px;
+    box-shadow: 2px 2px 8px 2px #ddd;
+    position: absolute;
+
+}
+.ui-datepicker-wrapper .header{
+	padding: 0 20px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background: #f0f0f0;
+	font-weight: bold;
+}
+.ui-datepicker-wrapper .header .ui-datepicker-btn{
+	color: #348932;
+	font-family: serif;
+	height: 50px;
+	width: 20px;
+	line-height: 50px;
+	text-decoration: none;
+}
+.ui-datepicker-wrapper .header .ui-datepicker-btn-previous{
+	float: left;
+}
+.ui-datepicker-wrapper .header .ui-datepicker-btn-back{
+	float: right;
+}
+.ui-datepicker-body table{
+	width: 100%;
+	border-collapse: collapse;
+}
+.ui-datepicker-body th,.ui-datepicker-body td{
+    height: 30px;
+    text-align: center;
+}
+.ui-datepicker-body th{
+       font-size: 12px;
+       height: 40px;
+       line-height: 40px;
+}
+.ui-datepicker-body td{
+	border: 1px solid #f0f0f0;
+	font-size: 10px;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
