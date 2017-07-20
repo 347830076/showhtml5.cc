@@ -4,27 +4,69 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/api.css" />
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.main {
+				overflow: hidden;
+			}
+			
+			.row {
+				display: inline-block;
+				vertical-align: middle;
+				width: 33.333%;
+				text-align: center;
+				border: 1px solid #e4e4e4;
+				word-break: break-all;
+				word-wrap: break-word;
+				padding-bottom: 100px;
+				margin-bottom: -100px;
+				margin-right: -6px;
+			}
+		</style>
 	</head>
 
 	<body>
-		<script src="ioeOsK.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
-			countWidth(3.8, 20, 10)
-			/*
-			 * num  ： 评分
-			 * starWidth : 星星的宽度
-			 * space  :  星星的间距
-			 */
-			function countWidth(num, starWidth, space) {
-				var intNum = parseInt(num / 2);
-				var floatNum = (num - intNum * 2).toFixed(1);
-				if(intNum >= 1) {
-					return intNum * starWidth + (intNum - 1) * space + starWidth * floatNum / 2;
-				} else {
-					return starWidth * floatNum / 2;
-				}
-			}
-		</script>
+		<div class="main clearfix">
+			<div class="row">12345678910</div>
+			<div class="row">12345678111111111111910123456781110123456789</div>
+			<div class="row">12345678910</div>
+			<div class="row">12345678910</div>
+			<!--<div class="row">12345678910</div>
+			<div class="row">12345678910</div>
+			<div class="row">12345678111111111111910123456781110123456789</div>
+			<div class="row">12345678910</div>
+			<div class="row">12345678910</div>
+			<div class="row">12345678910</div>-->
+		</div>
 	</body>
+	<input type="hidden" name="" id="token" value="123456" />
+	<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/md5_.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/azooo_ajax.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		
+		var obj = {x:1}
+		if('x' in obj){
+			console.log('rr')
+		}else{
+			console.log('rr0')
+		}
+		
+
+		//		$('.row').height();
+		//		var max = 0;
+		//		$('.row').each(function(){
+		//			max = Math.max(max,parseInt($(this).height()))
+		//		})
+		//		console.log(max);
+		//		$('.row').height(max+20);
+	</script>
 
 </html>
