@@ -1,58 +1,60 @@
-<!DOCTYPE html>
-<html>
+ <!DOCTYPE html>
+  <html>
+  <head>
+      <meta charset="utf-8"/>
+      <style>
 
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
 
-	<body>
-		<script type="text/javascript">
-			var str = '../';
-			var index = str.indexOf('statics');
-			console.log(index)
-			console.log(str.substr(index > 0 ? index : 0,str.length))
-			
-			arr = [
-				["1A", "B", "C"],
-				["J", "G", "H", "I"]
-			];
-			arr2 = [];
+          section {
+              margin: auto;
+              width: 1000px;
+              height: 500px;
+              margin-top: 100px;
+          }
 
-			function all_arrs(arr, level, former) {
-				if(arr.length == level + 1) {
-					if(arr[level] instanceof Array) {
-						for(var i = 0; i < arr[level].length; i++) {
-							temp = former.slice(0);
-//							console.log(temp)
-							temp.push(arr[level][i]);
-//							console.log(temp)
-							arr2.push(temp);
-							
-						}
-					} else {
-						temp = former.slice(0);
-						temp.push(arr[level]);
-						arr2.push(temp);
-						console.log('21213')
-					}
-				} else {
-					if(arr[level] instanceof Array) {
-						for(var i = 0; i < arr[level].length; i++) {
-							temp = former.slice(0);
-							temp.push(arr[level][i]);
-							all_arrs(arr, level + 1, temp);
-						}
-					} else {
-						temp = former.slice(0);
-						temp.push(arr[level]);
-						all_arrs(arr, level + 1, temp);
-					}
-				}
-			}
-			all_arrs(arr, 0, new Array(0));
-//			console.log(arr2)
-		</script>
-	</body>
+          .cover {
+              width: 100%;
+              height: 100%;
+              border-radius: 10px;
+              background-color: #5e5e5e;
+          }
 
-</html>
+          /*transform*/
+          section {
+              position: relative;
+              perspective: 2000px;
+          }
+
+          .cover {
+              transform-origin: 50% 50% 0;
+          }
+
+      </style>
+  </head>
+  <body>
+  <section>
+      <div class="cover">
+      </div>
+  </section>
+  <script>
+      var origin = {
+          X: document.body.clientWidth / 2,
+          Y: document.body.clientHeight / 2
+      };
+      var o = document.querySelector('.cover');
+      document.querySelector('section').onmouseover=function(){
+          document.querySelector('section').addEventListener('mousemove', function (e) {
+              var rotate = {x: 1 - e.pageY / origin.Y, y: e.pageX / origin.X - 1};
+              var transform = "rotateX(" + rotate.x *10 + "deg) rotateY(" + rotate.y * 10 + "deg)";  //变换效果
+              o.style.transform = transform;
+              o.style.boxShadow = -parseInt(rotate.y * 30) + 'px '+ parseInt(rotate.x * 20+20)+ 'px ' + '50px #333';  //边框阴影效果
+          });
+      };
+      document.querySelector('section').onmouseout=function(){
+              o.style.transform ="rotateX(0deg) rotateY(0deg)";
+          o.style.boxShadow ='0px 0px';
+      }
+
+  </script>
+  </body>
+  </html>

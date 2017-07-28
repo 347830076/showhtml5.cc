@@ -48,9 +48,10 @@
 //						continue;
 //					}
 					var reader = new FileReader();
+					console.log(reader)
 					reader.onload = (function(theFile) {
 						return function(e) {
-							console.log(e.target.result);
+//							console.log(e.target.result);
 							var i = document.getElementById("test");
 							i.src = event.target.result;
 							var quality = 50;

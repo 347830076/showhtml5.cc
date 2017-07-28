@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<input type="file" name="upload" id="upload" value="" />
+		<script src="js/lrz.all.bundle.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			document.querySelector('#upload').addEventListener('change', function() {
+				lrz(this.files[0])
+					.then(function(rst) {
+						// 处理成功会执行
+						console.log(rst);
+					})
+					.catch(function(err) {
+						// 处理失败会执行
+					})
+					.always(function() {
+						// 不管是成功失败，都会执行
+					});
+			});
+		</script>
+	</body>
+
+</html>
