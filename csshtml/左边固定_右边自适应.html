@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/api.css"/>
+		<style type="text/css">
+			/*添加快递*/
+			
+			.addExpressBg {
+				position: fixed;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.3);
+			}
+			
+			.addExpressCon {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				width: 90%;
+				max-width: 400px !important;
+				-webkit-transform: translateX(-50%) translateY(-50%);
+				-moz-transform: translateX(-50%) translateY(-50%);
+				-ms-transform: translateX(-50%) translateY(-50%);
+				-o-transform: translateX(-50%) translateY(-50%);
+				transform: translateX(-50%) translateY(-50%);
+				background-color: #fff;
+				padding: 15px;
+				border-radius: 8px;
+			}
+			
+			.addExpressTitle {
+				font-size: 18px;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+			
+			.addExpressRow {
+				width: 100%;
+				zoom: 1;
+				overflow: hidden;
+				padding-left: 70px;
+				margin: 8px 0;
+				box-sizing: border-box;
+			}
+			
+			.addExpressRow_l {
+				float: left;
+				width: 70px;
+				margin-left: -70px;
+				height: 35px;
+				line-height: 35px;
+			}
+			
+			.addExpressRow_r {
+				float: left;
+				width: 100%;
+				height: 35px;
+				line-height: 35px;
+			}
+			
+			.addExpressRow_r>select,
+			.addExpressRow_r>input {
+				width: 100%;
+				height: 35px;
+				line-height: 35px;
+				border: 1px solid #e4e4e4;
+				border-radius: 4px;
+				padding: 0 10px;
+			}
+			
+			.addExpressRow_r>input {
+				width: 100%;
+				height: 35px;
+				line-height: 35px;
+				border: 1px solid #e4e4e4;
+			}
+			.addExpressbtns{
+				width: 100%;
+				margin-top: 20px;
+			}
+			.addExpressbtns>div{
+				float: left;
+				width: 48%;
+				height: 44px;
+				line-height: 44px;
+				text-align: center;
+				font-size: 16px;
+				border-radius:4px;
+				border: 1px solid #e4e4e4 ;
+			}
+			.addExpressCancle{
+				margin-right: 4%;
+			}
+			.addExpressCancle:active{
+				background-color: #f5f5f5;
+			}
+			.addExpressConfirm{
+				border: 1px solid #ffda44 !important;
+				background-color: #ffda44;
+			}
+			.addExpressConfirm:active{
+				background-color: #face1b;
+			}
+			/*end添加快递*/
+		</style>
+	</head>
+
+	<body>
+		<div class="addExpressBg">
+			<div class="addExpressCon">
+				<div class="addExpressTitle">添加物流信息</div>
+				<div class="addExpressRow">
+					<div class="addExpressRow_l">选择快递</div>
+					<div class="addExpressRow_r">
+						<select>
+							<option value="顺丰快递">顺丰快递</option>
+							<option value="顺丰快递">EMS</option>
+							<option value="顺丰快递">圆通快递</option>
+							<option value="顺丰快递">申通快递</option>
+							<option value="顺丰快递">韵达快递</option>
+						</select>
+					</div>
+				</div>
+				<div class="addExpressRow">
+					<div class="addExpressRow_l">填写单号</div>
+					<div class="addExpressRow_r">
+						<input type="text" placeholder="请填写物流单号" />
+					</div>
+				</div>
+				<div class="addExpressbtns">
+					<div class="addExpressCancle">取消</div>
+					<div class="addExpressConfirm">确定</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
