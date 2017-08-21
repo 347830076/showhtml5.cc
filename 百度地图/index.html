@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<style type="text/css">
+		body, html{width: 100%;height: 100%;margin:0;font-family:"微软雅黑";}
+		#allmap {height:100%; width: 100%;}
+		#control{width:100%;}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=SalVkqMoNKh8lZugiLBICl0B"></script>
+	<title>设置线、面可编辑</title>
+</head>
+<body>
+	<div id="allmap"></div>
+</body>
+</html>
+<script type="text/javascript">
+	// 百度地图API功能
+	var map = new BMap.Map("allmap");
+	map.centerAndZoom(new BMap.Point(113.544426, 23.4), 10);
+	map.enableScrollWheelZoom();
+	var arr = [
+		new BMap.Point(113.344426, 23),
+		new BMap.Point(113.444426, 23.2001),
+		new BMap.Point(113.544426, 23.2001),
+		new BMap.Point(113.544427, 23.2003),
+		new BMap.Point(113.545428, 23.3004),
+		new BMap.Point(113.544729, 23.4005),
+		new BMap.Point(113.654423, 23.6006),
+	];
+	
+	for(var i = 0; i < 100; i++){
+		arr.push(new BMap.Point(113.344426+Math.random(), 23+Math.random()))
+	}
+	var polyline = new BMap.Polyline(arr, {strokeColor:"red", strokeWeight:4, strokeOpacity:1});   //创建折线
+	map.addOverlay(polyline);   //增加折线
+
+</script>
+

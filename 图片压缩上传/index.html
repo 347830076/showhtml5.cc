@@ -35,14 +35,15 @@ $(document).ready(function(e) {
 			  name: result.fileName,
 			  file:result.clearBase64,
 		  };
-		$.ajax({
-		   type: "POST",
-		   url: "/upload/testphoto",
-		   data: submitData,
-			async: true,
-		}).done(function(ret) {
-			alert(JSON.stringify(ret));
-		});
+		  console.log(result)
+		// $.ajax({
+		//    type: "POST",
+		//    url: "/upload/testphoto",
+		//    data: submitData,
+		// 	async: true,
+		// }).done(function(ret) {
+		// 	alert(JSON.stringify(ret));
+		// });
       }
   });
 

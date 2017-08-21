@@ -19,10 +19,10 @@
 			//				console.log([].indexOf())
 			//			}
 			document.getElementById("li1").onclick = function(e) {
-//				console.log([])
+				//				console.log([])
 				console.log([].indexOf())
 				console.log(e.target)
-//				console.log(this)
+				//				console.log(this)
 				console.log(this.children)
 				console.log([].indexOf.call(this.children, e.target))
 			};
@@ -44,7 +44,9 @@
 				return function() {
 					var args = [].slice.call(arguments);
 					// 首次调用时未提供最后一个参数 
-					if(currArgs !== undefined) { args = args.concat(currArgs); }
+					if(currArgs !== undefined) {
+						args = args.concat(currArgs);
+					}
 					// 递归出口
 					if(args.length == argLen) {
 						return fn.apply(this, args);
@@ -54,7 +56,9 @@
 				}
 			}
 
-			function sumOf4(a, b, c, d) { return a + b + c + d; }
+			function sumOf4(a, b, c, d) {
+				return a + b + c + d;
+			}
 			// 改造普通函数，返回柯里函数 
 			var sum4 = curry(sumOf4, 4);
 			console.log(sum4(1, 2, 3, 4));
