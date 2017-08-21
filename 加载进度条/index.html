@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<title>加载进度条</title>
+	<style type="text/css">
+		img{
+			display: inline-block;
+			width: 200px;
+			/*height: 100px;*/
+			border: 1px solid #e4e4e4;
+		}
+		.loadingBg{
+			position: fixed;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			background-color: #fff;
+		}
+		.loadingBg .pic{
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+		.loadingBg .pic i{
+			display: block;
+			float: left;
+			width: 6px;
+			height: 50px;
+			background-color: #399;
+			margin: 0 2px;
+			-webkit-transform: scaleY(0.4);
+			-ms-transform: scaleY(0.4);
+			-o-transform: scaleY(0.4);
+			transform: scaleY(0.4);
+			animation:load 1.2s infinite;
+		}
+		.loadingBg .pic i:nth-child(1){}
+		.loadingBg .pic i:nth-child(2){animation-delay: 0.1s}
+		.loadingBg .pic i:nth-child(3){animation-delay: 0.2s}
+		.loadingBg .pic i:nth-child(4){animation-delay: 0.3s}
+		.loadingBg .pic i:nth-child(5){animation-delay: 0.4s}
+		@-webkit-keyframes load {
+			0%,40%,100% {-webkit-transform: scaleY(0.4);
+			-ms-transform: scaleY(0.4);
+			-o-transform: scaleY(0.4);
+			transform: scaleY(0.4);  }
+			20%{-webkit-transform: scaleY(1);
+			-ms-transform: scaleY(1);
+			-o-transform: scaleY(1);
+			transform: scaleY(1);  }
+		}
+		@-o-keyframes load {
+			0%,40%,100% {-webkit-transform: scaleY(0.4);
+			-ms-transform: scaleY(0.4);
+			-o-transform: scaleY(0.4);
+			transform: scaleY(0.4);  }
+			20%{-webkit-transform: scaleY(1);
+			-ms-transform: scaleY(1);
+			-o-transform: scaleY(1);
+			transform: scaleY(1);  }
+		}
+		@-moz-keyframes load {
+			0%,40%,100% {-webkit-transform: scaleY(0.4);
+			-ms-transform: scaleY(0.4);
+			-o-transform: scaleY(0.4);
+			transform: scaleY(0.4);  }
+			20%{ -webkit-transform: scaleY(1);
+			-ms-transform: scaleY(1);
+			-o-transform: scaleY(1);
+			transform: scaleY(1); }
+		}
+		@keyframes load {
+			0%,40%,100% {-webkit-transform: scaleY(0.4);
+			-ms-transform: scaleY(0.4);
+			-o-transform: scaleY(0.4);
+			transform: scaleY(0.4);  }
+			20%{ -webkit-transform: scaleY(1);
+			-ms-transform: scaleY(1);
+			-o-transform: scaleY(1);
+			transform: scaleY(1); }
+		}
+	</style>
+</head>
+<body>
+	<div class="loadingBg">
+		<div class="pic">
+			<i></i>
+			<i></i>
+			<i></i>
+			<i></i>
+			<i></i>
+		</div>
+	</div>
+	<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1503151978531&di=54fbc48dd09197c1cbf7159fa3f2400b&imgtype=0&src=http%3A%2F%2Fimg17.3lian.com%2Fd%2Ffile%2F201702%2F24%2F8baca1f957695ced4a81401d5c2c94c0.jpg" />
+	<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1503151978531&di=54fbc48dd09197c1cbf7159fa3f2400b&imgtype=0&src=http%3A%2F%2Fimg17.3lian.com%2Fd%2Ffile%2F201702%2F24%2F8baca1f957695ced4a81401d5c2c94c0.jpg" />
+	<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1503151978531&di=54fbc48dd09197c1cbf7159fa3f2400b&imgtype=0&src=http%3A%2F%2Fimg17.3lian.com%2Fd%2Ffile%2F201702%2F24%2F8baca1f957695ced4a81401d5c2c94c0.jpg" />
+	<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1503151978531&di=54fbc48dd09197c1cbf7159fa3f2400b&imgtype=0&src=http%3A%2F%2Fimg17.3lian.com%2Fd%2Ffile%2F201702%2F24%2F8baca1f957695ced4a81401d5c2c94c0.jpg" />
+
+	<script src="../js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript">
+		//页面加载状态改变时的事件
+		document.onreadystatechange = function(){
+			if(document.readyState == 'complete'){
+				// $('.loadingBg').fadeOut('slow/400/fast', function() {
+					
+				// });
+			}
+			console.log(document.readyState);
+		}
+		//返回当前文档的状态 
+		//uninitialized 还未开始载入
+		//loading 载入中
+		//interactive  已加载，文档与用户可以开始交互
+		//complete 载入完成
+	</script>
+</body>
+</html>
