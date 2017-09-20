@@ -1,23 +1,36 @@
 <html>
+
 	<head>
 		<title></title>
+		<style type="text/css">
+			.d{
+				
+			}
+		</style>
 	</head>
+
 	<body>
 		<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
-			$.ajax({
-				type:"get",
-				url:"http://www.showhtml5.cc/index.php",
-				data:{
-					name:'cylyiou'
-				},
-				async:true,
-				success:function(ret){
-					console.log(ret);
-				},error:function(ret){
-					console.log('error:'+JSON.stringify(ret));
-				}
-			});
+			var str = "Visit W3School sdf W3School";
+			var patt = new RegExp("W3School", "g");
+			var result;
+			console.log(patt.exec(str))
+			console.log(patt.exec(str))
+			console.log(patt.exec(str))
+//			while((result = patt.exec(str)) != null) {
+//				
+//				document.write(result);
+//				document.write("<br />");
+//				document.write(patt.lastIndex);
+//				document.write("<br />");
+//			}
+//			var url = 'saaf#121sd';				
+//			reg = /#(.*)/
+//			v = reg.exec(url)[1];
+//			console.log(v)
+//			console.log(reg.exec(url))
 		</script>
 	</body>
+
 </html>

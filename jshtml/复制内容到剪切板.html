@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
 	</head>
+
 	<body>
 		<script type="text/javascript">
-function copyText(obj){
-	try{
-		var rng = document.body.createTextRange();
-		rng.moveToElementText(obj);
-		rng.scrollIntoView();
-		rng.select();
-		rng.execCommand("Copy");
-		rng.collapse(false);
-		alert("已经复制到粘贴板!你可以使用Ctrl+V 贴到需要的地方去了哦!");
-	}catch(e){
-		alert("您的浏览器不支持此复制功能，请选中相应内容并使用Ctrl+C进行复制!");
-	}
-}
-</script>
-<span id="tbid">这里是点击链接后复制的内容</span> <a href="javascript:;" onclick="copyText(document.all.tbid)">点击复制</a>
+			function copyText(obj) {
+				try {
+					var rng = document.body.createTextRange();
+					rng.moveToElementText(obj);
+					rng.scrollIntoView();
+					rng.select();
+					rng.execCommand("Copy");
+					rng.collapse(false);
+					alert("已经复制到粘贴板!你可以使用Ctrl+V 贴到需要的地方去了哦!");
+				} catch(e) {
+					alert("您的浏览器不支持此复制功能，请选中相应内容并使用Ctrl+C进行复制!");
+				}
+			}
+		</script>
+		<span id="tbid">这里是点击链接后复制的内容</span>
+		<a href="javascript:;" onclick="copyText(document.all.tbid)">点击复制</a>
 	</body>
+
 </html>

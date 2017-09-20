@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>文件base64-直接拖进来</title>
+		<style>
+			body {
+				word-break: break-all;
+				word-wrap: break-word;
+			}
+			
+			#con {
+				border: 1px solid #e4e4e4;
+				width: 90%;
+				text-align: center;
+				min-height: 100px;
+				padding-top: 50px;
+				margin: 20px auto;
+			}
+			
+			#result {
+				width: 90%;
+				height: 300px;
+				overflow: auto;
+				padding: 15px;
+				margin: 20px auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="con">
+			文件直接拖进来就可以直接生成base64
+		</div>
+		<div id="result"></div>
+		<script>
+			document.getElementById("con").addEventListener("dragenter", function(event) {
+				event.preventDefault();
+			}, false);
+			document.getElementById("con").addEventListener("dragover", function(event) {
+				event.preventDefault();
+			}, false);
+			document.getElementById("con").addEventListener("drop", function(event) {
+				var reader = new FileReader();
+				reader.onload = function(e) {
+					document.getElementById("result").innerHTML = '<p>' + e.target.result + '</p>'; // base64 encoded file data!
+				};
+				reader.readAsDataURL(event.dataTransfer.files[0]);
+				event.preventDefault();
+			}, false);
+		</script>
+	</body>
+
+</html>

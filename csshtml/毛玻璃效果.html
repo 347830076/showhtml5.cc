@@ -65,7 +65,8 @@
 	</head>
 	<body>
 		<div id='blur-div'>
-			<img src="image/3.jpg" id='img'/>
+			<!--<img src="../image/1.jpg" id='img'/>-->
+			<img src="../image/2.jpg" id='img'/>
 			<canvas id='canvas'></canvas>
 			<a href="javascript:reset()" class="button" id="reset">reset</a>
 			<a href="javascript:show()" class="button" id='show'>show</a>			
@@ -85,7 +86,7 @@
 			var	clippingRegion = {x: 140, y: 100 , r:0};
 			var leftMargin = topMargin = 0;
 			
-			image.src = 'image/3.jpg';
+			image.src = '../image/2.jpg';
 			
 			image.onload = function(e){
 				document.getElementById("blur-div").style.width = canvasWidth + 'px';

@@ -1,104 +1,36 @@
 <!doctype html>
 <html>
+<head>
+<meta charset="utf-8">
+<title>Video.js 6.2.5</title>
+	<link href="css/video-js.css" rel="stylesheet">	
+	<style>
+		body{background-color: #191919}
+		.m{ width: 740px; height: 400px; margin-left: auto; margin-right: auto; margin-top: 100px; }
+	</style>
+</head>
 
-	<head>
-		<link rel="stylesheet" type="text/css" href="../css/api.css"/>
-		<style type="text/css">
-			html,body{
-				height: 100%;
-			}
-			#video{
-				width: 100%;
-			}
-			.videoBG{
-				position: absolute;
-				left: 0;
-				top: 0;
-				width: 100%;
-				z-index: 9;
-			}
-		</style>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title>视频播放</title>
-		<link href="css/video-js.min.css" rel="stylesheet">
-		
-	</head>
-
-	<body>
-
-		<video id="video" class="video-js vjs-default-skin vjs-big-play-centered" controls>
-			<source class="source" src="" type="video/webm"></source> 
-			<source class="source" src="" type="video/mp4"></source> 
-			<source class="source" type="video/ogg"></source> 
-			<source class="source" type="video/m4v"></source> 
-		</video>
-		<div data-type = "1" class="videoBG" id="videoBG">
-			
-		</div>
-		<script src="js/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>	
-		<script src="js/video.min.js"></script>
-		<script type="text/javascript">
-			var srceenHeight = document.body.clientHeight || window.innerHeight || document.documentElement.clientWidth;
-//			alert(srceenHeight)
-			document.getElementById("video").style.height = srceenHeight - 40 + 'px';
-			
-			document.getElementById("videoBG").style.height = srceenHeight - 60 + 'px';
-			$('.source').each(function(){
-				$(this).attr('src','http://admin.taomei.in/Public/oss/caima-v/20160824/276/355/d94d05226aeb427eadb5657907e0f7b3.mp4');
-			});		
-			var player = videojs("video", {
-			    "techOrder": ["flash","html5"],
-			    "autoplay":false,
-			    "preload":"auto",
-			    "poster":'111.png',
-			    controlBar: {
-			        captionsButton: false,
-			        chaptersButton : false,
-			        liveDisplay:false,
-			        playbackRateMenuButton: false,
-			        subtitlesButton:false,
-			        muteToggle: false
-			      }
-			
-			}, function(){
-			
-			    this.on('loadeddata',function(){
-			        console.log(this);
-			    })
-			
-			    this.on('ended',function(){
-			         this.pause();
-			    });
-			    this.on('error',function(){
-			        alert('视频无法播放')
-			    });
-			
+<body>
+	<div class="m">
+		<video id="my-video" class="video-js" controls preload="auto" width="740" height="400"
+		  poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+			<source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+			<source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+			<source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+			<p class="vjs-no-js">
+			  To view this video please enable JavaScript, and consider upgrading to a web browser that
+			  <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+			</p>
+		  </video>
+		  <script src="http://vjs.zencdn.net/6.2.5/video.min.js"></script>	
+		  <script type="text/javascript">
+			var myPlayer = videojs('my-video');
+			videojs("my-video").ready(function(){
+				var myPlayer = this;
+				myPlayer.play();
 			});
-			document.getElementById("videoBG").addEventListener('click',function(){				
-				if(!isIos()){
-					if($('#videoBG').attr('data-type') == '1'){
-						player.play();
-						$('#videoBG').attr('data-type','2');
-					}else if($('#videoBG').attr('data-type') == '2'){
-						player.pause();
-						$('#videoBG').attr('data-type','1');
-					}else{
-						$('#videoBG').attr('data-type','2');
-					}
-				}else{
-					$('#videoBG').css('display','none');
-				}
-			},false);
-			function isIos() {
-				var ua = navigator.userAgent.toLowerCase();
-				return ua.indexOf('iphone') >= 0 || ua.indexOf('ipad') >= 0;
-			}
-			function isAndroid() {
-				var ua = navigator.userAgent.toLowerCase();
-				return ua.indexOf('android') >= 0;
-			}
 		</script>
-	</body>
+	</div>
 
+</body>
 </html>

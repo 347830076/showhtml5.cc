@@ -44,6 +44,8 @@
 				xmlHttp.onreadystatechange = function() {
 					if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
 						opt.success(xmlHttp.responseText);
+					}else{
+						opt.error(xmlHttp);
 					}
 				};
 			}
@@ -57,6 +59,8 @@
 			    },
 			    success: function (response) { 
 			       console.log(response);
+			    },error:function(ret){
+			    	console.log(ret)
 			    }
 			});
 		</script>

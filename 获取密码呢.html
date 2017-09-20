@@ -22,9 +22,17 @@
 					$(this).attr('data-flag',1)
 				}
 			});
-
+			$.ajax({
+				type:"get",
+				url:"http://ip.chinaz.com/getip.aspx",
+				dataType:'jsonp',
+				async:true,
+				success:function(ret){
+					console.log(ret);
+				}
+			});
 		</script>
-
+<script type="text/javascript" src="http://ip.chinaz.com/getip.aspx"></script>
 	</body>
 
 </html> 
