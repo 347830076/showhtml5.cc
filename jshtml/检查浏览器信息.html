@@ -32,18 +32,41 @@
 					}(),
 					language: (navigator.browserLanguage || navigator.language).toLowerCase()
 				}
-
-			 document.writeln("语言版本: " + browser.language + '<br/>');
-			 document.writeln(" 是否为移动终端: " + browser.versions.mobile+ '<br/>');
-			 document.writeln(" ios终端: " + browser.versions.ios+ '<br/>');
-			 document.writeln(" android终端: " + browser.versions.android+ '<br/>');
-			 document.writeln(" 是否为iPhone: " + browser.versions.iPhone+ '<br/>');
-			 document.writeln(" 是否iPad: " + browser.versions.iPad+ '<br/>');
-			 document.writeln(navigator.userAgent+ '<br/>');
-			 document.writeln(browser.language+ '<br/>');
-			 document.writeln("版本号" + navigator.userAgent.substr(navigator.userAgent.indexOf('Android') + 8, 5));
+			 console.log(navigator.userAgent)
+			 console.log("语言版本: " + browser.language)
+			 console.log("是否为移动终端: " + browser.versions.mobile)
+			 console.log("ios终端: " + browser.versions.ios)
+			 console.log("android终端: " + browser.versions.android)
+			 console.log("是否为iPhone: " + browser.versions.iPhone)
+			 console.log("是否iPad: " + browser.versions.iPad)
+			 console.log("版本号:" + navigator.userAgent.substr(navigator.userAgent.indexOf('Android') + 9, 4));
 			 
-
+			//判断是不是移动端 //使用办法：  
+			if(isMobile()){ 
+			    console.log('是移动端'); 
+			}
+			else{
+			    console.log('不是移动端'); 
+			}
+			
+			  //判断是不是移动端
+			function isMobile() { 
+			    var ua = navigator.userAgent.toLowerCase(); 
+			    return ua.indexOf('android') >= 0 || ua.indexOf('iphone') >= 0 || ua.indexOf('ipad') >= 0; 
+			} 
+			
+			//判断是不是微信端 //使用办法： 
+			if(isWeiXin()){ 
+			    console.log('是微信内嵌浏览器');
+			}else{
+			    console.log('不是微信内嵌浏览器'); 
+			} 
+			//判断是不是微信端
+			function isWeiXin() { 
+			    var ua = navigator.userAgent.toLowerCase();
+			    return ua.indexOf('micromessenger') >= 0;
+			}
+			 
 		</script>
 	</body>
 
