@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>Javascript 返回顶部</title>
+		<style type="text/css">
+			#btn {
+				width: 40px;
+				height: 40px;
+				position: fixed;
+				right: 65px;
+				bottom: 10px;
+				display: none;
+				background: url(images/top_bg.png) no-repeat left top;
+				background-color: #ccc;
+			}
+			
+			#btn:hover {
+				background: url(images/top_bg.png) no-repeat 0 -39px;
+			}
+			
+			.bg {
+				width: 100%;
+				height: 10000px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<a href="javascript:;" id="btn" title="回到顶部"></a>
+		<div class="bg"></div>
+
+		<script type="text/javascript">
+			window.onload = function() {
+				var obtn = document.getElementById("btn");
+				//获取页面可视区的高度
+				var clientHeight = document.documentElement.clientHeight;
+				var timer = null; //定时器
+				var isTop = true; //是否可以滚动
+				//滚动条滚动时触发
+				window.onscroll = function() {
+					var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+					if(osTop >= clientHeight) { //当滚动条高度大于页面可视高度就显示回到顶部按钮
+						obtn.style.display = "block";
+					} else {
+						obtn.style.display = "none";
+					}
+					if(!isTop) { //手动触发滚动条的时候删除定时器，否则定时器执行的时候又手动触发滚动，页面就会上下滚动
+						clearInterval(timer);
+					}
+					isTop = false; //手动触发滚动条的时候设置不能滚动
+				}
+				obtn.onclick = function() {
+					//设置定时器
+					timer = setInterval(function() {
+						//获取滚动条距离顶部的高度
+						var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+						//滚动速度，快到慢
+						var ispeed = Math.floor(-osTop / 6);
+						document.documentElement.scrollTop = document.body.scrollTop = osTop + ispeed;
+						isTop = true;
+						if(osTop == 0) { //滚动到顶部删除定时器
+							clearInterval(timer);
+						}
+					}, 30);
+				}
+			}
+		</script>
+	</body>
+
+</html>
