@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+	<meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+   
+  </head>
+  <body>
+      <canvas id="canvas" style="border:1px solid black">
+	    您的浏览器不支持canvas标签
+	  </canvas>
+  </body>
+</html>
+ <script type="text/javascript">
+   window.onload = function(){
+     var canvas = document.getElementById("canvas");
+	 canvas.width = 400;
+	 canvas.height =400;
+	 var context = canvas.getContext("2d");
+     circle({"cxt":context,"x":100,"y":100,"r":50,"starAngle":0*Math.PI,"endAngle":2*Math.PI,"borderWidth":10,"borderColor":"blue","fillColor":"red"});
+		
+	 function circle(obj){
+	    obj.cxt.beginPath();
+		obj.cxt.arc(obj.x,obj.y,obj.r,obj.starAngle,obj.endAngle);
+		obj.cxt.closePath();
+		obj.cxt.lineWidth=obj.borderWidth;
+		obj.cxt.strokeStyle=obj.borderColor;
+		obj.cxt.fillStyle=obj.fillColor;
+		obj.cxt.fill();
+		obj.cxt.stroke();
+		
+	 }
+	 
+   }
+</script>

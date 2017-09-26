@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+		    #canvas{display: block;margin: 0 auto;}
+			#buttons{width: 1000px;margin: 10px auto;clear: both;}
+			#buttons a{font-size: 18px;display: block;float: left;margin-right: 14px;}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" style="border: 1px solid #aaa;margin: 0px auto;">
+			当前的浏览器不支持Canvas,请更换浏览器后再试
+		</canvas>
+		<div id="buttons">
+			<a href="#">source-over</a>
+			<a href="#">source-atop</a>
+			<a href="#">source-in</a>
+			<a href="#">source-out</a>
+			<a href="#">destination-over</a>
+			<a href="#">destination-atop</a>
+			<a href="#">destination-in</a>
+			<a href="#">destination-out</a>
+			<a href="#">lighter</a>
+			<a href="#">copy</a>
+			<a href="#">xor</a>
+		</div>
+		<script type="text/javascript">
+			window.onload = function(){
+				draw("source-over");
+				var buttons = document.getElementById("buttons").getElementsByTagName("a");
+				for (var i=0; i<buttons.length;i++) {
+					buttons[i].onclick = function(){
+						draw(this.text);
+						return false;
+					}
+				}
+			}
+			function draw(compositeStyle){
+				var canvas = document.getElementById("canvas");
+				canvas.width = 600;
+				canvas.height = 500;
+				
+				var context = canvas.getContext("2d");
+				
+				context.clearRect(0,0,canvas.width,canvas.height);
+				
+				//draw title
+				context.font = "bold 20px Arail";
+				context.textAlign="center";
+				//context.textBaseline="middle";
+				context.fillStyle="#058";
+				context.fillText("globalCompositeOperantion = " + compositeStyle,canvas.width/2,30);
+				
+				//draw a rect
+				context.fillStyle = "blue";
+				context.fillRect(150,75,250,250);
+				
+				//draw a triangle
+				context.globalCompositeOperation = compositeStyle;
+				context.fillStyle = "red";
+				context.beginPath();
+				context.moveTo(350,125);
+				context.lineTo(500,385);
+				context.lineTo(200,385);
+				context.closePath();
+				context.fill();
+			}
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+

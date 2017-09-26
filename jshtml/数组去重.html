@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			//数组去重
+			Array.prototype.unique = function() {
+				var res = [];
+				var json = {};
+				for(var i = 0; i < this.length; i++) {
+					if(!json[this[i]]) {
+						res.push(this[i]);
+						json[this[i]] = 1;
+					}
+				}
+				return res;
+			}
+					
+			var arr = [112, 112, 34, '你好', 112, 'str', 34, '你好', 'str', 'str1'];
+
+			console.log(arr.unique())
+		</script>
+	</body>
+
+</html>

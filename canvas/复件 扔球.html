@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+	<meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+	<script type="text/javascript" src="jquery-2.1.0.min.js"></script>
+    <style>
+	*{margin:0;padding:0};
+	</style>
+  </head>
+  <body>
+      <canvas id="canvas" style="border:1px solid black;display:block;">
+	    您的浏览器不支持canvas标签
+	  </canvas>
+  </body>
+</html>
+ <script type="text/javascript">
+   window.onload = function(){
+     var canvas = document.getElementById("canvas");
+	 canvas.width = 800;
+	 canvas.height =500;
+	 var context = canvas.getContext("2d");//获取绘制画布环境
+	 //画初始小球
+	 context.fillStyle="black";
+	 context.arc(200,200,20,0,Math.PI*2);
+	 context.fill();    
+	 var start_x=200; //初始圆的x坐标
+	 var start_Y=200; //初始圆的Y坐标
+	 canvas.addEventListener('mousedown',function(e){  //这里的e 是鼠标按下事件的e
+	 
+	   if(e.clientX>start_x-20&&e.clientX<start_x+20&&e.clientY>start_Y-20&&e.clientY<start_Y+20){
+	     $(document).mousemove(function(e){ //触发document移动事件  这里的e 是移动事件的e
+		    drags(e);
+		 });
+	   }
+	   
+	   $(this).click( function(e){	//元素点击事件	
+			drags(e)
+		});
+		
+	   //document按下弹起事件
+		$(document).mouseup( function(e){
+			$(this).unbind("mousemove");
+			
+			
+			
+			//给圆赋值坐标-------------------------------------------
+			x = e.clientX;  
+			y = e.clientY;
+			if(x<=20){
+				if(y <= 20){
+					 start_x = 20; 
+					 start_Y = 20;
+				}else if(y >= canvas.height-20){
+					  start_x = 20; 
+					  start_Y = canvas.height-20;
+				}else{
+					 start_x = 20;
+                     start_Y = y;					 
+			    }
+			}else if(x >= canvas.width-20){
+			    if(y <= 20){
+					 start_x = canvas.width-20; 
+					 start_Y = 20;
+				}else if(y >= canvas.height-20){
+					  start_x = canvas.width-20; 
+					  start_Y = canvas.height-20;
+				}else{
+					 start_x = canvas.width-20;
+                     start_Y = y;					 
+			    }
+			}else{
+					start_x = x; //赋值给圆的x坐标
+					start_Y = y; //赋值给圆的Y坐标
+	        }
+			
+			if(y <= 20){
+			   start_Y = 20
+			}else if(y >= canvas.height-20){
+			  start_Y = canvas.height-20
+			}else{
+			   start_Y = y; //赋值给圆的Y坐标
+			}
+			//end给圆赋值坐标---------------------------------------------------------------
+			
+			
+		
+		});
+    },false); 
+  
+  
+   function drags(e){ //拖拽函数
+     var x = e.clientX;  //获取鼠标X坐标的位置
+	 var y = e.clientY;  //获取鼠标Y坐标的位置
+	 //console.log("x: "+e.clientX + " y: "+e.clientY); 
+	 context.clearRect(0,0,canvas.width,canvas.height); //清除画布 
+	 context.beginPath();
+	 if(x <= 20){ //不超过左边
+	   if(y <= 20){
+	     context.arc(20,20,20,0,Math.PI*2);
+	   }else if(y >= canvas.height-20){
+	     context.arc(20,canvas.height-20,20,0,Math.PI*2);
+	   }else{
+	     context.arc(20,y,20,0,Math.PI*2);
+	   }
+	   
+	 }
+	 else if(x >= canvas.width-20){ //不超过右边
+	   if(y <= 20){
+	     context.arc(canvas.width-20,20,20,0,Math.PI*2);
+	   }else if(y >= canvas.height-20){
+	     context.arc(canvas.width-20,canvas.height-20,20,0,Math.PI*2);
+	   }else{
+	     context.arc(canvas.width-20,y,20,0,Math.PI*2);
+	   }
+	   
+	 }
+	 else if(y <= 20){//不超过上边
+	   context.arc(x,20,20,0,Math.PI*2);
+	 }
+	 else if(y >= canvas.height-20){ //不超过下边
+	   context.arc(x,canvas.height-20,20,0,Math.PI*2);
+	 }else{
+	    context.arc(x,y,20,0,Math.PI*2); 
+	 }
+	
+	 
+	 context.closePath();
+	 context.fill();
+   }   
+}
+  
+</script>
+
+
+
+
+
+
+
+
+

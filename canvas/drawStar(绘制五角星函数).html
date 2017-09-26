@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+	<meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+   
+  </head>
+  <body>
+      <canvas id="canvas" style="display:block;margin:0 auto;border:1px solid black">
+	    您的浏览器不支持canvas标签
+	  </canvas>
+  </body>
+</html>
+ <script type="text/javascript">
+ 
+ window.onload=function(){
+    var canvas = document.getElementById("canvas");
+	 canvas.width=600;
+	 canvas.height=600;
+	 var context = canvas.getContext("2d");	
+
+
+	drawStar({"cxt":context,"r":100,"R":200,"rot":0,"borderWidth":"","borderColor":""});
+	
+
+	function drawStar(obj){
+	var cxt = obj.cxt ,
+	 rot = obj.rot || 0 ,
+	 r = obj.r || 0.5 ,
+	 R = obj.R || 1 ,
+	 fillColor = obj.fillColor || "#fb3" ,
+	 borderWidth = obj.borderWidth || 3 ,
+	 borderColor = obj.borderColor || "#fb5" ,
+	 x = obj.x || cxt.canvas.width/2 ,
+	 y = obj.y || cxt.canvas.height/2 ;
+	cxt.beginPath();
+	  for(var i=0;i<5;i++){
+		  cxt.lineTo(Math.cos((18 + 72 * i - rot) / 180 * Math.PI) * R + x,-Math.sin((18 + 72 * i - rot) / 180 * Math.PI) * R + y);
+		  cxt.lineTo(Math.cos((54 + 72 * i - rot) / 180 * Math.PI) * r + x,-Math.sin((54 + 72 * i - rot) / 180 * Math.PI) * r + y);
+	  }
+	  cxt.closePath();
+	  cxt.lineJoin = "round";
+	  cxt.fillStyle=fillColor;
+	  cxt.fill();
+	  cxt.lineWidth=borderWidth;
+	  cxt.strokeStyle=borderColor;
+	  cxt.stroke();
+	}
+}
+ 
+	
+</script>

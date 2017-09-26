@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+	<meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+   
+  </head>
+  <body>
+      <canvas id="canvas" style="border:1px solid black;display:block;margin:0 auto;">
+	    您的浏览器不支持canvas标签
+	  </canvas>
+  </body>
+</html>
+ <script type="text/javascript">
+   window.onload = function(){
+     var canvas = document.getElementById("canvas");
+	 canvas.width = 800;
+	 canvas.height =500;
+	 var context = canvas.getContext("2d");//获取绘制画布环境
+	 
+
+	 
+	 balls=new Array();//装小球数组
+	 for(var i=0;i<100;i++){  //随机生成100个小球 
+	    var R = Math.floor(Math.random()*255);//随机生成RGB颜色
+	    var G = Math.floor(Math.random()*255);
+	    var B = Math.floor(Math.random()*255);
+		var radius = Math.random()*25+10;
+		aBall={
+		       color:"rgb("+R+","+G+","+B+")",  //颜色
+			   radius:radius,                   //半径
+			   x:Math.random()*(canvas.width-2*radius), //圆心x坐标
+			   y:Math.random()*(canvas.height-2*radius), //圆心y坐标
+			   vx:(Math.random()*5+5)*Math.pow(-1,Math.floor(Math.random()*100)), //x轴加速度
+			   vy:(Math.random()*5+5)*Math.pow(-1,Math.floor(Math.random()*100)) //y轴加速度
+		};
+		balls[i]=aBall; //把每个小球装进数组中
+	 }
+	 
+	 setInterval(  //定时器，50毫秒执行一次   draw()函数先画出一开始位置，然后update()改变圆心位置，然后清空上次的画布，重新画
+	   function(){
+	      draw(context); //画圆
+		  update(canvas.width,canvas.height); //更新位置
+	   },50
+	 ); 
+   }
+   
+   function draw(cxt){//画圆-------------
+      var canvas = cxt.canvas;
+	  cxt.clearRect(0,0,canvas.width,canvas.height);  //清除画布
+	  	 
+	  for(var i=0;i<balls.length;i++){//循环画出balls数组里面的小球
+	      cxt.globalCompositeOperation = "xor";  
+	      cxt.fillStyle = balls[i].color;
+		  cxt.beginPath();
+		  cxt.arc(balls[i].x,balls[i].y,balls[i].radius,0,Math.PI*2);
+		  cxt.closePath();
+		  cxt.fill();
+	  }
+   }
+   
+   function update(canvasWidth,canvasHeight){
+      for(var i=0;i<balls.length;i++){
+	     balls[i].x += balls[i].vx;  //x加速度
+		 balls[i].y += balls[i].vy;  //Y加速度
+		 
+		 if(balls[i].x - balls[i].radius <= 0){  //当小球圆心到达左边线的时候，反弹
+		    balls[i].vx = -balls[i].vx;    //设置x加速度反方向
+			balls[i].x = balls[i].radius;   //反弹的圆心x位置
+		 }
+		 if(balls[i].x + balls[i].radius >= canvasWidth){//当小球圆心到达右边线的时候，反弹
+		   balls[i].vx = -balls[i].vx;   //设置x加速度反方向
+		   balls[i].x = canvasWidth - balls[i].radius; //反弹的圆心x位置
+		 }
+		 if(balls[i].y - balls[i].radius <= 0){ //当小球圆心到达上边线的时候，反弹
+		    balls[i].vy = -balls[i].vy;  //设置y加速度反方向
+            balls[i].y = balls[i].radius;	//反弹的圆心y位置	
+		 }
+		 if(balls[i].y + balls[i].radius >= canvasHeight){//当小球圆心到达下边线的时候，反弹
+		     balls[i].vy = -balls[i].vy;  //设置y加速度反方向
+			 balls[i].y = canvasHeight - balls[i].radius; //反弹的圆心y位置	
+		 }
+		 
+	   }
+   }
+   
+</script>
+
+
+
+
+
+
+
+
+

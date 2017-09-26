@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+	<meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+   
+  </head>
+  <body>
+      <canvas id="canvas" style="display:block;margin:0 auto;border:1px solid black">
+	    您的浏览器不支持canvas标签
+	  </canvas>
+  </body>
+</html>
+ <script type="text/javascript">
+ 
+ window.onload=function(){
+    var canvas = document.getElementById("canvas");
+	 canvas.width=400;
+	 canvas.height=400;
+	 var context = canvas.getContext("2d");	
+	   context.lineWidth = 10;
+	   
+	   context.beginPath();
+	   context.moveTo(10,150);
+	   context.lineTo(160,150);
+	   context.lineTo(160,50);
+	   context.lineTo(350,200);
+	   context.lineTo(160,350);
+	   context.lineTo(160,250);
+	   context.lineTo(10,250);
+	   //context.lineTo(10,150);
+	   context.closePath();  //如果不写，则有瑕疵，就是封闭的边宽不完整
+	   	  
+	   context.strokeStyle = "blue";
+	   //context.stroke(); 如果先描边在填充，则填充的时候会覆盖变宽的一半，使得变宽变细
+	   context.fillStyle = "green";
+	   context.fill();
+	   context.stroke();
+	   
+	  
+	   
+	 
+	 
+	   
+	 }
+ 
+	
+</script>
