@@ -2,257 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb92d319-ae26-4187-8d6a-470d87181925" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/五子棋/img/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/test.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/typescript-compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/canvas-course（倒计时）/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/canvas-course（倒计时）/.idea/canvas-course.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/canvas-course（倒计时）/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/canvas-course（倒计时）/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/canvas-course（倒计时）/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/canvas-course（倒计时）/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/canvas-course（倒计时）/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/canvas-course（倒计时）/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/canvas-course（倒计时）/countdown.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/canvas-course（倒计时）/digit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/canvas-course（倒计时）/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/canvas-course（时钟）/countdown.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/canvas-course（时钟）/digit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/canvas-course（时钟）/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/circle(绘制圆弧函数).html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/drawStar(绘制五角星函数).html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/example_1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/example_1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/isPointInPath.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/jquery-2.1.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/rect(绘制矩形函数).html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/一片星空(图形变换).html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/一片星空.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/七巧板（tangram）.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/会动的星星.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/剪纸效果.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/剪辑区域.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/剪辑区域（star).html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/动圆.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/圆弧.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/圆色.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/圆角边框矩形.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/复件 扔球.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/媳妇，送你一片星空.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/扔球.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/箭头.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/箭头1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canvas/覆盖形式.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/五子棋/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/五子棋/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/五子棋/js/script.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/贪吃蛇 - 1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/贪吃蛇1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jshtml/数组去重.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.project.sublime-workspace" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Highcharts图表/test.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/.project" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/about.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/about_contact.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/about_join.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/about_media.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/about_us.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/css/about.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/css/api.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/css/city.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/css/common.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/css/index.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/css/information.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/css/information_detail.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/css/internal_storage_up.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/css/maintain.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/home_float_right.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/home_footer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/home_head.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/2009.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/2012.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/2015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/2016.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/about_fbgx.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/about_gktm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/about_lfx.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/about_map.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/about_zyaq.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/bottom_qrcode.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/eye.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/float_r.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/float_r_d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/float_r_d_h.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/float_r_fg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/float_r_fg_w.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/float_r_kf.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/float_r_kf_w.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/float_r_wx.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/float_r_wx_w.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/flow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/gxwx.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/gxwx_w.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/iPad2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/iPad4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/iPadAir2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/iPadmini.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/iPadmini2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/iPhone5s.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/iPhone6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/iPhone6p.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/iPhone6s.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/iPhone6sp.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/images/zx_1_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/jgtm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/jgtm_w.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/link_email.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/link_phone.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/link_point.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/link_wx.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/loading1.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/loading2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/logo_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/mfsm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/mfsm_w.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/order_qrcode.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/orders_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/orders_close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/orders_set.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/qyfw_21cake.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/qyfw_cd.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/qyfw_lb.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/qyfw_tcbj.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/qyfw_tcbj1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/qyfw_top.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/qyfw_top_r.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/right_qrcode.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/search.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/set.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/shbz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/shbz_w.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/submit_success_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/success.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/top_banner.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/top_banner1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/up_bx.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/up_jgtm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/up_ycpj.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/up_zlbz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/up_zyjs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/wx.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/yi_yuyue1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/yj_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/yj_back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/yj_code.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/yj_flow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/yj_flow1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/yj_info.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/yj_logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/yj_name.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/yj_phone.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/yj_point.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/yj_point1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/yj_point_foot.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/yj_s_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/yj_set.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/yj_tel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/yj_tel_f.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/yj_time.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/yj_topbg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/yj_yan.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/yj_yuyue.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/zfb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/zlbz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/zlbz_w.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/img/zx_1_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/indexNew.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/information.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/information_detail.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/internal_storage_up.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/js/Popt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/js/center_img.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/js/city.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/js/cityJson.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/js/citySet.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/js/fitImage.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/js/float_right.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/js/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/js/jquery-1.10.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/js/maintain.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/js/myc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/js/orders_search.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/maintain.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoooWebsite/serviceNew.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoostatic/code_invite.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoostatic/code_success.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoostatic/css/api.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoostatic/img/bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoostatic/img/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoostatic/img/upgrade.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoostatic/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoostatic/js/city.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoostatic/js/jquery-2.1.1.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoostatic/poster.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/azoostatic/upgrade.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/html5/svg.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/html5/svg.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iconfont/demo.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iconfont/demo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iconfont/iconfont.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iconfont/iconfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iconfont/iconfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iconfont/iconfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iconfont/iconfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jqhtml/index.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jqhtml/jquery-1.10.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jqhtml/jquery-ui.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jqhtml/jquery-ui.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jqhtml/jquery.autocomplete.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jqhtml/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jqhtml/public.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jqhtml/自动完成部件(Autocomplete Widget).html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jqhtml/自动完成部分2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery_weui/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery_weui/jquery-weui.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery_weui/weui.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery模拟IOS弹出提示效果--iosOverlay.js/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery模拟IOS弹出提示效果--iosOverlay.js/css/custom.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery模拟IOS弹出提示效果--iosOverlay.js/css/iosOverlay.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery模拟IOS弹出提示效果--iosOverlay.js/css/prettify.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery模拟IOS弹出提示效果--iosOverlay.js/img/check.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery模拟IOS弹出提示效果--iosOverlay.js/img/cross.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery模拟IOS弹出提示效果--iosOverlay.js/img/promo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery模拟IOS弹出提示效果--iosOverlay.js/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery模拟IOS弹出提示效果--iosOverlay.js/js/custom.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery模拟IOS弹出提示效果--iosOverlay.js/js/iosOverlay.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery模拟IOS弹出提示效果--iosOverlay.js/js/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery模拟IOS弹出提示效果--iosOverlay.js/js/modernizr-2.0.6.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery模拟IOS弹出提示效果--iosOverlay.js/js/prettify.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery模拟IOS弹出提示效果--iosOverlay.js/js/spin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery模拟IOS弹出提示效果--iosOverlay.js/lanrenzhijia.com下载说明.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery模拟IOS弹出提示效果--iosOverlay.js/访问懒人之家.url" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/new_file.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/获取密码呢.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/28种CSS3炫酷loading页面加载动画特效代码/index.html" afterPath="$PROJECT_DIR$/28种CSS3炫酷loading页面加载动画特效代码/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jshtml/解析URL各部分.html" afterPath="$PROJECT_DIR$/jshtml/解析URL各部分.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jshtml/闭包的使用.html" afterPath="$PROJECT_DIR$/jshtml/闭包的使用.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jstest.html" afterPath="$PROJECT_DIR$/jstest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/文件直接拖进来就可以直接生成base64.html" afterPath="$PROJECT_DIR$/文件直接拖进来就可以直接生成base64.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/返回日期.html" afterPath="$PROJECT_DIR$/返回日期.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/azoostatic/.project" afterPath="$PROJECT_DIR$/game/五子棋/.project" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/test.iml" afterPath="$PROJECT_DIR$/.idea/test.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html5/h5_三种本地存储.html" afterPath="$PROJECT_DIR$/html5/h5_三种本地存储.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/typeScript/index.js" afterPath="$PROJECT_DIR$/typeScript/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/typeScript/index.ts" afterPath="$PROJECT_DIR$/typeScript/index.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -268,50 +24,50 @@
     <favorites_list name="test" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="index.ts" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/typeScript/index.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="575">
-                  <caret line="77" column="18" lean-forward="true" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="18" />
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/typeScript/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="252">
-                  <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/typeScript/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="576">
-                  <caret line="68" column="1" lean-forward="true" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/typeScript/index.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1344">
+              <caret line="64" column="4" lean-forward="false" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/typeScript/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="h5_三种本地存储.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/html5/h5_三种本地存储.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3823">
+              <caret line="78" column="23" lean-forward="true" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="storage监听.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html5/storage监听.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="20" column="26" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="24" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -333,6 +89,7 @@
       <find>v|aaaaaaaa</find>
       <find>v|aaaaaaaaa</find>
       <find>v|aaaaa</find>
+      <find>showAllTheData</find>
     </findStrings>
     <replaceStrings>
       <replace>a</replace>
@@ -357,10 +114,18 @@
         <option value="$PROJECT_DIR$/获取密码呢.html" />
         <option value="$PROJECT_DIR$/文件直接拖进来就可以直接生成base64.html" />
         <option value="$PROJECT_DIR$/返回日期.html" />
-        <option value="$PROJECT_DIR$/typeScript/index.html" />
         <option value="$PROJECT_DIR$/typeScript/index.ts" />
+        <option value="$PROJECT_DIR$/typeScript/index.html" />
+        <option value="$USER_HOME$/Desktop/sitemap.html" />
+        <option value="$PROJECT_DIR$/html5/storage监听.html" />
+        <option value="$PROJECT_DIR$/html5/h5_三种本地存储.html" />
       </list>
     </option>
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <exe-path />
+    <config-path />
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -379,10 +144,10 @@
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="300" />
+    <option name="y" value="411" />
+    <option name="width" value="1413" />
+    <option name="height" value="791" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -457,6 +222,11 @@
               <item name="test" type="b2602c69:ProjectViewProjectNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="html5" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -469,7 +239,7 @@
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="SearchEverywhereHistoryKey" value="test&#9;FILE&#9;file://E:/project/test/html/test.html" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.默认语言" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript.Linters.JSLint" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="node.js.path.for.package.jscs" value="project" />
     <property name="node.js.detected.package.jscs" value="true" />
@@ -535,12 +305,15 @@
       <workItem from="1506397954780" duration="2058000" />
       <workItem from="1506404585021" duration="3916000" />
       <workItem from="1506409453949" duration="4474000" />
-      <workItem from="1506415374096" duration="3087000" />
+      <workItem from="1506415374096" duration="4577000" />
+      <workItem from="1506479571626" duration="1021000" />
+      <workItem from="1506497440781" duration="11430000" />
+      <workItem from="1506563900709" duration="260000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22600000" />
+    <option name="totallyTimeSpent" value="36801000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -555,16 +328,16 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15384616" sideWeight="0.49369085" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2546246" sideWeight="0.49789253" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15384616" sideWeight="0.48099416" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5021075" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.4935065" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.49789253" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18020834" sideWeight="0.50630915" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15384616" sideWeight="0.51900584" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -574,7 +347,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -623,27 +396,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jstest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/azoostatic/js/jquery-2.1.1.js" />
     <entry file="file://$PROJECT_DIR$/test.ts" />
     <entry file="file://$PROJECT_DIR$/jshtml/arguments对象的用法.html">
@@ -812,13 +564,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html5/svg.svg" />
-    <entry file="file://$PROJECT_DIR$/html5/h5_三种本地存储.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/iconfont/demo.css" />
     <entry file="file://$PROJECT_DIR$/iconfont/demo.html" />
     <entry file="file://$PROJECT_DIR$/jqhtml/自动完成部分2.html" />
@@ -887,31 +632,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/typeScript/index.html">
+    <entry file="file://$PROJECT_DIR$/css/custom-f6/js/foundation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/typeScript/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="68" column="1" lean-forward="true" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="62">
+          <caret line="237" column="16" lean-forward="false" selection-start-line="237" selection-start-column="16" selection-end-line="237" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/typeScript/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="77" column="18" lean-forward="true" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="18" />
+        <state relative-caret-position="1344">
+          <caret line="64" column="4" lean-forward="false" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typeScript/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="65" column="14" lean-forward="false" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typeScript/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/sitemap.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="42" column="86" lean-forward="true" selection-start-line="42" selection-start-column="86" selection-end-line="42" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html5/storage监听.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="26" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="24" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html5/h5_三种本地存储.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3823">
+          <caret line="78" column="23" lean-forward="true" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>

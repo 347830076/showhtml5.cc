@@ -49,17 +49,12 @@ add('name', 'sex', 'sdf');
 * 可选参数
 *    在方法的参数声明后面用问号来标明此参数为可选参数
 * */
-func1(1, 1, 1, 1, "ds");
-function func1() {
-    var args = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        args[_i] = arguments[_i];
-    }
-    args.forEach(function (args) { });
-    {
-        console.log(args);
-    }
-}
+// func1(1,1,1,1,"ds");
+// function func1(...args){
+//     args.forEach(function(args)){
+//         console.log(args)
+//     }
+// }
 var args2 = [1, 1, 1, 1, 1];
 // func2(...args2);
 function func2(a, b, c) {
@@ -72,7 +67,7 @@ console.log(function () {
     return a;
 });
 var arr2 = [1, 2, 3, 4];
-arr2.desc = 'sfd';
+// arr2.desc = 'sfd';
 for (var _i = 0, arr2_1 = arr2; _i < arr2_1.length; _i++) {
     var i = arr2_1[_i];
 }
