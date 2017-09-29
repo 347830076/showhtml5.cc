@@ -1,3 +1,13 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 /*字符串新特性*/
 //多行字符串
 var content = "dsdf\nsdfsdf\nsdfsd\nfdsf\nsdf\n";
@@ -28,14 +38,6 @@ function funtest(name) {
 function funtest1() {
     return "dsd";
 }
-var Person = (function () {
-    function Person() {
-    }
-    return Person;
-}());
-var chen = new Person();
-chen.age = 15;
-chen.name = "yu";
 function add(name, age, sex) {
     if (sex === void 0) { sex = '男'; }
     console.log(name);
@@ -71,4 +73,58 @@ var arr2 = [1, 2, 3, 4];
 for (var _i = 0, arr2_1 = arr2; _i < arr2_1.length; _i++) {
     var i = arr2_1[_i];
 }
+var Person = (function () {
+    function Person(name) {
+        this.name = name;
+        console.log('haha ' + name);
+    }
+    // public name;
+    Person.prototype.eat = function () {
+        console.log('im eating ' + this.name);
+    };
+    return Person;
+}());
+var p1 = new Person("batman");
+p1.eat();
+var p2 = new Person("superman");
+p2.eat();
+var employee = (function (_super) {
+    __extends(employee, _super);
+    function employee(name, code) {
+        var _this = _super.call(this, name) || this;
+        console.log(code);
+        return _this;
+    }
+    employee.prototype.show = function () {
+        console.log('show');
+    };
+    return employee;
+}(Person));
+var e1 = new employee('e1', '007');
+e1.eat();
+e1.show();
+//泛型
+var arrF = [];
+arrF[0] = new Person('zhangshan');
+var Presoni = (function () {
+    function Presoni(config) {
+        this.config = config;
+        console.log(config.name);
+        console.log(config.age);
+    }
+    return Presoni;
+}());
+var pi = new Presoni({
+    name: 'xiao',
+    age: 23
+});
+var sheep = (function () {
+    function sheep() {
+    }
+    sheep.prototype.eat = function () {
+        console.log('i eat grass');
+    };
+    return sheep;
+}());
 var _a;
+//模块Moudule

@@ -2,13 +2,411 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb92d319-ae26-4187-8d6a-470d87181925" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dictionaries/yy.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/test.iml" afterPath="$PROJECT_DIR$/.idea/test.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLinters/jslint.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/test.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/typescript-compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/28种CSS3炫酷loading页面加载动画特效代码/css/demo.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/28种CSS3炫酷loading页面加载动画特效代码/css/loaders.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/28种CSS3炫酷loading页面加载动画特效代码/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/28种CSS3炫酷loading页面加载动画特效代码/index.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/28种CSS3炫酷loading页面加载动画特效代码/readme.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/28种CSS3炫酷loading页面加载动画特效代码/使用方法.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JS插件开发之-Tab选项卡/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JS插件开发之-Tab选项卡/tab.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/.idea/canvas-image.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/01-image-basic/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/01-image-basic/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/01-image-basic/.idea/image-basic.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/01-image-basic/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/01-image-basic/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/01-image-basic/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/01-image-basic/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/01-image-basic/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/01-image-basic/img.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/01-image-basic/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/02-image-scale/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/02-image-scale/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/02-image-scale/.idea/image-scale.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/02-image-scale/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/02-image-scale/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/02-image-scale/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/02-image-scale/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/02-image-scale/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/02-image-scale/img-lg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/02-image-scale/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/03-image-watermark/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/03-image-watermark/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/03-image-watermark/.idea/image-watermark.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/03-image-watermark/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/03-image-watermark/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/03-image-watermark/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/03-image-watermark/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/03-image-watermark/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/03-image-watermark/img-lg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/03-image-watermark/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/04-image-magnifier/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/04-image-magnifier/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/04-image-magnifier/.idea/image-magnifier.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/04-image-magnifier/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/04-image-magnifier/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/04-image-magnifier/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/04-image-magnifier/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/04-image-magnifier/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/04-image-magnifier/img-lg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/04-image-magnifier/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/05-image-filter/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/05-image-filter/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/05-image-filter/.idea/image-filter.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/05-image-filter/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/05-image-filter/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/05-image-filter/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/05-image-filter/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/05-image-filter/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/05-image-filter/autumn.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/05-image-filter/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/06-image-create/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/06-image-create/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/06-image-create/.idea/image-create.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/06-image-create/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/06-image-create/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/06-image-create/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/06-image-create/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/06-image-create/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/06-image-create/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/canvas_qrc/027.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/canvas_qrc/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/canvas_qrc/canvas_qrc.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/canvas-image/canvas_qrc/stackblur.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/custom-f6/css/app.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/custom-f6/css/foundation.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/custom-f6/css/foundation.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/custom-f6/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/custom-f6/js/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/custom-f6/js/foundation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/custom-f6/js/foundation.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/custom-f6/js/vendor/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/custom-f6/js/vendor/what-input.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/layui.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html/test.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/1111.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/1469293167.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/arr-l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/baozhang.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/binary_tree.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/image.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/img-lg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/link15.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/loading1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/loading2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/lufei.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/main.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/nan.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/nv.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/progress.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/red_packet.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/star.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/star_h.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/success.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/taomei_200x200.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/tets1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/timg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/login_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/p227.jpg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/jstest.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js解析二维码/alignpat.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js解析二维码/bitmat.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js解析二维码/bmparser.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js解析二维码/datablock.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js解析二维码/databr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js解析二维码/datamask.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js解析二维码/decoder.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js解析二维码/detector.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js解析二维码/errorlevel.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js解析二维码/findpat.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js解析二维码/formatinf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js解析二维码/gf256.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js解析二维码/gf256poly.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js解析二维码/grid.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js解析二维码/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js解析二维码/new_file.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js解析二维码/qrcode.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js解析二维码/rsdecoder.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js解析二维码/version.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mobilhtml/checkbox.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mobilhtml/radio.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mobilhtml/图片预览.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mobilhtml/图片预览1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/demo-rotate.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/jQueryRotate.2.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/jquery-1.7.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/jquery.easing.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/ly-plate.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/rotate-static.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/.idea/turntable.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/css/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/images/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/images/10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/images/100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/images/123.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/images/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/images/20.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/images/30.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/images/301.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/images/again.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/images/bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/images/dianchi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/images/qb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/images/shujuxian.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/images/sreen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/images/start.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/images/top_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/images/wheel-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/images/wheel-pointer.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/js/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/js/jQueryRotate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/js/jquery-2.1.4.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rotate/turntable/json/data.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/README_cn.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/example.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/example.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/icon_footer.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/icon_footer_link.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/icon_intro.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/icon_nav_actionSheet.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/icon_nav_article.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/icon_nav_button.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/icon_nav_cell.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/icon_nav_dialog.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/icon_nav_feedback.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/icon_nav_flow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/icon_nav_form.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/icon_nav_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/icon_nav_layout.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/icon_nav_msg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/icon_nav_nav.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/icon_nav_panel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/icon_nav_progress.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/icon_nav_search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/icon_nav_search_bar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/icon_nav_special.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/icon_nav_tab.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/icon_nav_toast.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/icon_nav_z-index.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/icon_nav_zindex.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/icon_tabbar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/layers/content.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/layers/navigation.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/layers/popout.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/layers/transparent.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/pic_160.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/pic_article.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/images/vcode.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/snapshot/actionSheet.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/snapshot/button.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/snapshot/cell.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/snapshot/dialog1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/snapshot/dialog2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/snapshot/grid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/snapshot/icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/snapshot/progress.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/snapshot/qrcode.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/snapshot/result.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/snapshot/text.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/snapshot/toast1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/snapshot/toast2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/example/zepto.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/style/weui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/dist/style/weui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/gulpfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/example.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/example.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/actionsheet.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/article.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/badge.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/button.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/dialog.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/flex.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/footer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/gallery.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/grid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/home.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/icons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/input.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/layers.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/list.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/loadmore.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/msg.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/msg_success.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/msg_warn.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/navbar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/panel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/picker.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/preview.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/progress.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/searchbar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/slider.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/tabbar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/toast.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/fragment/uploader.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/images/icon_footer.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/images/icon_footer_link.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/images/icon_intro.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/images/icon_nav_feedback.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/images/icon_nav_form.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/images/icon_nav_layout.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/images/icon_nav_nav.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/images/icon_nav_search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/images/icon_nav_special.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/images/icon_nav_z-index.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/images/icon_tabbar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/images/layers/content.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/images/layers/navigation.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/images/layers/popout.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/images/layers/transparent.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/images/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/images/pic_160.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/images/pic_article.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/images/vcode.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/snapshot/button.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/snapshot/cell.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/snapshot/dialog1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/snapshot/dialog2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/snapshot/grid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/snapshot/icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/snapshot/progress.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/snapshot/qrcode.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/snapshot/result.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/snapshot/text.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/snapshot/toast1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/snapshot/toast2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/example/zepto.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/base/fn.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/base/mixin/mobile.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/base/mixin/setArrow.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/base/mixin/setOnepx.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/base/mixin/text.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/base/reset.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/base/variable/color.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/base/variable/global.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/base/variable/weui-button.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/base/variable/weui-cell.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/base/variable/weui-dialog.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/base/variable/weui-grid.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/base/variable/weui-msg.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/base/variable/weui-progress.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/icon/weui-font.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/icon/weui-icon_font.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/weui.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-agree/weui-agree.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-animate/weui-animate.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-button/weui-btn_default.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-button/weui-btn_disabled.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-button/weui-btn_global.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-button/weui-btn_loading.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-button/weui-btn_plain.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-button/weui-btn_primary.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-button/weui-btn_warn.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-button/weui-button.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-cell/weui-access.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-cell/weui-cell_global.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-cell/weui-cell_swiped.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-cell/weui-check.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-cell/weui-check/weui-check_common.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-cell/weui-check/weui-checkbox.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-cell/weui-check/weui-radio.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-cell/weui-form.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-cell/weui-form/weui-form-preview.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-cell/weui-form/weui-form_common.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-cell/weui-form/weui-select.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-cell/weui-form/weui-vcode.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-cell/weui-gallery.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-cell/weui-switch.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-cell/weui-uploader.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-flex/weui-flex.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-footer/weui-footer.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-grid/weui-grid.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-loading/weui-loading.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-media-box/weui-media-box.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-page/weui-article.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-page/weui-msg.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-panel/weui-panel.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-picker/weui-picker.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-progress/weui-progress.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-searchbar/weui-searchbar.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-slider/weui-slider.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-tab/weui-navbar.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-tab/weui-tab.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-tab/weui-tabbar.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-tips/weui-actionsheet.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-tips/weui-badge.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-tips/weui-dialog.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-tips/weui-loadmore.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-tips/weui-mask.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/src/style/widget/weui-tips/weui-toast.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/test/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/test/weui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/weui-master/test/zepto.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加载进度条/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加载进度条/定位在顶部的进度条.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/加载进度条/实时加载进度条.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/弹出层阻止底层滚动.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/慕课网 - JavaScript 回到顶部/demo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/慕课网 - JavaScript 回到顶部/images/top_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/百度地图/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/返回日期.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/面试题.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/star.png" afterPath="$PROJECT_DIR$/img/star.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html5/h5_三种本地存储.html" afterPath="$PROJECT_DIR$/html5/h5_三种本地存储.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html5/图片压缩上传实践.html" afterPath="$PROJECT_DIR$/html5/图片压缩上传实践.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/typeScript/index.js" afterPath="$PROJECT_DIR$/typeScript/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/typeScript/index.ts" afterPath="$PROJECT_DIR$/typeScript/index.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/文件直接拖进来就可以直接生成base64.html" afterPath="$PROJECT_DIR$/工具类/文件直接拖进来就可以直接生成base64.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,11 +423,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="图片压缩上传实践.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html5/图片压缩上传实践.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="175" column="49" lean-forward="false" selection-start-line="175" selection-start-column="49" selection-end-line="175" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="moudule.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/typeScript/moudule.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="文件直接拖进来就可以直接生成base64.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/工具类/文件直接拖进来就可以直接生成base64.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="16" column="34" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="16" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/typeScript/index.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1344">
-              <caret line="64" column="4" lean-forward="false" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+            <state relative-caret-position="386">
+              <caret line="140" column="16" lean-forward="false" selection-start-line="140" selection-start-column="16" selection-end-line="140" selection-end-column="16" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -37,31 +475,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/typeScript/index.html">
+      <file leaf-file-name="moudule.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/typeScript/moudule.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+            <state relative-caret-position="231">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="h5_三种本地存储.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/html5/h5_三种本地存储.html">
+      <file leaf-file-name="jquery.d.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/typeScript/jquery.d.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3823">
-              <caret line="78" column="23" lean-forward="true" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="storage监听.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html5/storage监听.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="20" column="26" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="-42">
+              <caret line="34" column="35" lean-forward="true" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -90,9 +518,18 @@
       <find>v|aaaaaaaaa</find>
       <find>v|aaaaa</find>
       <find>showAllTheData</find>
+      <find>www.showhtml5.cc</find>
+      <find>http://blog.localhost.com/</find>
+      <find>blog.localhost.com/</find>
+      <find>blog.localhost.com</find>
+      <find>showhtml5.cc</find>
+      <find>Person</find>
+      <find>__extends</find>
+      <find>export</find>
     </findStrings>
     <replaceStrings>
       <replace>a</replace>
+      <replace>blog.localhost.com</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -114,11 +551,20 @@
         <option value="$PROJECT_DIR$/获取密码呢.html" />
         <option value="$PROJECT_DIR$/文件直接拖进来就可以直接生成base64.html" />
         <option value="$PROJECT_DIR$/返回日期.html" />
-        <option value="$PROJECT_DIR$/typeScript/index.ts" />
         <option value="$PROJECT_DIR$/typeScript/index.html" />
         <option value="$USER_HOME$/Desktop/sitemap.html" />
         <option value="$PROJECT_DIR$/html5/storage监听.html" />
         <option value="$PROJECT_DIR$/html5/h5_三种本地存储.html" />
+        <option value="$USER_HOME$/Desktop/bdm312622621_db.sql" />
+        <option value="$PROJECT_DIR$/typeScript/index.js" />
+        <option value="$PROJECT_DIR$/typeScript/index.ts" />
+        <option value="$PROJECT_DIR$/typeScript/module.ts" />
+        <option value="$PROJECT_DIR$/html5/图片压缩上传实践.html" />
+        <option value="$PROJECT_DIR$/typeScript/moudule_b.js" />
+        <option value="$PROJECT_DIR$/typeScript/moudule_b.ts" />
+        <option value="$PROJECT_DIR$/typeScript/moudule.js" />
+        <option value="$PROJECT_DIR$/typeScript/moudule.ts" />
+        <option value="$PROJECT_DIR$/工具类/i.html" />
       </list>
     </option>
   </component>
@@ -143,11 +589,11 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="300" />
-    <option name="y" value="411" />
-    <option name="width" value="1413" />
-    <option name="height" value="791" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -222,11 +668,6 @@
               <item name="test" type="b2602c69:ProjectViewProjectNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="html5" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -235,11 +676,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../azooo" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="SearchEverywhereHistoryKey" value="test&#9;FILE&#9;file://E:/project/test/html/test.html" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript.Linters.JSLint" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.JSON" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="node.js.path.for.package.jscs" value="project" />
     <property name="node.js.detected.package.jscs" value="true" />
@@ -255,7 +696,12 @@
     <property name="node.js.selected.package.tslint" value="" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\project\test\工具类" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\project\test\typeScript" />
+      <recent name="C:\Users\yy\Desktop" />
       <recent name="E:\project\test\game" />
       <recent name="E:\project\test" />
     </key>
@@ -308,12 +754,14 @@
       <workItem from="1506415374096" duration="4577000" />
       <workItem from="1506479571626" duration="1021000" />
       <workItem from="1506497440781" duration="11430000" />
-      <workItem from="1506563900709" duration="260000" />
+      <workItem from="1506563900709" duration="2768000" />
+      <workItem from="1506580378934" duration="9426000" />
+      <workItem from="1506651240630" duration="2826000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36801000" />
+    <option name="totallyTimeSpent" value="51561000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -325,10 +773,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2546246" sideWeight="0.49789253" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2546246" sideWeight="0.49789253" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15384616" sideWeight="0.48099416" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -338,6 +786,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.49789253" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15384616" sideWeight="0.51900584" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -347,7 +796,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,8 +803,12 @@
     <option name="exactExcludedFiles">
       <list>
         <option value="$PROJECT_DIR$/typeScript/index.js" />
+        <option value="$PROJECT_DIR$/typeScript/moudule_b.js" />
       </list>
     </option>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.sql" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -396,100 +848,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/azoostatic/js/jquery-2.1.1.js" />
-    <entry file="file://$PROJECT_DIR$/test.ts" />
-    <entry file="file://$PROJECT_DIR$/jshtml/arguments对象的用法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="34" column="31" lean-forward="false" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/五子棋/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/五子棋/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/五子棋/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="208" column="25" lean-forward="true" selection-start-line="208" selection-start-column="25" selection-end-line="208" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/canvas/canvas-course（时钟）/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/canvas/canvas-course（时钟）/digit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2017">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/canvas/canvas-course（倒计时）/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/canvas/canvas-course（时钟）/countdown.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="99" column="5" lean-forward="true" selection-start-line="99" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/canvas/canvas-course（倒计时）/countdown.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="8" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/canvas/会动的星星.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/canvas/剪纸效果.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/canvas/剪辑区域.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/canvas/剪辑区域（star).html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="53" lean-forward="false" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/贪吃蛇.html" />
     <entry file="file://$PROJECT_DIR$/game/贪吃蛇1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
@@ -547,22 +905,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.js" />
-    <entry file="file://$PROJECT_DIR$/文件直接拖进来就可以直接生成base64.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Highcharts图表/test.html" />
     <entry file="file://$PROJECT_DIR$/html5/svg.html" />
-    <entry file="file://$PROJECT_DIR$/html5/图片压缩上传实践.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2373">
-          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html5/svg.svg" />
     <entry file="file://$PROJECT_DIR$/iconfont/demo.css" />
     <entry file="file://$PROJECT_DIR$/iconfont/demo.html" />
@@ -595,22 +939,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jstest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1092">
-          <caret line="52" column="28" lean-forward="false" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/new_file.html" />
     <entry file="file://$PROJECT_DIR$/获取密码呢.html" />
-    <entry file="file://$PROJECT_DIR$/弹出层阻止底层滚动.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="59" column="51" lean-forward="true" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/返回日期.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -625,13 +955,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/custom-f6/js/foundation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
@@ -639,50 +962,201 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Desktop/sitemap.html" />
+    <entry file="file://$PROJECT_DIR$/csshtml/支付密码样式.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="54" column="29" lean-forward="true" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/新建文本文档 (3).txt" />
+    <entry file="file://$PROJECT_DIR$/html5/storage监听.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html5/h5_三种本地存储.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="286" column="37" lean-forward="false" selection-start-line="286" selection-start-column="37" selection-end-line="286" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/bdm312622621_db.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="272" column="61" lean-forward="false" selection-start-line="272" selection-start-column="61" selection-end-line="272" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typeScript/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/jquery/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/jquery/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/jquery/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-819">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typeScript/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typeScript/moudule_b.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typeScript/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="90" column="17" lean-forward="false" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typeScript/moudule_b.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/typeScript/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1344">
-          <caret line="64" column="4" lean-forward="false" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+        <state relative-caret-position="386">
+          <caret line="140" column="16" lean-forward="false" selection-start-line="140" selection-start-column="16" selection-end-line="140" selection-end-column="16" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/typeScript/index.js">
+    <entry file="file://$PROJECT_DIR$/弹出层阻止底层滚动.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="65" column="14" lean-forward="false" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
+        <state relative-caret-position="218">
+          <caret line="52" column="15" lean-forward="true" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/typeScript/index.html">
+    <entry file="file://$PROJECT_DIR$/工具类/i.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/sitemap.html">
+    <entry file="file://$PROJECT_DIR$/html/layui.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="42" column="86" lean-forward="true" selection-start-line="42" selection-start-column="86" selection-end-line="42" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html5/storage监听.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="26" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="24" selection-end-column="5" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html5/h5_三种本地存储.html">
+    <entry file="file://$PROJECT_DIR$/html/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3823">
-          <caret line="78" column="23" lean-forward="true" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html5/图片压缩上传实践.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="175" column="49" lean-forward="false" selection-start-line="175" selection-start-column="49" selection-end-line="175" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jstest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-688">
+          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1066">
+          <caret line="47" column="40" lean-forward="true" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typeScript/moudule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typeScript/jquery.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-42">
+          <caret line="34" column="35" lean-forward="true" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typeScript/moudule.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/工具类/文件直接拖进来就可以直接生成base64.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="34" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="16" selection-end-column="34" />
           <folding />
         </state>
       </provider>
