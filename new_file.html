@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<a href="https://s.click.taobao.com/avwk2Yw" style="position: fixed;right: 0;bottom: 30%;width: 100px;height: 100px;">
+			<img src="" / style="width: 100px;height: 100px;">
+		</a>
+		<input type="" name="" id="" value="1" />
+		<input type="" name="" id="" value="1" />
+		<input type="" name="" id="" value="1" />
+		<input type="" name="" id="" value="1" />
+		<input type="" name="" id="" value="1" />
+		<input type="" name="" id="" value="1" />
+		<script type="text/javascript">
+			// var patt = new RegExp(that.data.phone[0].model,'gi');
+			// if (patt.test(modelList[i].smallModelName)){
+			//   console.log(1, that.data.phone[0].model)
+			//   console.log(111111111111, modelList[i].smallModelName)
+			// }else{
+			//   console.log(2)
+			// }
+
+			var elements = document.getElementsByTagName('input');
+			var n = elements.length;
+			// 假设有10个元素
+			var makeHandler = function(num) {
+				// outer function
+				return function() { // inner function
+					console.log("元素编号##" + num);
+				};
+			};
+			for(var i = 0; i < n; i++) {
+				(function(num){
+					console.log(num)
+					elements[num].onclick = function(){
+						console.log(num)
+					}
+				})(i)
+//				elements[i].onclick = makeHandler(i + 1);
+			}
+			
+			var list = [{sort:2},{sort:3 },{ sort:4 } ,{ sort:1 },{ sort:4 }];
+			var compare = function(a,b){
+				if(a.sort > b.sort){
+					return 1;
+				}else if(a.sort < b.sort){
+					return -1;
+				}else{
+					return 0;
+				}
+			}
+			console.log(JSON.stringify(list.sort(compare)))
+			
+		</script>
+	</body>
+
+</html>

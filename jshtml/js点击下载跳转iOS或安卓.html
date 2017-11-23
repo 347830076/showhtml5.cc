@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<a href="javascript:void(0)" onclick="downApp()">点击下载应用</a>
+		<script type="text/javascript">
+			//在移动wap上，最常见的就是引流用户下载安装自己的应用程序，如何通过js点击判断下载是ios还是安卓呢？其实很简单，就是要判断用户的设备是iOS还是Android，然后分别跳转就可以了。
+			//之前写过的一个代码：判断iOS或安卓
+
+			var u = navigator.userAgent;
+			var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+			var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+
+			console.log('是否是Android：' + isAndroid);
+			console.log('是否是iOS：' + isiOS);
+
+//			有了这个判断，就可以根据对应的平台来进行操作。
+//			
+//			1.安卓的，就直接下载app，或者跳到安卓应用市场下载
+//			
+//			2.iOS的，直接跳到苹果商店的应用页进行下载
+//			
+//			3.其它平台，跳到自定义的页面，比如一个放有多个平台的下载页。
+			function downApp() {
+				var u = navigator.userAgent,
+					isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1,
+					isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+					urls = {
+						'android': '安卓的apk下载地址',
+						'ios': '苹果的下载地址',
+						'other': 'http://www.showhtml5.cc'
+					};
+				//三元运算
+				// window.location.href = isAndroid? urls.android : isiOS? urls.ios : urls.other;
+				//简化
+				if(isAndroid) {
+					window.location.href = urls.android;
+				} else if(isiOS) {
+					window.location.href = urls.ios;
+				} else {
+					window.location.href = urls.other;
+				}
+			}
+			//downApp();
+
+			//你可以直接把这个函数放在一个按钮或者链接上，点击触发这个事件。就能实现js点击跳转到适合手机的设备了。
+			//
+			//例如：
+		</script>
+	</body>
+
+</html>

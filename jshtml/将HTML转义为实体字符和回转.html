@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<span id="span">dsd</span>
+		<script type="text/javascript">
+			//前端开发工作中，经常需要将HTML的左右尖括号等转义成实体形式。我们不能把<，>，&等直接显示在最终看到的网页里。需要将其转义后才能在网页上显示。
+			//利用浏览器DOM API  有个缺陷是只能转义“< > & ”，对于单引号，双引号都不转义。另外一些非ASCII也不能转义。选择时须注意。
+			// 将HTML转义为实体
+			function escape2(html) {
+				var elem = document.createElement('div')
+				var txt = document.createTextNode(html)
+				elem.appendChild(txt)
+				return elem.innerHTML;
+			}
+			// 将实体转回为HTML
+			function unescape2(str) {
+				var elem = document.createElement('div')
+				elem.innerHTML = str
+				return elem.innerText || elem.textContent
+			}
+			document.write(escape2('<span>将HTML转义为实体</span>'))
+			document.write(unescape2('<span>将实体转回为HTML</span>'))
+			/*
+			 * 
+为hack方式，代码量少很多，利用浏览器内部API就行了转义和转回（主流浏览器都支持）。不具完整性，很明显只能在浏览器环境中使用（比如不能在Node.js中跑）。
+			 */
+		</script>
+	</body>
+
+</html>
