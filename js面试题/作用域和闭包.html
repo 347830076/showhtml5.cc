@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>作用域和闭包</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//变量，函数声明置前
+			fn(100,200);
+			function fn (num){ //声明 置前,  函数执行时就确定了this 和arguments
+				console.log(this);//执行时才能确认值，定义时无法确认
+				console.log(arguments);
+				console.log('fn----------------------')
+			}
+//			fn1(); //fn1 is not a function
+			var fn1 = function(){ //这里var 想相当于声明 var fn1 = undefined; 前置最前面
+				console.log('dd')
+			}
+			console.log(a); //undefined
+			var a = 100;
+			
+			fn3('yu');
+			function fn3(name){
+				age = 20;
+				console.log(name,age);
+				var age = 10;
+				console.log(age);
+				bar(100);
+				function bar(num){
+					console.log(num)
+				}
+			}
+			
+			
+			//执行上下文
+			
+			/*
+			 * 范围：整个页面所以js，或者一个函数
+			 * 全局：变量定义，函数声明
+			 * 函数：变量定义，函数声明，this,arguments 函数
+			 */
+			
+			//this的使用场景
+			
+			/*
+			 * 作为构造函数执行
+			 * 作为对象属性执行
+			 * 作为普通函数执行
+			 * call apply bind
+			 */
+			//执行时才能确认值，定义时无法确认
+			var b = {
+				name:'B',
+				fn:function(){
+					console.log(this)
+					console.log(this.name)
+				}
+			}
+			b.fn(); //B this === b
+			b.fn.call({name:'C'}); //C this === {name:'C'}
+			var fnb = b.fn;
+			fnb(); //this === window
+			
+			//作为构造函数执行的 this
+			function Foo(name){
+//				this = {};  //默认的
+				this.name = name;
+//				return this; //默认的
+			}
+			
+			var f = new Foo('yu');
+			//作为对象属性执行的 this
+			var obj = {
+				name:'A',
+				printName:function(){
+					console.log(this.name)
+				}
+			}
+			obj.printName();
+			//作为普通函数执行
+			function fnp(){
+				console.log(this); //this === window
+			}
+			fnp();
+			
+			//call apply bind
+			function fnc(name){
+				console.log(name)
+				console.log(this);
+			}
+			fnc.call({x:100},'guoyu',20); //{x:100}作为this对象， 'guoyu'作为参数
+			fnc.apply({x:200},['guoyu20']); //
+			
+			var fnd = function (name ,age){
+				console.log(name)
+				console.log(age)
+				console.log(this)
+			}.bind({yy:200});
+			fnd('ggg',111)
+			//作用域
+			/*
+			 * js没有块级作用域
+			 * 函数和全局作用域
+			 */
+			//js没有块级作用域
+			if(true){
+				var name = 'guoyyy';
+			}
+			console.log(name)
+			//函数和全局作用域
+			var aa = 100;
+			a100()
+			function a100(){
+				var a = 200;
+				console.log('a100:',a)
+			}
+			console.log('global',a)
+			
+			//作用域链
+			
+			
+			
+			//闭包使用场景
+			//函数作为返回值
+			function F1(){
+				var a = 100;
+				return function(){
+					console.log(a) //z自由变量，父作用域寻找， 声明定义时候的父作用域
+				}
+			}
+			
+			var f1 = F1();
+			var a = 200;
+			f1();
+			//函数作为参数传递
+			function F2(fn){
+				var a = 200;
+				fn();
+			}
+			F2(f1);
+			
+			/*
+			 * 说一下对变量提升的理解
+			 * 说明this几种不同的使用场景
+			 * 创建10个<a>标签，点击的时候弹出来对应的序号
+			 * 如何理解作用域
+			 * 实际开发中闭包的应用
+			 */
+			
+			//说一下对变量提升的理解
+			//变量定义
+			//函数声明（注意和函数表达式的区别）
+			//错误闭包的写法
+			var i , a;
+			for(i = 0; i < 10; i++){
+				a = document.createElement('a');
+				a.innerHTML = '错误的：'+i +'<br>';
+				a.addEventListener('click',function(e){
+					e.preventDefault();
+					console.log(i)
+				})
+				document.body.appendChild(a);
+			}
+			//正确闭包的写法
+			var i , a;
+			for(i = 0; i < 10; i++){
+				//自执行函数
+				(function(i){
+					a = document.createElement('a');
+					a.innerHTML = '正确的：'+i +'<br>';
+					a.addEventListener('click',function(e){
+						e.preventDefault();
+						console.log(i)
+					})
+					document.body.appendChild(a);
+				})(i)			
+			}
+			//闭包实际应用中主要用于封装变量，收敛权限
+			function isFirstLoad(){
+				var list = [];
+				return function(id){
+					if(list.indexOf(id)>=0){
+						console.log(false)
+					}else{
+						list.push(id)
+						console.log(true)
+					}
+				}
+			}
+			//使用
+			var firstLoad = isFirstLoad();
+			firstLoad(10);
+			firstLoad(10);
+			firstLoad(20);
+			//你在isFirstLoad函数外面，根本不可能修改掉list的值
+			
+		</script>
+	</body>
+</html>

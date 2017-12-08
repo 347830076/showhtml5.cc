@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div1">
+			<span>打印html</span>
+		</div>
+		<script type="text/javascript">
+			 
+			 //zepto（或其他框架）源码中如何使用原型链
+			 /*
+			  * 阅读源码是高效提高技能的方式
+			  * 但不能“埋头苦钻”
+			  * 慕课网搜索“zepto设计和源码分析”
+			  */
+			//写一个原型继承的例子
+			
+			//动物
+			function Animal(){
+				this.eat = function(){
+					console.log('animal eat');
+				}
+			}
+			
+			//狗
+			function Dog(){
+				this.bark = function(){
+					console.log('dog bark')
+				}
+			}
+			 Dog.prototype = new Animal();
+			 //哈士奇
+			 var hashiqi = new Dog();
+			 hashiqi.eat();
+			 hashiqi.bark();
+			 
+			 
+			//原型链继承
+			
+			function test(){
+				this.test = function(){
+					console.log('test继承')
+				}
+			}
+			
+			
+			 function Elem (id){
+			 	this.elem = document.getElementById(id);
+			 }
+			 
+			 Elem.prototype = new test(); //
+			 
+			 Elem.prototype.html = function(val){
+			 	var elem = this.elem;
+			 	if(val){
+			 		elem.innerHTML = val;
+			 		return this; //链式操作
+			 	}else{
+			 		return elem.innerHTML;
+			 	}
+			 }
+			 
+			 Elem.prototype.on = function(type,fn){
+			 	var elem = this.elem;
+			 	elem.addEventListener(type,fn);
+			 	return this;
+			 }
+			 
+			 var div1 = new Elem('div1'); // Elem 是div1的构造函数, 所以div1的隐式原型全等于Elem的显式原型，所以上面Elem.prototype = new test()， 也相当于div1继承了test的全部
+			 console.log(div1.__proto__)
+			 console.log(Elem.prototype)
+			 console.log(div1.__proto__.__proto__.__proto__)
+			 console.log(div1.html());
+			 div1.html('<p>hello imooc</p>').on('click',function(){
+			 	alert('onclick')
+			 }).html('javascript')
+			 
+			 div1.test()
+		</script>
+	</body>
+</html>
