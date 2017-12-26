@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//数组api
+			
+			//forEach遍历所有元素
+			var arr = [1,2,3];
+			arr.forEach(function(item,index){
+				//遍历数组的所有元素
+				console.log(index,item)
+			})
+			
+			//every判断所有元素是否都符合条件
+			var result = arr.every(function(item,index){
+				if(item < 4){
+					return true;
+				}
+			})
+			console.log(result)
+			
+			//some 判断是否有至少一个元素符合条件
+			var result = arr.some(function(item,index){
+				if(item < 2){
+					return true;
+				}
+			})
+			console.log(result)
+			
+			//sort 排序
+			var arr2 = [1,4,2,3,5];
+			var arrTemp = arr2.sort(function(a,b){
+				//从小到大排序
+				return a - b;
+				
+				//从大到小排序
+				//return b -a;
+			});
+			console.log(arr2);
+			
+			
+			//map 对元素重新组装，生成新数组
+			var arr3 = [1,2,3,4];
+			var arrTemp2 = arr3.map(function(item,index){
+				//将元素重新组装，并返回
+				return '<b>' + item + '</b>';
+			})
+			console.log(arrTemp2)
+			//filter 过滤符合条件的元素
+			var arr4 = [1,2,3];
+			var arrTemp4 = arr4.filter(function(item,index){
+				//通过某一个条件过滤数组
+				if(item >= 2){
+					return true;
+				}
+			})
+			console.log(arrTemp4)
+			
+			//对象api
+			var obj = {
+				x:100,
+				y:200,
+				z:300
+			}
+			var key;
+			for(key in obj){
+				//高级浏览器已经在for in 中屏蔽了来自原型的属性
+				//但是这里建议大家还是加上这个判断，保证程序的健壮性
+				if(obj.hasOwnProperty(key)){
+					console.log("自身的属性:"+key,obj[key])
+				}else{
+					console.log("不是自身的属性:"+key)
+				}
+			}
+		</script>
+	</body>
+</html>

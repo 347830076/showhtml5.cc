@@ -18,15 +18,6 @@
 			alert(2);
 			console.log(3)
 			
-			//何时需要异步
-			/*
-			 * 在可能发生等待的情况
-			 * 等待过程中不能像alert一样阻塞程序运行
-			 * 因此，所有的“等待的情况”都需要异步
-			 * 定时任务：setTimeout setInverval
-			 * 网络请求：ajax请求，动态<img>加载
-			 * 事件绑定
-			 */
 			//异步和单线程
 			/*
 			 * 执行第一行，打印100
@@ -38,7 +29,25 @@
 			
 			
 			//一个关于setTimeout的笔试题
+			console.log(1)
+			setTimeout(function(){
+				console.log(2)
+			});
+			console.log(3)
+			setTimeout(function(){
+				console.log(4)
+			},1000)
+			console.log(5)
+			//打印顺序是：  1 3 5 2 4
 			//前端使用异步的场景有哪些
+			/*
+			 * 在可能发生等待的情况
+			 * 等待过程中不能像alert一样阻塞程序运行
+			 * 因此，所有的“等待的情况”都需要异步
+			 * 定时任务：setTimeout setInverval
+			 * 网络请求：ajax请求，动态<img>加载
+			 * 事件绑定
+			 */
 		</script>
 	</body>
 </html>
