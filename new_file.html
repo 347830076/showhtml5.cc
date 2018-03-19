@@ -2,23 +2,63 @@
 <html>
 	<head>
 		<title></title>
+		<style type="text/css">
+			.pic {
+			    width: 200px;
+			    height: 200px;
+			    background-image: url($img);
+			    background-size: cover;
+			}
+			 
+			.pic1 {
+			    background-image: url($img), linear-gradient(#f00, #f00);
+			    background-blend-mode: lighten;
+			    background-size: cover;
+}
+		</style>
 	</head>
 	<body>
 
 		<script>
 
-			    if(1) {
-			    	try{
-			    		throw {
-				        name: 'System Error',
-				        message: 'A name should always be specified!'
-				      }
-			    	}catch(e){
-			    		//TODO handle the exception
-			    		console.log(e)
-			    	}
-			      
+//		    if(1) {
+//		    	try{
+//		    		throw {
+//			        name: 'System Error',
+//			        message: 'A name should always be specified!'
+//			      }
+//		    	}catch(e){
+//		    		//TODO handle the exception
+//		    		console.log(e)
+//		    	}
+//		      
+//		    }
+//		    const a = {
+//			  i: 1,
+//			  toString: function () {
+//			    return a.i++;
+//			  }
+//			}
+//			console.log(a)
+//			if(a == 1 && a == 2 && a == 3) {
+//			  console.log('Hello World!');
+//			}
+			with({
+			  get a() {
+			  	console.log(Math.floor(Math.random()*4))
+			    return Math.floor(Math.random()*4);
+			  }
+			}){
+//			  for(var i=0;i<1000;i++){
+			    if (a == 1 && a == 2 && a == 3){
+			    	console.log('tu')
+//			      console.log("after "+(i+1)+" trials, it becomes true finally!!!");
+//			      break;
+			    }else{
+			    	console.log('else')
 			    }
+//			  }
+			}
 		</script>
 	</body>
 </html>
