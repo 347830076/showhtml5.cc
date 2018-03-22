@@ -1,0 +1,341 @@
+@charset "UTF-8";
+
+/*写上这一句编译有中文注释才不会乱码*/
+
+
+/*注释
+命令编译---------------- ---------------------------------------------
+    单文件编译：
+    sass <要编译的Sass文件路径>/style.scss:<要输出CSS文件路径>/style.css
+
+    多文件编译：
+    sass sass/:css/
+  
+    开启“watch”功能，这样只要你的代码进行任保修改，都能自动监测到代码的变化，并且给你直接编译出来：
+    sass --watch <要编译的Sass文件路径>/style.scss:<要输出CSS文件路径>/style.css
+end 命令编译---------------- -----------------------------------------------
+
+GUI工具编译
+
+    Koala (http://www.w3cplus.com/preprocessor/sass-gui-tool-koala.html) 
+    CodeKit (http://www.w3cplus.com/preprocessor/sass-gui-tool-codekit.html)
+
+ 自动化编译
+ Grunt 和 Gulp
+ 
+ 嵌套输出方式 nested   
+ 展开输出方式 expanded   sass --watch index.scss:index.css --style expanded
+ 紧凑输出方式 compact 
+ 压缩输出方式 compressed
+
+*/
+
+$red:#fff;
+body {
+    background-color: $red;
+}
+
+
+/*选择器嵌套*/
+
+nav {
+    a {
+        color: $red;
+        header & {
+            background-color: $red;
+        }
+    }
+}
+
+
+/*属性嵌套*/
+
+.box {
+    font: {
+        size: 12px;
+        weight: bold;
+    }
+}
+
+
+/*伪元素嵌套*/
+
+.clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+        overflow: hidden;
+    }
+}
+
+/*混合宏*/
+@mixin border-radius($radius:3px,$heigth:50px) { /*有一个特别的参数“…”。当混合宏传的参数过多之时，可以使用参数来替代  @mixin box-shadow($shadows...)*/
+    height: $heigth;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+}
+.rowCon{
+    @include border-radius;
+}
+.row{
+    @include border-radius(5px,100px);
+}
+
+/*继承   @extend*/
+.btn{
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    font-size: 14px;
+}
+.btn-primary{
+    background-color: #F36600;
+    color: #FFF;
+    @extend .btn;
+}
+.btn-second{
+    background-color: orange;
+    color: #fff;
+    @extend .btn;
+}
+
+/*占位符 %placeholder
+    Sass 中的占位符 %placeholder 功能是一个很强大，很实用的一个功能，这也是我非常喜欢的功能。他可以取代以前 CSS 中的基类造成的代码冗余的情形。因为     %placeholder 声明的代码，如果不被 @extend 调用的话，不会产生任何代码。
+*/
+%mt5{
+    margin-top: 5px;
+}
+%pt5{
+    padding-top: 5px;
+}
+
+.btn1{
+    @extend %mt5;
+    @extend %pt5;
+}
+.block{
+    @extend %mt5;
+    span{
+        @extend %pt5;
+    }
+}
+//插值
+$properties: (margin, padding);
+@mixin set-value($side, $value) {
+    @each $prop in $properties {
+        #{$prop}-#{$side}: $value;
+    }
+}
+.login-box {
+    @include set-value(top, 14px);
+}
+//在 Sass 中注释有两种方式，我暂且将其命名为：
+
+//1、类似 CSS 的注释方式，使用 ”/* ”开头，结属使用 ”*/ ”
+//2、类似 JavaScript 的注释方式，使用“//”
+
+//两者区别，前者会在编译出来的 CSS 显示，后者在编译出来的 CSS 中不会显示
+
+/*
+  Sass 和 JavaScript 语言类似，也具有自己的数据类型，在 Sass 中包含以下几种数据类型：
+
+     数字: 如，1、 2、 13、 10px；
+     字符串：有引号字符串或无引号字符串，如，"foo"、 'bar'、 baz；
+     颜色：如，blue、 #04a3f9、 rgba(255,0,0,0.5)；
+     布尔型：如，true、 false；
+     空值：如，null；
+     值列表：用空格或者逗号分开，如，1.5em 1em 0 2em 、 Helvetica, Arial, sans-serif。
+
+ * */
+
+@mixin firefox-message($selector) {
+  body.firefox #{$selector}:before {
+    content: "Hi, Firefox users!";
+  }
+}
+@include firefox-message(".header");
+
+.box {
+  width: 20px + 8in;
+  height: 10px * 2;
+}
+
+$list: twitter,facebook,github,weibo;
+
+@for $i from 1 through length($list){
+  .icon-#{nth($list,$i)}{
+    background-postion: 0 -20px * $i;
+  }
+}
+/*
+ * @if
+ */
+@mixin blockOrHidden($boolean:true) {
+  @if $boolean {
+    @debug "$boolean is #{$boolean}";
+      display: block;
+    }
+    @else {
+      @debug "$boolean is #{$boolean}";
+      display: none;
+    }
+}
+
+.block {
+  @include blockOrHidden;
+}
+
+.hidden{
+  @include blockOrHidden(false);
+}
+
+/*
+ * 在 Sass 的 @for 循环中有两种方式：
+
+@for $i from <start> through <end>
+@for $i from <start> to <end>
+
+    $i 表示变量
+    start 表示起始值
+    end 表示结束值
+
+这两个的区别是关键字 through 表示包括 end 这个数，而 to 则不包括 end 这个数。
+ */
+
+/*through*/
+@for $i from 1 through 3 {
+  .item-#{$i} { width: 2em * $i; }
+}
+
+
+
+/*to*/
+@for $i from 1 to 3 {
+  .item-#{$i} { width: 2em * $i; }
+}
+/*@for应用在网格系统生成各个格子 class 的代码：*/
+$grid-prefix: span !default;
+$grid-width: 60px !default;
+$grid-gutter: 20px !default;
+
+%grid {
+  float: left;
+  margin-left: $grid-gutter / 2;
+  margin-right: $grid-gutter / 2;
+}
+@for $i from 1 through 12 {
+  .#{$grid-prefix}#{$i}{
+    width: $grid-width * $i + $grid-gutter * ($i - 1);
+    @extend %grid;
+  }  
+}
+/*
+ * @while循环
+ */
+$types: 4;
+$type-width: 20px;
+
+@while $types > 0 {
+    .while-#{$types} {
+        width: $type-width + $types;
+    }
+    $types: $types - 1;
+}
+/*
+ * @each循环
+ */
+
+$list: adam john wynn mason kuroir;//$list 就是一个列表
+
+@mixin author-images {
+    @each $author in $list {
+        .photo-#{$author} {
+            background: url("/images/avatars/#{$author}.png") no-repeat;
+        }
+    }
+}
+
+.author-bio {
+    @include author-images;
+    width: percentage(.2);
+}
+
+/*
+ * 1.字符串函数
+ * unquote($string)：删除字符串中的引号
+ * quote($string)：给字符串添加引号。
+ * to-upper-case() 函数将字符串小写字母转换成大写字母
+ * to-lower-case() 函数将字符串转换成小写字母
+ * 
+ * 2.数字函数
+ *  percentage($value)：将一个不带单位的数转换成百分比值；
+      round($value)：将数值四舍五入，转换成一个最接近的整数；
+      ceil($value)：将大于自己的小数转换成下一位整数；
+      floor($value)：将一个数去除他的小数部分；
+      abs($value)：返回一个数的绝对值；
+      min($numbers…)：找出几个数值之间的最小值；
+      max($numbers…)：找出几个数值之间的最大值；
+      random(): 获取随机数
+      
+    3.列表函数  
+            列表函数主要包括一些对列表参数的函数使用，主要包括以下几种：
+
+      length($list)：返回一个列表的长度值；
+      nth($list, $n)：返回一个列表中指定的某个标签值
+      join($list1, $list2, [$separator])：将两个列给连接在一起，变成一个列表；
+      append($list1, $val, [$separator])：将某个值放在列表的最后；
+      zip($lists…)：将几个列表结合成一个多维的列表；
+      index($list, $value)：返回一个值在列表中的位置值。
+      
+    4.Introspection函数
+    Introspection 函数包括了几个判断型函数：
+
+    type-of($value)：返回一个值的类型   number 为数值型。string 为字符串型。bool 为布尔型。color 为颜色型。
+
+    unit($number)：返回一个值的单位
+    unitless($number)：判断一个值是否带有单位
+    comparable($number-1, $number-2)：判断两个值是否可以做加、减和合并
+    
+    5.Miscellaneous函数
+    
+    在这里把 Miscellaneous 函数称为三元条件函数，主要因为他和 JavaScript 中的三元判断非常的相似。他有两个值，当条件成立返回一种值，当条件不成立时返回另一种值：
+    
+    if($condition,$if-true,$if-false)
+    
+    6.Sass 的 map 常常被称为数据地图，也有人称其为数组，因为他总是以 key:value 成对的出现，但其更像是一个 JSON 数据。
+    $map: (
+        $key1: value1,
+        $key2: value2,
+        $key3: value3
+    )
+    
+    map-get($map,$key)：根据给定的 key 值，返回 map 中相关的值。
+    map-merge($map1,$map2)：将两个 map 合并成一个新的 map。
+    map-remove($map,$key)：从 map 中删除一个 key，返回一个新 map。
+    map-keys($map)：返回 map 中所有的 key。
+    map-values($map)：返回 map 中所有的 value。
+    map-has-key($map,$key)：根据给定的 key 值判断 map 是否有对应的 value 值，如果有返回 true，否则返回 false。
+    keywords($args)：返回一个函数的参数，这个参数可以动态的设置 key 和 value。
+    
+    7.RGB 颜色函数
+     rgb() 函数只能快速的将一个 rgb 颜色转换成十六进制颜色表达
+     red()、green() 和 blue() 函数，只能取得某一颜色的一个值
+     mix()
+     Mix 函数是将两种颜色根据一定的比例混合在一起，生成另一种颜色。其使用语法如下：
+
+        mix($color-1,$color-2,$weight);
+        
+        $color-1 和 $color-2 指的是你需要合并的颜色，颜色可以是任何表达式，也可以是颜色变量。
+        
+        $weight 为 合并的比例（选择权重），默认值为 50%，其取值范围是 0~1 之间。它是每个 RGB 的百分比来衡量，当然透明度也会有一定的权重。
+                        默认的比例是 50%，这意味着两个颜色各占一半，如果指定的比例是 25%，这意味着第一个颜色所占比例为 25%，第二个颜色所占比例为75%。
+
+ */
+.rgba {
+    color: rgba(#f36,.5);
+    background: rgba(orange,.5);
+    border-color: rgba(green,.5);
+}
