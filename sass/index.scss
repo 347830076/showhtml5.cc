@@ -339,3 +339,8 @@ $list: adam john wynn mason kuroir;//$list 就是一个列表
     background: rgba(orange,.5);
     border-color: rgba(green,.5);
 }
+/*
+ * @import
+
+Sass 扩展了 CSS 的 @import 规则，让它能够引入 SCSS 和 Sass 文件。 所有引入的 SCSS 和 Sass 文件都会被合并并输出一个单一的 CSS 文件。 另外，被导入的文件中所定义的变量或 mixins 都可以在主文件中使用。
+ */
