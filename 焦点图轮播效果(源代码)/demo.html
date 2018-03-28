@@ -292,7 +292,7 @@
 						as[i].style.width = containerWidth + 'px';
 					}
 					//总图片容器宽度
-					document.getElementById("carousel_list").style.width = containerWidth * ($('#carousel_list a').length) + 'px';
+					document.getElementById("carousel_list").style.width = containerWidth * (document.getElementById("carousel_list").getElementsByTagName('a').length) + 'px';
 					//显示容器排第一的图片
 					document.getElementById("carousel_list").style.left = -containerWidth + 'px';
 					//图片在容器内居住显示            
