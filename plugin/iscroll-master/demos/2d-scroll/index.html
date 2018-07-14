@@ -13,13 +13,14 @@
 var myScroll;
 
 function loaded () {
-	myScroll = new IScroll('#wrapper', { scrollX: true, freeScroll: true });
+//	myScroll = new IScroll('#wrapper', { scrollX: true});
+	myScroll2 = new IScroll('#wrapper2', { scrollX: true});
 }
 
-document.addEventListener('touchmove', function (e) { e.preventDefault(); }, isPassive() ? {
-	capture: false,
-	passive: false
-} : false);
+//document.addEventListener('touchmove', function (e) { e.preventDefault(); }, isPassive() ? {
+//	capture: false,
+//	passive: false
+//} : false);
 
 </script>
 
@@ -31,7 +32,7 @@ document.addEventListener('touchmove', function (e) { e.preventDefault(); }, isP
 }
 
 html {
-	-ms-touch-action: none;
+	/*-ms-touch-action: none;*/
 }
 
 body,ul,li {
@@ -43,7 +44,7 @@ body,ul,li {
 body {
 	font-size: 12px;
 	font-family: ubuntu, helvetica, arial;
-	overflow: hidden; /* this is important to prevent the whole page to bounce */
+	/*overflow: hidden;*/ 
 }
 
 #header {
@@ -84,7 +85,17 @@ body {
 	background: #ccc;
 	overflow: hidden;
 }
-
+#wrapper2 {
+	position: absolute;
+	z-index: 1;
+	top: 45px;
+	bottom: 48px;
+	left: 0;
+	width: 100%;
+	height: 200px;;
+	background: #ccc;
+	overflow: hidden;
+}
 #scroller {
 	position: absolute;
 	z-index: 1;
@@ -118,9 +129,32 @@ p {
 </head>
 <body onload="loaded()">
 <div id="header">iScroll</div>
-
-<div id="wrapper">
-	<div id="scroller">
+<div id="wrapper2">
+	<ul >
+			<li>Pretty cell 1</li>
+			<li>Pretty cell 2</li>
+			<li>Pretty cell 3</li>
+			<li>Pretty cell 4</li>
+			<li>Pretty cell 5</li>
+			<li>Pretty cell 6</li>
+			<li>Pretty cell 7</li>
+			<li>Pretty cell 8</li>
+			<li>Pretty cell 9</li>
+			<li>Pretty cell 10</li>
+			<li>Pretty cell 11</li>
+			<li>Pretty cell 12</li>
+			<li>Pretty cell 13</li>
+			<li>Pretty cell 14</li>
+			<li>Pretty cell 15</li>
+			<li>Pretty cell 16</li>
+			<li>Pretty cell 17</li>
+			<li>Pretty cell 18</li>
+			<li>Pretty cell 19</li>
+			<li>Pretty cell 20</li>
+		</ul>
+</div>
+<!--<div id="wrapper">
+	<div >
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -133,7 +167,7 @@ p {
 
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</div>
-</div>
+</div>-->
 
 <div id="footer"></div>
 

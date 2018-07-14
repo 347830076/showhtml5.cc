@@ -14,6 +14,7 @@ var myScroll;
 
 function loaded () {
 	myScroll = new IScroll('#wrapper', { eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false });
+	myScroll2 = new IScroll('#wrapper2');
 }
 
 </script>
@@ -24,7 +25,9 @@ function loaded () {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-
+html {
+	-ms-touch-action: none;
+}
 body,ul,li {
 	padding: 0;
 	margin: 0;
@@ -106,7 +109,17 @@ p {
 	padding: 1.2em;
 	line-height: 200%;
 }
-
+#wrapper2 {
+	position: absolute;
+	z-index: 1;
+	top: 45px;
+	bottom: 48px;
+	left: 0;
+	width: 100%;
+	height: 200px;;
+	background: #ccc;
+	overflow: hidden;
+}
 </style>
 </head>
 <body onload="loaded()">
@@ -139,17 +152,29 @@ p {
 	</div>
 </div>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
+<div id="wrapper2">
+	<ul >
+			<li>Pretty cell 1</li>
+			<li>Pretty cell 2</li>
+			<li>Pretty cell 3</li>
+			<li>Pretty cell 4</li>
+			<li>Pretty cell 5</li>
+			<li>Pretty cell 6</li>
+			<li>Pretty cell 7</li>
+			<li>Pretty cell 8</li>
+			<li>Pretty cell 9</li>
+			<li>Pretty cell 10</li>
+			<li>Pretty cell 11</li>
+			<li>Pretty cell 12</li>
+			<li>Pretty cell 13</li>
+			<li>Pretty cell 14</li>
+			<li>Pretty cell 15</li>
+			<li>Pretty cell 16</li>
+			<li>Pretty cell 17</li>
+			<li>Pretty cell 18</li>
+			<li>Pretty cell 19</li>
+			<li>Pretty cell 20</li>
+		</ul>
+</div>
 </body>
 </html>

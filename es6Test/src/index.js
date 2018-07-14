@@ -84,6 +84,140 @@ jspang(0,1,2,3,4,5,6,7);
 
 //第5节：字符串模版 而且这里边 支持html标签 对运算的支持 字符串查找
 let yu='yu';
-let yublog = `<b>非常高兴你能看到这篇文章</b>，我是你的老朋友${yu}。${3+3}这节课我们学习字符串模版。`;
+let yublog = `yu<b>非常高兴你能看到这篇文章</b>，我是你的老朋友${yu}。${3+3}这节课我们学习字符串模版。`;
 document.write(yublog);
-document.write(yublog.includes(yu));
+document.write(yublog.includes(yu)); //字符串查找
+document.write(yublog.startsWith(yu)); //判断开头是否存在：
+document.write(yublog.endsWith(yu)+"<br/>"); //判断结尾是否存在：
+ 	
+document.write('jspang|'.repeat(3));
+
+//第6节：ES6数字操作
+//二进制声明：二进制的英文单词是Binary,二进制的开始是0（零），然后第二个位置是b（注意这里大小写都可以实现），然后跟上二进制的值就可以了。
+let binary = 0B010101;   //21
+//八进制声明：八进制的英文单词是Octal，也是以0（零）开始的，然后第二个位置是O（欧），然后跟上八进制的值就可以了。
+let b = 0o666; //438
+
+//数字判断和转换
+
+//数字验证Number.isFinite( xx ) 只要是数字，不论是浮点型还是整形都会返回true，其他时候会返回false。
+let a3= 11/4;
+console.log('数字验证--------------');
+console.log(Number.isFinite(a3));//true
+console.log(Number.isFinite('jspang'));//false
+console.log(Number.isFinite(NaN));//false
+console.log(Number.isFinite(undefined));//false
+//NaN验证 NaN是特殊的非数字，可以使用Number.isNaN()来进行验证。下边的代码控制台返回了true。
+console.log('NaN验证-------------');
+console.log(Number.isNaN(NaN)); //true
+console.log(Number.isNaN(12)); //false
+console.log(Number.isNaN('dd')); //false
+//判断是否为整数Number.isInteger(xx)
+console.log(Number.isInteger(123))
+console.log(Number.isInteger(123.32));
+console.log(Number.isInteger('123.32'));
+//整数转换Number.parseInt(xxx)和浮点型转换Number.parseFloat(xxx)
+let a4='9.18';
+console.log(Number.parseInt(a4)); 
+console.log(Number.parseFloat(a4));
+
+//整数取值范围操作 整数的操作是有一个取值范围的，它的取值范围就是2的53次方。我们先用程序来看一下这个数字是什么.
+console.log('整数取值范围操作------------------')
+let a5 = Math.pow(2,53) - 1;
+console.log(a5); //9007199254740991
+//最大安全整数
+console.log(Number.MAX_SAFE_INTEGER);
+//最小安全整数
+console.log(Number.MIN_SAFE_INTEGER);
+//安全整数判断isSafeInteger( )
+console.log(Number.isSafeInteger(a5));//false
+
+//第7节：ES6中新增的数组知识（1）
+//JSON数组格式转换
+console.log('Array.from json对象转数组')
+let  json = {
+    '0': 'jspang',
+    '1': '技术胖',
+    '2': '15151',
+    // length:3
+}
+
+let arr=Array.from(json);
+console.log(arr)
+//Array.of()方法：
+console.log('Array.of() 文本，字符串转数组 ')
+let arr4 =Array.of(3,4,5,6);
+console.log(arr4);
+let arr5 =Array.of('技术胖','jspang','15125');
+console.log(arr5);
+
+//Array.find()
+console.log('Array.find() 传入匿名函数，查找数组元素，符合条件就返回，并停止查找，没有找到undefined')
+let arr6=[1,2,3,4,5,7,8,9];
+console.log(arr6.find(function(value,index,arr){
+    return value > 5;
+}))
+//Array.fill()
+console.log('Array.fill() 数组填充')
+let arr7=[0,1,2,3,4,5,6,7,8,9];
+arr7.fill('jspang',2,5);
+console.log(arr7);
+//for…of循环：
+let arr8=['jspang','技术胖','大胖逼逼叨']
+ 
+for (let item of arr8){
+    console.log(item);
+}
+//for…of数组索引:有时候开发中是需要数组的索引的，那我们可以使用下面的代码输出数组索引。
+let arr9=['jspang','技术胖','大胖逼逼叨']
+for (let index of arr9.keys()){
+    console.log(index);
+}
+//同时输出数组的内容和索引：我们用entries()这个实例方法，配合我们的for…of循环就可以同时输出内容和索引了。
+let arr10=['jspang','技术胖','大胖逼逼叨']
+for (let [index,val] of arr10.entries()){
+    console.log(index+':'+val);
+}
+let arr11=['jspang','技术胖','大胖逼逼叨']
+let list=arr11.entries();
+console.log(list.next().value);
+console.log(list.next().value);
+console.log(list.next().value);
+
+//箭头函数
+var add = (a,b=1) =>{
+    console.log('箭头函数')
+    return a+b;
+}
+console.log(add(20));
+
+//对象的函数解构
+(({a,b}) =>{
+    console.log(a,b);
+})({c:'cc','a':'aa','b':'bb'});
+
+((a,b,c,d) =>{
+    console.log(a,b,c,d)
+})(...[1,2,3,4]);
+
+//in 
+console.log('in 是用来判断对象或者数组中是否存在某个值');
+console.log('a' in {a:'a'});
+console.log(4 in [0,4])
+
+//forEach
+console.log('forEach 循环的特点就是会自动省略为空的数组元素，相当于直接给我们筛空了')
+let arr12 = ['d',4,4];
+arr12.forEach((val,index)=>{console.log(val,index)});
+console.log('Array.filter()');
+let arr13 = ['jspang','技术胖','前端教程'];
+arr13.filter(x => console.log(x));
+
+let arr14=['jspang','技术胖','前端教程'];
+ 
+console.log(arr14.map(x=>'web'));
+
+(x => {console.log(x)})(12);
+
+//数组转字符串
+console.log('arr.join("|")  arr.toString()' ,'join()方法就是在数组元素中，加了一些间隔 ； toString() 只是用逗号隔开')
