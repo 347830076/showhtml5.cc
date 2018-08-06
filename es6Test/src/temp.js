@@ -1,0 +1,1 @@
+export var aex = 'aexport';

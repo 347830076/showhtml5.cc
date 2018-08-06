@@ -1,6 +1,20 @@
 'use strict';
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _obj2;
+
 var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
+var _temp = require('./temp.js');
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 //第1节：ES6的开发环境搭建
 /**
@@ -34,7 +48,7 @@ var a = 2;
 }
 console.log(a);
 var i = 'i';
-for (var _i = 0; _i < 10; _i++) {
+for (var _i = 0; _i < 2; _i++) {
     console.log('循环体中:' + _i);
 }
 console.log('循环体外:' + i);
@@ -127,7 +141,7 @@ function jspang(first) {
     }
 }
 
-jspang(0, 1, 2, 3, 4, 5, 6, 7);
+jspang(0, 1, 2, 3);
 
 //第5节：字符串模版 而且这里边 支持html标签 对运算的支持 字符串查找
 var yu = 'yu';
@@ -218,9 +232,9 @@ var _iteratorError2 = undefined;
 
 try {
     for (var _iterator2 = arr8[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-        var item = _step2.value;
+        var _item2 = _step2.value;
 
-        console.log(item);
+        console.log(_item2);
     }
     //for…of数组索引:有时候开发中是需要数组的索引的，那我们可以使用下面的代码输出数组索引。
 } catch (err) {
@@ -343,6 +357,261 @@ console.log(arr14.map(function (x) {
     return 'web';
 }));
 
-(function (x, b) {
-    console.log(x, b);
-})(12, 13);
+(function (x) {
+    console.log(x);
+})(12);
+
+//数组转字符串
+console.log('arr.join("|")  arr.toString()', 'join()方法就是在数组元素中，加了一些间隔 ； toString() 只是用逗号隔开');
+
+//对象赋值
+var name = 'jishu';
+var obj12 = { name: name };
+console.log('ES6允许把声明的变量直接赋值给对象', obj12.name);
+var key2 = 'skill';
+var obj13 = _defineProperty({}, key2, 'web');
+console.log(obj13.skill);
+
+//object.is()对象比较
+console.log('Object.is()对象比较');
+console.log(Object.is({ name: '1' }.name, { name: '1' }.name));
+
+console.log('Object.assign()合并对象');
+console.log(Object.assign({ a: 'b' }, { b: 'b' }, { c: 'c' }));
+
+console.log('Symbol在对象中的作用');
+
+var g = Symbol('jspang');
+console.log(g);
+console.log(g.toString());
+console.log('Symbol对象元素的保护作用');
+var jspang = Symbol();
+var obj = (_obj2 = {}, _defineProperty(_obj2, jspang, '技术胖'), _defineProperty(_obj2, 'name', 'cylyiou'), _obj2);
+console.log(obj[jspang]);
+obj[jspang] = 'web';
+console.log(obj[jspang]);
+console.log(obj);
+
+var obj = { name: 'jspang', skill: 'web', age: 18 };
+
+for (var item in obj) {
+    console.log(item, obj[item]);
+}
+console.log('-----------');
+var obj15 = { name: 'jspang', skill: 'web' };
+var age15 = Symbol();
+obj15[age15] = 18;
+for (var _item in obj15) {
+    console.log(_item, obj15[_item]);
+}
+console.log(obj15);
+
+console.log('Set和Array 的区别是Set不允许内部有重复的值，如果有只显示一个，相当于去重。虽然Set很像数组，但是他不是数组。');
+var setArr = new Set(['a', 'b2', 'c']);
+console.log(setArr);
+setArr.add('前端职场');
+console.log(setArr);
+var _iteratorNormalCompletion5 = true;
+var _didIteratorError5 = false;
+var _iteratorError5 = undefined;
+
+try {
+    for (var _iterator5 = setArr.entries()[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+        var _step5$value = _slicedToArray(_step5.value, 2),
+            _index2 = _step5$value[0],
+            val = _step5$value[1];
+
+        console.log(_index2, val);
+    }
+} catch (err) {
+    _didIteratorError5 = true;
+    _iteratorError5 = err;
+} finally {
+    try {
+        if (!_iteratorNormalCompletion5 && _iterator5.return) {
+            _iterator5.return();
+        }
+    } finally {
+        if (_didIteratorError5) {
+            throw _iteratorError5;
+        }
+    }
+}
+
+console.log(setArr.has('a'));
+console.log(setArr.size);
+setArr.forEach(function (val, index) {
+    return console.log(val, index);
+});
+setArr.clear();
+console.log(setArr);
+
+var weakObj = new WeakSet();
+var objw = { a: 'jspang', b: '技术胖' };
+var objw2 = { a: 'jspang2', b: '技术胖2' };
+var obj1w = objw;
+
+weakObj.add(objw);
+weakObj.add(objw2);
+weakObj.add(obj1w);
+
+console.log(weakObj);
+
+var jsonm = {
+    name: 'jspang',
+    skill: 'web'
+};
+console.log(jsonm.name);
+
+var map = new Map();
+map.set(jsonm, 'iam');
+console.log(map);
+console.log(map.get(jsonm));
+console.log(map.has(jsonm));
+console.log(map.size);
+
+console.log('用Proxy进行预处理 new Proxy({},{})');
+
+var pro = new Proxy({
+    add: function add(val) {
+        return val + 10;
+    },
+    name: 'I am Jspang'
+}, {
+    get: function get(target, key) {
+        console.log('come in Get');
+        return target[key];
+    },
+    set: function set(target, key, value, receiver) {
+        console.log('                            setting ' + key + ' = ' + value);
+        // return target[key] = value;
+        return target[key] = 12;
+    }
+
+});
+
+console.log(pro.name);
+pro.name = '技术胖';
+console.log(pro.name);
+
+var target = function target() {
+    return 'I am JSPang';
+};
+var handler = {
+    apply: function apply(target, ctx, args) {
+        console.log('do apply');
+        return Reflect.apply.apply(Reflect, arguments);
+    }
+};
+
+var pro = new Proxy(target, handler);
+
+console.log(pro());
+
+var state = 1;
+
+function step1(resolve, reject) {
+    console.log('1.开始-洗菜做饭');
+    if (state == 1) {
+        resolve('洗菜做饭--完成');
+    } else {
+        reject('洗菜做饭--出错');
+    }
+}
+
+function step2(resolve, reject) {
+    console.log('2.开始-坐下来吃饭');
+    if (state == 1) {
+        resolve('坐下来吃饭--完成');
+    } else {
+        reject('坐下来吃饭--出错');
+    }
+}
+
+function step3(resolve, reject) {
+    console.log('3.开始-收拾桌子洗完');
+    if (state == 1) {
+        resolve('收拾桌子洗完--完成');
+    } else {
+        reject('收拾桌子洗完--出错');
+    }
+}
+
+new Promise(step1).then(function (val) {
+    console.log(val);
+    state = 2;
+    return new Promise(step2);
+}).then(function (val) {
+    console.log(val);
+    return new Promise(step3);
+}, function (error) {
+    console.log(error);
+}).then(function (val) {
+    console.log(val);
+    return val;
+});
+
+//这里需要注意的是两个方法中间不要写逗号了，还有这里的this指类本身，还有要注意return 的用法。
+
+var Coder = function () {
+    function Coder(a, b) {
+        _classCallCheck(this, Coder);
+
+        this.a = a;
+        this.b = b;
+    }
+
+    _createClass(Coder, [{
+        key: 'name',
+        value: function name(val) {
+            console.log(val);
+            return val;
+        }
+    }, {
+        key: 'skill',
+        value: function skill(val) {
+            console.log(this.name('jspang') + ' : ' + 'Skill ' + val);
+        }
+    }, {
+        key: 'add',
+        value: function add() {
+            return this.a + this.b;
+        }
+    }]);
+
+    return Coder;
+}();
+
+var coders = new Coder(1, 2);
+coders.name('haha');
+coders.skill('vue');
+console.log('add ', coders.add());
+
+//class继承
+
+var htmler = function (_Coder) {
+    _inherits(htmler, _Coder);
+
+    function htmler() {
+        _classCallCheck(this, htmler);
+
+        return _possibleConstructorReturn(this, (htmler.__proto__ || Object.getPrototypeOf(htmler)).apply(this, arguments));
+    }
+
+    _createClass(htmler, [{
+        key: 'minux',
+        value: function minux(val) {
+            console.log('minux ' + this.name('min'));
+        }
+    }]);
+
+    return htmler;
+}(Coder);
+
+var pang = new htmler();
+pang.name('jishu');
+pang.minux('jishu');
+
+console.log('\nexport :\u8D1F\u8D23\u8FDB\u884C\u6A21\u5757\u5316\uFF0C\u4E5F\u662F\u6A21\u5757\u7684\u8F93\u51FA\u3002\nimport : \u8D1F\u8D23\u628A\u6A21\u5757\u5F15\uFF0C\u4E5F\u662F\u6A21\u5757\u7684\u5F15\u5165\u64CD\u4F5C\u3002\n');
+
+console.log(_temp.aex);

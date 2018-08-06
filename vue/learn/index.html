@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+    <script src="./js/bundle.js"></script>
+    <script src="./js/bundle1.js"></script>
+</head>
+
+<body>
+    <h1>hello vue</h1>
+    <div id="app">
+        {{message}}
+        <div v-text="message"></div>
+        <div v-html="msgHtml" v-jspang="color"></div>
+        本场比赛得分： {{count}}
+        <br/>
+        <button v-on:click="jiafen">加分</button>
+        <button @click="jianfen">减分</button>
+
+        <input type="text" v-on:keyup.enter="onEnter" v-model="count">
+        <div> v-if 和v-show的区别：</div>
+        <ul>
+            <li> v-if： 判断是否加载，可以减轻服务器的压力，在需要时加载。
+            </li>
+            <li>
+                v-show：调整css dispaly属性，可以使客户端操作更加流畅。
+            </li>
+        </ul>
+        <div v-if="isFlag == 1">if</div>
+        <div v-else-if="isFlag == 2">else if</div>
+        <div v-else="isFlag">else</div>
+        <ul>
+            <li v-for="item in sortItems">
+                {{item}}
+            </li>
+            <li v-for="(student,index) in sortStudent">
+                {{index}} : {{student.name}} - {{student.age}}
+            </li>
+        </ul>
+        <p>
+            Ask a yes/no question:
+            <input v-model="question">
+        </p>
+        <div class="author"></div>
+        <author></author>
+    </div>
+
+    <div id="app2">
+        {{message}}
+        <p>
+            <button @click="jia">加分</button>
+        </p>
+        <ul>
+            <li v-for=" aa in arr">{{aa}}</li>
+        </ul>
+        <panda here="China"></panda>
+        <button onclick="add()">外部添加</button>
+        <button onclick="app2.$destroy()">销毁</button>
+    </div>
+    <script>
+        // v-model指令  双向数据绑定
+        //自定义指令
+        Vue.directive('jspang', function (el, binding, vnode) {
+            // console.log(el,binding,vnode);
+            el.style = 'color:' + binding.value;
+        });
+        //Vue.extend 构造器的延伸
+        var authorExtend = Vue.extend({
+            template: "<p><a :href='authorUrl'>{{authorName}}</a></p>",
+            data: function () {
+                return {
+                    authorName: 'jspang',
+                    authorUrl: 'http://www.baidu.com'
+                }
+            }
+        });
+        new authorExtend().$mount('.author');
+        new authorExtend().$mount('author');
+
+        function add() {
+            console.log("我已经执行了");
+            app2.arr[1] = 'ddd';
+            Vue.set(app2.arr, 1, 'ddd');
+        }
+        var outData = {
+            arr: ['aaa', 'bbb', 'ccc'],
+            message: 1
+        };
+        var app2 = new Vue({
+            el: '#app2',
+            data: outData,
+            methods: {
+                jia: function () {
+                    this.message++;
+                }
+            },
+            components: {
+                "panda": {
+                    template: `<div style="color:red">Panda from {{ here }} </div>`,
+                    props: ['here']
+                }
+            },
+            beforeCreate: function () {
+                console.log('1-beforeCreate 初始化之后');
+            },
+            created: function () {
+                console.log('2-created 创建完成');
+            },
+            beforeMount: function () {
+                console.log('3-beforeMount 挂载之前');
+            },
+            mounted: function () {
+                console.log('4-mounted 被创建');
+            },
+            beforeUpdate: function () {
+                console.log('5-beforeUpdate 数据更新前');
+            },
+            updated: function () {
+                console.log('6-updated 被更新后');
+            },
+            activated: function () {
+                console.log('7-activated');
+            },
+            deactivated: function () {
+                console.log('8-deactivated');
+            },
+            beforeDestroy: function () {
+                console.log('9-beforeDestroy 销毁之前');
+            },
+            destroyed: function () {
+                console.log('10-destroyed 销毁之后')
+            }
+        })
+
+        var app = new Vue({
+            el: '#app',
+            data: {
+                isFlag: 1,
+                message: 'haha',
+                color: 'red',
+                count: 1,
+                msgHtml: '<h2>hello vue!</h2>',
+                question: '',
+                secondCount: 0,
+                items: [20, 23, 18, 65, 32, 5, 54, 56, 41],
+                students: [
+                    { name: 'jspang', age: 32 },
+                    { name: 'a', age: 3 },
+                    { name: 'b', age: 2 },
+                    { name: 'Panda', age: 30 },
+                    { name: 'PanPaN', age: 21 },
+                    { name: 'King', age: 45 }
+                ]
+            }, computed: { //计算属性
+                sortItems: function () {
+                    return this.items.sort(sortNumber);
+                },
+                sortStudent: function () {
+                    return sortByKey(this.students, 'age');
+                }
+            },
+            //侦听器
+            watch: {
+                question: function (newQuestion, oldQuestion) {
+                    console.log(newQuestion, oldQuestion);
+                }
+            },
+            methods: {
+                jiafen: function () {
+                    this.count++;
+                },
+                jianfen: function () {
+                    this.count--;
+                },
+                onEnter: function () {
+                    this.count = parseInt(this.count) + 1;
+                }
+            }
+        });
+        function sortNumber(a, b) {
+            return a - b;
+        }
+        //数组对象方法排序:
+        function sortByKey(array, key) {
+            return array.sort(function (a, b) {
+                var x = a[key];
+                var y = b[key];
+                return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+            });
+        }
+    </script>
+</body>
+
+</html>
