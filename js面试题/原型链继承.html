@@ -46,6 +46,9 @@
 				}
 			}
 			
+			test.prototype.get = function(){
+				console.log('get')
+			}
 			
 			 function Elem (id){
 			 	this.elem = document.getElementById(id);
@@ -78,7 +81,8 @@
 			 	alert('onclick')
 			 }).html('javascript')
 			 
-			 div1.test()
+			 div1.test();
+			 div1.get();
 		</script>
 	</body>
 </html>
