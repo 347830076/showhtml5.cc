@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ajax</title>
+</head>
+<body>
+    <script>
+        //手动编写一个ajax,不依赖第三方库
+
+        /**
+         * XMLHttpRequest
+         * 状态码说明
+         * readyState 
+         * 0 -(未初始化)还没调用send()方法
+         * 1 -(载入) 已调用send()方法，正在发送请求
+         * 2 -(载入完成) send()方法执行完成，已经接收到全部响应内容
+         * 3-(交互) 正在解析响应内容
+         * 4-(完成)响应内容解析完成，可以在客户端调用了
+         * 
+         * status
+         * 2XX - 表示 成功处理请求 如200
+         * 3xx -需要重定向，浏览器直接跳转(服务器直接跳转，客户端不用管)
+         * 4XX- 客户端请求错误 如404 找不到该接口
+         * 5XX 服务器端错误
+         */
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET','/api',false);
+        xhr.onreadystatechange = function (){
+            //这里的函数异步执行，
+            if(xhr.readyState == 4){
+                if(xhr.status == 200){
+                    alert(xhr.responseText)
+                }
+            }
+        }
+
+        xhr.send(null);
+
+        //跨域的几种实现方式
+        //什么是跨域 (浏览器有同源策略，不允许ajax访问其他域名接口)
+        //跨域条件：协议，域名，端口，有一个不同就算跨域
+        //所有的跨域请求都必须经过信息提供方允许
+        //如果未经允许即可获取，那是浏览器同源策略出现漏洞
+
+
+        //jsonp  前端
+        //服务器端设置 http header
+
+        //可以跨域的三个标签
+        //<img src=xxx>   用于打点统计，统计网站可能是其他域
+        //<link href=XXX>   link script可以使用cdn cdn的也是其他域
+        //<sripct src=XXX>  可以用于jsonp 
+
+        //jsonp实现原理
+        //加载http://coding.m.imooc.com/classindex.html
+        //不一定服务端真正有一个classinde.html文件
+        //服务器可以根据请求，动态生成一个文件，返回
+        //同理 <script src="http://coding.m.imooc.com/api.js">    
+        
+
+
+
+    </script>
+</body>
+</html>

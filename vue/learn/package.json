@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "uglify-js": "^3.4.5",
+    "url-loader": "^1.0.1",
+    "webpack-dev-server": "^3.1.5"
+  }
+}

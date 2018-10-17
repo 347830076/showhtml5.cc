@@ -1,0 +1,38 @@
+//通常在处理URL解析，前端会创建一个a标签，通过浏览器来解析URL。实现代码如下：
+function parseUrl(url){
+    var anchor = document.createElement('a');
+    anchor.href = url;
+    var path = anchor.pathname,
+        search = anchor.search,
+        query = null;
+    if(search){
+        var keyValue = search.replace(/^\?/,'').split('&'), 
+            tempValue;
+        query = {};
+        for(var i = 0, j = keyValue.length; i < j; i++){
+            tempValue = keyValue[i].split('=');
+            query[tempValue[0]] = tempValue[1];
+        }
+    }
+    var defaultPort = {
+        "http:":80,
+        "https:": 443,
+        "ftp:": 21,
+        "gopher:": 70,
+        "ws:": 80,
+        "wws": 443
+    };
+    return {
+        href: anchor.href,                      //full url
+        protocol: anchor.protocol,              //protocol,            eg: http:, https:, ftp:
+        host: anchor.host,                      //host,                eg: www.lyblog.net:8087
+        hostname: anchor.hostname,              //hostname,            eg: www.lyblog.net
+        path: path + search,                    //path and search,     eg: www.lyblog.net/archive/2015/566.html?debug=1
+        port: anchor.port || defaultPort[anchor.protocol] || "",
+                                                //port,                eg: 8087
+        pathname: path,                         //path,                eg: /archive/2015/566.html
+        hash: anchor.hash,                      //hash,                eg: #respond
+        search: search,                         //search,              eg: ?search=1&debug=2
+        query: query                            //query                eg: JSON
+    };
+}

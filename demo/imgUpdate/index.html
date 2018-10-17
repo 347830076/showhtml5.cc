@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="all" />
+    <meta name="Copyright" content="SuddenFix" />
+    <meta name="author" content="SuddenFix" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title></title>
+    <link rel="stylesheet" href="static/activities/valentine/css/reset.css">
+    <link rel="stylesheet" href="static/activities/valentine/css/cropper.min.css">
+    <link rel="stylesheet" href="static/activities/valentine/css/index.css">
+    <link rel="stylesheet" href="static/css/sweetalert.css">
+    <script>
+        //定义rem的值，1rem=100px
+        ! function() {
+            function a() {
+                document.documentElement.style.fontSize = document.documentElement.clientWidth / 750 * 10 / 16 * 1000 + "%"
+            }
+            var b = null;
+            window.addEventListener("resize", function() {
+                clearTimeout(b);
+                b = setTimeout(a, 300)
+            }, !1);
+            a()
+        }(window);
+    </script>
+</head>
+<body>
+    <div class="wrp">
+        <div class="banner"></div>
+        <form action="" id="upload">
+            <div class="input_file" id="preview-pane">
+                <div class="preview-container"></div>
+                <!--input change在安卓无法调起 accept需改成image/*-->
+                <input type="file" id="fileInput" accept="image/*"/>
+            </div>
+            <div class="input_text">
+                <input type="text" id="textInput" placeholder="这一刻，我想说（10～30字表白内容）" minlength="10" maxlength="30" name="content">
+            </div>
+            <button type="submit" class="create" value=""></button>
+        </form>
+        <span class="ruleBtn">&lt;&lt;&lt;活动规则&gt;&gt;&gt;</span>
+    </div>
+    <div class="popup">
+        <div class="popupBox">
+            <div class="contentBox">
+                <div class="ruleBox">
+                    <div class="ruleTitle"></div>
+                    <p>1、活动时间：即日起 — 5月22日23:59；</p>
+                    <p>2、点击推文、或从微信菜单活动入口，进入【520花式表白】有奖分享活动页；</p>
+                    <p>3、点击按钮，上传您的花式表白截图或情侣秀照片，附上10-30字的告白，确认图文无误后，生成您专享的520表白海报；</p>
+                    <p>4、长按保存表白海报，转发至朋友圈，带上<span>#闪电修助你去表白#</span>话题，邀请小伙伴点赞；</p>
+                    <p>5、活动奖品：<br>一等奖5名——价值188元森巴海盐草莓蛋糕一个（需集满102个赞，仅限南山、福田、罗湖、宝安配送，其他区需到福田区赛格门店自提。)<br>二等奖10名——价值120元复仇者联盟通兑情侣电子票一套（需集满52个赞，深圳万达影城通用。)<br>三等奖37名——价值 40 元创意礼品示爱风扇一个（需集满20个赞，快递包邮。)<br>四等奖520名——价值 20 元闪电修现金抵扣电子券一张（需集满5个赞，需注册后使用。)</p>
+                    <p>6、您集够指定奖品的点赞数后，截图保存。通过微信后台发截图并留言想兑换的礼品，向小编申请领奖，<span>请务必要在留言内写下您的联系电话</span>，否则无法发送奖品哦~</p>
+                    <p>7、小编在活动结束后2个工作日内，参照活动规则确认合格中奖者，并联系其领奖。如活动结束后3天未联系中奖者，视为放弃奖品；</p>
+                    <p>8、活动期间如有任何问题，可致电400080086或关注“闪电修”公众号联系客服为您处理；</p>
+                    <p>9、如果出现违规行为（如作弊刷单、恶意冒领等），将取消参与者的活动资格；同时有权撤回相关礼品，必要时将追究违规参与者的法律责任；</p>
+                    <p>10、深圳闪电修科技有限公司有权根据活动举行情况对活动规则进行相应变更或调整，并拥有本次活动的最终解释权。</p>
+                </div>
+                <div class="qaBox">
+                    <div class="qaTitle"></div>
+                    <p>Q：是将活动文章分享到朋友圈集赞吗？<br>A：不是的~是要点击进去活动页面，然后根据规则上传照片，分享生成的海报到朋友圈并附上<span>#闪电修助你去表白#</span>话题才算合格，请按照规则来操作哦~</p>
+                    <p>Q：上传的图片什么类型都可以吗？<br>A：要用您跟对象表白的相关图片哦，可以是给对方表白的各类截图，也可以是情侣间秀恩爱的照片（让狗粮来得更猛烈吧！）</p>
+                    <p>Q：图片格式和大小有要求吗？<br>A：手机拍的照片基本上都是可以的哦，文件太大可能会影响上传的成功率呢~</p>
+                    <p>Q：图片尺寸啥的有要求吗？<br>A：只要符合我们的相框就可以了，可自行移动图片，以呈现最佳显示效果~</p>
+                    <p>Q：除了上传照片还有啥要求吗？<br>A：还要附上您爱的告白，至少10字哦~我们系统会自动生成您的告白海报的~然后保存海报转发朋友圈，记得加上话题<span>#闪电修助你去表白#</span>哦~</p>
+                    <p>Q：集满赞后怎样领取相应礼品？<br>A：集满赞后赶紧截图发到我们公众号后台，并注明您想要兑换什么礼品以及确定一定以及肯定附上您的联系电话哦，我们会按照截图发送时间的先后确定获奖名单哦~如果中奖者没有提供联系电话，在活动结束3天后小闪还是无法联系上的话~中奖者只能视为放弃领奖了哦~</p>
+                    <p>Q：获奖之后啥时候能收到奖品？<br>A：我们会在活动结束后2个工作日内确认中奖者并联系其领奖。要注意哦，蛋糕仅限部分地区配送，详情请看规则第五条~电影票请尽快使用，预计5月31号复联3就下线了~“示爱风扇”需要快递，要多等几天哦~闪电修优惠券需要注册才有效哦~~</p>
+                    <p>Q：有后续问题怎么处理？<br>A：有任何问题都可以联系我们公众号客服或致电400080086处理哦~</p>
+                </div>
+            </div>
+        </div>
+        <div class="closePopup"></div>
+    </div>
+
+    <div class="cut">
+        <img src="" alt="" id="cropimg">
+        <div class="handle cf">
+            <span class="cancel">取消</span>
+            <span class="confirm">完成</span>
+        </div>
+    </div>
+
+    <div class="preview">
+        <div class="previewBox">
+            <img src="" alt="">
+        </div>
+        <p class="tips">长按保存图片，转发至朋友圈，附上指定话题集赞，拿走您的表白好礼。</p>
+        <div class="closePreview"></div>
+    </div>
+</body>
+<script src="static/activities/valentine/js/jquery-3.3.1.min.js"></script>
+<script src="static/activities/valentine/js/canvas-to-blob.min.js"></script>
+<script src="static/activities/valentine/js/cropper.min.js"></script>
+<script src="static/js/layer.js"></script>
+<script src="static/js/sweetalert.min.js"></script>
+<script>
+    var file_input = document.getElementById("fileInput");
+    var cropper;
+    var $formData;
+
+    /*window.addEventListener('load',function(e){
+        console.log(e)
+    },false);*/
+
+    $(document).ready(function () {
+
+        //生成图片
+        $("#upload").submit(function (e) {
+            e.preventDefault();
+            var layerIndex = layer.open({
+                title: false,
+                content: "正在生成图片，请稍等片刻",
+                icon: 16,
+                closeBtn: 0,
+                btn: 0
+            });
+            //var formData = new FormData($("#upload")[0]);
+            var content = $("#textInput").val();
+            if($formData){
+                $formData.append('content',content);
+            }else{
+                /*layer.close(layerIndex)
+                swal('请上传图片截取','error')*/
+            }
+            $.ajax({
+//                url:"https://www.suddenfix.com/activities/valentine.index/complainorder.html?orderNo="+orderNo+"&orderType="+orderType,
+                url:"",
+                timeout:60000,
+                cache: false,
+                data:$formData,
+                processData: false,
+                contentType: false,
+                method:'POST'
+            }).done(function (res) {
+                layer.close(layerIndex)
+                if(res.status == 'success')
+                {
+                    $(".previewBox img").attr("src",res.imgUrl);
+                    $(".preview").show();
+                    $(".create").attr("type","button").addClass("astrict").removeClass("create");
+                }else{
+                  swal('生成失败',res.msg,'error');
+                }
+            }).fail(function () {
+                layer.close(layerIndex)
+                swal('网络错误','请重试','error')
+            })
+        })
+
+
+        function b64toBlob(b64Data, contentType, sliceSize) {
+            contentType = contentType || '';
+            sliceSize = sliceSize || 512;
+            var byteCharacters = atob(b64Data);
+            var byteArrays = [];
+            for (var offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+                var slice = byteCharacters.slice(offset, offset + sliceSize);
+                var byteNumbers = new Array(slice.length);
+                for (var i = 0; i < slice.length; i++) {
+                    byteNumbers[i] = slice.charCodeAt(i);
+                }
+                var byteArray = new Uint8Array(byteNumbers);
+                byteArrays.push(byteArray);
+            }
+            var blob = new Blob(byteArrays, {type: contentType});
+            return blob;
+        }
+
+        $(".ruleBtn").click(function () {
+            $(".popup").show()
+        })
+        $(".closePopup").click(function () {
+            $(".popup").hide()
+        })
+        $(".closePreview").click(function () {
+            $(".preview").hide();
+        })
+
+        $("#textInput").on("input propertychange",function () {
+            $(".astrict").attr("type","submit").addClass("create").removeClass("astrict")
+        })
+
+        $('#fileInput').change(function(event) {
+            document.activeElement.blur();
+            var files = event.target.files, file;
+            if (files && files.length > 0) {
+                file = files[0];
+                var URL = window.URL || window.webkitURL;
+                var imgURL = URL.createObjectURL(file);
+                $('#cropimg').attr('src', imgURL);
+                $(".cut").show();
+                var image = document.getElementById('cropimg');
+                cropper = new Cropper(image, {
+                    aspectRatio: 677 / 413,
+                    viewMode:1,
+                    dragMode:'move',
+                    //resizable:false,
+                    //rotatable:false,
+                    restore:false,
+                    responsive:false,
+                    dragCrop:false,
+                    cropBoxResizable:false,
+                    movable:true,
+                    crop: function(event) {
+
+                    }
+                });
+
+                file_input.setAttribute("type","text");
+            }
+        });
+
+        $(".confirm").click(function () {
+            var cas = cropper.getCroppedCanvas({
+                fillColor: '#fff',
+                imageSmoothingEnabled: false,
+                imageSmoothingQuality: 'high',
+            });
+
+            //压缩图片
+            var tmp = cas.toDataURL("image/jpeg");
+            var strIndex=tmp.indexOf('base64') + 7;
+            var fileEnd="image/jpeg";
+            var $blob = b64toBlob(tmp.substr(strIndex), fileEnd);
+
+
+            $('.preview-container').html(cas)
+            cropper.getCroppedCanvas().toBlob(function () {
+                var formData = new FormData();
+                formData.append('image', $blob);
+                $formData = formData;
+            });
+            cropper.destroy();
+            $(".cut").hide();
+            file_input.setAttribute("type","file");
+            $(".astrict").attr("type","submit").addClass("create").removeClass("astrict")
+        })
+
+        $(".cancel").click(function () {
+            $(".cut").hide();
+            cropper.destroy();
+            file_input.setAttribute("type","file");
+            $(".astrict").attr("type","submit").addClass("create").removeClass("astrict")
+        })
+
+
+        $("body").on("click",".astrict",function () {
+            swal('很抱歉','您已经生成过预览海报，如无法查看海报，请修改后再次点击预览','info');
+        })
+    })
+</script>
+</html>
