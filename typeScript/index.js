@@ -1,7 +1,14 @@
+var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
+    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+    return cooked;
+};
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -27,7 +34,7 @@ function test(template, name, age) {
 var getAge = function () {
     return 18;
 };
-(_a = ["hello my name is ", ",i'm ", ""], _a.raw = ["hello my name is ", ",i'm ", ""], test(_a, myname, getAge()));
+test(__makeTemplateObject(["hello my name is ", ",i'm ", "123"], ["hello my name is ", ",i'm ", "123"]), myname, getAge());
 //参数类型
 var stringtest = '陈国宇';
 var alias = "12";
@@ -73,7 +80,7 @@ var arr2 = [1, 2, 3, 4];
 for (var _i = 0, arr2_1 = arr2; _i < arr2_1.length; _i++) {
     var i = arr2_1[_i];
 }
-var Person = (function () {
+var Person = /** @class */ (function () {
     function Person(name) {
         this.name = name;
         console.log('haha ' + name);
@@ -88,7 +95,7 @@ var p1 = new Person("batman");
 p1.eat();
 var p2 = new Person("superman");
 p2.eat();
-var employee = (function (_super) {
+var employee = /** @class */ (function (_super) {
     __extends(employee, _super);
     function employee(name, code) {
         var _this = _super.call(this, name) || this;
@@ -106,7 +113,7 @@ e1.show();
 //泛型
 var arrF = [];
 arrF[0] = new Person('zhangshan');
-var Presoni = (function () {
+var Presoni = /** @class */ (function () {
     function Presoni(config) {
         this.config = config;
         console.log(config.name);
@@ -118,7 +125,7 @@ var pi = new Presoni({
     name: 'xiao',
     age: 23
 });
-var sheep = (function () {
+var sheep = /** @class */ (function () {
     function sheep() {
     }
     sheep.prototype.eat = function () {
@@ -126,5 +133,4 @@ var sheep = (function () {
     };
     return sheep;
 }());
-var _a;
 //模块Moudule

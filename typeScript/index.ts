@@ -29,7 +29,7 @@ var getAge = function () {
     return 18;
 }
 
-test`hello my name is ${myname},i'm ${getAge()}`;
+test`hello my name is ${myname},i'm ${getAge()}123`;
 
 //参数类型
 var stringtest: string = '陈国宇';
@@ -45,7 +45,7 @@ function funtest1(): string {
     return "dsd";
 }
 
-
+//可选参数  默认参数
 function add(name: string, age?: string, sex: string = '男') {
     console.log(name)
 }
@@ -153,5 +153,3 @@ class sheep implements animal{
 }
 
 //模块Moudule
-
-
