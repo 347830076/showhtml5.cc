@@ -182,7 +182,7 @@
           console.log(i, digit);
           return digit.replace(/(\d)/g, spanContent);
         });
-        $hoursEl.html(("0" + Math.floor(timeLeft % oneDay / oneHour)).slice(-2)).html(function (i, digit) {
+        $hoursEl.html((Math.floor(timeLeft % oneDay / oneHour)).slice(-2)).html(function (i, digit) {
           return digit.replace(/(\d)/g, spanContent);
         });
         $minutesEl.html(("0" + Math.floor(timeLeft % oneHour / oneMinute)).slice(-2)).html(function (i, digit) {
