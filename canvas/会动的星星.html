@@ -190,7 +190,7 @@ function fn_FillText(context) {
     context.shadowOffsetY = 1;   //Y 偏移
     context.shadowBlur = 0;   //模糊度
     var name = Request.queryString("name");
-    name = decodeURIComponent(name ? name : "宝贝");
+    name = decodeURIComponent(name ? name : "陆鸭鸭");
     var title =name + "，画下一片星空，只为送给你！";
     
     context.fillText(title, canvasWidth /2, canvasHeight - 20);  //填充文字
