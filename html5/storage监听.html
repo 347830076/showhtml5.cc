@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //storage还提供了storage事件，当键值改变或者clear的时候，就可以触发storage事件，如下面的代码就添加了一个storage事件改变的监听：
+    if (window.addEventListener) {
+        window.addEventListener("storage", handle_storage, false);
+        console.log(localStorage)
+    } else if (window.attachEvent) {
+        window.attachEvent("onstorage", handle_storage);
+    }
+
+    function handle_storage(e) {
+        alert(e.newValue);
+        if (!e) {
+            e = window.event;
+        }
+    }
+</script>
+</body>
+</html>

@@ -9,17 +9,9 @@
 				height: 100px;
 				overflow: hidden;
 				margin-bottom: 10px;
-				border: 10px solid #ccc;
+				border: 1px solid #ccc;
 			}
 		</style>
-	</head>
-	<body>
-		<div class="container">
-			<img src="../image/2.jpg" onload="fitImage(this.parentNode,this)" />
-		</div>
-		<div class="container" style="width: 200px;">
-			<img src="../image/2.jpg" onload="fitImage(this.parentNode,this)" />
-		</div>
 		<script type="text/javascript">
 			function fitImage(objDiv, objImg) {				
 				var divWidth = objDiv.offsetWidth;      //容器的宽
@@ -44,5 +36,13 @@
 				objImg.style.marginTop = (divHeight - objImg.height) / 2 + 'px';	
 			}
 		</script>
+	</head>
+	<body>
+		<div class="container">
+			<img src="../img/lufei.ico" onload="fitImage(this.parentNode,this)" />
+		</div>
+		<div class="container" style="">
+			<img src="../img/binary_tree.png" onload="fitImage(this.parentNode,this)" />
+		</div>
 	</body>
 </html>

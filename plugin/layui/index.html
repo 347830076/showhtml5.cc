@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/layui.css">
+    <style>
+    #slideTest1{
+        position: relative;
+        margin: 50px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="slideTest1"></div>
+    <div id="test1"></div>
+    <script src="layui.js"></script>
+    <script>
+        //一般直接写在一个js文件中
+        layui.use(['layer', 'form','slider','colorpicker'], function () {
+            var layer = layui.layer
+                , form = layui.form;
+
+            var slider = layui.slider;
+
+            //渲染
+            slider.render({
+                elem: '#slideTest1',  //绑定元素
+                input:true
+            });
+
+              var colorpicker = layui.colorpicker;
+            //渲染
+            colorpicker.render({
+                elem: '#test1'  //绑定元素
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>存储</title>
+</head>
+<body>
+    <script>
+        //cookie
+        /**
+         * 本身用于客户端和服务器端通信，每次请求都会传给服务器(css js 图片 html)
+         * 但是它有本地存储的功能，于是就被“借用”
+         * 使用document.cookie = ...  获取和修改即可   
+         * 
+         * cookie用于存储的缺点
+         * 存储量太小，只有4KB
+         * 所有http请求都带着，会影响获取资源的效率
+         * api简单，需要封装才能用
+         */
+
+         //locationStorage 和sessionStorage
+         /*
+           html5 专门为存储而设计，最大容量为5M
+           API 简单易用
+           locationStorage.setItem(key,value)   locationStorage.getItem(key);
+           
+           ios safari 隐藏模式下
+           locationStorage.getItem 会报错
+           建议统一使用try-catch 封装
+
+           cookie 和 locationStorag sessionStorage的区别
+           容量
+           是否会携带到http请求中
+           api易用性
+         */
+        </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			//定义一个函数，准备当作回调函数
+			var callback = function() {
+				console.log('我是callback函数');
+			}
+
+			function b(callback) {
+				console.log('我是b函数,先执行我，我再执行传进来的函数callback');
+
+				//3秒后才执行 更加能提现回调函数的作用
+				setTimeout(function() {
+					if(callback && typeof(callback) === 'function') { //判断传入是否存在，和是否函数function
+						callback();
+					} else {
+						console.log('你传入的不是函数,请自己传入函数试试回调的感觉');
+					}
+				}, 3000);
+
+			}
+			//调用b函数
+			b(callback);
+		</script>
+	</body>
+
+</html>

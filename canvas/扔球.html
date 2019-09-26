@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+	<meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+	<script type="text/javascript" src="jquery-2.1.0.min.js"></script>
+    <style>
+	*{margin:0;padding:0};
+	</style>
+  </head>
+  <body>
+      <canvas id="canvas" style="border:1px solid black;display:block;">
+	    您的浏览器不支持canvas标签
+	  </canvas>
+  </body>
+</html>
+ <script type="text/javascript">
+   window.onload = function(){
+     var canvas = document.getElementById("canvas");
+	 canvas.width = 800;
+	 canvas.height =500;
+	 var context = canvas.getContext("2d");//获取绘制画布环境
+	 //画初始小球
+	 context.fillStyle="black";
+	 context.arc(200,200,20,0,Math.PI*2);
+	 context.fill();    
+	 var start_x=200; //初始圆的x坐标
+	 var start_Y=200; //初始圆的Y坐标
+	 var time ="";
+	 canvas.addEventListener('mousedown',function(e){  //这里的e 是鼠标按下事件的e
+	 
+	   if(e.clientX>start_x-20&&e.clientX<start_x+20&&e.clientY>start_Y-20&&e.clientY<start_Y+20){
+	     $(document).mousemove(function(e){ //触发document移动事件  这里的e 是移动事件的e		   
+		    drags(e); 			
+		 });
+	   }
+	   //元素点击事件		 
+	   $(this).click( function(e){	   
+			drags(e);	
+		});
+	 
+	   //document按下弹起事件
+		$(document).mouseup( function(e){
+			$(this).unbind("mousemove");
+
+			var old_x = start_x;  //上一次的x坐标
+			var old_y = start_Y;  //上一次的y坐标
+			
+			//给圆赋值坐标-------------------------------------------
+			x = e.clientX;  
+			y = e.clientY;
+			if(x<=20){
+				if(y <= 20){
+					 start_x = 20; 
+					 start_Y = 20;
+				}else if(y >= canvas.height-20){
+					  start_x = 20; 
+					  start_Y = canvas.height-20;
+				}else{
+					 start_x = 20;
+                     start_Y = y;					 
+			    }
+			}else if(x >= canvas.width-20){
+			    if(y <= 20){
+					 start_x = canvas.width-20; 
+					 start_Y = 20;
+				}else if(y >= canvas.height-20){
+					  start_x = canvas.width-20; 
+					  start_Y = canvas.height-20;
+				}else{
+					 start_x = canvas.width-20;
+                     start_Y = y;					 
+			    }
+			}else{
+					start_x = x; //赋值给圆的x坐标
+					start_Y = y; //赋值给圆的Y坐标
+	        }
+			
+			if(y <= 20){
+			   start_Y = 20
+			}else if(y >= canvas.height-20){
+			  start_Y = canvas.height-20
+			}else{
+			   start_Y = y; //赋值给圆的Y坐标
+			}
+			//end给圆赋值坐标---------------------------------------------------------------
+			
+		var num_x = old_x - start_x;
+		var num_y = old_y - start_Y;
+		balls=new Array();//装小球数组
+	
+	    var R = Math.floor(Math.random()*255);//随机生成RGB颜色
+	    var G = Math.floor(Math.random()*255);
+	    var B = Math.floor(Math.random()*255);
+
+		aBall={
+		       color:"rgb("+R+","+G+","+B+")",  //颜色
+			   radius:20,                   //半径
+			   x:start_x, //圆心x坐标
+			   y:start_Y, //圆心y坐标
+			   g:1.5,     //重力加速度
+			   vx:num_x*0.2, //x轴加速度
+			   vy:num_y*0.2 //y轴加速度
+	}
+			balls[0]=aBall; //把每个小球装进数组中
+			
+	time = setInterval(  //定时器，50毫秒执行一次   draw()函数先画出一开始位置，然后update()改变圆心位置，然后清空上次的画布，重新画
+			   function(){
+			   draw(context); //画圆
+				  update(canvas.width,canvas.height); //更新位置
+			  },50
+	); 
+	
+	
+	function draw(cxt){//画圆-------------
+      var canvas = cxt.canvas;
+	  cxt.clearRect(0,0,canvas.width,canvas.height);  //清除画布
+
+	      cxt.globalCompositeOperation = "xor";  
+	      cxt.fillStyle = balls[0].color;
+		  cxt.beginPath();
+		  cxt.arc(balls[0].x,balls[0].y,balls[0].radius,0,Math.PI*2);
+		  cxt.closePath();
+		  cxt.fill();
+   }
+   
+   function update(canvasWidth,canvasHeight){//更新位置
+  
+   
+	  
+	     balls[0].x += balls[0].vx;  //x加速度
+		 balls[0].y += balls[0].vy;  //Y加速度
+	     
+
+		 if(balls[0].x - balls[0].radius <= 0){  //当小球圆心到达左边线的时候，反弹
+		    balls[0].vx = -balls[0].vx;    //设置x加速度反方向
+			balls[0].x = balls[0].radius;   //反弹的圆心x位置
+		 }
+		 if(balls[0].x + balls[0].radius >= canvasWidth){//当小球圆心到达右边线的时候，反弹
+		   balls[0].vx = -balls[0].vx;   //设置x加速度反方向
+		   balls[0].x = canvasWidth - balls[0].radius; //反弹的圆心x位置
+		 }
+		 if(balls[0].y - balls[0].radius <= 0){ //当小球圆心到达上边线的时候，反弹
+		    balls[0].vy = -balls[0].vy;  //设置y加速度反方向
+            balls[0].y = balls[0].radius;	//反弹的圆心y位置	
+		 }
+		 if(balls[0].y + balls[0].radius >= canvasHeight){//当小球圆心到达下边线的时候，反弹
+		     balls[0].vy = -balls[0].vy;  //设置y加速度反方向
+			 balls[0].y = canvasHeight - balls[0].radius; //反弹的圆心y位置	
+		 }
+		 
+	   
+   }
+			
+		});
+    
+	},false); 
+  
+  
+   function drags(e){ //拖拽函数
+
+     var x = e.clientX;  //获取鼠标X坐标的位置
+	 var y = e.clientY;  //获取鼠标Y坐标的位置
+	 //console.log("x: "+e.clientX + " y: "+e.clientY); 
+	 context.clearRect(0,0,canvas.width,canvas.height); //清除画布 
+	 context.beginPath();
+	 if(x <= 20){ //不超过左边
+	   if(y <= 20){
+	     context.arc(20,20,20,0,Math.PI*2);
+	   }else if(y >= canvas.height-20){
+	     context.arc(20,canvas.height-20,20,0,Math.PI*2);
+	   }else{
+	     context.arc(20,y,20,0,Math.PI*2);
+	   }
+	   
+	 }
+	 else if(x >= canvas.width-20){ //不超过右边
+	   if(y <= 20){
+	     context.arc(canvas.width-20,20,20,0,Math.PI*2);
+	   }else if(y >= canvas.height-20){
+	     context.arc(canvas.width-20,canvas.height-20,20,0,Math.PI*2);
+	   }else{
+	     context.arc(canvas.width-20,y,20,0,Math.PI*2);
+	   }
+	   
+	 }
+	 else if(y <= 20){//不超过上边
+	   context.arc(x,20,20,0,Math.PI*2);
+	 }
+	 else if(y >= canvas.height-20){ //不超过下边
+	   context.arc(x,canvas.height-20,20,0,Math.PI*2);
+	 }else{
+	    context.arc(x,y,20,0,Math.PI*2); 
+	 }
+	
+	 
+	 context.closePath();
+	 context.fill();
+   }   
+}
+  
+</script>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		<script type="text/javascript">
+			/*
+			 * js中使用typeof 能得到的哪些类型
+			 * 何时使用=== 何时用==
+			 * js中有哪些内置函数
+			 * js变量按照存储方式区分为哪些类型，并描述其特点
+			 * 如何理解json 
+			 * 
+			 * 变量类型
+			 * 变量计算
+			 */
+			
+			
+			//js按存储方式区分变量类型
+			//值类型和引用类型的内存存储位置不一样
+			
+			//值类型  每个变量分块存储在内存中
+			var a = 100; 
+			var b = a;
+			a = 200;
+			console.log(b)
+			
+			//引用类型： 数组 对象 函数   引用类型在内存一个地址，不同变量都指向它
+			var c = {age:100};
+			var b = c;
+			b.age = 21;
+			console.log(c)
+			
+			//typeof 运算符 typeof只能区分值类型的详细类型
+			console.log('值类型的详细类型')
+			console.log(typeof undefined); //undefine
+			console.log(typeof 'abc'); // string
+			console.log(typeof 123); // number
+			console.log(typeof true); //boolean
+
+			//引用类型
+			console.log('引用类型获取不到详细类型，除了函数')
+			console.log(typeof {}); //object
+			console.log(typeof []); //object
+			console.log(typeof null); //object
+			console.log(typeof console.log) //function  特殊的引用类型
+			
+			//变量计算 - 强制类型转换
+			
+			//字符串拼接
+			var a = 100 + 10; //110
+			var b = 100 + '10'; // '10010'
+			//==运算符
+			100 == '100'  //true
+			0 == ''  //true
+			null == undefined //true
+			//if语句
+			// 0  , NAN , '',""  ,null , undefined, false
+			//逻辑运算
+			console.log('逻辑运算-----')
+			console.log(10 && 0); //0
+			console.log(''||'abc'); //'abc'
+			console.log(!window.abc); // true
+			//判断一个变量会被当做true还是false
+			console.log('判断一个变量会被当做true还是false')
+			var a = 100;
+			console.log(!!a);
+			
+			
+			//何时使用=== 何时用==
+//			if(obj.a == null){
+//				//这里相当于obj.a === null || obj.a === undefined,简写形式
+//				//这是jquery源码中推荐的写法
+//				//写法简单，易读，代码洁癖，除了obj.a==null 其他都是用===，jq源码就是这样写，好习惯用===
+//			}
+
+			//js中的内置函数-- 数据封装类对象
+			//object array boolean number string function date regExp error
+			
+			//如何理解JSON  json只不过是一个js对象而已 也是一种数据格式
+			JSON.stringify({a:10,b:20});
+			JSON.parse('{"a":10,"b":20}');
+
+		</script>
+	</body>
+</html>

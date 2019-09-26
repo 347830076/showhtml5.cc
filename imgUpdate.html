@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+
+		<canvas id="imgCanvas"></canvas>
+		<canvas id="resultCanvas"></canvas>
+		<input type="file" name="" id="inputArea" onchange="changeImg()" />
+		
+		<script type="text/javascript">
+			var imgFrom = document.getElementById("inputArea");
+
+			function loadImg() {
+				imgFrom.click();
+			}
+
+			function changeImg() {
+				var myFrom = new FormData();
+				var imageData = imgFrom.files[0];
+				//获取表单中第一个文件
+				myFrom.append("image", imageData);
+				//向表单中添加一个键值对
+				console.log(myFrom.getAll("image"));
+				var reader = new FileReader();
+				//调用FileReader对象
+				reader.readAsDataURL(imageData);
+				//通过DataURL的方式返回图像
+				//创建img对象
+				var img = new Image();
+
+				//通过DataURL的方式返回图像
+				reader.onload = function(e) {
+					img.src = e.target.result;
+				}
+				
+				//获取2D渲染背景
+
+				img.onload = function() {
+					var theCanvas = document.getElementById("imgCanvas");
+					var canvasImg = theCanvas.getContext("2d");
+					
+					theCanvas.width = img.width;
+					//将img对象的长款赋给canvas标签
+					theCanvas.height = img.height;
+					//确认图片已载入    
+					canvasImg.drawImage(img, 0, 0);
+
+					var resultCanvas = document.getElementById("resultCanvas");
+					var resultImg = resultCanvas.getContext("2d");
+					var cutData = canvasImg.getImageData(100, 100, 200, 200);
+					resultImg.putImageData(cutData, 0, 0);				
+				}
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
 		<style type="text/css">
-			.test{
+			.clear1 {
+				clear: both;
+			}
+			
+			.clear2 {
+				border: 1px solid #f00;
+				display: block;
+				zoom: 1;
+				overflow: hidden;
+				margin: 10px 0;
+			}
+			
+			.clear3 {
 				zoom: 1;
 				border: 1px solid #f00;
 			}
-			.test:after{
-				display: block;	
+			
+			.clear3:after {
+				display: block;
 				clear: both;
 				visibility: hidden;
 				height: 0;
@@ -17,20 +31,18 @@
 			}
 		</style>
 	</head>
+
 	<body>
-		<div>
-			清除浮动 方法1： test{clear:both;} test为浮动元素的下一个兄弟元素 方法2： test{display:block;zoom:1;overflow:hidden;} test为浮动元素的父元素。zoom:1也可以替换为固定的width或height 方法3： test{zoom:1;} test:after{display:block;clear:both;visibility:hidden;height:0;content:'';}
-			
-		</div>
 		<div style="border: 1px solid #f00;">
 			<div style="float: left;">左浮动</div>
-			<div style="clear: both;">下一个兄弟元素清除浮动</div>
+			<div class="clear1">下一个兄弟元素清除浮动</div>
 		</div>
-		<div style="border: 1px solid #f00;display: block;zoom: 1;overflow: hidden;margin: 10px 0;">
-			<div style="float: left;">左浮动</div>			
+		<div class="clear2">
+			<div style="float: left;">左浮动</div>
 		</div>
-		<div class="test">
-			<div style="float: left;">左浮动</div>			
+		<div class="clear3">
+			<div style="float: left;">左浮动</div>
 		</div>
 	</body>
+
 </html>

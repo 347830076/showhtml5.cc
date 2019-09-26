@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<div id="div1">
+		<img data-id='1' src="../img/12.jpg" />
+	</div>
+</head>
+
+<body>
+	<script type="text/javascript">
+		//编写一个通用的事件监听函数
+		function bindEv(elem, type, fn) {
+			elem.addEventListener(type, fn)
+		}
+
+		//描述事件冒泡流程(树形结构： 子元素->父元素  组织冒泡)
+		//对于一个无限下拉加载图片的页面，如何给每个图片绑定事件 (通过冒泡机制，给包含所有图片容器添加事件，然后判断点击是否是图片类型)
+		var div1 = document.getElementById('div1');
+		// div1.addEventListener('click',function(e){
+		// 	var target = e.target;
+		// 	console.log(target);
+		// 	console.log(target.nodeName)
+		// 	if(target.nodeName === 'IMG'){
+		// 		console.log(target.getAttribute('data-id'))
+		// 	}
+		// })
+
+		bindEvent(div1, 'click', 'img', function (e) {
+			console.log(this)
+			console.log(this.getAttribute('data-id'))
+		})
+		//通用事件绑定，事件冒泡，代理
+		function bindEvent(elem, type, selector, fn) {
+			if (fn == null) {
+				fn = selector;
+				selectot = null;
+			}
+			elem.addEventListener(type, function (e) {
+				var target;
+				if (selector) { //代理
+					target = e.target;  //点击的目标元素
+					console.log(target)
+					// if (target.matches(selector)) {
+					if (matchesSelector(target,selector)) {
+						fn.call(target, e)
+					}
+				} else { //不是代理
+					fn(e)
+				}
+			})
+		}
+		
+		//为DOM节点添加了一个方法，主要是用来判断当前DOM节点不否能完全匹配对应的CSS选择器规则；如果匹配成功，返回true，反之则返回false
+		function matchesSelector(element, selector) {
+			if (element.matches) {
+				return element.matches(selector);
+			} else if (element.matchesSelector) {
+				return element.matchesSelector(selector);
+			} else if (element.webkitMatchesSelector) {
+				return element.webkitMatchesSelector(selector);
+			} else if (element.msMatchesSelector) {
+				return element.msMatchesSelector(selector);
+			} else if (element.mozMatchesSelector) {
+				return element.mozMatchesSelector(selector);
+			} else if (element.oMatchesSelector) {
+				return element.oMatchesSelector(selector);
+			} else if (element.querySelectorAll) {
+				var matches = (element.document || element.ownerDocument).querySelectorAll(selector),
+					i = 0;
+
+				while (matches[i] && matches[i] !== element) i++;
+				return matches[i] ? true : false;
+			}
+			throw new Error('Your browser version is too old,please upgrade your browser');
+		}
+	</script>
+</body>
+
+</html>

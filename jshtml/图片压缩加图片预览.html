@@ -5,7 +5,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>File API Test</title>
-		<script src="../js/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="../js/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>-->
 		<script type="text/javascript">
 			var jic = {
 				compress: function(source_img_obj, quality, output_format) {
@@ -48,9 +48,10 @@
 //						continue;
 //					}
 					var reader = new FileReader();
+					console.log(reader)
 					reader.onload = (function(theFile) {
 						return function(e) {
-							console.log(e.target.result);
+//							console.log(e.target.result);
 							var i = document.getElementById("test");
 							i.src = event.target.result;
 							var quality = 50;

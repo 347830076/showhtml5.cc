@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>图片预加载-有序加载</title>
+  <style>
+    a {
+      text-decoration: none;
+    }
+    .box {
+      text-align: center;
+    }
+    .btn {
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      padding: 0 10px;
+      margin-right: 50px;
+      color: #333;
+    }
+    .btn:hover {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=441964184,3845756874&fm=27&gp=0.jpg" id="img" width="800" />
+    <p>
+      <a href="javascript:;" class="btn" data-control="prev">上一页</a>
+      <a href="javascript:;" class="btn" data-control="next">下一页</a>
+    </p>
+  </div>
+
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/preload.js"></script>
+  <script>
+    var imgs = [
+				'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3290177281,190274794&fm=27&gp=0.jpg',
+				'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=4208339356,2649158864&fm=27&gp=0.jpg',
+				'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4017270591,943690633&fm=27&gp=0.jpg',
+				'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2350400114,1178305077&fm=27&gp=0.jpg'
+			];
+    var len = imgs.length,
+        index = 0;
+        
+    //有序加载
+//  function load(){
+//  	var imgObj = new Image();
+//  	$(imgObj).on('load error',function(){
+//  		if(count >= len){ //所有图片已经加载完毕
+//  			
+//  		}else{ 
+//  			load();
+//  		}
+//  	});
+//  	 imgObj.src = imgs[count];
+//  }
+        
+    $.preload(imgs, {
+      order: 'ordered'
+    })
+    $('.btn').on('click', function() {
+      if ($(this).data('control') === 'prev') {
+        index = Math.max(0, --index);
+      } else {
+        index = Math.min(len - 1, ++index);
+      }
+      document.title = (index + 1) + '/' + len;
+      $('#img').attr('src', imgs[index]);
+    });
+  </script>
+</body>
+</html>

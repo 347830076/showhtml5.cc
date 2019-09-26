@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.dpbt{
+				transform: scale(0.5) rotate(45deg) translateX(-50%);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<p v-bind:style="{color:'red'}" >{{message}}</p>
+			<button v-on:click="reverseMessage">逆转消息</button>
+			<ol>
+				<!--
+      现在我们为每个 todo-item 提供 todo 对象
+      todo 对象是变量，即其内容可以是动态的。
+      我们也需要为每个组件提供一个“key”，稍后再
+      作详细解释。
+    -->
+				<todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id">
+				</todo-item>
+			</ol>
+			<h1 v-if="1">Yes</h1>
+			<h1 v-else>No</h1>
+			<div v-for="(value, key) in object">
+			  {{ key }}: {{ value }}
+			</div>
+			<p>
+    <!-- 使用 router-link 组件来导航. -->
+    <!-- 通过传入 `to` 属性指定链接. -->
+    <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
+    <router-link to="/foo">Go to Foo</router-link>
+    <router-link to="/bar">Go to Bar</router-link>
+  </p>
+  <!-- 路由出口 -->
+  <!-- 路由匹配到的组件将渲染在这里 -->
+  <router-view></router-view>
+		</div>
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="vue_router.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			// 定义名为 todo-item 的新组件
+			Vue.component('todo-item', {
+				// todo-item 组件现在接受一个
+				// "prop"，类似于一个自定义特性。
+				// 这个 prop 名为 todo。
+				props: ['todo'],
+				template: '<li>{{ todo.text }}</li>'
+			})
+			
+						// 0. 如果使用模块化机制编程，導入Vue和VueRouter，要调用 Vue.use(VueRouter)
+ 
+// 1. 定义（路由）组件。
+// 可以从其他文件 import 进来
+const Foo = { template: '<div>foo</div>' }
+const Bar = { template: '<div>bar</div>' }
+ 
+// 2. 定义路由
+// 每个路由应该映射一个组件。 其中"component" 可以是
+// 通过 Vue.extend() 创建的组件构造器，
+// 或者，只是一个组件配置对象。
+// 我们晚点再讨论嵌套路由。
+const routes = [
+  { path: '/foo', component: Foo },
+  { path: '/bar', component: Bar }
+]
+ 
+// 3. 创建 router 实例，然后传 `routes` 配置
+// 你还可以传别的配置参数, 不过先这么简单着吧。
+const router = new VueRouter({
+  routes // （缩写）相当于 routes: routes
+})
+ 
+// 4. 创建和挂载根实例。
+// 记得要通过 router 配置参数注入路由，
+// 从而让整个应用都有路由功能
+//const app = new Vue({
+//router
+//}).$mount('#app')
+ 
+// 现在，应用已经启动了！
+			
+			var app = new Vue({
+				el: '#app',
+				data: {
+					message: 'Hello Vue',
+					groceryList: [
+				      { id: 0, text: '蔬菜' },
+				      { id: 1, text: '奶酪' },
+				      { id: 2, text: '随便其它什么人吃的东西' }
+				    ],
+				    styleObject: {
+					    color: 'red',
+					    fontSize: '13px',
+					    transform:'scale(0.5)'
+					  },
+					   activeColor: 'red',
+					    object: {
+				      firstName: 'John',
+				      lastName: 'Doe',
+				      age: 30
+				    }
+				},
+				methods: {
+					reverseMessage: function() {
+						this.message = this.message.split('').reverse().join('')
+					}
+				},
+				router
+			});
+			
+
+			
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div1">div1</div>
+		<div id="div2">div2</div>
+		<div class="container">container1</div>
+		<div class="container">container2</div>
+		<p>p1</p>
+		<script type="text/javascript">
+			//JS基础知识：ECMA 262 标准
+			//JS-Web-API: W3C标准
+			//W3C标准没有规定任何JS基础相关的东西，只管定义用于浏览器JS操作页面的API和全局变量
+			
+			//DOM是那种基本的数据结构？
+			//树结构
+			//DOM操作的常用API有哪些
+			/*
+			 * 获取DOM节点，以及节点的prototype和Attribute
+			 * 获取父节点，获取子节点
+			 * 新增节点，删除节点
+			 */
+			
+			//DOM节点的Attribute和prototype有何区别
+			//prototype只是一个JS对象的属性的修改
+			//Attribute是对html标签属性的额修改
+			
+			//DOM可以理解为：
+			//浏览器把拿到的html代码，结构化一个浏览器能识别并且JS可操作的一个模型而已
+			var div1 = document.getElementById("div1"); //元素
+			var divList = document.getElementsByTagName('div');//集合
+			console.log(divList);
+			for(var i in divList){
+				console.log(i,divList[i])
+			}
+			console.log(divList[0]);
+			
+			var containerList = document.getElementsByClassName('.contaniner');//集合
+			var pList = document.querySelectorAll('p'); //集合
+			
+			var p = pList[0];
+			console.log(p.style.width);//获取样式
+			p.style.width = '100px';//修改样式
+			console.log(p.className);//获取class
+			p.className = 'p1';//修改class
+			//获取nodeName和nodeType
+			console.log(p)
+			console.log(p.nodeName)
+			console.log(p.nodeType)
+			p.setAttribute('data-name','yu');
+			p.getAttribute('data-name');
+			//新增节点
+			//获取父元素
+			//获取子元素
+			//删除节点
+			var div1 = document.getElementById("div1");
+			//添加新节点
+			var p1 = document.createElement('p');
+			p1.innerHTML = 'this is p1';
+			div1.appendChild(p1);//添加新创建的元素
+			//移动已有节点
+			var p2 = document.getElementById("p2");
+			div1.appendChild(p2);
+			//获取父元素
+			var parent = div1.parentElement();
+			//获取子元素
+			var child = div1.childNodes;
+			
+			div1.removeChild(child[0]);
+				
+		</script>
+	</body>
+</html>

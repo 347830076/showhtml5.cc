@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>文件base64-直接拖进来</title>
+	<style>
+		body {
+			word-break: break-all;
+			word-wrap: break-word;
+		}
+
+		#con {
+			border: 1px solid #e4e4e4;
+			width: 90%;
+			text-align: center;
+			min-height: 100px;
+			padding-top: 50px;
+			margin: 20px auto;
+		}
+
+		#result {
+			width: 90%;
+			height: 300px;
+			overflow: auto;
+			padding: 15px;
+			margin: 20px auto;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="con">
+		文件直接拖进来就可以直接生成base64
+	</div>
+	<div id="result"></div>
+	<script>
+		document.getElementById("con").addEventListener("dragenter", function (event) {
+			event.preventDefault();
+		}, false);
+		document.getElementById("con").addEventListener("dragover", function (event) {
+			event.preventDefault();
+		}, false);
+		document.getElementById("con").addEventListener("drop", function (event) {
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				document.getElementById("result").innerHTML = '<p>' + e.target.result + '</p>'; // base64 encoded file data!
+			};
+			reader.readAsDataURL(event.dataTransfer.files[0]);
+			event.preventDefault();
+		}, false);
+	</script>
+
+	<script>
+		//Base64转Blob对象
+		function base64ToBlob(base64) {
+			var base64Split = base64.split(',');
+			var binStr = atob(base64Split[1]),
+				len = binStr.length,
+				arr = new Uint8Array(len);
+
+			for (var i = 0; i < len; i++) {
+				arr[i] = binStr.charCodeAt(i);
+			}
+			return new Blob([arr], { type: base64Split[0].split(':')[1] });
+		}
+		//Base64转File对象
+		function base64ToFile(base64, filename) {
+			var base64Split = base64.split(',');
+			var base64Data = base64Split[1];
+			var contentType = base64Split[0].split(':')[1];
+			var sliceSize = 1024;
+			var byteCharacters = atob(base64Data);
+			var bytesLength = byteCharacters.length;
+			var slicesCount = Math.ceil(bytesLength / sliceSize);
+			var byteArrays = new Array(slicesCount);
+
+
+			for (var sliceIndex = 0; sliceIndex < slicesCount; ++sliceIndex) {
+				var begin = sliceIndex * sliceSize;
+				var end = Math.min(begin + sliceSize, bytesLength);
+
+				var bytes = new Array(end - begin);
+				for (var offset = begin, i = 0; offset < end; ++i, ++offset) {
+					bytes[i] = byteCharacters[offset].charCodeAt(0);
+				}
+				byteArrays[sliceIndex] = new Uint8Array(bytes);
+			}
+			return new File(byteArrays, filename, { type: contentType });
+		}
+		//Blob对象转成File对象   注：以下方法在Mac中Safari，或IOS上浏览器，存在问题，所以最好基于base64字符串转。
+		function blobToFile(blob, filename) {
+			return new File([blob], filename, { type: blob.type });
+		}
+	</script>
+</body>
+
+</html>

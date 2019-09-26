@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片懒加载</title>
+    <style>
+        img {
+            width: 200px;
+            display: block;
+            margin-bottom: 30px;
+        }
+
+        #container2 img {
+            display: inline-block !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" style="height:300px;overflow:scroll">
+        <img class="lazy1" data-original="../../img/h1.jpg" src="../../img/default.jpg" />
+        <img class="lazy1" data-original="../../img/h2.jpg" src="../../img/default.jpg" />
+        <img class="lazy1" data-original="../../img/h3.jpg" src="../../img/default.jpg" />
+        <img class="lazy1" data-original="../../img/h4.jpg" src="../../img/default.jpg" />
+        <img class="lazy1" data-original="../../img/h5.jpg" src="../../img/default.jpg" />
+    </div>
+    <div id="container2" style="width: 100%;height:300px;overflow-x:scroll;white-space: nowrap">
+        <img class="lazy2" data-original="../../img/h1.jpg" src="../../img/default.jpg" />
+        <img class="lazy2" data-original="../../img/h2.jpg" src="../../img/default.jpg" />
+        <img class="lazy2" data-original="../../img/h3.jpg" src="../../img/default.jpg" />
+        <img class="lazy2" data-original="../../img/h4.jpg" src="../../img/default.jpg" />
+        <img class="lazy2" data-original="../../img/h5.jpg" src="../../img/default.jpg" />
+    </div>
+    <img class="lazy" data-original="../../img/h1.jpg" src="../../img/default.jpg" />
+    <img class="lazy" data-original="../../img/h2.jpg" src="../../img/default.jpg" />
+    <img class="lazy" data-original="../../img/h3.jpg" src="../../img/default.jpg" />
+    <img class="lazy" data-original="../../img/h4.jpg" src="../../img/default.jpg" />
+    <img class="lazy" data-original="../../img/h5.jpg" src="../../img/default.jpg" />
+
+
+
+    <script src="../../js/jquery-1.10.2.min.js"></script>
+    <script src="jquery.lazyload.js"></script>
+    <script src="lazyload_x.js"></script>
+    <script>
+        $(function () {
+            /*
+                container 	window 	父容器。延迟加载父容器中的图片。 [Demo1] [Demo2]
+                event 	'scroll' 	触发加载的事件 [Demo] 有时候我们需要当页面加载完成时，不用滚动，立即执行加载显示图片，这时候我们就可以给懒加载绑定“sporty”事件
+                effect 	'show' 	加载使用的动画效果，如 show, fadeIn, slideDown 等 jQuery 自带的效果，或者自定义动画。 [Demo]
+                effectspeed 	undefined 	动画时间。作为 effect 的参数使用：effect(effectspeed)
+                data_attribute 	'original' 	真实图片地址的 data 属性后缀
+                threshold 	0 	灵敏度。默认为 0 表示当图片出现在显示区域中的立即加载显示；设为整数表示图片距离 x 像素进入显示区域时进行加载；设为负数表示图片进入显示区域 x 像素时进行加载。
+                failure_limit 	0 	容差范围。页面滚动时，Lazy Load 会遍历延迟加载的图片，检查是否在显示区域内，默认找到第 1 张不可见的图片时，就终止遍历。因为 Lazy Load 认为图片的排序是与 HTML 中的代码中的排序相同，但是也可能会出现例外，通过该值来扩大容差范围。
+                skip_invisible 	true 	跳过隐藏的图片。图片不可见时（如 display:none），不强制加载。
+                appear 	null 	图片加载时的事件 (Function)，有 2 个参数：elements_left（未加载的图片数量）、settings（lazyload 的参数）。[Demo]（参考 DEMO 的源代码）
+                load 	null 	图片加载后的事件 (Function)，有 2 个参数，同 appear 。[Demo]（参考 DEMO 的源代码）
+            */
+            $("img.lazy").lazyload({
+
+            });
+
+            $("img.lazy1").lazyload({
+                //插件也可以使用在滚动容器内的图片上。下面的div拥有scrollerbar，内容的内容进行滚动，滚到图片位置时，图片开始加载
+                container: $("#container")
+            });
+            $("img.lazy2").lazyload({
+                //插件也可以使用在滚动容器内的图片上。下面的div拥有scrollerbar，内容的内容进行滚动，滚到图片位置时，图片开始加载
+                container: $("#container2")
+            });
+            // lazyloadX({
+            //     selector: 'img.lazy2', // 选择器
+            //     container: document.getElementById('container2'),  // 容器
+            //     threshold: 0,  // 预留间距，即图片距离屏幕还有一定距离就预先加载
+            //     failurelimit: 0,  // failurelimit,值为数字.lazyload默认在找到第一张不在可见区域里的图片时则不再继续加载,但当HTML容器混乱的时候可能出现可见区域内图片并没加载出来的情况,failurelimit意在加载N张可见区域外的图片,以避免出现这个问题.
+            //     dataAttribute: "data-original",  // 存放真实URL的属性
+            //     load:function(e){
+            //         console.log(e)
+            //     }
+            // });
+        })
+    </script>
+</body>
+
+</html>

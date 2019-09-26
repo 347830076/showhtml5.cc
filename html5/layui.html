@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../plugin/layui/css/layui.css" />
+	</head>
+
+	<body>
+		<div class="layui-layout layui-layout-admin">
+			<div class="layui-header">
+				<div class="layui-logo">加速度ERP系统</div>
+				<!-- 头部区域（可配合layui已有的水平导航） -->
+				<ul class="layui-nav layui-layout-left">
+					<li class="layui-nav-item">
+						<a href="">控制台</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="">商品管理</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="">用户</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">其它系统</a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="">邮件管理</a>
+							</dd>
+							<dd>
+								<a href="">消息管理</a>
+							</dd>
+							<dd>
+								<a href="">授权管理</a>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+				<ul class="layui-nav layui-layout-right">
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<i class="layui-icon">&#xe60c;</i> 贤心
+						</a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="">基本资料</a>
+							</dd>
+							<dd>
+								<a href="">安全设置</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a href="">退了</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="layui-side layui-bg-black">
+				<div class="layui-side-scroll">
+					<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+					<ul class="layui-nav layui-nav-tree" lay-filter="test">
+						<li class="layui-nav-item layui-nav-itemed">
+							<a class="" href="javascript:;"><i class="layui-icon">&#xe614;</i>系统设置</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a class="" href="javascript:;">职位管理</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">仓库管理</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">门店管理</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">人员管理</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">采购管理</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;">采购入库单</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">库存管理</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;">手机管理</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">内配管理</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">外配管理</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">门店业务</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;">门店开单</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">维修单详情</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">新建维修单</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">修改维修单</a>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="layui-body">
+				<!-- 内容主体区域 -->
+				<div style="padding: 15px;">
+					<table id="test" lay-filter="test"></table>
+				</div>
+
+			</div>
+
+			<div class="layui-footer">
+				<!-- 底部固定区域 -->
+				© layui.com - 底部固定区域
+			</div>
+		</div>
+		<script type="text/html" id="barDemo">
+			<a class="layui-btn layui-btn-mini" lay-event="detail">查看</a>
+			<a class="layui-btn layui-btn-mini" lay-event="edit">编辑</a>
+			<a class="layui-btn layui-btn-danger layui-btn-mini" lay-event="del">删除</a>
+
+		</script>
+		<script src="../plugin/layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			layui.config({
+				dir: '/res/layui/' //layui.js 所在路径（注意，如果是script单独引入layui.js，无需设定该参数。），一般情况下可以无视
+					,
+				version: false //一般用于更新模块缓存，默认不开启。设为true即让浏览器不缓存。也可以设为一个固定的值，如：201610
+					,
+				debug: true //用于开启调试模式，默认false，如果设为true，则JS模块的节点会保留在页面
+					,
+				base: '' //设定扩展的Layui模块的所在目录，一般用于外部模块扩展
+			});
+
+			layui.use(['layer', 'form', 'element', 'table'], function() {
+				var layer = layui.layer,
+					form = layui.form,
+					table = layui.table,
+					element = layui.element;
+				table.render({
+					elem: '#test',
+					data: [{
+						"username":'username'
+					}],
+					cols: [
+						[{
+								field: 'id',
+								title: 'ID',
+								width: 100
+							},
+							{
+								field: 'username',
+								title: '职位名称',
+								width: 100
+							}, {
+								fixed: 'right',
+								width: 150,
+								align: 'center',
+								toolbar: '#barDemo'
+							} //这里的toolbar值是模板元素的选择器
+						]
+					]
+				});
+				//监听工具条
+				table.on('tool(test)', function(obj) { //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
+					var data = obj.data; //获得当前行数据
+					var layEvent = obj.event; //获得 lay-event 对应的值
+					var tr = obj.tr; //获得当前行 tr 的DOM对象
+
+					if(layEvent === 'detail') { //查看
+						//do somehing
+					} else if(layEvent === 'del') { //删除
+						layer.confirm('真的删除行么', function(index) {
+							obj.del(); //删除对应行（tr）的DOM结构
+							layer.close(index);
+							//向服务端发送删除指令
+						});
+					} else if(layEvent === 'edit') { //编辑
+						//do something
+
+						//同步更新缓存对应的值
+						obj.update({
+							username: '123',
+							title: 'xxx'
+						});
+					}
+				});
+			});
+		</script>
+	</body>
+
+</html>

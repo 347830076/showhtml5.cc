@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/center_img.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/fit_image.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div style="width: 100px;height: 100px;border: 1px solid #f00;overflow: hidden;" >
+			<img src="../image/2.jpg" onload="fitImage(this.parentNode,this)" />
+		</div>
+		<div style="width: 100px;height: 100px;border: 1px solid #f00;overflow: hidden;" >
+			<img src="../image/2.jpg" onload="center_img(this)" />
+		</div>
+	</body>
+</html>

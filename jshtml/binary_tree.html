@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>二叉树算法</title>
+		<style type="text/css">
+			body {
+				word-break: break-word;
+			}
+		</style>
+	</head>
+
+	<body>
+		<img src="../image/binary_tree.png" width="100%"/>
+		<script type="text/javascript">
+			function BinaryTree() {
+				//创建节点
+				var Node = function(key) {
+					this.key = key; //数值
+					this.left = null; //左节点
+					this.right = null; //右节点
+				}
+
+				var root = null; //根节点
+
+				//二叉树插入节点逻辑
+				var insertNode = function(node, newNode) {
+					if(newNode.key < node.key) { //新结点小于老节点 就插入老结点的左边
+						if(node.left === null) { // 老结点的左结点为空的时候，直接插入
+							node.left = newNode;
+						} else { //老结点的左节点不为空的时候，再次执行insertNode()
+							insertNode(node.left, newNode);
+						}
+					} else {
+						if(node.right === null) {
+							node.right = newNode;
+						} else {
+							insertNode(node.right, newNode);
+						}
+					}
+				}
+				//插入节点
+				this.insert = function(key) {
+					var newNode = new Node(key);
+					if(root === null) {
+						root = newNode;
+					} else {
+						insertNode(root, newNode);
+					}
+				}
+				//打印中间开始
+				//中序遍历  一直找结点最左边的节点，本身没有左节点，就打印自己，然后右节点再按同样原理执行
+				var inOrderTraverseNode = function(node, callback) {
+					if(node !== null) {
+						//一直查找左节点有没有值
+						inOrderTraverseNode(node.left, callback);
+						//左节点没有值了，就直接打印本身
+						callback(node.key);
+						//再按以上同理执行右边节点
+						inOrderTraverseNode(node.right, callback);
+					}
+				}
+				//中序遍历
+				this.inOrderTraverse = function(callback) {
+					//一开始传入根节点进去
+					inOrderTraverseNode(root, callback);
+				}
+				//打印左节点开始
+				//前序遍历  进入直接打印节点，然后进入左节点，直接打印，然后再进入左节点，直到没有左节点，然后进入右节点，直接打印，同理
+				var prevOrderTraverseNode = function(node, callback) {
+					if(node !== null) {
+						callback(node.key);
+						prevOrderTraverseNode(node.left, callback);
+						prevOrderTraverseNode(node.right, callback);
+					}
+				}
+
+				//前序遍历 
+				this.prevOrderTraverse = function(callback) {
+					prevOrderTraverseNode(root, callback);
+				}
+				//最后打印自己
+				//后序遍历 
+				var postOrderTraverseNode = function(node, callback) {
+					if(node !== null) {
+						postOrderTraverseNode(node.left, callback);
+						postOrderTraverseNode(node.right, callback);
+						callback(node.key);
+					}
+				}
+
+				//后序遍历 
+				this.postOrderTraverse = function(callback) {
+					postOrderTraverseNode(root, callback);
+				}
+				//查找最小值逻辑
+				var minNode = function(node) {
+					if(node) {
+						while(node && node.left !== null) {
+							node = node.left;
+						}
+						return node.key;
+					}
+					return null;
+				}
+				//查找最小值
+				this.min = function() {
+					return minNode(root);
+				}
+				//查找最大值逻辑
+				var maxNode = function(node) {
+					if(node) {
+						while(node && node.right !== null) {
+							node = node.right;
+						}
+						return node.key;
+					}
+					return null;
+				}
+				//查找最大值
+				this.max = function() {
+					return maxNode(root);
+				}
+				//查找是否存在
+				var searchNode = function(node,key){
+					if(node === null){
+						return false;
+					}
+					
+					if(key < node.key){
+						return searchNode(node.left,key);
+					}else if(key > node.key){
+						return searchNode(node.right,key);
+					}else{
+						return true;
+					}
+				}
+				//查找是否存在
+				this.search = function(key){
+					return searchNode(root,key);
+				}
+				
+				//查找最小节点
+				var findMinNode = function(node){
+					if(node){
+						while(node && node.left !== null){
+							node = node.left;
+						}
+						return node;
+					}
+					return null;
+				}
+				
+				//删除节点逻辑
+				var removeNode = function(node,key){
+					if(node === null){
+						return null;
+					}
+					
+					if(key < node.key){
+						node.left = removeNode(node.left,key);
+						return node;
+					}else if(key > node.key){
+						node.right = removeNode(node.right,key);
+						return node;
+					}else{
+						if(node.left === null && node.right === null){ //删除叶子节点（就是该节点没有左右节点）
+							node = null;
+							return node;
+						}
+						
+						if(node.left === null){ //只有右节点，直接把当前结点等于自己的右节点，就把自己删除了
+							node = node.right;
+							return node;
+						}else if(node.right === null){ //只有左节点，直接把当前结点等于自己的左节点，就把自己删除了
+							node = node.left;
+							return node;
+						}
+						
+						//代码执行到这里的话，代码要删除的节点下面有左右孩子节点
+						//查找该节点右边最小的节点，
+						var aux = findMinNode(node.right); 
+						//然后替换该节点的值
+						node.key = aux.key;
+						//再删除该节点右边最小的节点
+						node.right = removeNode(node.right,aux.key); 
+						return node;						
+					}
+				}
+				
+				//删除节点
+				this.remove = function(key){
+					root = removeNode(root,key);
+				}
+
+			}
+			var nodes = [8, 3, 10, 1, 6, 14, 4, 7, 13];
+			var binaryTree = new BinaryTree();
+			nodes.forEach(function(key, index) {
+				binaryTree.insert(key);
+			});
+			var arr = [];
+			var callback = function(key) {
+				arr.push(key);
+			}
+			//中序遍历
+//						binaryTree.inOrderTraverse(callback);
+			//前序遍历
+//						binaryTree.prevOrderTraverse(callback);
+			//后序遍历
+			binaryTree.postOrderTraverse(callback);
+			console.log(arr);
+			//查找最小值
+//			console.log(binaryTree.min());
+			//查找最大值
+//			console.log(binaryTree.max());
+			//查找
+//			console.log(binaryTree.search(7) ? 'key 7 is found' : 'key 7 is not found');
+			
+		</script>
+	</body>
+
+</html>

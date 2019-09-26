@@ -1,8 +1,23 @@
-html {
-	font-family: "微软雅黑" arial "宋体";
+html,
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", "微软雅黑", "黑体", "宋体", Arial, sans-serif;
+	font-size: 14px;
+	width: 100%;
+	color: #333;
+	-webkit-touch-callout: none;
+	-webkit-text-size-adjust: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none;
 }
+
 a,
-body,center,cite,code,dd,del,div,
+body,
+center,
+cite,
+code,
+dd,
+del,
+div,
 dl,
 dt,
 em,
@@ -40,16 +55,11 @@ var {
 	padding: 0;
 	font-style: normal;
 	color: #555;
+	-moz-box-sizing:border-box; 
+	-webkit-box-sizing:border-box; 
 	box-sizing: border-box;	
 }
-body,
-html {
-	-webkit-touch-callout: none;
-	-webkit-text-size-adjust: none;
-	-webkit-tap-highlight-color: transparent;
-	-webkit-user-select: none;
-	background-color: #fff
-}
+
 article,
 aside,
 details,
@@ -63,6 +73,7 @@ nav,
 section {
 	display: block
 }
+
 a,
 button,
 cite,
@@ -79,49 +90,69 @@ time,
 var {
 	display: inline-block
 }
+
 footer,
 header,
 section {
 	position: relative
 }
+
 ol,
 ul {
 	list-style: none
 }
+
 button,
 input,
 textarea {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", "微软雅黑", "黑体", "宋体", Arial, sans-serif;
 	border: 0;
 	margin: 0;
 	padding: 0;
 	font-size: 1em;
 	line-height: 1em;
-	background-color: transparent
+	outline:none;
+	background-color: transparent;
 }
+/*去掉按下的阴影盒子*/
+input, textarea, a {
+    -webkit-tap-highlight-color: transparent;
+}
+textarea{
+	resize:none;
+	-webkit-appearance: none;
+} 
 span {
 	display: inline-block
 }
+
 a:active,
 a:hover {
 	outline: 0
 }
+
 a,
 a:visited {
 	text-decoration: none
 }
+a{blr:expression(this.onFocus=this.blur());}/*IE下*/    
+a:focus{outline:none;}/*FF下 */
 .wordWrap,
 label {
 	word-wrap: break-word;
 	word-break: break-all
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0
 }
+
 td,
 th {
 	padding: 0
 }
+
 .clearfix:after {
 	content: ' ';
 	display: block;
@@ -130,17 +161,31 @@ th {
 	line-height: 0;
 	height: 0
 }
-.loading_more {
-	display: block;
-	height: 1.5em;
-	width: 100%
+
+a,input{-webkit-tap-highlight-color:rgba(255,0,0,0);
 }
-.loading_more:before {
-	background-image: url(../image/loading_more.gif) 30% center;
-	background-repeat: no-repeat;
-	background-size: contain;
-	text-align: center
+input::-webkit-input-placeholder{/* WebKit browsers */
+	color: #c7c7c7;
 }
-.loading_more:after {
-	content: '加载更多'
+input:-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+	color: #c7c7c7;
+}
+input::-moz-placeholder{ /* Mozilla Firefox 19+ */
+	color: #c7c7c7;
+}
+input:-ms-input-placeholder{ /* Internet Explorer 10+ */
+	color: #c7c7c7;
+}
+
+textarea::-webkit-input-placeholder{/* WebKit browsers */
+	color: #c7c7c7;
+}
+textarea:-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+	color: #c7c7c7;
+}
+textarea::-moz-placeholder{ /* Mozilla Firefox 19+ */
+	color: #c7c7c7;
+}
+textarea:-ms-input-placeholder{ /* Internet Explorer 10+ */
+	color: #c7c7c7;
 }

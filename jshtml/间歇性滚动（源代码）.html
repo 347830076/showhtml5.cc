@@ -1,0 +1,135 @@
+<!DOCTYPE >
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>新闻无缝向上无缝滚动</title>
+		<style>
+			* {
+				margin: 0px;
+				padding: 0px;
+				/*  去掉所有标签的marign和padding的值  */
+			}			
+			ul {
+				list-style: none;
+				/*  去掉ul标签默认的点样式  */
+			}
+					
+			a {
+				color: #333;
+				text-decoration: none;
+				/* 超链接样式 */
+			}
+			
+			a:hover {
+				color: #ff0000;
+			}
+			
+			#mooc {
+				width: 399px;
+				border: 1px solid #e4e4e4;
+				margin: 50px auto 0;
+			}
+	
+			#moocBox {
+				height: 144px;
+				width: 380px;
+				margin-top: 10px;
+				overflow: hidden;
+				/*  这个一定要加，超出的内容部分要隐藏，免得撑高中间部分 */
+			}
+			
+			#mooc ul li {
+				height: 24px;
+			}
+			
+			#mooc ul li a {
+				width: 240px;
+				float: left;
+				display: block;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				text-indent: 15px;
+				height: 24px;
+				line-height: 24px;
+			}
+			
+			#mooc ul li span {
+				float: right;
+				color: #999;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="mooc">
+			<div id="moocBox">
+				<ul>
+					<li>
+						<a href="#">1.标题1标题1标题1标题1标题1标题1标题1标题1</a>
+						<span>2017-09-21</span>
+					</li>
+					<li>
+						<a href="#">2.标题2标题2标题2标题2标题2标题2标题2标题2</a>
+						<span>2017-09-22</span>
+					</li>
+					<li>
+						<a href="#">3.标题3标题3标题3标题3标题3标题3标题3标题3</a>
+						<span>2017-09-23</span>
+					</li>
+					<li>
+						<a href="#">4.标题4标题4标题4标题4标题4标题4标题4标题4</a>
+						<span>2017-09-24</span>
+					</li>
+					<li>
+						<a href="#">5.标题5标题5标题5标题5标题5标题5标题5标题5</a>
+						<span>2017-09-25</span>
+					</li>
+					<li>
+						<a href="#">6.标题6标题6标题6标题6标题6标题6标题6标题6</a>
+						<span>2017-09-26</span>
+					</li>
+					<li>
+						<a href="#">7.标题7标题7标题7标题7标题7标题7标题7标题7</a>
+						<span>2017-09-27</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			var area = document.getElementById('moocBox');
+			var iliHeight = 24; //单行滚动的高度
+			var speed = 50; //滚动的速度
+			var time; //定义时间定时器
+			var delay = 200; //延迟200毫秒执行
+			
+			area.scrollTop = 0; //先设置滚动条顶部为零
+			area.innerHTML += area.innerHTML; //克隆一份一样的内容
+			
+			//开始滚动
+			function startScroll() {
+				time = setInterval("scrollUp()", speed);
+				area.scrollTop++;
+			}
+			
+			//滚动逻辑
+			function scrollUp() {
+				if(area.scrollTop % iliHeight == 0) { //刚刚好滚动完一个标题高度，就删除定时器，延迟后再执行定时器
+					clearInterval(time);
+					setTimeout(startScroll, delay);
+				} else { 
+					area.scrollTop++;
+					//滚动条高度大于滚动条高度的一半时，就立马设置滚动条高度为零，回到初始状态，这也是为什么一开始要克隆一份一样的内容，是为了看起来无缝链接。
+					if(area.scrollTop >= area.scrollHeight / 2) { 
+						area.scrollTop = 0;
+					}
+				}
+			}
+			//第一次执行滚动
+			setTimeout(startScroll, delay);
+		</script>
+	</body>
+
+</html>

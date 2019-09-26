@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box-align-start {
+            -webkit-box-align: start;
+            -moz-box-align: start;
+        }
+
+        .box-align-center {
+            -webkit-box-align: center;
+            -moz-box-align: center;
+        }
+
+        .box-align-end {
+            -webkit-box-align: end;
+            -moz-box-align: end;
+        }
+
+        .box-pack-start {
+            -webkit-box-pack: start;
+            -moz-box-pack: start;
+
+        }
+
+        .box-pack-center {
+            -webkit-box-pack: center;
+            -moz-box-pack: center;
+            box-pack: center;
+        }
+
+        .box-pack-end {
+            -webkit-box-pack: end;
+            -moz-box-pack: end;
+        }
+
+        .display-box-v {
+            width: 100%;
+            display: -moz-box;
+            display: -webkit-box;
+            display: box;
+            -moz-box-orient: vertical;
+            -webkit-box-orient: vertical;
+            box-orient: vertical;
+        /*/ / 垂直排列*/
+        }
+
+        .display-box-h {
+            width: 100%;
+            display: -moz-box;
+            display: -webkit-box;
+            display: box;
+            -moz-box-orient: horizontal;
+            -webkit-box-orient: horizontal;
+            box-orient: horizontal;
+        /*/ / 水平排列*/
+        }
+
+        .flex-one {
+            -moz-box-flex: 1;
+            -webkit-box-flex: 1;
+            box-flex: 1;
+            background-color: #aaa;
+            
+        }
+
+    </style>
+</head>
+<body>
+<div class="display-box-h box-align-center">
+    <div style="width: 50px;height:50px;background-color: #ccc;">1</div>
+    <div class="flex-one">
+        第三方公司打工十多个十多第三方公司打工十多个十多第三方公司打工十多个十多第三方公司打工十多个十多
+    </div>
+    <div class="flex-one" style=" background: #eee;">帝国时代帝国时代帝国时代帝国时代</div>
+</div>
+
+</body>
+</html>

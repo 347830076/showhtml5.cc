@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+	</head>
+
+	<body>
+		<div id="back">返回</div>
+		<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var a = "change";
+			console.log(a); //输出change
+			function fun() {
+				console.log(a); //输出undefined
+				var a = "改变了";
+				console.log(a); //输出改变了
+			}			
+			fun();
+			//			var obj = {contetn:"&lt;p&gt;asdfasdf&lt;strong&gt;dsfasdf&lt;span style=&quot;background-color: rgb(255, 0, 0);&quot;&gt;asdf&lt;/span&gt;a&lt;em&gt;fasdfasdfa&lt;span style=&quot;background-color: rgb(255, 255, 0);&quot;&gt;fasdfasdfasdf&lt;/span&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;"}
+			//			$('body').html('').append(html_unencode(obj.contetn))
+			////			console.log(html_unencode(obj.contetn))
+			//			function html_encode(str){     
+			//				var s = "";     
+			//				if (str.length == 0) 
+			//				return "";     
+			//				s = str.replace(/&/g, "&gt;");     
+			//				s = s.replace(/</g, "&lt;");     
+			//				s = s.replace(/>/g, "&gt;");     
+			//				s = s.replace(/ /g, "&nbsp;");     
+			//				s = s.replace(/\'/g, "&#39;");     
+			//				s = s.replace(/\"/g, "&quot;");     
+			//				s = s.replace(/\n/g, "");     
+			//				return s;   
+			//			}
+			//			function html_unencode(str){     
+			//				var s = "";     
+			//				if (str.length == 0) 
+			//				return "";     
+			//				s = str.replace(/&lt;/g, "<");     
+			//				s = s.replace(/&gt;/g, ">");     
+			//				s = s.replace(/&nbsp;/g, " ");     
+			//				s = s.replace(/\'/g, "&#39;");     
+			//				s = s.replace(/\"/g, "&quot;");     
+			//				s = s.replace(/\n/g, "");     
+			//				return s;   
+			//			}
+			//			var html = '{sm_star_hour : 7,sm_star_minute : 7,sm_end_hour : 7,sm_end_minute : 7,weekArr : ["周一","周二","周三","周四","周五"]}';
+			////			console.log(strToJson(html));
+			//			function strToJson(str){
+			//				var json = eval('(' + str + ')');
+			//				return json;
+			//			} 
+			////			console.time('tiemtest');
+			////			var body = $('body');
+			////			for(var i = 0; i < 10000; i++){
+			////				body.append(i);
+			////			}			
+			////			console.timeEnd('tiemtest')
+			////			
+			////			
+			////			
+			////			$('body').html('');
+			////			console.time('tiemtest1');
+			////			for(var i = 0; i < 10000; i++){
+			////				var body = $('body');
+			////				body.append(i);
+			////			}			
+			////			console.timeEnd('tiemtest1')
+			////			
+			////			$('body').html('');
+			////			console.time('tiemtest2');
+			////			for(var i = 0; i < 10000; i++){
+			////				$('body').append(i);
+			////			}			
+			////			console.timeEnd('tiemtest2');
+			//			
+			//			$('body').html('');
+			//			console.profile('性能分析器一');
+			////			alert('d')
+			//			foo();
+			//		
+			//		　　console.profileEnd();
+			//		
+			//			function foo(){
+			//				var body = $('body');
+			//				for(var i = 0; i < 100; i++){
+			//					body.append(i);
+			//				}
+			//			}
+			//			$('body').html('')
+			//			console.profile('性能分析器2');
+			////			alert('d')
+			//			foo1();
+			//		
+			//		　　console.profileEnd();
+			//		
+			//			function foo1(){
+			//
+			//				for(var i = 0; i < 100; i++){
+			//					$('body').append(i);
+			//				}
+			//			}
+			//			$('body').html('')
+			//			console.profile('性能分析器3');
+			////			alert('d')
+			//			foo2();
+			//		
+			//		　　console.profileEnd();
+			//		
+			//			function foo2(){
+			//
+			//				for(var i = 0; i < 100; i++){
+			//					var body = $('body');
+			//					body.append(i);
+			//				}
+			//			}
+		</script>
+	</body>
+
+</html>

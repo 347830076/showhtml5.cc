@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+	<meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+   
+  </head>
+  <body>
+      <canvas id="canvas" style="border:1px solid black;display:block;margin:0 auto;">
+	    您的浏览器不支持canvas标签
+	  </canvas>
+  </body>
+</html>
+ <script type="text/javascript">
+ var searchLight = {x:400,y:400,radius:150,vx:Math.random()*5+10,vy:Math.random()*5+10};
+ 
+   window.onload = function(){
+     var canvas = document.getElementById("canvas");
+	 canvas.width = 800;
+	 canvas.height =500;
+	 var context = canvas.getContext("2d");//获取绘制画布环境
+
+	context.beginPath();
+	context.arc(200,200,150,0,Math.PI*2,false);
+	context.arc(200,200,75,0,Math.PI*2,true);
+	 
+	 context.fillStyle = "#058";
+	 context.shadowColor = "gray";
+	 context.shadowOffsetX = 10;
+	 context.shadowOffsetY = 10;
+	 context.shadowBlur = 10;
+	 context.fill();
+	 
+    }	 
+	 
+	
+	 
+	
+  
+   
+</script>
+
+
+
+
+
+
+
+
+

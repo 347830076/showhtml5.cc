@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>js对象中的key按照a-z排序</title>
+
+        <script type="text/javascript">
+            //要求此对象中的key按照a-z排序
+            var arys = {
+                'ba': 'baba',
+                'ac': 'acac',
+                'cc': 'cccc',
+                'bb': 'bbbb'
+            };
+
+            var extra_str='12345678901234561234567890123456';
+
+            objKeySort(arys); //函数执行
+            var jsonstr=JSON.stringify(objKeySort(arys));
+            console.log(jsonstr);
+            // 打印结果==> "{"ac":"acac","ba":"baba","bb":"bbbb","cc":"cccc"}"
+            //new RegExp(':','g') 参数‘g’表示替换字符串中所有的匹配模式串，如果不写此参数，只替换找到的第一个模式串
+            var str1=jsonstr.replace(new RegExp(':','g'),'=');
+            console.log('str1=='+str1);
+            // 打印结果==> {"ac"="acac","ba"="baba","bb"="bbbb","cc"="cccc"}
+            var str2=str1.replace(new RegExp(',','g'),'&');
+            console.log('str2=='+str2);
+            // 打印结果==> {"ac"="acac"&"ba"="baba"&"bb"="bbbb"&"cc"="cccc"}
+            var str3=str2.substring(1,str2.length-1);
+            // 打印结果==> "ac"="acac"&"ba"="baba"&"bb"="bbbb"&"cc"="cccc"
+            console.log('str3=='+str3);
+            var newstr=str3+extra_str;
+            console.log('new_string=='+newstr);
+            // 打印结果==> "ac"="acac"&"ba"="baba"&"bb"="bbbb"&"cc"="cccc"12345678901234561234567890123456"
+
+
+            //排序的函数
+            function objKeySort(arys) { 
+                //先用Object内置类的keys方法获取要排序对象的属性名，再利用Array原型上的sort方法对获取的属性名进行排序，newkey是一个数组
+                var newkey = Object.keys(arys).sort();　　 
+                //console.log('newkey='+newkey);
+                var newObj = {}; //创建一个新的对象，用于存放排好序的键值对
+                for(var i = 0; i < newkey.length; i++) {
+                    //遍历newkey数组
+                    newObj[newkey[i]] = arys[newkey[i]]; 
+                    //向新创建的对象中按照排好的顺序依次增加键值对
+
+                }
+                return newObj; //返回排好序的新对象
+            }
+        </script>
+
+    </head>
+
+    <body>
+
+    </body>
+
+</html>

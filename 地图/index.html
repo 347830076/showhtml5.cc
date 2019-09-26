@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div id="allmap" style="height:600px;"></div>
+		<div style="height:600px;">
+			<label for="pointAy">坐标点:</label>
+			<textarea id="pointAy" disabled=true name="pointAy" clos="15" rows="3"></textarea>
+			<button id=startEdit onclick="clearStr()">清空坐标点</button>
+			<input type="button" onclick="addPol()" value="添加多边形">
+			<button id=startEdit onclick="edit('start')">启用多边形编辑</button>
+			<button id="stopEdit" onclick="edit('stop')">关闭多边形编辑</button>
+			<button id="open" onclick="getAllPoints()">获取单个端局所有点</button>
+			<label for="staPoint">端局点:</label>
+			<textarea id="staPoint" clos="15" rows="3"></textarea>
+			<button id="clear" onclick="clearPol()">删除所有多边形</button>
+		</div>
+		<script src="../js/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=SalVkqMoNKh8lZugiLBICl0B"></script>
+		<script type="text/javascript">
+			var map = new BMap.Map("allmap");
+			map.centerAndZoom(new BMap.Point(121.441932, 31.151924), 12);
+			map.enableScrollWheelZoom();
+
+			addClick();
+			
+			//清空坐标点
+			function clearStr() {
+				$("#pointAy").text('');
+			}
+
+			function showInfo(e) {
+				var str = e.point.lng + ", " + e.point.lat + ";";
+				$("#pointAy").append(str);
+			}
+
+			function addClick() {
+				map.addEventListener("click", showInfo);
+			}
+
+			function removeClick() {
+				map.removeEventListener("click", showInfo);
+			}
+
+			function addPol() {
+				var points = ($("#pointAy").val()).split(";");
+				subStationName = prompt("请输入添加的地名:", "");
+				if(subStationName == '' || subStationName == null) {
+					alert("输入地名!");
+					return;
+				}
+				if(points.length < 4) {
+					alert("最少3个点!");
+					return;
+				}
+				$("#pointAy").text('');
+				var mapPoint = [];
+				for(var i = 0; i < points.length; i++) {
+					if(points[i] != '') {
+						var x = parseFloat((points[i].split(','))[0]);
+						var y = parseFloat((points[i].split(','))[1]);
+						mapPoint.push(new BMap.Point(x, y));
+					}
+				}
+				var polygon = new BMap.Polygon(mapPoint, {
+					strokeColor: getRandomColor(),
+					strokeWeight: 2,
+					strokeOpacity: 0.5,
+					fillColor: getRandomColor()
+				}); //创建多边形  
+				polygon.name = subStationName;
+				map.addOverlay(polygon); //增加多边形  
+				polygon.enableEditing();
+			}
+
+			function clearPol() {
+				clearStr();
+				$("#staPoint").val('');
+				map.clearOverlays();
+			}
+
+			function getAllPoints() {
+				var flag = false;
+				var name = prompt("请输入获取的地名:", "");
+				if(name != null) {
+					if(name == '') {
+						alert("未输入地名!");
+					} else {
+						var overlays = map.getOverlays();
+						for(var i = 0; i < overlays.length; i++) {
+							var overlay = overlays[i];
+							if(overlay.name) {
+								if(name == overlay.name) {
+									var points = overlay.getPath(),
+										pointStr = '';
+									for(var j = 0; j < points.length; j++) {
+										pointStr += points[j].lng + "," + points[j].lat + ";";
+									}
+									$("#staPoint").val(pointStr);
+									flag = true;
+								}
+							}
+						}
+						if(!flag) {
+							alert("没有匹配的区域!");
+						}
+					}
+				} else {
+					alert("你按了[取消]按钮");
+				}
+			}
+
+			function edit(flag) {
+				var overlays = map.getOverlays();
+				for(var i = 0; i < overlays.length; i++) {
+					var overlay = overlays[i];
+					if(overlay.name) {
+						if(flag == "start") {
+							overlay.enableEditing();
+						} else {
+							overlay.disableEditing();
+						}
+					}
+				}
+			}
+
+			var getRandomColor = function() {
+				return '#' + (function(h) {
+					return new Array(7 - h.length).join("0") + h
+				})((Math.random() * 0x1000000 << 0).toString(16))
+			}
+		</script>
+	</body>
+
+</html>
