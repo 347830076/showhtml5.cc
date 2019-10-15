@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //this 的指向是谁调用就指向谁；即调用之前，this 还不知其指向。
+        /*
+        1、直接调用的默认绑定， this 指向一定是全局对象（浏览器的话是 window）。在严格模式下其值会是 undefined。
+        2、对象调用的隐式绑定， this 指向就是这个调用的对象。
+        3、call()/apply() 方式的显式绑定， this 指向传入的对象。
+        4、new 方式的绑定规则， this 指向这个构造出的新对象。
+        */
+        //第一种和第二种
+        let name = '小宇';
+        function consoleName () {
+            console.log(this.name);
+        }
+        let test = {
+            name: '陆鸭鸭',
+            method: function() {
+                console.log(this.name); //小宇
+                consoleName(); //let定义的变量，则打印undefined ， var定义的变量，不是严格模式就打印 小宇
+            }
+        }
+        test.method();
+        //第三种  隐式绑定和显式绑定一起使用的时候，显式绑定的优先级更高。
+        
+        test.method.apply(window); //小宇
+
+        //第四种
+        function consoleName(name) {
+            this.name = name;
+        }
+        let userName = new consoleName('xiaoyu');
+        console.log(userName.name); //xiaoyu
+    </script>
+</body>
+</html>
