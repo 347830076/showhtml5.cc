@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+        font-weight: bold;
+    }
+    </style>
+</head>
+
+<body>
+    <div id='progress-container'></div>
+    <script src="../js/arc_progress.js"></script>
+    <script>
+        const customText = [{ text: '昨日收益（元）', size: '12px', color: '#999999', x: 100, y: 80 }];
+
+        const arcProgress = new ArcProgress({
+            el: '#progress-container',
+            progress: 0.5,
+            text: '1532.99',
+            speed: 50,
+            arcStart: 0,  
+            arcEnd: 360,
+            size: 0,
+            thickness:14,
+            fillThickness: 14,
+            emptyColor: '#e3effd',
+            fillColor: '#79d1fe',
+            lineCap: 'round',
+            // animation: 500,
+            textStyle: {
+                size: '30px',
+                color: '#333',
+                font: 'HelveticaNeueBold',
+                y: 110
+            },
+            customText,
+            observer(e, t) {
+                console.log('监听动画进度', e, t);
+            },
+            animationEnd(e) {
+                console.log('动画执行结束', e);
+            }
+        });
+    </script>
+</body>
+
+</html>
