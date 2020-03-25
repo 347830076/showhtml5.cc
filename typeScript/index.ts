@@ -6,7 +6,9 @@ sdfsd
 fdsf
 sdf
 `;
-
+let asg: [number, string] = [1, '323'];
+console.log(asg[0], '元组')
+console.log(asg[1])
 //字符串模板
 var myname = 'guo yu';
 var getName = function () {

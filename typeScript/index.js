@@ -18,6 +18,9 @@ var __extends = (this && this.__extends) || (function () {
 /*字符串新特性*/
 //多行字符串
 var content = "dsdf\nsdfsdf\nsdfsd\nfdsf\nsdf\n";
+var asg = [1, '323'];
+console.log(asg[0], '元组');
+console.log(asg[1]);
 //字符串模板
 var myname = 'guo yu';
 var getName = function () {
@@ -45,6 +48,7 @@ function funtest(name) {
 function funtest1() {
     return "dsd";
 }
+//可选参数  默认参数
 function add(name, age, sex) {
     if (sex === void 0) { sex = '男'; }
     console.log(name);

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+    <style>
+        .row{
+            display: flex;
+            margin-bottom: 10px;
+        }
+        select{
+            width: 30px;
+            height: 20px;
+        }
+        .row > div{
+            width: 200px;
+            flex: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .row .r {
+            width: 400px;
+        }
+        .row >div div{
+            display: flex;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+        .block{
+            display: flex;
+            align-items: center;
+        }
+        .block>div{
+            margin-right: 20px;
+        }
+        .btn{
+            padding: 6px 12px;
+            border-radius: 4px;
+            color: #fff;
+            background-color: #1E9FFF;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="row">
+            <div class="l">主动技能</div>
+            <div class="r">被动技能</div>
+        </div>
+        <div class="row">
+            <div class="l">
+                <div v-for="(index,item) in initiative" :key="index">
+                    <div>
+                        <select v-model="item.ss" + index :name="item.ss" + index>
+                            <option :value="item2" v-for="item2 in item.start" :key="index">{{item2}}</option>
+                        </select>
+                        <span>星</span>
+                    </div>
+                    <div>
+                        <select v-model="item.ls" name="item.ls">
+                            <option :value="item2" v-for="item2 in item.level" :key="index">{{item2}}</option>
+                        </select>
+                        <span>级</span>
+                    </div>
+                </div>
+            </div>
+            <div class="r">
+                <div v-for="(index, item) in passivity" :key="index">
+                    <div>
+                        <select v-model="item.ss" name="item.ss">
+                            <option :value="item2" v-for="item2 in item.start" >{{item2}}</option>
+                        </select>
+                        <span>星</span>
+                    </div>
+                    <div>
+                        <select v-model="item.ls" name="item.ls">
+                            <option :value="item2" v-for="item2 in item.level" >{{item2}}</option>
+                        </select>
+                        <span>级</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="block">
+            <div>
+                <div>请输入童子技价格</div>
+                <input type="text" placeholder="请输入童子技价格">
+            </div>
+            <div>
+                <div>请输入香墨价格</div>
+                <input type="text" placeholder="请输入香墨价格">
+            </div>
+            <div>
+                <div>请输入精致香墨技价格</div>
+                <input type="text" placeholder="请输入精致香墨价格">
+            </div>
+            <div>
+                <div>主动被动总价格</div>
+                <input type="text" readonly>
+            </div>
+            <div class="btn">计算</div>
+        </div>
+
+        <div class="block">
+            <div>
+                <div>请输入洗髓丹价格</div>
+                <input type="text" placeholder="请输入洗髓丹价格">
+            </div>
+            <div>
+                <div>洗髓进度</div>
+                <div>
+                    <select v-model="pVal" name="pVal" style="width: 100px;">
+                        <option :value="item2.text" v-for="item2 in press" >{{item2}}</option>
+                    </select>
+                    ~50000
+                </div>
+            </div>
+            <div>
+                <div>需要洗髓丹</div>
+                <input type="text" readonly>
+            </div>
+            <div>
+                <div>洗髓成本</div>
+                <input type="text" readonly>
+            </div>
+            <div class="btn">计算</div>
+        </div>
+
+        <div class="block">
+            <div>
+                <div>请输入波板糖价格</div>
+                <input type="text" placeholder="请输入波板糖价格">
+            </div>
+            <div>
+                <div>子女等级</div>
+                <input type="text" placeholder="请输入子女等级">
+            </div>
+            <div>
+                <div>需要棉花糖</div>
+                <input type="text" readonly>
+            </div>
+            <div>
+                <div>需要波板糖</div>
+                <input type="text" readonly>
+            </div>
+            <div>
+                <div>等级成本</div>
+                <input type="text" readonly>
+            </div>
+            <div class="btn">计算</div>
+        </div>
+        
+    </div>
+    <script>
+         var vm = new Vue({
+            el: '#app',
+            data: {
+                pVal: '',
+                press: [
+                    {text: 8000, num: 5},
+                    {text: 10000, num: 5},
+                    {text: 12000, num: 5},
+                    {text: 14000, num: 5},
+                    {text: 16000, num: 5},
+                    {text: 18000, num: 5},
+                    {text: 20000, num: 5},
+                    {text: 22000, num: 5},
+                    {text: 24000, num: 5},
+                    {text: 26000, num: 5},
+                    {text: 28000, num: 5},
+                    {text: 30000, num: 5},
+                    {text: 32000, num: 5},
+                    {text: 34000, num: 5},
+                    {text: 36000, num: 5},
+                    {text: 38000, num: 5},
+                    {text: 40000, num: 5},
+                    {text: '42000以上或满洗髓', num: 5}
+                ],
+                initiative: [
+                    {
+                        ss: '',
+                        ls: '',
+                        start: [1,2,3,10],
+                        level: [1,2,3,4,5,6,7,8,9,10],
+                    },
+                    {
+                        ss: '',
+                        ls: '',
+                        start: [1,2,3,10],
+                        level: [1,2,3,4,5,6,7,8,9,10],
+                    },
+                    {
+                        ss: '',
+                        ls: '',
+                        start: [1,2,3,10],
+                        level: [1,2,3,4,5,6,7,8,9,10],
+                    },
+                    {
+                        ss: '',
+                        ls: '',
+                        start: [1,2,3,10],
+                        level: [1,2,3,4,5,6,7,8,9,10],
+                    },
+                ],
+                passivity: [
+                    {
+                        ss: '',
+                        ls: '',
+                        start: [1,2,3,10],
+                        level: [1,2,3,4,5,6,7,8,9,10],
+                    },
+                    {
+                        ss: '',
+                        ls: '',
+                        start: [1,2,3,10],
+                        level: [1,2,3,4,5,6,7,8,9,10],
+                    },
+                    {
+                        ss: '',
+                        ls: '',
+                        start: [1,2,3,10],
+                        level: [1,2,3,4,5,6,7,8,9,10],
+                    },
+                    {
+                        ss: '',
+                        ls: '',
+                        start: [1,2,3,10],
+                        level: [1,2,3,4,5,6,7,8,9,10],
+                    },
+                    {
+                        ss: '',
+                        ls: '',
+                        start: [1,2,3,10],
+                        level: [1,2,3,4,5,6,7,8,9,10],
+                    },
+                    {
+                        ss: '',
+                        ls: '',
+                        start: [1,2,3,10],
+                        level: [1,2,3,4,5,6,7,8,9,10],
+                    },
+                    {
+                        ss: '',
+                        ls: '',
+                        start: [1,2,3,10],
+                        level: [1,2,3,4,5,6,7,8,9,10],
+                    },
+                    {
+                        ss: '',
+                        ls: '',
+                        start: [1,2,3,10],
+                        level: [1,2,3,4,5,6,7,8,9,10],
+                    },
+                    {
+                        ss: '',
+                        ls: '',
+                        start: [1,2,3,10],
+                        level: [1,2,3,4,5,6,7,8,9,10],
+                    },
+                    {
+                        ss: '',
+                        ls: '',
+                        start: [1,2,3,10],
+                        level: [1,2,3,4,5,6,7,8,9,10],
+                    },
+                    {
+                        ss: '',
+                        ls: '',
+                        start: [1,2,3,10],
+                        level: [1,2,3,4,5,6,7,8,9,10],
+                    },
+                    {
+                        ss: '',
+                        ls: '',
+                        start: [1,2,3,10],
+                        level: [1,2,3,4,5,6,7,8,9,10],
+                    },
+                ]
+            },
+            methods: {
+                add: function() {
+                    return  this.site + " - 学的不仅是技术，更是梦想！";
+                }
+            }
+        });
+    </script>
+</body>
+</html>
