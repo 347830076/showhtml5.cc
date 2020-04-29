@@ -8,16 +8,19 @@
 </head>
 <body>
     <script>
+        const obj = { name: 'obj' };
         const foo = { name: 'foo' };
 
-        foo.fn = function() {
-        // 这里的 this 指向了 foo
-        // 因为 foo 调用了 fn，
-        // fn 的 this 就指向了调用它所在方法的对象 foo 上
-        console.log(this.name); // foo
+        foo.fn = function(val) {
+            // 这里的 this 指向了 foo
+            // 因为 foo 调用了 fn，
+            // fn 的 this 就指向了调用它所在方法的对象 foo 上
+            console.log(val);
+            console.log(this.name); // foo
         };
         foo.fn();
         Function.prototype.mycall = function(thisArg) {
+            console.log(Function.prototype, this);
             // this指向调用call的对象
             if (typeof this !== 'function') {
                 // 调用call的若不是函数则报错
@@ -29,12 +32,75 @@
             // 将调用call函数的对象添加到thisArg的属性中
             thisArg.fn = this;
             // 执行该属性
-            const result = thisArg.fn(...arg);
+            const result = thisArg.fn(...args);
             // 删除该属性
             delete thisArg.fn;
             // 返回函数执行结果
             return result;
-            };
+        };
+        foo.fn.mycall(obj, 1);
+
+        Function.prototype.myCall2 = function (context = window, ...args) {
+            if (this === Function.prototype) {
+                // 用于防止 Function.prototype.myCall2 直接调用
+                return undefined;
+            }
+            context = context || window;
+            const fn = Symbol();
+            context[fn] = this;
+            const result = context[fn](...args);
+            delete context[fn];
+            return result;
+        }
+       console.log(Function.prototype.myCall2());
+
+       Function.prototype.myApply = function (context = window, ...args) {
+          if (this === Function.prototype) {
+              return undefined;
+          }
+          context = context || window;
+          const fn = Symbol();
+          let result;
+          if (Array.isArray(args)) {
+            result = context[fn](...args);
+          }
+          else {
+              result = context[fn]();
+          }
+          delete context[fn];
+          return result;
+       }
+
+       // 获取argument对象 类数组对象 不能调用数组方法
+    function test1() {
+      console.log('获取argument对象 类数组对象 不能调用数组方法', arguments);
+    }
+
+    // 获取参数数组  可以调用数组方法
+    function test2(...args) {
+      console.log('获取参数数组  可以调用数组方法', args);
+    }
+
+    // 获取除第一个参数的剩余参数数组
+    function test3(first, ...args) {
+      console.log('获取除第一个参数的剩余参数数组', args);
+    }
+
+    // 透传参数
+    function test4(first, ...args) {
+      fn(...args);
+      fn(...arguments);
+    }
+
+    function fn() {
+      console.log('透传', ...arguments);
+    }
+
+    test1(1, 2, 3);
+    test2(1, 2, 3);
+    test3(1, 2, 3);
+    test4(1, 2, 3);
+
     </script>
 </body>
 </html>
