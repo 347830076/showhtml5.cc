@@ -10,6 +10,23 @@
   <button id="debounce">防抖动</button>
   <button id="throttle">节流</button>
   <script>
+
+    function debounceNew (event, time, flag) {
+      let timer = null;
+      return function (...args) {
+        clearTimeout(timer);
+        if (flag && !timer) {
+          event.apply(this, args);
+        }
+        timer = setTimeout(() => {
+          timer = null;
+          if (!flag) {
+            event.apply(this, args);
+          }
+        }, time);
+      }
+    }
+
     //对于按钮防点击来说的实现：如果函数是立即执行的，就立即调用，如果函数是延迟执行的，就缓存上下文和参数，放到延迟函数中去执行。
     //一旦我开始一个定时器，只要我定时器还在，你每次点击我都重新计时。一旦你点累了，定时器时间到，定时器重置为 null，就可以再次点击了。
     /**
@@ -56,9 +73,9 @@
       };
     }
 
-    document.getElementById('debounce').onclick = debounce(function (){
-      console.log('防抖动');
-    }, 1000);
+    document.getElementById('debounce').onclick = debounceNew(function (e){
+      console.log('防抖动', e);
+    }, 1000, true);
     // 这个是用来获取当前时间戳的
     function now() {
       return +new Date()
