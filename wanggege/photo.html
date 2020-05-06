@@ -6,7 +6,14 @@
     <title>王格格我喜欢你</title>
     <style>
 
-        *{padding:0px;margin:0px;} /*这是为了消除默认dom元素的内外边距，使得我们写css的时候更精确*/
+        *{
+            padding:0px;margin:0px;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
         body{background:#000;}
         #photos{
             width:110px;            /*宽度*/
