@@ -20,6 +20,15 @@
             font-size: 18px;
             color: #fff;
             text-align: center;
+            background-image: -webkit-linear-gradient(left, rgb(236, 97, 115), #E6D205 25%, #1989fa 50%, #E6D205 75%, #1989fa);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-background-size: 200% 100%;
+            -webkit-animation: masked-animation 4s infinite linear;
+        }
+        @-webkit-keyframes masked-animation {
+            0%  { background-position: 0 0;}
+            100% { background-position: -100% 0;}
         }
         #photos{
             width:110px;            /*宽度*/
