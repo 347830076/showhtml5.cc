@@ -309,7 +309,7 @@
         function fn_FillText(context) {
 
             context.fillStyle = "#1989fa";
-            context.font = "bold 14px Arial";
+            context.font = "normal 14px Microsoft YaHei";
             context.textAlign = "right";   //文本坐对齐  （以起始点对齐）
             context.shadowColor = "#fff";  //阴影颜色
             // context.shadowOffsetX = 1;    //x 偏移
@@ -317,7 +317,7 @@
             context.shadowBlur = 0;   //模糊度
             var name = Request.queryString("name");
             name = decodeURIComponent(name ? name : "格格");
-            var title = name + "，画下一片星空，只为送给你！";
+            var title = name + "，画下一片星空，只为送给你!";
 
             context.fillText(title, canvasWidth - 20, canvasHeight - 40);  //填充文字
             context.beginPath();
@@ -325,7 +325,7 @@
             context.textAlign = "right";   //文本坐对齐  （以起始点对齐）
             context.fillStyle = "#1989fa";
             context.shadowColor = "blue";  //阴影颜色
-            context.font = "normal 14px Arial";
+            context.font = "normal 14px Microsoft YaHei";
             context.fillText("--- 爱你的男友", canvasWidth - 20, canvasHeight - 10);  //填充文字
             context.restore();
             context.closePath();
